@@ -40,12 +40,12 @@ In alternativa, l'estensione *Marp for VS Code* mostra l'anteprima direttamente 
 
 ## Pubblicazione
 
-1. Crea su GitHub un repository vuoto `abinf-2026-27`.
+1. Crea su GitHub un repository vuoto `abilita-informatiche-2027`.
 2. Sostituisci `USERNAME` in `mkdocs.yml` (`site_url`).
 3. ```bash
    git init && git add . && git commit -m "Primo commit"
    git branch -M main
-   git remote add origin git@github.com:USERNAME/abinf-2026-27.git
+   git remote add origin git@github.com:aschimmenti/abilita-informatiche-2027.git
    git push -u origin main
    ```
 4. Al primo push la Action compila slide e sito e crea il branch `gh-pages`. Poi *Settings → Pages →

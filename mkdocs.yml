@@ -2,7 +2,7 @@ site_name: Abilità Informatiche 2026/27
 site_description: Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna
 site_author: Andrea Schimmenti
 # Aggiornare con l'URL reale dopo aver creato il repository
-site_url: https://USERNAME.github.io/abinf-2026-27/
+site_url: https://aschimmenti.github.io/abilita-informatiche-2027/
 copyright: Materiali rilasciati con licenza CC BY 4.0
 
 theme:
