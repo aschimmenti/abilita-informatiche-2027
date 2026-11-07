@@ -1,0 +1,93 @@
+site_name: Abilità Informatiche 2026/27
+site_description: Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna
+site_author: Andrea Schimmenti
+# Aggiornare con l'URL reale dopo aver creato il repository
+site_url: https://USERNAME.github.io/abinf-2026-27/
+copyright: Materiali rilasciati con licenza CC BY 4.0
+
+theme:
+  name: material
+  language: it
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Tema scuro
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Tema chiaro
+  font:
+    text: Atkinson Hyperlegible
+    code: JetBrains Mono
+
+extra_css:
+  - assets/css/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - abbr
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: it
+
+# Le slide (docs/slides/*.html e *.pdf) sono generate da slides/*.md con Marp:
+# non sono pagine del sito e non vanno elencate nella navigazione.
+not_in_nav: |
+  /slides/
+
+nav:
+  - Home: index.md
+  - Il corso:
+      - Informazioni ed esame: info.md
+      - Programma: programma.md
+  - Lezioni:
+      - lezioni/index.md
+      - "Blocco A · Fondamenti":
+          - "L01 · Dati e macchine": lezioni/01-dati-e-macchine.md
+          - "L02 · Come si rappresenta l'informazione": lezioni/02-rappresentazione.md
+          - "L03 · Strutturare i dati": lezioni/03-strutturare-i-dati.md
+          - "L04 · Algoritmi e pensiero computazionale": lezioni/04-algoritmi.md
+          - "L05 · Bibliografia e Zotero": lezioni/05-bibliografia-e-zotero.md
+  - Risorse:
+      - Letture e materiali: letture.md
+      - Glossario: glossario.md

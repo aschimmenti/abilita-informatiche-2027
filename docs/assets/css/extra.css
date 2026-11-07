@@ -1,0 +1,26 @@
+/* Colore principale coerente con le slide UniBo/Barzaghi (#980260) */
+:root {
+  --md-primary-fg-color: #980260;
+  --md-primary-fg-color--light: #b8348a;
+  --md-primary-fg-color--dark: #6e0146;
+  --md-accent-fg-color: #ff7017;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #b8348a;
+}
+
+/* Box "In sintesi" in apertura di lezione */
+.md-typeset .admonition.abstract { border-color: #980260; }
+
+/* Tabelle a tutta larghezza */
+.md-typeset table:not([class]) { display: table; width: 100%; }
+
+/* Riga meta (durata, modalità) sotto il titolo */
+.meta { color: var(--md-default-fg-color--light); font-size: .85rem; margin-top: -.8rem; }
+
+/* Slide incorporate nelle pagine di lezione (Marp, 16:9) */
+.slides-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1.2rem 0 .4rem;
+  border: 1px solid var(--md-default-fg-color--lightest); border-radius: 6px; overflow: hidden; }
+.slides-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.slides-links { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.slides-links .md-button { font-size: .75rem; padding: .4em 1em; }

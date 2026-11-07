@@ -1,0 +1,66 @@
+/*
+ * @theme abinf
+ * @size 16:9 1280px 720px
+ * Tema per le slide di Abilità Informatiche 2026/27 (colori coerenti con il sito)
+ */
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primary: #980260;
+  --accent: #ff7017;
+  --text: #2b2b2b;
+  --muted: #6b6b6b;
+  --bg: #ffffff;
+  --code-bg: #f6f2f5;
+}
+
+section {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 28px;
+  color: var(--text);
+  background: var(--bg);
+  padding: 56px 72px;
+  justify-content: flex-start;
+}
+
+h1, h2, h3 { color: var(--primary); margin: 0 0 .5em 0; line-height: 1.15; }
+h1 { font-size: 1.9em; }
+h2 { font-size: 1.35em; }
+h3 { font-size: 1.05em; color: var(--text); }
+strong { color: var(--primary); }
+a { color: var(--primary); }
+ul, ol { margin: .2em 0; }
+li { margin-bottom: .25em; }
+blockquote { border-left: 6px solid var(--primary); color: var(--muted); padding-left: .8em; margin: .5em 0; }
+code { background: var(--code-bg); color: #4a0a33; border-radius: 4px; padding: .05em .3em; }
+pre { background: var(--code-bg); border-radius: 6px; font-size: .72em; }
+table { font-size: .75em; border-collapse: collapse; }
+th { background: var(--primary); color: #fff; }
+th, td { padding: .3em .7em; border: 1px solid #ddd; }
+img { max-height: 100%; }
+
+/* Numerazione di pagina */
+section::after { color: #fff; background: var(--primary); font-size: .55em; padding: .2em .6em; border-radius: 3px; }
+
+/* Piè di pagina per le fonti */
+footer { font-size: .45em; color: var(--muted); left: 72px; right: 140px; }
+
+/* Slide di titolo e di sezione */
+section.lead { background: var(--primary); color: #fff; justify-content: center; }
+section.lead h1, section.lead h2, section.lead strong, section.lead a { color: #fff; }
+section.lead::after { background: #fff; color: var(--primary); }
+
+section.section { background: #f6f2f5; justify-content: center; }
+section.section h1 { font-size: 2.2em; }
+
+/* Slide con una domanda o un'attività */
+section.activity { background: #fff7f0; }
+section.activity h2 { color: var(--accent); }
+
+/* Testo piccolo */
+.small { font-size: .75em; }
+.muted { color: var(--muted); }
+
+/* Due colonne: <div class="cols"><div>…</div><div>…</div></div> */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
