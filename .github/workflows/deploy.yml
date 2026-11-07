@@ -13,4 +13,5 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -r requirements.txt
       - run: npx -y @marp-team/marp-cli@4 --theme-set slides/themes --input-dir slides --output docs/slides --html --allow-local-files
+      - run: npx -y @marp-team/marp-cli@4 --theme-set slides/themes --input-dir slides --output docs/slides --html --allow-local-files --pdf
       - run: mkdocs gh-deploy --force
