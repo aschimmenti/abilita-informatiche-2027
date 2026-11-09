@@ -276,18 +276,41 @@ Saperlo è il primo passo per usare con giudizio qualunque strumento digitale ch
 ### Ada Lovelace e la macchina analitica
 
 Negli anni Trenta dell'Ottocento il matematico inglese **Charles Babbage** progettò la **macchina
-analitica**, un calcolatore meccanico programmabile tramite schede perforate, che non fu mai
-completato. Nel 1843 **Ada Lovelace** tradusse in inglese un articolo dell'ingegnere italiano Luigi
-Federico Menabrea che descriveva la macchina, e vi aggiunse una serie di note molto più lunghe del
-testo originale. In una di queste note descrisse un procedimento per far calcolare alla macchina una
-serie di numeri (i numeri di Bernoulli), che è spesso considerato il primo programma della storia.
+analitica**, un calcolatore meccanico programmabile tramite schede perforate, simili a quelle che
+comandavano i telai Jacquard per tessere i disegni sulle stoffe. La macchina aveva già le parti
+fondamentali di un computer moderno: un "mulino" (*mill*) che eseguiva i calcoli e un "magazzino"
+(*store*) che conservava i numeri. Non fu mai completata: ne fu costruita solo una piccola parte.
 
-Ma l'intuizione più importante di Lovelace è un'altra. La macchina, osservava, non è limitata ai
-numeri: può operare su **qualsiasi simbolo**, purché le relazioni tra i simboli possano essere espresse
-in modo formale. Se si riuscisse a descrivere così i rapporti tra i suoni in armonia e composizione,
-scriveva, la macchina potrebbe comporre musica. È esattamente l'idea che sta alla base di tutto ciò che
-vedremo nel corso: qualunque cosa, una volta rappresentata con simboli e regole, può essere elaborata
-da una macchina.
+<figure markdown>
+![Parte della macchina analitica di Babbage](https://commons.wikimedia.org/wiki/Special:FilePath/Babbages_Analytical_Engine,_1834-1871._(9660574685).jpg?width=900){ width="460" loading=lazy }
+<figcaption>Parte del "mulino" della macchina analitica, rimasta incompiuta alla morte di Babbage (1871).
+Science Museum di Londra. Foto Science Museum, CC BY-SA 2.0, via Wikimedia Commons.</figcaption>
+</figure>
+
+Nel 1843 **Ada Lovelace** tradusse in inglese un articolo dell'ingegnere italiano Luigi Federico
+Menabrea che descriveva la macchina, e vi aggiunse sette note, indicate con le lettere dalla A alla G,
+molto più lunghe del testo originale. Nella **Nota G** descrisse passo per passo il procedimento con cui
+la macchina avrebbe potuto calcolare una serie di numeri (i numeri di Bernoulli), presentato in una
+tabella che è spesso considerata il primo programma mai pubblicato.
+
+<figure markdown>
+![Il diagramma della Nota G di Ada Lovelace](https://commons.wikimedia.org/wiki/Special:FilePath/Diagram_for_the_computation_of_Bernoulli_numbers.jpg?width=1100){ width="640" loading=lazy }
+<figcaption>Il diagramma della Nota G (1843) per il calcolo dei numeri di Bernoulli. Pubblico dominio,
+via Wikimedia Commons.</figcaption>
+</figure>
+
+Ma l'intuizione più importante di Lovelace si trova nella **Nota A**. La macchina, osservava, non è
+limitata ai numeri: può operare su qualsiasi oggetto le cui relazioni possano essere espresse in modo
+formale. E portava un esempio:
+
+> Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony
+> and of musical composition were susceptible of such expression and adaptations, the engine might
+> compose elaborate and scientific pieces of music of any degree of complexity or extent.
+
+Se le relazioni fondamentali tra i suoni nella scienza dell'armonia e della composizione potessero
+essere espresse in questo modo, la macchina potrebbe comporre brani musicali elaborati, di qualsiasi
+complessità. È esattamente l'idea che sta alla base di tutto ciò che vedremo nel corso: qualunque cosa,
+una volta rappresentata con **simboli** e **regole**, può essere elaborata da una macchina.
 
 ### Dati da contare: le schede perforate di Hollerith
 
@@ -298,6 +321,11 @@ caratteristica (sesso, età, stato civile, luogo di nascita). L'elaborazione dei
 che in passato. L'azienda fondata da Hollerith confluì in seguito in quella che sarebbe diventata IBM, e
 le schede perforate rimasero il principale supporto per i dati fino agli anni Settanta del Novecento.
 
+<figure markdown>
+![Una tabulatrice Hollerith](https://commons.wikimedia.org/wiki/Special:FilePath/HollerithMachine.CHM.jpg?width=900){ width="420" loading=lazy }
+<figcaption>Una tabulatrice Hollerith. Computer History Museum, via Wikimedia Commons.</figcaption>
+</figure>
+
 ### Turing, Enigma e Bletchley Park
 
 Nel 1936 il matematico inglese **Alan Turing** descrisse una macchina astratta, oggi chiamata
@@ -306,10 +334,19 @@ descrivibile con regole precise. Era un modello teorico, ma fissava i concetti d
 calcolabilità su cui si fonda l'informatica.
 
 Durante la Seconda guerra mondiale Turing lavorò a **Bletchley Park**, il centro britannico di
-decrittazione, dove contribuì a progettare le *bombe*, macchine elettromeccaniche che aiutavano a
-individuare le impostazioni giornaliere di **Enigma**, la macchina cifrante usata dalle forze armate
-tedesche. Nello stesso centro entrò in funzione nel 1944 **Colossus**, uno dei primi calcolatori
-elettronici, costruito per decifrare un altro sistema di cifratura tedesco.
+decrittazione. Qui progettò, insieme a Gordon Welchman, la *bombe* britannica, una macchina
+elettromeccanica che aiutava a individuare le impostazioni giornaliere di **Enigma**, la macchina
+cifrante usata dalle forze armate tedesche. Il progetto riprendeva e superava la *bomba kryptologiczna*
+costruita nel 1938 dai crittografi polacchi guidati da Marian Rejewski, che decifravano Enigma già dal
+1932 e che nel 1939 condivisero i loro risultati con britannici e francesi. Nello stesso centro entrò
+in funzione nel 1944 **Colossus**, uno dei primi calcolatori elettronici, costruito per decifrare un
+altro sistema di cifratura tedesco.
+
+<figure markdown>
+![Una macchina Enigma](https://commons.wikimedia.org/wiki/Special:FilePath/EnigmaMachine.jpg?width=900){ width="360" loading=lazy }
+<figcaption>Una macchina Enigma all'Imperial War Museum di Londra. A ogni tasto premuto, la lettera passa
+attraverso una serie di rotori che cambiano posizione. Pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
 
 La decrittazione è un caso esemplare di trasformazione di un problema linguistico in un problema di
 calcolo. Un messaggio cifrato è un testo; per decifrarlo si sfruttavano le regolarità della lingua
@@ -387,10 +424,32 @@ modo, può funzionare su computer fisicamente diversi.
 
 ## 8. L'hardware
 
+### Prima di von Neumann: ENIAC
+
+Uno dei primi calcolatori elettronici di uso generale, **ENIAC**, fu completato nel 1945
+all'Università della Pennsylvania. Era velocissimo per l'epoca, ma aveva un limite enorme: il programma
+non era scritto da nessuna parte, se non nei **collegamenti fisici** della macchina. Per fargli eseguire
+un calcolo diverso bisognava staccare e ricollegare a mano decine di cavi e spostare centinaia di
+interruttori, un lavoro che poteva richiedere giorni e che era affidato a un gruppo di sei
+programmatrici. In altre parole, il programma faceva parte dell'**hardware**.
+
+### L'idea del programma memorizzato
+
+Nel 1945 il matematico **John von Neumann** firmò un rapporto, la *First Draft of a Report on the
+EDVAC*, che raccoglieva e sistematizzava le idee nate nel gruppo di lavoro di ENIAC per la macchina
+successiva. L'idea centrale è semplice e rivoluzionaria: **le istruzioni del programma e i dati su cui
+lavorare si conservano nella stessa memoria**, scritti entrambi come numeri. Per cambiare programma non
+serve più ricablare la macchina: basta caricare in memoria un'altra sequenza di numeri.
+
+È questo che rende il computer una macchina **universale**: lo stesso oggetto fisico diventa un
+programma di videoscrittura, un dizionario, un lettore musicale o un traduttore automatico a seconda
+delle istruzioni che carica. E torna l'intuizione di Lovelace: se anche le istruzioni sono simboli, la
+macchina può trattarle come qualsiasi altro dato.
+
 ### Le componenti principali
 
-Quasi tutti i computer, dal portatile allo smartphone, sono organizzati secondo lo schema descritto dal
-matematico **John von Neumann** nel 1945:
+Da allora, quasi tutti i computer, dal portatile allo smartphone, sono organizzati secondo lo schema
+descritto in quel rapporto, che porta il nome di von Neumann:
 
 ```mermaid
 flowchart LR
@@ -415,6 +474,23 @@ flowchart LR
 - I **dispositivi di input** (tastiera, mouse, microfono, fotocamera, touchscreen, sensori) portano le
   informazioni dentro il computer; quelli di **output** (schermo, altoparlanti, stampante) le restituiscono.
 - I **dispositivi di rete** collegano il computer ad altri computer e a Internet.
+
+### Come lavora: il ciclo del processore
+
+Il processore lavora ripetendo all'infinito un ciclo di tre passi: **prende** dalla memoria la prossima
+istruzione, la **decodifica** (cioè capisce che cosa chiede: sommare due numeri, copiare un dato,
+confrontare due valori, saltare a un'altra istruzione) e la **esegue**. Poi passa all'istruzione
+successiva. Ogni cosa che vedete fare a un computer, dall'apertura di un file alla traduzione di una
+frase, è il risultato di miliardi di questi cicli.
+
+Un'analogia può aiutare:
+
+| Nel computer | In cucina |
+|---|---|
+| **Processore** (CPU) | il cuoco, che esegue un passo della ricetta alla volta |
+| **Memoria centrale** (RAM) | il piano di lavoro: la ricetta aperta e gli ingredienti a portata di mano, sgombrato a fine giornata |
+| **Memoria di massa** | la dispensa e il ricettario: tutto resta, ma è più lento da raggiungere |
+| **Input e output** | gli ordini che arrivano in cucina e i piatti che escono |
 
 ### Molti tipi di computer
 
