@@ -612,16 +612,55 @@ ottenere la **concordanza** di tutte le occorrenze, ordinate secondo il contesto
 Si possono anche calcolare le **collocazioni**, cioè le parole che compaiono insieme alla parola cercata
 più spesso di quanto ci si aspetterebbe per caso.
 
+#### Come si interroga DiaCORIS
+
+Le ricerche si scrivono nel **linguaggio di interrogazione** del corpus (*Corpus Query Language*, nello
+stile IMS/CWB). Le regole di base sono poche:
+
+| Sintassi | Che cosa fa | Esempio |
+|---|---|---|
+| `"parola"` | cerca una parola esatta | `"calcolatore"` |
+| `"parola"%c` | ignora maiuscole e minuscole | `"radio"%c` trova *radio*, *Radio*, *RADIO* |
+| `"parol.*"` | tra le virgolette si possono usare **espressioni regolari**: `.` vale un carattere qualsiasi, `*` "ripetuto zero o più volte" | `"calcolat.*"` trova *calcolatore*, *calcolatori*, *calcolatrice*… |
+| `"parola1" "parola2"` | cerca due parole **in sequenza** | `"macchina" "da" "scrivere"` |
+| `"a" | "b"` | cerca l'una **o** l'altra | `("telefono" | "telegrafo")` |
+| `"a" []{0,N} "b"` | cerca *b* dopo *a*, con **al massimo N parole in mezzo** | `"lingua" []{0,3} "italiana"` |
+
+Le parti si possono combinare. Qualche esempio da provare:
+
+```text
+"computer"%c
+"calcolat(ore|ori|rice|rici)"
+"signorin[ae]"
+("fa" | "fanno" | "faceva" | "fece") "paura"
+"pres.*" []{0,2} "decisione"
+```
+
+Il primo trova *computer* comunque sia scritto. Il secondo usa un'espressione regolare per elencare le
+forme di *calcolatore* e *calcolatrice*. Il terzo trova *signorina* e *signorine* (le parentesi quadre
+indicano "uno di questi caratteri"). Il quarto cerca alcune forme del verbo *fare* seguite da *paura*:
+DiaCORIS non è annotato per lemma, quindi le forme vanno elencate a mano. Il quinto trova *prendere una
+decisione*, *presero la decisione*, *presa questa decisione* e simili, con al massimo due parole in mezzo.
+
+!!! warning "Un corpus non annotato"
+    In questa forma di interrogazione il corpus contiene solo **parole**, senza lemmi né categorie
+    grammaticali. Non si può chiedere "tutte le forme del verbo *fare*" né "tutti gli aggettivi prima di
+    *lingua*": bisogna elencare le forme con le espressioni regolari. È la differenza concreta tra un
+    corpus annotato e uno non annotato, di cui abbiamo parlato nella sezione 4.
+
 !!! example "Esercizio (15 minuti, in coppia)"
-    1. Aprite [DiaCORIS](https://corpora.ficlit.unibo.it/DiaCORIS/) e cercate la parola `calcolatore`
-       prima nella sezione 1946–1967 e poi nella sezione 1968–2001. Fate lo stesso con `computer`.
-       Che cosa notate?
-    2. Scegliete una parola che secondo voi ha cambiato significato o frequenza nel corso del Novecento
-       (*signorina*, *telefono*, *radio*, *automobile*, *macchina*, *ferie*) e osservatene le concordanze
-       nei diversi periodi.
-    3. Provate a calcolare le collocazioni della vostra parola. Quali parole la accompagnano più spesso?
-       Cambiano da un periodo all'altro?
-    4. Ricordando la sezione 2: chi ha scelto i testi di questo corpus? Che tipi di testo **non** ci
+    1. Aprite [DiaCORIS](https://corpora.ficlit.unibo.it/DiaCORIS/) e cercate `"calcolat.*"` prima nella
+       sezione 1946–1967 e poi nella sezione 1968–2001. Fate lo stesso con `"computer"%c`. Che cosa
+       notate?
+    2. Cercate `"signorin[ae]"` nelle cinque sezioni. Leggete una decina di righe di concordanza per
+       periodo: chi viene chiamata *signorina*, e in quali contesti?
+    3. Scegliete un'espressione che secondo voi è cambiata nel corso del Novecento (*telefono*, *radio*,
+       *ferie*, *televisione*, *macchina da scrivere*) e scrivete una query che ne trovi tutte le forme.
+       Confrontate i risultati tra i periodi.
+    4. Usate l'operatore di distanza per cercare due parole vicine, ad esempio
+       `"lingua" []{0,3} "italiana"` o `("prendere" | "prese" | "presa") []{0,2} "decisione"`. Quali parole
+       compaiono in mezzo?
+    5. Ricordando la sezione 2: chi ha scelto i testi di questo corpus? Che tipi di testo **non** ci
        sono? Che cosa potete concludere sull'italiano in generale, e che cosa no?
 
 ---
