@@ -9,6 +9,14 @@
     vediamo perché a volte, al posto di "è", compare "Ã¨"; scopriamo chi decide quali sistemi di
     scrittura esistano nel mondo digitale; e apriamo un file per capire che cosa contenga davvero.
 
+<div class="slides-embed">
+  <iframe src="../../slides/L02.html" title="Slide della lezione 2" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L02.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L02.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
 ## Obiettivi
 
 Alla fine della lezione saprete:
