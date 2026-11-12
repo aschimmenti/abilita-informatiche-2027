@@ -11,6 +11,14 @@
     permettono alle macchine di collegare tra loro concetti, persone, opere e luoghi. Lavoreremo su un
     esempio che non ha bisogno di presentazioni: gli spaghetti aglio, olio e peperoncino.
 
+<div class="slides-embed">
+  <iframe src="../../slides/L03.html" title="Slide della lezione 3" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L03.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L03.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
 ## Obiettivi
 
 Alla fine della lezione saprete:

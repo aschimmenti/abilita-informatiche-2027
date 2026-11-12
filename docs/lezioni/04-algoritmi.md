@@ -11,6 +11,14 @@
     familiari: cucinare un piatto di pasta, formare il plurale dei nomi, ordinare le parole di un
     dizionario. Concluderemo con un primo sguardo a un vero linguaggio di programmazione.
 
+<div class="slides-embed">
+  <iframe src="../../slides/L04.html" title="Slide della lezione 4" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L04.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L04.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
 ## Obiettivi
 
 Alla fine della lezione saprete:

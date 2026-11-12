@@ -3,10 +3,10 @@
 | # | Lezione | Blocco | Modalità | Stato |
 |---|---|---|---|---|
 | L01 | [Dati e macchine](01-dati-e-macchine.md) | A Fondamenti | in presenza | ✅ con slide |
-| L02 | [Come si rappresenta l'informazione](02-rappresentazione.md) | A Fondamenti | in presenza | ✅ |
-| L03 | [Strutturare i dati](03-strutturare-i-dati.md) | A Fondamenti | in presenza | ✅ |
-| L04 | [Algoritmi e pensiero computazionale](04-algoritmi.md) | A Fondamenti | online | ✅ |
-| L05 | [Gestire la bibliografia: standard, identificativi, Zotero](05-bibliografia-e-zotero.md) | A Fondamenti | online | ✅ |
+| L02 | [Come si rappresenta l'informazione](02-rappresentazione.md) | A Fondamenti | in presenza | ✅ con slide |
+| L03 | [Strutturare i dati](03-strutturare-i-dati.md) | A Fondamenti | in presenza | ✅ con slide |
+| L04 | [Algoritmi e pensiero computazionale](04-algoritmi.md) | A Fondamenti | online | ✅ con slide |
+| L05 | [Gestire la bibliografia: standard, identificativi, Zotero](05-bibliografia-e-zotero.md) | A Fondamenti | online | ✅ con slide |
 | L06 | Internet: la rete delle reti | B Internet e Web | online | in preparazione |
 | L07 | Il Web e la società | B Internet e Web | online | in preparazione |
 | L08 | Laboratorio: costruire e pubblicare una pagina web | B Internet e Web | online | in preparazione |
