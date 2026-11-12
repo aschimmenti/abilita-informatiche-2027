@@ -1,0 +1,2743 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/02-rappresentazione/">
+      
+      
+        <link rel="prev" href="../01-dati-e-macchine/">
+      
+      
+        <link rel="next" href="../03-strutturare-i-dati/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>L02 · Come si rappresenta l'informazione - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l02-come-si-rappresenta-linformazione" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L02 · Come si rappresenta l'informazione
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-bit-lunita-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il bit: l'unità minima
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Il bit: l&#39;unità minima">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#due-stati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Due stati
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinare-i-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combinare i bit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-contare-in-binario-e-in-esadecimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Contare in binario (e in esadecimale)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Contare in binario (e in esadecimale)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-sistema-posizionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il sistema posizionale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perche-esiste-lesadecimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perché esiste l'esadecimale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dai-numeri-alle-lettere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dai numeri alle lettere
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dai numeri alle lettere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-tabella-condivisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una tabella condivisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ascii-un-alfabeto-per-una-sola-lingua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASCII, un alfabeto per una sola lingua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-caos-delle-codifiche-nazionali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il caos delle codifiche nazionali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-mojibake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il mojibake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode-un-numero-per-ogni-carattere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unicode: un numero per ogni carattere
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-8-come-scrivere-unicode-in-byte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UTF-8: come scrivere Unicode in byte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-lettera-due-codifiche-la-normalizzazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una lettera, due codifiche: la normalizzazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-emoji-sono-caratteri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le emoji sono caratteri
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-caratteri-glifi-e-caratteri-tipografici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Caratteri, glifi e caratteri tipografici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Caratteri, glifi e caratteri tipografici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carattere-e-glifo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carattere e glifo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-tofu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il tofu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-direzione-della-scrittura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La direzione della scrittura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-immagini-suoni-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Immagini, suoni, video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Immagini, suoni, video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-immagini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le immagini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-suoni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I suoni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-compressione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La compressione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-metadati-nascosti-nei-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I metadati nascosti nei file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dove-stanno-i-dati-un-ripasso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dove stanno i dati: un ripasso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-file-e-formati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. File e formati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. File e formati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ce-in-un-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa c'è in un file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tre-grandi-famiglie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tre grandi famiglie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formati-aperti-e-proprietari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formati aperti e proprietari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-bit-lunita-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il bit: l'unità minima
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Il bit: l&#39;unità minima">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#due-stati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Due stati
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinare-i-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combinare i bit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-contare-in-binario-e-in-esadecimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Contare in binario (e in esadecimale)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Contare in binario (e in esadecimale)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-sistema-posizionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il sistema posizionale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perche-esiste-lesadecimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perché esiste l'esadecimale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dai-numeri-alle-lettere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dai numeri alle lettere
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dai numeri alle lettere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-tabella-condivisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una tabella condivisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ascii-un-alfabeto-per-una-sola-lingua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASCII, un alfabeto per una sola lingua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-caos-delle-codifiche-nazionali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il caos delle codifiche nazionali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-mojibake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il mojibake
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode-un-numero-per-ogni-carattere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unicode: un numero per ogni carattere
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-8-come-scrivere-unicode-in-byte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UTF-8: come scrivere Unicode in byte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-lettera-due-codifiche-la-normalizzazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una lettera, due codifiche: la normalizzazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-emoji-sono-caratteri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le emoji sono caratteri
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-caratteri-glifi-e-caratteri-tipografici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Caratteri, glifi e caratteri tipografici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Caratteri, glifi e caratteri tipografici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#carattere-e-glifo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Carattere e glifo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-tofu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il tofu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-direzione-della-scrittura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La direzione della scrittura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-immagini-suoni-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Immagini, suoni, video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Immagini, suoni, video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-immagini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le immagini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-suoni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I suoni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-compressione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La compressione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-metadati-nascosti-nei-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I metadati nascosti nei file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dove-stanno-i-dati-un-ripasso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dove stanno i dati: un ripasso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-file-e-formati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. File e formati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. File e formati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ce-in-un-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa c'è in un file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tre-grandi-famiglie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tre grandi famiglie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formati-aperti-e-proprietari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formati aperti e proprietari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l02-come-si-rappresenta-linformazione">L02 · Come si rappresenta l'informazione<a class="headerlink" href="#l02-come-si-rappresenta-linformazione" title="Permanent link">&para;</a></h1>
+<p class="meta">In presenza · 2 ore · Blocco A — Fondamenti</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>All'interno di un computer esistono soltanto due stati, convenzionalmente indicati con 0 e 1.
+Eppure sullo schermo compaiono poesie in arabo, ideogrammi cinesi, emoji, fotografie e canzoni.
+In questa lezione ricostruiamo i passaggi che portano dai bit alle lettere, alle immagini e ai suoni;
+vediamo perché a volte, al posto di "è", compare "Ã¨"; scopriamo chi decide quali sistemi di
+scrittura esistano nel mondo digitale; e apriamo un file per capire che cosa contenga davvero.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L02.html" title="Slide della lezione 2" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L02.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L02.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>spiegare che cosa sono <strong>bit</strong> e <strong>byte</strong>, contare in binario e leggere un numero esadecimale;</li>
+<li>calcolare in modo approssimativo quanto spazio occupano un testo, un'immagine e un brano musicale;</li>
+<li>descrivere il funzionamento di una <strong>codifica dei caratteri</strong> e la differenza tra <strong>ASCII</strong>,
+  <strong>Unicode</strong> e <strong>UTF-8</strong>;</li>
+<li>riconoscere e diagnosticare un problema di codifica (<em>mojibake</em>) e un problema di carattere tipografico (<em>tofu</em>);</li>
+<li>distinguere <strong>carattere</strong> e <strong>glifo</strong>, <strong>file</strong> e <strong>formato</strong>, formati <strong>aperti</strong> e <strong>proprietari</strong>.</li>
+</ul>
+<hr />
+<h2 id="1-il-bit-lunita-minima">1. Il bit: l'unità minima<a class="headerlink" href="#1-il-bit-lunita-minima" title="Permanent link">&para;</a></h2>
+<h3 id="due-stati">Due stati<a class="headerlink" href="#due-stati" title="Permanent link">&para;</a></h3>
+<p>Il <strong>bit</strong> (contrazione di <em>binary digit</em>, "cifra binaria") è la più piccola quantità di informazione
+rappresentabile: un'alternativa tra due possibilità, che chiamiamo per convenzione 0 e 1. Fisicamente,
+a seconda del supporto, può corrispondere alla presenza o all'assenza di una tensione elettrica in un
+circuito, all'orientamento di una particella magnetica su un disco, a un minuscolo avvallamento sulla
+superficie di un CD.</p>
+<p>La scelta di due soli stati ha ragioni pratiche: distinguere tra "c'è corrente" e "non c'è corrente"
+è molto più affidabile che distinguere tra dieci livelli diversi di tensione, e un sistema a due stati
+resiste meglio ai disturbi.</p>
+<h3 id="combinare-i-bit">Combinare i bit<a class="headerlink" href="#combinare-i-bit" title="Permanent link">&para;</a></h3>
+<p>Un bit risponde a una domanda sì/no. Per rappresentare più alternative si usano più bit, e ogni bit
+aggiunto <strong>raddoppia</strong> il numero delle combinazioni possibili:</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Combinazioni</th>
+<th>Che cosa ci sta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>vero / falso, acceso / spento</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>le quattro stagioni</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8</td>
+<td>i sette giorni della settimana, con un valore di avanzo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>32</td>
+<td>le 21 lettere dell'alfabeto italiano, maiuscole o minuscole</td>
+</tr>
+<tr>
+<td>7</td>
+<td>128</td>
+<td>l'alfabeto inglese, maiuscolo e minuscolo, cifre e punteggiatura (ASCII)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>256</td>
+<td>un <strong>byte</strong></td>
+</tr>
+<tr>
+<td>16</td>
+<td>65.536</td>
+<td>una buona parte degli ideogrammi cinesi di uso comune</td>
+</tr>
+<tr>
+<td><em>n</em></td>
+<td>2<sup><em>n</em></sup></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Il <strong>byte</strong> è un gruppo di otto bit, e costituisce l'unità di misura di base della memoria. I suoi
+multipli si indicano con i prefissi del Sistema internazionale:</p>
+<table>
+<thead>
+<tr>
+<th>Unità</th>
+<th>Valore</th>
+<th>Ordine di grandezza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kilobyte (kB)</td>
+<td>mille byte</td>
+<td>una pagina di testo semplice, una breve email</td>
+</tr>
+<tr>
+<td>megabyte (MB)</td>
+<td>un milione di byte</td>
+<td>un romanzo in formato testo, una fotografia compressa</td>
+</tr>
+<tr>
+<td>gigabyte (GB)</td>
+<td>un miliardo di byte</td>
+<td>un film in alta definizione, alcune centinaia di libri illustrati</td>
+</tr>
+<tr>
+<td>terabyte (TB)</td>
+<td>mille miliardi di byte</td>
+<td>il disco di un computer recente</td>
+</tr>
+<tr>
+<td>petabyte (PB)</td>
+<td>un milione di miliardi di byte</td>
+<td>l'archivio di una grande biblioteca digitale</td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>1000 o 1024?</summary>
+<p>Per ragioni storiche, in informatica si è usato a lungo il valore 1 kB = 1024 byte, perché 1024 è
+una potenza di due (2<sup>10</sup>). Le norme attuali distinguono il kilobyte (kB, 1000 byte) dal
+<em>kibibyte</em> (KiB, 1024 byte), e così via per MiB, GiB e TiB. È questa la ragione per cui un disco
+venduto come "1 TB" appare, una volta collegato al computer, come circa 931 GB: il produttore
+conta in potenze di dieci, il sistema operativo in potenze di due.</p>
+</details>
+<hr />
+<h2 id="2-contare-in-binario-e-in-esadecimale">2. Contare in binario (e in esadecimale)<a class="headerlink" href="#2-contare-in-binario-e-in-esadecimale" title="Permanent link">&para;</a></h2>
+<h3 id="il-sistema-posizionale">Il sistema posizionale<a class="headerlink" href="#il-sistema-posizionale" title="Permanent link">&para;</a></h3>
+<p>Il sistema con cui contiamo abitualmente è <strong>posizionale in base 10</strong>: usa dieci cifre, e il valore di
+una cifra dipende dalla posizione che occupa. Nel numero 1819 la cifra 8 vale ottocento, perché si
+trova nella posizione delle centinaia:</p>
+<p>1819 = 1 × 1000 + 8 × 100 + 1 × 10 + 9 × 1</p>
+<p>Il sistema <strong>binario</strong> funziona allo stesso modo, ma con due sole cifre, e ogni posizione vale il
+doppio della precedente:</p>
+<table>
+<thead>
+<tr>
+<th>Posizione</th>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01000001</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>00010011</code></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Il primo numero vale 64 + 1 = <strong>65</strong>, il secondo 16 + 2 + 1 = <strong>19</strong>. Il numero 65 avrà un ruolo
+importante tra poco.</p>
+<p>Per passare dal decimale al binario si può procedere al contrario: si cerca la potenza di due più
+grande contenuta nel numero, la si sottrae e si ripete. Per 45: 32 ci sta (resta 13), 16 no, 8 sì
+(resta 5), 4 sì (resta 1), 2 no, 1 sì. Quindi 45 = <code>00101101</code>.</p>
+<h3 id="perche-esiste-lesadecimale">Perché esiste l'esadecimale<a class="headerlink" href="#perche-esiste-lesadecimale" title="Permanent link">&para;</a></h3>
+<p>Le sequenze binarie diventano presto illeggibili. Per questo i programmatori usano spesso il sistema
+<strong>esadecimale</strong> (base 16), che impiega le cifre da 0 a 9 e le lettere da A a F per i valori da 10 a 15.
+Il vantaggio è che <strong>una cifra esadecimale corrisponde esattamente a quattro bit</strong>, quindi un byte si
+scrive sempre con due cifre:</p>
+<table>
+<thead>
+<tr>
+<th>Binario</th>
+<th><code>0100</code> <code>0001</code></th>
+<th><code>1100</code> <code>0011</code></th>
+<th><code>1111</code> <code>1111</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esadecimale</td>
+<td><code>41</code></td>
+<td><code>C3</code></td>
+<td><code>FF</code></td>
+</tr>
+<tr>
+<td>Decimale</td>
+<td>65</td>
+<td>195</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+<p>Vedrete numeri esadecimali ovunque: nei codici dei colori sul web (<code>#980260</code> è il colore di questo
+sito), negli indirizzi di rete, nei codici dei caratteri Unicode (<code>U+00E8</code>).</p>
+<div class="admonition example">
+<p class="admonition-title">Esercizio (5 minuti)</p>
+<ol>
+<li>Quanto vale in decimale <code>00001010</code>? E <code>00011001</code>?</li>
+<li>Come si scrive 7 in binario? E 100?</li>
+<li>Il colore <code>#FF0000</code> è composto da tre byte (rosso, verde, blu). Che colore è?</li>
+</ol>
+<details class="success">
+<summary>Soluzioni</summary>
+<ol>
+<li><code>00001010</code> = 8 + 2 = <strong>10</strong>; <code>00011001</code> = 16 + 8 + 1 = <strong>25</strong>.</li>
+<li>7 = <code>00000111</code>; 100 = 64 + 32 + 4 = <code>01100100</code>.</li>
+<li>Rosso al massimo (<code>FF</code> = 255), verde e blu a zero: è <strong>rosso puro</strong>.</li>
+</ol>
+</details>
+</div>
+<hr />
+<h2 id="3-dai-numeri-alle-lettere">3. Dai numeri alle lettere<a class="headerlink" href="#3-dai-numeri-alle-lettere" title="Permanent link">&para;</a></h2>
+<h3 id="una-tabella-condivisa">Una tabella condivisa<a class="headerlink" href="#una-tabella-condivisa" title="Permanent link">&para;</a></h3>
+<p>Il computer non conosce le lettere, conosce soltanto numeri. Per scrivere un testo occorre quindi una
+convenzione condivisa che associ a ogni carattere un numero: questa convenzione si chiama <strong>codifica
+dei caratteri</strong> (<em>character encoding</em>). Chi scrive e chi legge un file devono usare la stessa tabella;
+se le tabelle differiscono, i numeri vengono interpretati come caratteri sbagliati.</p>
+<h3 id="ascii-un-alfabeto-per-una-sola-lingua">ASCII, un alfabeto per una sola lingua<a class="headerlink" href="#ascii-un-alfabeto-per-una-sola-lingua" title="Permanent link">&para;</a></h3>
+<p>La codifica più antica ancora in uso è <strong>ASCII</strong> (<em>American Standard Code for Information
+Interchange</em>), pubblicata negli Stati Uniti nel 1963. Usa 7 bit e definisce quindi 128 caratteri:</p>
+<ul>
+<li>33 caratteri di controllo, eredità delle telescriventi (il ritorno a capo, la tabulazione, un
+  segnale acustico);</li>
+<li>lo spazio, le cifre da 0 a 9, la punteggiatura e alcuni simboli;</li>
+<li>le 26 lettere dell'alfabeto inglese, maiuscole e minuscole.</li>
+</ul>
+<p>In ASCII <code>A</code> corrisponde a 65, <code>B</code> a 66, <code>a</code> a 97, lo spazio a 32. Una parola come <code>Ciao</code> diventa la
+sequenza di numeri 67 105 97 111.</p>
+<p>L'elenco è notevole soprattutto per ciò che <strong>manca</strong>: lettere accentate, la <code>ñ</code> spagnola, la <code>ç</code>
+francese, la <code>ß</code> tedesca, la <code>ø</code> danese, e naturalmente qualsiasi alfabeto non latino. ASCII è stato
+progettato per l'inglese, e per molti anni il mondo digitale ha dato per scontato che l'inglese
+bastasse.</p>
+<h3 id="il-caos-delle-codifiche-nazionali">Il caos delle codifiche nazionali<a class="headerlink" href="#il-caos-delle-codifiche-nazionali" title="Permanent link">&para;</a></h3>
+<p>Per rimediare, negli anni Ottanta e Novanta produttori e organismi di standardizzazione hanno usato
+l'ottavo bit del byte per aggiungere altri 128 caratteri. Ma lo hanno fatto ciascuno a modo proprio:</p>
+<ul>
+<li><strong>ISO 8859-1</strong> (detta <em>Latin-1</em>) per le lingue dell'Europa occidentale, e la sua variante
+  Microsoft <strong>Windows-1252</strong>;</li>
+<li><strong>ISO 8859-2</strong> per le lingue dell'Europa centrale (polacco, ceco, ungherese);</li>
+<li><strong>ISO 8859-5</strong> e <strong>KOI8-R</strong> per il cirillico;</li>
+<li><strong>ISO 8859-6</strong> per l'arabo, <strong>ISO 8859-7</strong> per il greco;</li>
+<li><strong>Shift-JIS</strong> ed <strong>EUC-JP</strong> per il giapponese, <strong>GB 2312</strong> per il cinese semplificato, <strong>Big5</strong> per
+  il cinese tradizionale.</li>
+</ul>
+<p>Lo stesso numero indicava così lettere diverse a seconda della tabella: il valore 232 era <code>è</code> in
+Latin-1, <code>č</code> in ISO 8859-2, <code>ш</code> in ISO 8859-5. Un file scritto in Polonia e aperto in Francia mostrava
+caratteri sbagliati, e non era possibile scrivere nello stesso documento, ad esempio, un testo
+francese con citazioni in russo.</p>
+<h3 id="il-mojibake">Il <em>mojibake</em><a class="headerlink" href="#il-mojibake" title="Permanent link">&para;</a></h3>
+<p>Questo genere di errore è così comune che il giapponese ha una parola apposita, <strong><em>mojibake</em></strong>
+(文字化け, "caratteri trasformati"), entrata ormai nel lessico informatico internazionale.</p>
+<div class="admonition example">
+<p class="admonition-title">Anatomia di un errore</p>
+<p>In UTF-8, la codifica che vedremo tra poco, la lettera <code>è</code> si scrive con due byte: <code>C3 A8</code>.
+Se un programma legge quei byte credendo che il testo sia in Latin-1, li interpreta come due
+caratteri distinti: <code>C3</code> diventa <code>Ã</code> e <code>A8</code> diventa <code>¨</code>. È per questo che <em>perché</em> si trasforma in
+<strong>perchÃ©</strong> e <em>città</em> in **cittÃ **.</p>
+<p>I byte del file sono corretti: è sbagliata la tabella usata per leggerli. Per questo il problema
+si risolve quasi sempre senza modificare il file, indicando al programma la codifica giusta.</p>
+</div>
+<p>Il caso opposto, un testo in Latin-1 letto come se fosse UTF-8, produce di solito un altro sintomo:
+il carattere sostitutivo <strong>�</strong>, con cui il programma segnala di aver incontrato una sequenza di byte
+che non sa decifrare.</p>
+<h3 id="unicode-un-numero-per-ogni-carattere">Unicode: un numero per ogni carattere<a class="headerlink" href="#unicode-un-numero-per-ogni-carattere" title="Permanent link">&para;</a></h3>
+<p>Per uscire dal caos, alla fine degli anni Ottanta un gruppo di aziende e di studiosi avviò il progetto
+<strong>Unicode</strong>, la cui prima versione fu pubblicata nel 1991. L'idea è semplice e ambiziosa: assegnare a
+<strong>ogni carattere di ogni sistema di scrittura</strong> un numero unico, valido ovunque, detto <strong>punto di
+codice</strong> (<em>code point</em>). Per convenzione lo si scrive in esadecimale preceduto da <code>U+</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Carattere</th>
+<th>Punto di codice</th>
+<th>Nome ufficiale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>U+0041</td>
+<td>LATIN CAPITAL LETTER A</td>
+</tr>
+<tr>
+<td><code>è</code></td>
+<td>U+00E8</td>
+<td>LATIN SMALL LETTER E WITH GRAVE</td>
+</tr>
+<tr>
+<td><code>ж</code></td>
+<td>U+0436</td>
+<td>CYRILLIC SMALL LETTER ZHE</td>
+</tr>
+<tr>
+<td><code>א</code></td>
+<td>U+05D0</td>
+<td>HEBREW LETTER ALEF</td>
+</tr>
+<tr>
+<td><code>ع</code></td>
+<td>U+0639</td>
+<td>ARABIC LETTER AIN</td>
+</tr>
+<tr>
+<td><code>अ</code></td>
+<td>U+0905</td>
+<td>DEVANAGARI LETTER A</td>
+</tr>
+<tr>
+<td><code>中</code></td>
+<td>U+4E2D</td>
+<td>CJK UNIFIED IDEOGRAPH-4E2D</td>
+</tr>
+<tr>
+<td><code>😀</code></td>
+<td>U+1F600</td>
+<td>GRINNING FACE</td>
+</tr>
+</tbody>
+</table>
+<p>Unicode contiene oggi <strong>oltre 150.000 caratteri</strong> e più di 160 sistemi di scrittura: le lingue vive
+più diffuse e molte lingue minoritarie, ma anche scritture storiche come il cuneiforme, i geroglifici
+egizi, la lineare B, il gotico di Wulfila, le rune. Ogni nuova versione dello standard ne aggiunge altri.</p>
+<p>I caratteri sono organizzati in <strong>blocchi</strong> (Latino di base, Cirillico, Arabo, Ideogrammi CJK
+unificati…) e ciascuno è accompagnato da proprietà formali: la categoria (lettera, cifra,
+punteggiatura), la direzione di scrittura, l'eventuale corrispondenza tra maiuscola e minuscola.</p>
+<h3 id="utf-8-come-scrivere-unicode-in-byte">UTF-8: come scrivere Unicode in byte<a class="headerlink" href="#utf-8-come-scrivere-unicode-in-byte" title="Permanent link">&para;</a></h3>
+<p>Unicode stabilisce <em>quale numero</em> corrisponde a ogni carattere, ma non dice ancora come scrivere quel
+numero in una sequenza di byte. Esistono diverse <strong>forme di codifica</strong>; la più diffusa, di gran lunga,
+è <strong>UTF-8</strong>, progettata nel 1992 da Ken Thompson e Rob Pike. UTF-8 usa un numero variabile di byte,
+da uno a quattro, a seconda del carattere:</p>
+<table>
+<thead>
+<tr>
+<th>Carattere</th>
+<th>Punto di codice</th>
+<th>Byte in UTF-8</th>
+<th>Quanti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code></td>
+<td>U+0041</td>
+<td><code>41</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>è</code></td>
+<td>U+00E8</td>
+<td><code>C3 A8</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>ж</code></td>
+<td>U+0436</td>
+<td><code>D0 B6</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>中</code></td>
+<td>U+4E2D</td>
+<td><code>E4 B8 AD</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>😀</code></td>
+<td>U+1F600</td>
+<td><code>F0 9F 98 80</code></td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Due proprietà ne spiegano il successo. La prima è la <strong>compatibilità con ASCII</strong>: i 128 caratteri di
+ASCII si codificano con un solo byte e con lo stesso valore, quindi qualsiasi testo ASCII è già, senza
+modifiche, un testo UTF-8 valido. La seconda è l'<strong>universalità</strong>: con UTF-8 si possono scrivere nello
+stesso file l'italiano, il russo, l'arabo e il giapponese. Oggi la quasi totalità delle pagine web
+usa questa codifica.</p>
+<p>Una conseguenza pratica è che in UTF-8 lettere e byte non coincidono. Il testo dell'<em>Infinito</em> che
+abbiamo visto nella L01 conta 552 caratteri ma occupa 556 byte: le quattro lettere accentate
+(<em>là</em>, <em>Così</em>, <em>immensità</em>, <em>m'è</em>) richiedono due byte ciascuna. Un testo in russo occupa circa il
+doppio dei byte rispetto a un testo inglese di pari lunghezza, uno in cinese o in giapponese circa il
+triplo per carattere.</p>
+<h3 id="una-lettera-due-codifiche-la-normalizzazione">Una lettera, due codifiche: la normalizzazione<a class="headerlink" href="#una-lettera-due-codifiche-la-normalizzazione" title="Permanent link">&para;</a></h3>
+<p>Unicode permette di scrivere alcuni caratteri in due modi diversi. La lettera <code>é</code> può essere un unico
+carattere (U+00E9, <em>e con accento acuto</em>) oppure la sequenza di una <code>e</code> semplice (U+0065) seguita da un
+<strong>accento combinante</strong> (U+0301), che il sistema sovrappone alla lettera precedente. A schermo le due
+forme sono indistinguibili, ma per il computer sono sequenze diverse, di lunghezza diversa.</p>
+<p>Il problema è tutt'altro che teorico. I file prodotti su macOS, ad esempio, usano spesso la forma
+scomposta per i nomi dei file, mentre Windows e la maggior parte delle pagine web usano la forma
+composta. Se costruite un corpus raccogliendo testi da fonti diverse e cercate la parola <em>café</em>,
+potreste ottenere solo una parte delle occorrenze. Per evitarlo, i testi vanno <strong>normalizzati</strong>,
+cioè convertiti tutti nella stessa forma: si parla di <strong>NFC</strong> (forma composta) e <strong>NFD</strong> (forma
+scomposta). La normalizzazione è uno dei primissimi passaggi di qualunque analisi linguistica
+automatica, e la ritroveremo nel Blocco C.</p>
+<p>Lo stesso meccanismo degli accenti combinanti rende possibile scrivere lingue che impilano più
+diacritici sulla stessa lettera, come il vietnamita (<em>ệ</em> ha sia un accento circonflesso sia un punto
+sottoscritto), o alfabeti in cui le vocali si scrivono come segni attorno alle consonanti, come
+l'hindi in devanagari.</p>
+<h3 id="le-emoji-sono-caratteri">Le emoji sono caratteri<a class="headerlink" href="#le-emoji-sono-caratteri" title="Permanent link">&para;</a></h3>
+<p>Le emoji fanno parte di Unicode a pieno titolo: sono caratteri con un punto di codice, un nome e delle
+proprietà, esattamente come le lettere. Ciascun sistema operativo le disegna però a modo proprio, ed è
+per questo che la stessa emoji può avere un aspetto, e talvolta una sfumatura di significato, diversi
+su un iPhone e su un telefono Android. Alcune sono in realtà sequenze di più caratteri:</p>
+<ul>
+<li>👍🏽 è il pollice alzato (U+1F44D) seguito da un <strong>modificatore di carnagione</strong> (U+1F3FD);</li>
+<li>👩‍💻 è la donna (U+1F469) unita al computer (U+1F4BB) da un carattere invisibile chiamato
+  <em>zero width joiner</em> (U+200D);</li>
+<li>🇮🇹 è formata da due "lettere regionali", I e T, che il sistema riconosce come codice del paese.</li>
+</ul>
+<hr />
+<h2 id="4-caratteri-glifi-e-caratteri-tipografici">4. Caratteri, glifi e caratteri tipografici<a class="headerlink" href="#4-caratteri-glifi-e-caratteri-tipografici" title="Permanent link">&para;</a></h2>
+<h3 id="carattere-e-glifo">Carattere e glifo<a class="headerlink" href="#carattere-e-glifo" title="Permanent link">&para;</a></h3>
+<p>È utile distinguere il <strong>carattere</strong>, cioè l'unità astratta che Unicode codifica ("la lettera a
+minuscola"), dal <strong>glifo</strong>, la forma concreta con cui quel carattere viene disegnato sullo schermo o
+sulla carta. La stessa <code>a</code> ha glifi molto diversi in Times New Roman, in Helvetica o in un corsivo
+calligrafico, ma resta lo stesso carattere U+0061. Il file contiene i caratteri, mentre il carattere
+tipografico (<em>font</em>) installato sul computer fornisce i glifi.</p>
+<p>In alcune scritture la distinzione è ancora più evidente. In arabo ogni lettera assume forme diverse a
+seconda che si trovi isolata, all'inizio, in mezzo o alla fine di una parola: il file contiene un solo
+carattere per ciascuna lettera, ed è il sistema di visualizzazione a scegliere la forma giusta.</p>
+<h3 id="il-tofu">Il <em>tofu</em><a class="headerlink" href="#il-tofu" title="Permanent link">&para;</a></h3>
+<p>Se il computer riceve un carattere corretto ma non possiede un font in grado di disegnarlo, al posto
+del glifo compare un rettangolo vuoto, talvolta con il codice esadecimale all'interno: □. Per la sua
+forma lo si chiama scherzosamente <strong><em>tofu</em></strong>. A differenza del <em>mojibake</em>, qui la codifica è giusta e
+manca soltanto il disegno. Il progetto di caratteri tipografici liberi <strong>Noto</strong> di Google prende il
+nome proprio da questo problema (<em>no more tofu</em>) e si propone di coprire tutte le scritture presenti
+in Unicode.</p>
+<div class="admonition warning">
+<p class="admonition-title">Due problemi diversi, due soluzioni diverse</p>
+<p>Se vedete <strong>caratteri sbagliati</strong> (Ã¨, Ð¶) il problema è la codifica: bisogna dire al programma
+con quale tabella leggere il file. Se vedete <strong>rettangoli vuoti</strong> il problema è il font: bisogna
+installarne uno che copra quella scrittura.</p>
+</div>
+<h3 id="la-direzione-della-scrittura">La direzione della scrittura<a class="headerlink" href="#la-direzione-della-scrittura" title="Permanent link">&para;</a></h3>
+<p>L'arabo, l'ebraico, il persiano e l'urdu si scrivono da destra verso sinistra, ma i numeri al loro
+interno si scrivono da sinistra verso destra, e un testo può contenere parole in alfabeto latino.
+Unicode gestisce queste situazioni con l'<strong>algoritmo bidirezionale</strong>, che stabilisce l'ordine di
+visualizzazione dei caratteri a partire dalle loro proprietà. Chi ha provato a inserire una citazione
+in arabo dentro un documento italiano sa che il cursore, a volte, sembra impazzire: è l'algoritmo
+bidirezionale al lavoro.</p>
+<div class="admonition question">
+<p class="admonition-title">Per discutere</p>
+<p>Le decisioni su quali caratteri entrino in Unicode sono prese dal <strong>Consorzio Unicode</strong>,
+un'organizzazione senza fini di lucro i cui membri con pieno diritto di voto sono soprattutto
+grandi aziende tecnologiche. La codifica di una scrittura richiede ricerca, documentazione e
+proposte formali, e molte scritture usate da comunità minoritarie, in Africa e in Asia in
+particolare, sono state aggiunte solo di recente o attendono ancora di esserlo. Per chi le usa,
+scrivere un messaggio sul telefono nella propria lingua è difficile o impossibile.
+Un caso discusso a lungo è quello dell'<strong>unificazione Han</strong>: per ridurre il numero di caratteri,
+Unicode ha assegnato lo stesso punto di codice a ideogrammi cinesi, giapponesi e coreani
+considerati varianti dello stesso carattere, una scelta che alcuni utenti giapponesi hanno
+percepito come una forzatura.
+Chi dovrebbe decidere quali lingue esistano nel mondo digitale, e con quali criteri?</p>
+</div>
+<hr />
+<h2 id="5-immagini-suoni-video">5. Immagini, suoni, video<a class="headerlink" href="#5-immagini-suoni-video" title="Permanent link">&para;</a></h2>
+<h3 id="le-immagini">Le immagini<a class="headerlink" href="#le-immagini" title="Permanent link">&para;</a></h3>
+<p>Un'immagine digitale <em>bitmap</em> (fotografie, scansioni) è una griglia di <strong>pixel</strong>. Due parametri ne
+determinano la qualità:</p>
+<ul>
+<li>la <strong>risoluzione</strong>, cioè il numero di pixel: una foto da 12 megapixel ha, ad esempio,
+  4000 × 3000 pixel;</li>
+<li>la <strong>profondità di colore</strong>, cioè quanti bit si usano per ciascun pixel. Nel modello più comune,
+  <strong>RGB</strong>, ogni pixel è descritto da tre valori (rosso, verde, blu) di un byte ciascuno, per un totale
+  di oltre sedici milioni di colori possibili.</li>
+</ul>
+<p>Una foto da 12 megapixel non compressa occupa quindi circa 12 milioni × 3 byte = <strong>36 MB</strong>. Lo stesso
+file salvato in JPEG pesa di solito tra 3 e 5 MB.</p>
+<p>Accanto alle immagini <em>bitmap</em> esistono le immagini <strong>vettoriali</strong> (SVG, molti loghi, i caratteri
+tipografici stessi), descritte come insiemi di forme geometriche: "un cerchio di raggio 10 con centro
+in (50, 50)". Si possono ingrandire all'infinito senza perdere nitidezza, ma non si prestano a
+rappresentare fotografie.</p>
+<h3 id="i-suoni">I suoni<a class="headerlink" href="#i-suoni" title="Permanent link">&para;</a></h3>
+<p>Il suono è un'onda di pressione. Per digitalizzarlo se ne misura l'ampiezza a intervalli regolari:
+è il <strong>campionamento</strong>. Un CD audio registra 44.100 campioni al secondo per ciascuno dei due canali
+stereo, con 16 bit (due byte) per campione. Un minuto di musica non compressa occupa quindi:</p>
+<p>44.100 campioni × 2 byte × 2 canali × 60 secondi ≈ <strong>10,6 MB</strong></p>
+<p>Un file MP3 di qualità media riduce lo stesso minuto a circa 1 MB.</p>
+<h3 id="il-video">Il video<a class="headerlink" href="#il-video" title="Permanent link">&para;</a></h3>
+<p>Un video è una sequenza di immagini (di solito 24, 25 o 30 al secondo) accompagnata da una traccia
+audio. Senza compressione, un minuto di video in alta definizione occuperebbe svariati gigabyte; è per
+questo che la compressione video è uno dei campi più sofisticati dell'informatica applicata.</p>
+<h3 id="la-compressione">La compressione<a class="headerlink" href="#la-compressione" title="Permanent link">&para;</a></h3>
+<p>Comprimere significa ridurre lo spazio occupato da un file. Si distinguono due famiglie:</p>
+<ul>
+<li>la compressione <strong>senza perdita</strong> (<em>lossless</em>: ZIP, PNG, FLAC) individua regolarità e ripetizioni
+  nei dati e le descrive in modo più compatto. Il file originale si può ricostruire esattamente,
+  bit per bit;</li>
+<li>la compressione <strong>con perdita</strong> (<em>lossy</em>: JPEG, MP3, la maggior parte dei formati video) elimina i
+  dettagli che occhio e orecchio umani percepiscono meno. Il risultato è molto più leggero, ma
+  l'originale non è più recuperabile, e ogni nuovo salvataggio peggiora un poco la qualità.</li>
+</ul>
+<p>Per conservare un documento nel lungo periodo (un archivio, un'edizione digitale, una registrazione
+sul campo) si usano formati senza perdita; i formati con perdita vanno bene per la diffusione.</p>
+<h3 id="i-metadati-nascosti-nei-file">I metadati nascosti nei file<a class="headerlink" href="#i-metadati-nascosti-nei-file" title="Permanent link">&para;</a></h3>
+<p>Molti file contengono, oltre ai dati veri e propri, dei <strong>metadati</strong>, cioè dati che descrivono il
+file stesso. Una fotografia scattata con lo smartphone registra di norma, nel formato <strong>EXIF</strong>, la
+data e l'ora dello scatto, il modello del telefono e spesso anche le <strong>coordinate GPS</strong> del luogo.
+Un documento di Word conserva il nome dell'autore e la cronologia di alcune modifiche.</p>
+<div class="admonition question">
+<p class="admonition-title">Per discutere</p>
+<p>Pubblicare online una foto scattata a casa propria può rivelare, attraverso i metadati, l'indirizzo
+esatto in cui è stata scattata. Molti social network rimuovono questi dati al momento del
+caricamento, ma non tutti i servizi lo fanno. Sapevate che le vostre foto contengono queste
+informazioni? Ne riparleremo a proposito di privacy nella L07.</p>
+</div>
+<hr />
+<h2 id="6-dove-stanno-i-dati-un-ripasso">6. Dove stanno i dati: un ripasso<a class="headerlink" href="#6-dove-stanno-i-dati-un-ripasso" title="Permanent link">&para;</a></h2>
+<p>Nella L01 abbiamo distinto <strong>hardware</strong> e <strong>software</strong> e visto le componenti principali di un computer.
+Alla luce di quanto visto oggi possiamo aggiungere un dettaglio: tutto ciò che abbiamo descritto finora
+(testi, immagini, suoni) vive come sequenza di byte nella <strong>memoria centrale</strong> (RAM) mentre un programma
+lo sta usando, e nella <strong>memoria di massa</strong> (disco, SSD) quando viene salvato. Quando "salviamo nel
+<em>cloud</em>", quei byte finiscono sui dischi dei server di un'azienda, in un <strong>data center</strong> che ha una sede
+fisica, un proprietario e una legislazione di riferimento: ne riparleremo nella L06.</p>
+<hr />
+<h2 id="7-file-e-formati">7. File e formati<a class="headerlink" href="#7-file-e-formati" title="Permanent link">&para;</a></h2>
+<h3 id="che-cosa-ce-in-un-file">Che cosa c'è in un file<a class="headerlink" href="#che-cosa-ce-in-un-file" title="Permanent link">&para;</a></h3>
+<p>Un <strong>file</strong> è una sequenza di byte a cui il sistema operativo associa un nome e alcune informazioni
+(dimensione, data di modifica, permessi). Il <strong>formato</strong> è la convenzione che stabilisce come
+interpretare quella sequenza: dove inizia il testo, come sono descritte le immagini, dove si trovano
+i metadati.</p>
+<p>L'<strong>estensione</strong> (<code>.txt</code>, <code>.docx</code>, <code>.pdf</code>, <code>.jpg</code>) è soltanto un'indicazione per il sistema operativo,
+che la usa per scegliere con quale programma aprire il file. Rinominare <code>foto.jpg</code> in <code>foto.txt</code> non
+trasforma l'immagine in testo: il contenuto resta lo stesso, e il Blocco note mostrerà soltanto una
+serie di simboli incomprensibili.</p>
+<h3 id="tre-grandi-famiglie">Tre grandi famiglie<a class="headerlink" href="#tre-grandi-famiglie" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Esempi</th>
+<th>Che cosa contiene</th>
+<th>Si apre con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testo semplice</strong></td>
+<td><code>.txt</code>, <code>.csv</code>, <code>.md</code>, <code>.html</code>, <code>.xml</code>, <code>.json</code></td>
+<td>solo caratteri, in una codifica come UTF-8</td>
+<td>qualsiasi editor di testo</td>
+</tr>
+<tr>
+<td><strong>Documenti formattati</strong></td>
+<td><code>.docx</code>, <code>.odt</code>, <code>.pdf</code>, <code>.epub</code></td>
+<td>testo, impaginazione, stili, immagini, metadati</td>
+<td>programmi specifici</td>
+</tr>
+<tr>
+<td><strong>Multimediali</strong></td>
+<td><code>.png</code>, <code>.jpg</code>, <code>.mp3</code>, <code>.mp4</code></td>
+<td>immagini, suoni, video, spesso compressi</td>
+<td>visualizzatori e lettori</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Che cosa c'è dentro un .docx?</p>
+<p>Fate una copia di un documento Word, cambiate l'estensione da <code>.docx</code> a <code>.zip</code> e aprite l'archivio.
+Troverete una serie di cartelle e di file: il testo del documento è in <code>word/document.xml</code>, scritto
+in un linguaggio di marcatura (lo vedremo nella L03), mentre le immagini sono nella cartella
+<code>word/media</code>. Un <code>.docx</code> è dunque un archivio compresso di file di testo strutturato.</p>
+</div>
+<h3 id="il-pdf">Il PDF<a class="headerlink" href="#il-pdf" title="Permanent link">&para;</a></h3>
+<p>Il <strong>PDF</strong> (<em>Portable Document Format</em>) è stato progettato per far apparire un documento identico su
+qualsiasi computer e su qualsiasi stampante. Per ottenere questo risultato descrive la <strong>posizione</strong>
+di ogni carattere sulla pagina, più che la struttura del testo. Ne derivano problemi ben noti a chi
+lavora sui testi: copiando da un PDF si ottengono parole spezzate dalla sillabazione, righe interrotte,
+note a piè di pagina mescolate al testo principale, colonne lette nell'ordine sbagliato. Un PDF ottenuto
+dalla scansione di un libro, poi, può contenere soltanto immagini, senza alcun testo.</p>
+<h3 id="formati-aperti-e-proprietari">Formati aperti e proprietari<a class="headerlink" href="#formati-aperti-e-proprietari" title="Permanent link">&para;</a></h3>
+<p>Un formato è <strong>aperto</strong> quando le sue specifiche sono pubbliche e chiunque può scrivere un programma
+in grado di leggerlo e produrlo, senza chiedere permessi né pagare licenze. Sono aperti, ad esempio,
+il testo semplice, HTML, XML, PNG, il formato <strong>OpenDocument</strong> (<code>.odt</code>) usato da LibreOffice e
+normato dallo standard internazionale ISO/IEC 26300, e oggi anche il PDF. Un formato è
+<strong>proprietario</strong> quando è controllato da un'azienda, che può modificarlo o smettere di supportarlo.</p>
+<p>La scelta del formato ha conseguenze sulla <strong>conservazione a lungo termine</strong>. I file scritti con
+programmi molto diffusi negli anni Ottanta e Novanta, come WordStar o le prime versioni di
+WordPerfect, sono oggi difficili da aprire; i dischi floppy su cui erano salvati non si leggono più con
+i computer attuali. Si parla, con qualche enfasi, del rischio di una <em>digital dark age</em>, un'età oscura
+digitale in cui una parte della memoria del nostro tempo diventa illeggibile. Per un testo destinato a
+durare decenni, un formato aperto e il più semplice possibile resta la scelta più prudente.</p>
+<div class="admonition tip">
+<p class="admonition-title">Perché vi riguarda</p>
+<p>Quasi tutti gli strumenti di analisi linguistica (programmi di concordanze, corpora, strumenti di
+NLP) lavorano su <strong>testo semplice in UTF-8</strong>. Un <code>.docx</code> o un PDF vanno prima convertiti, e nella
+conversione si perdono o si alterano note, corsivi, caratteri speciali, a volte intere porzioni di
+testo. Conoscere questi passaggi vi risparmierà molte ore quando dovrete preparare un corpus per la
+tesi.</p>
+</div>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>Durante la lezione (online)</strong></p>
+<ol>
+<li><strong>Il vostro nome in binario.</strong> Usando la tabella ASCII, scrivete in binario l'iniziale del vostro
+   nome e incollatela nella chat. Gli altri devono decifrarla.</li>
+<li><strong>Caccia al mojibake.</strong> Ci sono due file con lo stesso testo in cinque lingue,
+   <a href="../../assets/files/prova-codifica-utf8.txt">uno salvato in UTF-8</a> e
+   <a href="../../assets/files/prova-codifica-latin1.txt">uno salvato in Latin-1</a>.
+   Apriteli nel browser: quale si legge male, e in che modo? Scaricate poi il file "rotto" e apritelo
+   in un editor (Notepad++, VS Code, TextEdit) scegliendo la codifica <em>Western / ISO 8859-1</em>. Che cosa
+   cambia?</li>
+<li><strong>Esplorare Unicode.</strong> Cercate su <a href="https://codepoints.net/">Codepoints</a> o sulle
+   <a href="https://www.unicode.org/charts/">tabelle ufficiali</a> un carattere della lingua che studiate. Qual è
+   il suo punto di codice? A quale blocco appartiene? Quanti byte occupa in UTF-8?</li>
+<li><strong>Dentro un .docx.</strong> Seguite le istruzioni del box qui sopra e aprite <code>word/document.xml</code>.
+   Riuscite a trovare il vostro testo?</li>
+</ol>
+<p><strong>A casa (facoltativo)</strong></p>
+<ul>
+<li>Prendete una foto scattata con il vostro telefono e controllatene i metadati (su Windows: tasto
+  destro → <em>Proprietà</em> → <em>Dettagli</em>; su macOS: apri con <em>Anteprima</em> → <em>Strumenti</em> → <em>Mostra
+  ispettore</em>). Contiene le coordinate GPS?</li>
+<li>Prendete un documento Word con accenti, corsivi e una nota a piè di pagina. Salvatelo come <em>Testo
+  semplice (.txt)</em> scegliendo la codifica UTF-8 e riapritelo con il Blocco note o TextEdit. Che cosa è
+  sopravvissuto alla conversione?</li>
+</ul>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Quante combinazioni diverse si possono rappresentare con 8 bit?</p>
+<ul>
+<li>A. 8</li>
+<li>B. 16</li>
+<li>C. 128</li>
+<li>D. 256</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>D.</strong> 2<sup>8</sup> = 256. Le combinazioni di 7 bit, quelle di ASCII, sono 128.</p>
+</details>
+<p><strong>2.</strong> Il numero binario <code>00000101</code> corrisponde in decimale a:</p>
+<ul>
+<li>A. 3</li>
+<li>B. 5</li>
+<li>C. 6</li>
+<li>D. 101</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> 4 + 1 = 5.</p>
+</details>
+<p><strong>3.</strong> Perché i programmatori usano spesso il sistema esadecimale?</p>
+<ul>
+<li>A. Perché i computer funzionano in base 16</li>
+<li>B. Perché ogni cifra esadecimale corrisponde a quattro bit, e un byte si scrive con due cifre</li>
+<li>C. Perché è più preciso del sistema binario</li>
+<li>D. Perché è il sistema usato da ASCII</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Il computer lavora in binario; l'esadecimale è solo un modo più compatto di scrivere i bit.</p>
+</details>
+<p><strong>4.</strong> Qual è il limite principale della codifica ASCII?</p>
+<ul>
+<li>A. Occupa troppo spazio</li>
+<li>B. Rappresenta soltanto i caratteri dell'alfabeto inglese</li>
+<li>C. Non rappresenta i numeri</li>
+<li>D. Funziona soltanto su computer Apple</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> 128 caratteri, senza lettere accentate né alfabeti non latini.</p>
+</details>
+<p><strong>5.</strong> Un testo mostra "cittÃ " al posto di "città". Qual è la causa più probabile?</p>
+<ul>
+<li>A. Il file è stato danneggiato da un virus</li>
+<li>B. Manca un font adatto a mostrare la lettera</li>
+<li>C. Il file è in UTF-8 ma viene letto con un'altra codifica</li>
+<li>D. Il file è troppo grande</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> È un caso di <em>mojibake</em>. Se mancasse il font si vedrebbe un rettangolo vuoto (<em>tofu</em>).</p>
+</details>
+<p><strong>6.</strong> Quale affermazione su Unicode e UTF-8 è corretta?</p>
+<ul>
+<li>A. Unicode e UTF-8 sono due nomi dello stesso standard</li>
+<li>B. Unicode assegna un numero a ogni carattere, UTF-8 stabilisce come scrivere quel numero in byte</li>
+<li>C. UTF-8 può rappresentare solo le lingue europee</li>
+<li>D. Unicode è un formato di file per documenti di testo</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>7.</strong> Due parole visivamente identiche, <em>café</em> e <em>café</em>, non vengono riconosciute come uguali da un
+programma di ricerca. Qual è la spiegazione più probabile?</p>
+<ul>
+<li>A. Una delle due è scritta in un font diverso</li>
+<li>B. L'accento è codificato in un caso come carattere unico, nell'altro come carattere combinante</li>
+<li>C. Una delle due è in maiuscolo</li>
+<li>D. Il programma non supporta il francese</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Per risolvere il problema si normalizza il testo (NFC o NFD).</p>
+</details>
+<p><strong>8.</strong> La memoria RAM:</p>
+<ul>
+<li>A. conserva i dati anche quando il computer è spento</li>
+<li>B. è la memoria di lavoro del processore, veloce e volatile</li>
+<li>C. è un tipo di processore</li>
+<li>D. è il sistema operativo</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> I dati che devono essere conservati vanno salvati sulla memoria di massa.</p>
+</details>
+<p><strong>9.</strong> Quale di questi formati usa una compressione <strong>senza perdita</strong>?</p>
+<ul>
+<li>A. JPEG</li>
+<li>B. MP3</li>
+<li>C. PNG</li>
+<li>D. MP4</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> PNG permette di ricostruire esattamente l'immagine originale.</p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Petzold, C. (2022). <em>Code: The Hidden Language of Computer Hardware and Software</em> (2ª ed.). Microsoft Press.</li>
+<li>Spolsky, J. (2003). <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/"><em>The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets</em></a>.</li>
+<li>Il sito del <a href="https://home.unicode.org/">Consorzio Unicode</a> e quello dello
+  <a href="https://www.linguistics.berkeley.edu/sei/">Script Encoding Initiative</a> (Università di Berkeley),
+  che lavora per codificare le scritture ancora escluse.</li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-a-fondamenti">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#bit">Bit</a> ·
+<a href="../../glossario/#byte">Byte</a> ·
+<a href="../../glossario/#sistema-binario">Sistema binario</a> ·
+<a href="../../glossario/#esadecimale">Esadecimale</a> ·
+<a href="../../glossario/#codifica-dei-caratteri">Codifica dei caratteri</a> ·
+<a href="../../glossario/#ascii">ASCII</a> ·
+<a href="../../glossario/#unicode">Unicode</a> ·
+<a href="../../glossario/#punto-di-codice">Punto di codice</a> ·
+<a href="../../glossario/#utf-8">UTF-8</a> ·
+<a href="../../glossario/#mojibake">Mojibake</a> ·
+<a href="../../glossario/#normalizzazione">Normalizzazione</a> ·
+<a href="../../glossario/#glifo">Glifo</a> ·
+<a href="../../glossario/#tofu">Tofu</a> ·
+<a href="../../glossario/#pixel">Pixel</a> ·
+<a href="../../glossario/#compressione">Compressione</a> ·
+<a href="../../glossario/#metadati">Metadati</a> ·
+<a href="../../glossario/#hardware">Hardware</a> ·
+<a href="../../glossario/#software">Software</a> ·
+<a href="../../glossario/#sistema-operativo">Sistema operativo</a> ·
+<a href="../../glossario/#formato-aperto">Formato aperto</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../01-dati-e-macchine/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L01 · Dati e macchine">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L01 · Dati e macchine
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-strutturare-i-dati/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L03 · Strutturare i dati">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L03 · Strutturare i dati
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

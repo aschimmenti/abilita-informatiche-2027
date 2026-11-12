@@ -1,0 +1,3040 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/01-dati-e-macchine/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-rappresentazione/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>L01 · Dati e macchine - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l01-dati-e-macchine" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L01 · Dati e macchine
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-da-dove-partiamo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Da dove partiamo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Da dove partiamo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-alzata-di-mano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per alzata di mano
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-che-cosa-sono-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Che cosa sono i dati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Che cosa sono i dati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-parola-che-sembra-ovvia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una parola che sembra ovvia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati-presi-non-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dati "presi", non "dati"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I dataset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-perche-servono-i-dati-londra-1854" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Perché servono i dati: Londra, 1854
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Perché servono i dati: Londra, 1854">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unepidemia-nel-quartiere-di-soho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un'epidemia nel quartiere di Soho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-mostrava-la-mappa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa mostrava la mappa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ci-insegna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa ci insegna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-che-cosa-ce-ne-facciamo-dei-dati-quando-studiamo-le-lingue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Che cosa ce ne facciamo dei dati quando studiamo le lingue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Che cosa ce ne facciamo dei dati quando studiamo le lingue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-macroscopio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il macroscopio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-linguistica-dei-corpora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La linguistica dei corpora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lannotazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'annotazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelli-linguistici-e-processi-automatici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelli linguistici e processi automatici
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-la-parte-difficile-rendere-computabile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. La parte difficile: rendere computabile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. La parte difficile: rendere computabile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-vuol-dire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa vuol dire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dai-simboli-alle-macchine-una-breve-storia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dai simboli alle macchine: una breve storia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Dai simboli alle macchine: una breve storia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ada-lovelace-e-la-macchina-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ada Lovelace e la macchina analitica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati-da-contare-le-schede-perforate-di-hollerith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dati da contare: le schede perforate di Hollerith
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turing-enigma-e-bletchley-park" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turing, Enigma e Bletchley Park
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warren-weaver-tradurre-come-decifrare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warren Weaver: tradurre come decifrare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-dare-istruzioni-a-una-macchina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Dare istruzioni a una macchina
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Dare istruzioni a una macchina">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#istruzioni-e-interfacce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni e interfacce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-e-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware e software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-lhardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. L'hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. L&#39;hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prima-di-von-neumann-eniac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prima di von Neumann: ENIAC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidea-del-programma-memorizzato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'idea del programma memorizzato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-componenti-principali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le componenti principali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-lavora-il-ciclo-del-processore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come lavora: il ciclo del processore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molti-tipi-di-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Molti tipi di computer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-il-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Il software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Il software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-operativo-e-applicazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema operativo e applicazioni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ce-dentro-il-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa c'è dentro il software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-due-esempi-dal-vivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Due esempi dal vivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Due esempi dal vivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wikidata-informazioni-strutturate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wikidata: informazioni strutturate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diacoris-un-corpus-dellitaliano-nel-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DiaCORIS: un corpus dell'italiano nel tempo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DiaCORIS: un corpus dell&#39;italiano nel tempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-si-interroga-diacoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come si interroga DiaCORIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-da-dove-partiamo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Da dove partiamo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Da dove partiamo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-alzata-di-mano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per alzata di mano
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-che-cosa-sono-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Che cosa sono i dati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Che cosa sono i dati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-parola-che-sembra-ovvia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una parola che sembra ovvia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati-presi-non-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dati "presi", non "dati"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I dataset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-perche-servono-i-dati-londra-1854" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Perché servono i dati: Londra, 1854
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Perché servono i dati: Londra, 1854">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unepidemia-nel-quartiere-di-soho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un'epidemia nel quartiere di Soho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-mostrava-la-mappa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa mostrava la mappa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ci-insegna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa ci insegna
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-che-cosa-ce-ne-facciamo-dei-dati-quando-studiamo-le-lingue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Che cosa ce ne facciamo dei dati quando studiamo le lingue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Che cosa ce ne facciamo dei dati quando studiamo le lingue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-macroscopio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il macroscopio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-linguistica-dei-corpora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La linguistica dei corpora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lannotazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'annotazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelli-linguistici-e-processi-automatici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelli linguistici e processi automatici
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-la-parte-difficile-rendere-computabile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. La parte difficile: rendere computabile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. La parte difficile: rendere computabile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-vuol-dire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa vuol dire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dai-simboli-alle-macchine-una-breve-storia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dai simboli alle macchine: una breve storia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Dai simboli alle macchine: una breve storia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ada-lovelace-e-la-macchina-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ada Lovelace e la macchina analitica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati-da-contare-le-schede-perforate-di-hollerith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dati da contare: le schede perforate di Hollerith
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turing-enigma-e-bletchley-park" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turing, Enigma e Bletchley Park
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warren-weaver-tradurre-come-decifrare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warren Weaver: tradurre come decifrare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-dare-istruzioni-a-una-macchina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Dare istruzioni a una macchina
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Dare istruzioni a una macchina">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#istruzioni-e-interfacce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni e interfacce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-e-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware e software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-lhardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. L'hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. L&#39;hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prima-di-von-neumann-eniac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prima di von Neumann: ENIAC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidea-del-programma-memorizzato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'idea del programma memorizzato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-componenti-principali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le componenti principali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-lavora-il-ciclo-del-processore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come lavora: il ciclo del processore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#molti-tipi-di-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Molti tipi di computer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-il-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Il software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Il software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistema-operativo-e-applicazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema operativo e applicazioni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-ce-dentro-il-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa c'è dentro il software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-due-esempi-dal-vivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Due esempi dal vivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Due esempi dal vivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wikidata-informazioni-strutturate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wikidata: informazioni strutturate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diacoris-un-corpus-dellitaliano-nel-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DiaCORIS: un corpus dell'italiano nel tempo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DiaCORIS: un corpus dell&#39;italiano nel tempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-si-interroga-diacoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come si interroga DiaCORIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l01-dati-e-macchine">L01 · Dati e macchine<a class="headerlink" href="#l01-dati-e-macchine" title="Permanent link">&para;</a></h1>
+<p class="meta">In presenza · 2 ore · Blocco A — Fondamenti</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Questa prima lezione parte da una domanda semplice: che cosa sono i dati, e perché ce ne
+occupiamo? Partiremo da un'epidemia di colera nella Londra del 1854, vedremo che cosa si fa con i
+dati nello studio delle lingue e ci soffermeremo sull'operazione più difficile di tutte: trasformare
+qualcosa che una macchina non sa trattare (una frase, una registrazione, un documento) in qualcosa
+che può elaborare. Attraverso una breve storia che va da Ada Lovelace alla decrittazione di Enigma
+arriveremo alla traduzione automatica, e poi alle basi: come si danno istruzioni a un computer, che
+cosa sono hardware e software e quali forme prende il software. Chiuderemo con due esempi dal vivo,
+Wikidata e il corpus DiaCORIS.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L01.html" title="Slide della lezione 1" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L01.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L01.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>spiegare che cosa si intende per <strong>dato</strong> e per <strong>dataset</strong>, e perché nessun dato è del tutto neutrale;</li>
+<li>raccontare il caso della mappa del colera di John Snow e spiegare che cosa insegna sull'uso dei dati;</li>
+<li>descrivere che cosa si fa con i dati nello studio delle lingue: <strong>corpora</strong>, <strong>annotazione</strong>,
+  modelli linguistici, processi automatici;</li>
+<li>spiegare perché rendere <strong>computabile</strong> un oggetto linguistico richiede una serie di scelte;</li>
+<li>collocare nel tempo alcune tappe fondamentali: Lovelace, Turing e Bletchley Park, Weaver e la
+  traduzione automatica;</li>
+<li>distinguere <strong>hardware</strong> e <strong>software</strong> e riconoscere i principali tipi di interfaccia;</li>
+<li>riconoscere nel software tre componenti di base: <strong>strutture dati</strong>, <strong>linguaggi di programmazione</strong>
+  e <strong>linguaggi di marcatura</strong>.</li>
+</ul>
+<hr />
+<h2 id="1-da-dove-partiamo">1. Da dove partiamo<a class="headerlink" href="#1-da-dove-partiamo" title="Permanent link">&para;</a></h2>
+<h3 id="il-quiz">Il quiz<a class="headerlink" href="#il-quiz" title="Permanent link">&para;</a></h3>
+<p>La lezione si apre con un quiz su <strong>Kahoot</strong>. Inquadrate il QR code proiettato in aula, oppure aprite
+<a href="https://kahoot.it">kahoot.it</a> sul telefono e inserite il PIN che compare sullo schermo. Potete usare
+un soprannome: il quiz serve a capire che cosa la classe sa già su computer, web, dati, traduzione
+automatica e intelligenza artificiale, e lo ripeteremo nell'ultima lezione per vedere che cosa è
+cambiato. Nessuna risposta ha conseguenze sull'esame.</p>
+<h3 id="per-alzata-di-mano">Per alzata di mano<a class="headerlink" href="#per-alzata-di-mano" title="Permanent link">&para;</a></h3>
+<p>Alcune domande non hanno una risposta giusta o sbagliata, e le faremo per alzata di mano. Chi di voi…</p>
+<ol>
+<li>sa che cosa sia la <strong>linguistica computazionale</strong>, anche solo a grandi linee?</li>
+<li>conosce almeno un <strong>linguaggio di programmazione</strong> (Python, JavaScript, R), anche a livello elementare?</li>
+<li>ha mai scritto o modificato una pagina in <strong>HTML</strong>?</li>
+<li>ha mai usato un <strong>corpus</strong> linguistico (CORIS, BNC, Sketch Engine, un corpus parallelo)?</li>
+<li>usa un <strong>gestore bibliografico</strong> come Zotero o Mendeley?</li>
+<li>ha mai aperto il <strong>terminale</strong> del proprio computer?</li>
+<li>usa abitualmente la <strong>traduzione automatica</strong> per studiare o per lavorare?</li>
+<li>ha usato un <strong>chatbot</strong> (ChatGPT, Claude, Gemini) per preparare un esame o scrivere un testo?</li>
+<li>tra quelli che lo usano, <strong>verifica sempre</strong> le informazioni che il chatbot fornisce?</li>
+<li>ha un account su <strong>GitHub</strong>?</li>
+</ol>
+<hr />
+<h2 id="2-che-cosa-sono-i-dati">2. Che cosa sono i dati<a class="headerlink" href="#2-che-cosa-sono-i-dati" title="Permanent link">&para;</a></h2>
+<h3 id="una-parola-che-sembra-ovvia">Una parola che sembra ovvia<a class="headerlink" href="#una-parola-che-sembra-ovvia" title="Permanent link">&para;</a></h3>
+<p>Nell'immaginario comune i dati sono numeri: statistiche, percentuali, tabelle, grafici. In realtà la
+parola copre un territorio molto più ampio. Sono dati anche una registrazione audio, la fotografia di
+un documento, la trascrizione di un'intervista, l'elenco dei libri prestati da una biblioteca, la
+cronologia delle ricerche su un motore di ricerca, i messaggi che vi scambiate ogni giorno.</p>
+<p><em>Dato</em> viene dal latino <em>datum</em>, participio passato di <em>dare</em>: letteralmente "ciò che è dato".
+L'etimologia suggerisce un'idea precisa, cioè che i dati siano qualcosa che il mondo ci consegna già
+pronto, indipendente da chi lo osserva, e quindi neutrale e oggettivo.</p>
+<h3 id="dati-presi-non-dati">Dati "presi", non "dati"<a class="headerlink" href="#dati-presi-non-dati" title="Permanent link">&para;</a></h3>
+<p>Le cose, però, sono meno semplici. Ogni dato esiste perché qualcuno ha deciso di <strong>raccoglierlo</strong>, ha
+scelto <strong>che cosa</strong> registrare e <strong>come</strong> farlo, e ha usato uno strumento con i propri limiti. La
+studiosa Johanna Drucker ha proposto, provocatoriamente, di sostituire la parola <em>data</em> con
+<strong><em>capta</em></strong>, "ciò che è stato preso", proprio per ricordare che ogni dato è il risultato di un atto di
+selezione e di interpretazione.</p>
+<p>Pensate a un'operazione che sembra puramente meccanica: contare le parole di un testo. Per farlo bisogna
+prima decidere che cosa sia una parola. <em>L'albero</em> è una parola o due? <em>Fine settimana</em> è una parola o
+due? E <em>weekend</em>? <em>Glielo</em> è una parola sola o tre pronomi uniti? Diverse risposte producono conteggi
+diversi, e tutte sono legittime. Il numero finale sembra oggettivo, ma incorpora una serie di scelte che
+chi lo legge spesso non vede.</p>
+<div class="admonition tip">
+<p class="admonition-title">Una definizione di lavoro</p>
+<p>In questo corso chiameremo <strong>dati</strong> le rappresentazioni di fenomeni (oggetti, eventi, testi,
+comportamenti) raccolte e organizzate per poter essere usate come <strong>prove</strong>: per descrivere,
+confrontare, spiegare, dimostrare qualcosa. Ciò che rende qualcosa un dato è l'uso che se ne fa.</p>
+</div>
+<h3 id="i-dataset">I dataset<a class="headerlink" href="#i-dataset" title="Permanent link">&para;</a></h3>
+<p>I dati si raccolgono di solito in un <strong>dataset</strong>, cioè in una raccolta organizzata secondo criteri
+precisi, pensata per sostenere un certo tipo di analisi o di interpretazione. Qualche esempio dal
+mondo delle lingue:</p>
+<ul>
+<li>un <strong>corpus</strong>, cioè una raccolta di testi scritti o trascritti dal parlato, selezionati con criteri
+  espliciti (periodo, genere, varietà di lingua) e organizzati per essere analizzati;</li>
+<li>un <strong>dizionario elettronico</strong>, in cui ogni voce è suddivisa in campi (lemma, categoria grammaticale,
+  pronuncia, significati, esempi);</li>
+<li>un <strong>corpus di apprendenti</strong>, che raccoglie testi scritti da chi sta imparando una lingua straniera e
+  ne annota gli errori;</li>
+<li>un <strong>atlante linguistico</strong>, che registra come si dice la stessa cosa in centinaia di località diverse;</li>
+<li>una <strong>memoria di traduzione</strong>, che conserva coppie di frasi già tradotte per riutilizzarle.</li>
+</ul>
+<p>Quando incontrate un dataset, conviene sempre chiedersi chi lo ha costruito, con quali strumenti, con
+quali criteri di selezione, che cosa ha escluso e per quale scopo. Le risposte a queste domande dicono
+molto sui limiti di ciò che il dataset vi permette di concludere.</p>
+<hr />
+<h2 id="3-perche-servono-i-dati-londra-1854">3. Perché servono i dati: Londra, 1854<a class="headerlink" href="#3-perche-servono-i-dati-londra-1854" title="Permanent link">&para;</a></h2>
+<h3 id="unepidemia-nel-quartiere-di-soho">Un'epidemia nel quartiere di Soho<a class="headerlink" href="#unepidemia-nel-quartiere-di-soho" title="Permanent link">&para;</a></h3>
+<p>Tra la fine di agosto e l'inizio di settembre del 1854, nel quartiere londinese di Soho, un'epidemia di
+colera uccise più di cinquecento persone in una decina di giorni. All'epoca la teoria più accreditata
+sosteneva che il colera si trasmettesse attraverso i <strong>miasmi</strong>, cioè l'aria malsana che si sprigionava
+dalla sporcizia e dai materiali in decomposizione.</p>
+<p>Il medico <strong>John Snow</strong> non era convinto di questa spiegazione e sospettava che la malattia si
+diffondesse attraverso l'acqua. Per verificarlo raccolse i dati sui decessi, casa per casa, e li
+riportò su una mappa del quartiere, segnando ogni morte con una piccola barra nera in corrispondenza
+dell'abitazione della vittima. Sulla stessa mappa indicò le pompe pubbliche da cui gli abitanti
+attingevano l'acqua.</p>
+<figure>
+<p><img alt="La mappa del colera di John Snow, 1854" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Snow-cholera-map-1.jpg?width=1200" width="560" /></p>
+<figcaption>La mappa di John Snow (1854), pubblicata nella seconda edizione di <em>On the Mode of
+Communication of Cholera</em> (1855). Pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="che-cosa-mostrava-la-mappa">Che cosa mostrava la mappa<a class="headerlink" href="#che-cosa-mostrava-la-mappa" title="Permanent link">&para;</a></h3>
+<p>Una volta disposti nello spazio, i dati mostravano qualcosa che l'elenco dei morti non rivelava: i
+decessi si concentravano attorno alla pompa di <strong>Broad Street</strong>. Snow raccolse anche informazioni sulle
+eccezioni, che si rivelarono decisive. Gli operai di una birreria vicina, che bevevano la birra prodotta
+sul posto e non l'acqua della pompa, erano stati in gran parte risparmiati; lo stesso valeva per gli
+ospiti di un ospizio dotato di un proprio pozzo. Al contrario, alcune vittime che abitavano lontano dal
+quartiere avevano l'abitudine di farsi portare l'acqua proprio da Broad Street.</p>
+<p>Snow presentò i suoi risultati alle autorità locali, che l'8 settembre fecero rimuovere la maniglia
+della pompa. L'epidemia, che era già in fase di declino, si esaurì. Le indagini successive mostrarono
+che il pozzo era stato contaminato da un pozzo nero che si trovava a pochi passi.</p>
+<h3 id="che-cosa-ci-insegna">Che cosa ci insegna<a class="headerlink" href="#che-cosa-ci-insegna" title="Permanent link">&para;</a></h3>
+<p>Il caso di Snow è diventato un classico della statistica, dell'epidemiologia e della visualizzazione
+dei dati, e contiene alcune lezioni che valgono anche per noi:</p>
+<ul>
+<li>i <strong>dati da soli non bastano</strong>: lo stesso elenco di decessi era disponibile a chiunque, ma solo una
+  certa organizzazione dei dati (la mappa) ha fatto emergere il fenomeno;</li>
+<li>serve una <strong>domanda di ricerca</strong>: Snow cercava una conferma alla sua ipotesi sull'acqua, e per questo
+  ha registrato le pompe sulla mappa;</li>
+<li>le <strong>eccezioni</strong> contano quanto la regola: la birreria e l'ospizio hanno rafforzato la spiegazione più
+  di qualsiasi conteggio;</li>
+<li>una correlazione nello spazio <strong>non è ancora una prova</strong>: Snow aveva bisogno di altre informazioni
+  per dimostrare il legame causale, ed è proprio questo che ha cercato.</li>
+</ul>
+<hr />
+<h2 id="4-che-cosa-ce-ne-facciamo-dei-dati-quando-studiamo-le-lingue">4. Che cosa ce ne facciamo dei dati quando studiamo le lingue<a class="headerlink" href="#4-che-cosa-ce-ne-facciamo-dei-dati-quando-studiamo-le-lingue" title="Permanent link">&para;</a></h2>
+<h3 id="il-macroscopio">Il macroscopio<a class="headerlink" href="#il-macroscopio" title="Permanent link">&para;</a></h3>
+<p>Il microscopio permette di vedere ciò che è troppo piccolo per l'occhio umano. Per descrivere gli
+strumenti che fanno il contrario, cioè che permettono di vedere ciò che è troppo <strong>grande</strong>, troppo
+<strong>lento</strong> o troppo <strong>complesso</strong> per essere colto a colpo d'occhio, la studiosa Katy Börner ha usato la
+parola <strong>macroscopio</strong>. Un macroscopio può essere un dataset, un software, un metodo di analisi: ciò che
+conta è che sintetizzi molti elementi in relazione tra loro e faccia emergere tendenze, casi
+particolari, eccezioni.</p>
+<p>Nello studio delle lingue i dati servono soprattutto a tre cose:</p>
+<ul>
+<li><strong>organizzare</strong> grandi quantità di materiali, in modo da poterli ritrovare, consultare e confrontare;</li>
+<li><strong>cercare pattern</strong>, cioè regolarità e tendenze che nessuno potrebbe notare leggendo un testo alla
+  volta: quali parole compaiono insieme, come cambia l'uso di una costruzione nel tempo, in che cosa
+  differiscono due varietà di una lingua;</li>
+<li>condurre <strong>analisi su larga scala</strong>, su milioni o miliardi di parole, che permettono di verificare
+  ipotesi formulate a partire da pochi esempi.</li>
+</ul>
+<h3 id="la-linguistica-dei-corpora">La linguistica dei corpora<a class="headerlink" href="#la-linguistica-dei-corpora" title="Permanent link">&para;</a></h3>
+<p>In linguistica queste operazioni sono al centro di un intero settore di studi, la <strong>linguistica dei
+corpora</strong>, che descrive la lingua a partire dall'osservazione di grandi raccolte di testi reali invece
+che da esempi inventati o dall'intuizione del parlante. È grazie ai corpora che i dizionari moderni
+registrano le parole davvero in uso e con le accezioni davvero più frequenti, e che le grammatiche
+possono dire quanto è diffusa una costruzione. Il British National Corpus, ad esempio, contiene circa
+cento milioni di parole di inglese scritto e parlato del tardo Novecento.</p>
+<p>Lo strumento più tipico è la <strong>concordanza</strong>, che mostra tutte le occorrenze di una parola con il
+contesto immediato a destra e a sinistra, allineate al centro:</p>
+<div class="highlight"><pre><span></span><code>             ...che non ha mai avuto |  paura  | di niente e di nessuno...
+       ...la sera, quando aveva più |  paura  | , si chiudeva in camera...
+          ...ci mise un po' a farsi |  paura  | da sola, poi rise...
+              ...senza alcuna ombra |  paura  | ...
+</code></pre></div>
+<p>Leggendo decine o centinaia di righe come queste si capisce come una parola viene usata, con quali
+verbi si combina (<em>avere paura</em>, <em>fare paura</em>, <em>mettere paura</em>), in quali registri compare.</p>
+<h3 id="lannotazione">L'annotazione<a class="headerlink" href="#lannotazione" title="Permanent link">&para;</a></h3>
+<p>Un corpus diventa molto più utile quando i testi sono <strong>annotati</strong>, cioè arricchiti con informazioni
+esplicite aggiunte a ogni parola o a ogni frase. Le annotazioni più comuni indicano il <strong>lemma</strong> (la
+forma di dizionario) e la <strong>categoria grammaticale</strong> (<em>part of speech</em>):</p>
+<table>
+<thead>
+<tr>
+<th>Forma</th>
+<th>Lemma</th>
+<th>Categoria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le</td>
+<td>il</td>
+<td>articolo</td>
+</tr>
+<tr>
+<td>ragazze</td>
+<td>ragazza</td>
+<td>nome</td>
+</tr>
+<tr>
+<td>avevano</td>
+<td>avere</td>
+<td>verbo ausiliare</td>
+</tr>
+<tr>
+<td>visto</td>
+<td>vedere</td>
+<td>verbo</td>
+</tr>
+<tr>
+<td>il</td>
+<td>il</td>
+<td>articolo</td>
+</tr>
+<tr>
+<td>film</td>
+<td>film</td>
+<td>nome</td>
+</tr>
+</tbody>
+</table>
+<p>Grazie a questa annotazione si possono cercare tutte le forme di un verbo con una sola ricerca (il lemma
+<em>vedere</em> trova <em>vedo</em>, <em>vide</em>, <em>visto</em>, <em>vedranno</em>), oppure tutte le sequenze "aggettivo + nome" per
+studiare la posizione dell'aggettivo. L'annotazione può riguardare anche la sintassi, il significato, la
+prosodia, gli errori, gli atti linguistici. Ogni livello di annotazione è a sua volta una forma di
+interpretazione, e due annotatori possono non essere d'accordo.</p>
+<h3 id="modelli-linguistici-e-processi-automatici">Modelli linguistici e processi automatici<a class="headerlink" href="#modelli-linguistici-e-processi-automatici" title="Permanent link">&para;</a></h3>
+<p>A partire dai corpora si costruiscono anche i <strong>modelli linguistici</strong>, cioè rappresentazioni
+statistiche di come funziona una lingua: quali parole sono probabili in un certo contesto, quali
+combinazioni sono frequenti, quali rare. Sono modelli linguistici, di complessità molto diversa, quelli
+che stanno dietro al completamento automatico della tastiera del telefono, al correttore ortografico,
+alla traduzione automatica e ai chatbot. Ne parleremo a lungo nei Blocchi C e D. Per ora basta tenere a
+mente un punto: <strong>tutti questi sistemi imparano dai dati</strong>, e quindi ereditano i pregi e i difetti dei
+dataset su cui sono stati costruiti.</p>
+<hr />
+<h2 id="5-la-parte-difficile-rendere-computabile">5. La parte difficile: rendere computabile<a class="headerlink" href="#5-la-parte-difficile-rendere-computabile" title="Permanent link">&para;</a></h2>
+<h3 id="che-cosa-vuol-dire">Che cosa vuol dire<a class="headerlink" href="#che-cosa-vuol-dire" title="Permanent link">&para;</a></h3>
+<p>Un computer non sa che cosa sia una frase, una lettera scritta a mano o un messaggio vocale. Sa
+soltanto eseguire operazioni su simboli rappresentati in forma numerica. Perché una macchina possa
+lavorare su un oggetto linguistico, quell'oggetto deve essere trasformato in una forma che la macchina
+può memorizzare e manipolare: in una parola, deve diventare <strong>computabile</strong>.</p>
+<p>Questa trasformazione è l'operazione più complessa, e più delicata, di tutto il lavoro con i dati.
+Prendiamo un esempio quotidiano: un messaggio vocale che un'amica vi manda in spagnolo.</p>
+<ol>
+<li><strong>Registrare.</strong> Il suono, che è un fenomeno continuo, viene misurato migliaia di volte al secondo e
+   trasformato in una sequenza di numeri (lo vedremo nella L02).</li>
+<li><strong>Trascrivere.</strong> Un sistema di riconoscimento vocale, o una persona, trasforma il suono in testo.
+   Si perdono l'intonazione, le pause, l'ironia nella voce; bisogna decidere come trattare le parole
+   pronunciate a metà, le esitazioni, le parole in un'altra lingua.</li>
+<li><strong>Codificare.</strong> Ogni carattere del testo diventa un numero secondo una tabella condivisa (L02).</li>
+<li><strong>Strutturare.</strong> Si decide come organizzare le informazioni: il testo del messaggio, la data, chi
+   l'ha inviato, la lingua (L03).</li>
+<li><strong>Annotare.</strong> Si aggiungono informazioni esplicite: le parti del discorso, il lemma di ogni parola,
+   magari il tono del messaggio.</li>
+<li><strong>Elaborare.</strong> Solo a questo punto un programma può cercare, contare, tradurre, classificare (L04).</li>
+</ol>
+<p>A ogni passaggio qualcosa si perde e qualcosa si guadagna, e ogni passaggio richiede delle scelte.
+Saperlo è il primo passo per usare con giudizio qualunque strumento digitale che lavori sulle lingue.</p>
+<hr />
+<h2 id="6-dai-simboli-alle-macchine-una-breve-storia">6. Dai simboli alle macchine: una breve storia<a class="headerlink" href="#6-dai-simboli-alle-macchine-una-breve-storia" title="Permanent link">&para;</a></h2>
+<h3 id="ada-lovelace-e-la-macchina-analitica">Ada Lovelace e la macchina analitica<a class="headerlink" href="#ada-lovelace-e-la-macchina-analitica" title="Permanent link">&para;</a></h3>
+<p>Negli anni Trenta dell'Ottocento il matematico inglese <strong>Charles Babbage</strong> progettò la <strong>macchina
+analitica</strong>, un calcolatore meccanico programmabile tramite schede perforate, simili a quelle che
+comandavano i telai Jacquard per tessere i disegni sulle stoffe. La macchina aveva già le parti
+fondamentali di un computer moderno: un "mulino" (<em>mill</em>) che eseguiva i calcoli e un "magazzino"
+(<em>store</em>) che conservava i numeri. Non fu mai completata: ne fu costruita solo una piccola parte.</p>
+<figure>
+<p><img alt="Parte della macchina analitica di Babbage" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Babbages_Analytical_Engine,_1834-1871._(9660574685).jpg?width=900" width="460" /></p>
+<figcaption>Parte del "mulino" della macchina analitica, rimasta incompiuta alla morte di Babbage (1871).
+Science Museum di Londra. Foto Science Museum, CC BY-SA 2.0, via Wikimedia Commons.</figcaption>
+</figure>
+<p>Nel 1843 <strong>Ada Lovelace</strong> tradusse in inglese un articolo dell'ingegnere italiano Luigi Federico
+Menabrea che descriveva la macchina, e vi aggiunse sette note, indicate con le lettere dalla A alla G,
+molto più lunghe del testo originale. Nella <strong>Nota G</strong> descrisse passo per passo il procedimento con cui
+la macchina avrebbe potuto calcolare una serie di numeri (i numeri di Bernoulli), presentato in una
+tabella che è spesso considerata il primo programma mai pubblicato.</p>
+<figure>
+<p><img alt="Il diagramma della Nota G di Ada Lovelace" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Diagram_for_the_computation_of_Bernoulli_numbers.jpg?width=1100" width="640" /></p>
+<figcaption>Il diagramma della Nota G (1843) per il calcolo dei numeri di Bernoulli. Pubblico dominio,
+via Wikimedia Commons.</figcaption>
+</figure>
+<p>Ma l'intuizione più importante di Lovelace si trova nella <strong>Nota A</strong>. La macchina, osservava, non è
+limitata ai numeri: può operare su qualsiasi oggetto le cui relazioni possano essere espresse in modo
+formale. E portava un esempio:</p>
+<blockquote>
+<p>Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony
+and of musical composition were susceptible of such expression and adaptations, the engine might
+compose elaborate and scientific pieces of music of any degree of complexity or extent.</p>
+</blockquote>
+<p>Se le relazioni fondamentali tra i suoni nella scienza dell'armonia e della composizione potessero
+essere espresse in questo modo, la macchina potrebbe comporre brani musicali elaborati, di qualsiasi
+complessità. È esattamente l'idea che sta alla base di tutto ciò che vedremo nel corso: qualunque cosa,
+una volta rappresentata con <strong>simboli</strong> e <strong>regole</strong>, può essere elaborata da una macchina.</p>
+<h3 id="dati-da-contare-le-schede-perforate-di-hollerith">Dati da contare: le schede perforate di Hollerith<a class="headerlink" href="#dati-da-contare-le-schede-perforate-di-hollerith" title="Permanent link">&para;</a></h3>
+<p>Alla fine dell'Ottocento il censimento degli Stati Uniti richiedeva anni di lavoro manuale. Per quello
+del 1890 l'ingegnere <strong>Herman Hollerith</strong> introdusse una macchina che leggeva le informazioni di ogni
+cittadino registrate su <strong>schede perforate</strong>: la posizione di ogni foro corrispondeva a una
+caratteristica (sesso, età, stato civile, luogo di nascita). L'elaborazione dei dati fu molto più rapida
+che in passato. L'azienda fondata da Hollerith confluì in seguito in quella che sarebbe diventata IBM, e
+le schede perforate rimasero il principale supporto per i dati fino agli anni Settanta del Novecento.</p>
+<figure>
+<p><img alt="Una tabulatrice Hollerith" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/HollerithMachine.CHM.jpg?width=900" width="420" /></p>
+<figcaption>Una tabulatrice Hollerith. Computer History Museum, via Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="turing-enigma-e-bletchley-park">Turing, Enigma e Bletchley Park<a class="headerlink" href="#turing-enigma-e-bletchley-park" title="Permanent link">&para;</a></h3>
+<p>Nel 1936 il matematico inglese <strong>Alan Turing</strong> descrisse una macchina astratta, oggi chiamata
+<strong>macchina di Turing</strong>, capace in linea di principio di eseguire qualsiasi procedimento di calcolo
+descrivibile con regole precise. Era un modello teorico, ma fissava i concetti di algoritmo e di
+calcolabilità su cui si fonda l'informatica.</p>
+<p>Durante la Seconda guerra mondiale Turing lavorò a <strong>Bletchley Park</strong>, il centro britannico di
+decrittazione. Qui progettò, insieme a Gordon Welchman, la <em>bombe</em> britannica, una macchina
+elettromeccanica che aiutava a individuare le impostazioni giornaliere di <strong>Enigma</strong>, la macchina
+cifrante usata dalle forze armate tedesche. Il progetto riprendeva e superava la <em>bomba kryptologiczna</em>
+costruita nel 1938 dai crittografi polacchi guidati da Marian Rejewski, che decifravano Enigma già dal
+1932 e che nel 1939 condivisero i loro risultati con britannici e francesi. Nello stesso centro entrò
+in funzione nel 1944 <strong>Colossus</strong>, uno dei primi calcolatori elettronici, costruito per decifrare un
+altro sistema di cifratura tedesco.</p>
+<figure>
+<p><img alt="Una macchina Enigma" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/EnigmaMachine.jpg?width=900" width="360" /></p>
+<figcaption>Una macchina Enigma all'Imperial War Museum di Londra. A ogni tasto premuto, la lettera passa
+attraverso una serie di rotori che cambiano posizione. Pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
+<p>La decrittazione è un caso esemplare di trasformazione di un problema linguistico in un problema di
+calcolo. Un messaggio cifrato è un testo; per decifrarlo si sfruttavano le regolarità della lingua
+(la frequenza delle lettere, le parole che ricorrevano spesso nei messaggi militari, le formule fisse
+di saluto) per ridurre il numero di combinazioni da verificare a un numero che le macchine potevano
+esplorare.</p>
+<h3 id="warren-weaver-tradurre-come-decifrare">Warren Weaver: tradurre come decifrare<a class="headerlink" href="#warren-weaver-tradurre-come-decifrare" title="Permanent link">&para;</a></h3>
+<p>Nel 1949 il matematico americano <strong>Warren Weaver</strong>, che durante la guerra aveva coordinato ricerche
+scientifiche militari, fece circolare un memorandum intitolato semplicemente <em>Translation</em>. Weaver
+proponeva di applicare alla traduzione le idee nate con la crittografia: davanti a un articolo in russo,
+suggeriva, si può immaginare che sia in realtà scritto in inglese e poi "cifrato" con simboli strani, e
+che tradurre significhi decifrarlo.</p>
+<p>Il memorandum diede avvio alla ricerca sulla <strong>traduzione automatica</strong>. Nel 1954 una dimostrazione
+pubblica organizzata dalla Georgetown University e da IBM tradusse automaticamente una sessantina di
+frasi dal russo all'inglese, suscitando grandi aspettative. Le lingue si rivelarono però molto più
+complesse di un codice cifrato, e i progressi furono lenti. L'idea di Weaver di trattare la lingua con
+strumenti statistici sarebbe tornata, con risultati molto diversi, quarant'anni dopo. Seguiremo questa
+storia nella L10.</p>
+<pre class="mermaid"><code>timeline
+    1843 : Ada Lovelace e la macchina analitica
+    1890 : Le schede perforate di Hollerith per il censimento
+    1936 : La macchina di Turing
+    1940-1945 : Bletchley Park, Enigma e Colossus
+    1945 : ENIAC e l'architettura di von Neumann
+    1949 : Il memorandum di Weaver sulla traduzione
+    1954 : L'esperimento Georgetown-IBM</code></pre>
+<hr />
+<h2 id="7-dare-istruzioni-a-una-macchina">7. Dare istruzioni a una macchina<a class="headerlink" href="#7-dare-istruzioni-a-una-macchina" title="Permanent link">&para;</a></h2>
+<h3 id="istruzioni-e-interfacce">Istruzioni e interfacce<a class="headerlink" href="#istruzioni-e-interfacce" title="Permanent link">&para;</a></h3>
+<p>Per far fare qualcosa a una macchina bisogna darle delle <strong>istruzioni</strong>. Un insieme organizzato di
+istruzioni, scritto in modo che la macchina possa eseguirlo, si chiama <strong>programma</strong>. Ma raramente
+scriviamo programmi direttamente: di solito comunichiamo con il computer attraverso un'<strong>interfaccia</strong>,
+cioè il punto di contatto tra una persona e una macchina, che traduce le nostre azioni in istruzioni.</p>
+<p>Le interfacce sono cambiate molto nel tempo:</p>
+<table>
+<thead>
+<tr>
+<th>Interfaccia</th>
+<th>Come si danno le istruzioni</th>
+<th>Diffusione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schede perforate</strong></td>
+<td>si preparano le istruzioni su schede di cartoncino e si consegnano alla macchina</td>
+<td>fino agli anni Settanta</td>
+</tr>
+<tr>
+<td><strong>Riga di comando</strong></td>
+<td>si scrivono comandi testuali in un terminale (<code>copy lettera.txt archivio</code>)</td>
+<td>dagli anni Sessanta; ancora oggi usata da programmatori e tecnici</td>
+</tr>
+<tr>
+<td><strong>Interfaccia grafica</strong></td>
+<td>si usano finestre, icone, menu e un puntatore controllato dal mouse</td>
+<td>dagli anni Ottanta</td>
+</tr>
+<tr>
+<td><strong>Interfaccia touch</strong></td>
+<td>si tocca e si trascina direttamente sullo schermo</td>
+<td>dalla fine degli anni Duemila, con gli smartphone</td>
+</tr>
+<tr>
+<td><strong>Interfaccia vocale</strong></td>
+<td>si parla (<em>"imposta una sveglia alle sette"</em>)</td>
+<td>dagli anni Dieci, con gli assistenti vocali</td>
+</tr>
+<tr>
+<td><strong>Interfaccia conversazionale</strong></td>
+<td>si scrive una richiesta in linguaggio naturale a un chatbot</td>
+<td>dagli anni Venti, con i modelli linguistici</td>
+</tr>
+</tbody>
+</table>
+<p>L'ultima riga merita attenzione. Per la prima volta, la lingua in cui si danno istruzioni a una macchina
+può essere una lingua naturale come l'italiano o lo spagnolo, con tutta la sua ambiguità. Saper
+formulare una richiesta precisa a un modello linguistico è diventata una competenza linguistica, oltre
+che tecnica, e ce ne occuperemo nella L14.</p>
+<h3 id="hardware-e-software">Hardware e software<a class="headerlink" href="#hardware-e-software" title="Permanent link">&para;</a></h3>
+<p>Qualunque sia l'interfaccia, dietro c'è sempre la stessa distinzione fondamentale:</p>
+<ul>
+<li>l'<strong>hardware</strong> è l'insieme delle componenti fisiche, ciò che si può toccare;</li>
+<li>il <strong>software</strong> è l'insieme dei programmi e dei dati, cioè le istruzioni e le informazioni su cui
+  l'hardware lavora.</li>
+</ul>
+<p>Un'analogia può aiutare: un libro stampato è un oggetto fatto di carta e inchiostro, mentre il testo
+che contiene si può ristampare in un'altra edizione, leggere su un e-reader o ascoltare in un audiolibro
+senza cambiare. Il libro fisico è l'hardware, il testo è il software. Lo stesso programma, allo stesso
+modo, può funzionare su computer fisicamente diversi.</p>
+<hr />
+<h2 id="8-lhardware">8. L'hardware<a class="headerlink" href="#8-lhardware" title="Permanent link">&para;</a></h2>
+<h3 id="prima-di-von-neumann-eniac">Prima di von Neumann: ENIAC<a class="headerlink" href="#prima-di-von-neumann-eniac" title="Permanent link">&para;</a></h3>
+<p>Uno dei primi calcolatori elettronici di uso generale, <strong>ENIAC</strong>, fu completato nel 1945
+all'Università della Pennsylvania. Era velocissimo per l'epoca, ma aveva un limite enorme: il programma
+non era scritto da nessuna parte, se non nei <strong>collegamenti fisici</strong> della macchina. Per fargli eseguire
+un calcolo diverso bisognava staccare e ricollegare a mano decine di cavi e spostare centinaia di
+interruttori, un lavoro che poteva richiedere giorni e che era affidato a un gruppo di sei
+programmatrici. In altre parole, il programma faceva parte dell'<strong>hardware</strong>.</p>
+<h3 id="lidea-del-programma-memorizzato">L'idea del programma memorizzato<a class="headerlink" href="#lidea-del-programma-memorizzato" title="Permanent link">&para;</a></h3>
+<p>Nel 1945 il matematico <strong>John von Neumann</strong> firmò un rapporto, la <em>First Draft of a Report on the
+EDVAC</em>, che raccoglieva e sistematizzava le idee nate nel gruppo di lavoro di ENIAC per la macchina
+successiva. L'idea centrale è semplice e rivoluzionaria: <strong>le istruzioni del programma e i dati su cui
+lavorare si conservano nella stessa memoria</strong>, scritti entrambi come numeri. Per cambiare programma non
+serve più ricablare la macchina: basta caricare in memoria un'altra sequenza di numeri.</p>
+<p>È questo che rende il computer una macchina <strong>universale</strong>: lo stesso oggetto fisico diventa un
+programma di videoscrittura, un dizionario, un lettore musicale o un traduttore automatico a seconda
+delle istruzioni che carica. E torna l'intuizione di Lovelace: se anche le istruzioni sono simboli, la
+macchina può trattarle come qualsiasi altro dato.</p>
+<h3 id="le-componenti-principali">Le componenti principali<a class="headerlink" href="#le-componenti-principali" title="Permanent link">&para;</a></h3>
+<p>Da allora, quasi tutti i computer, dal portatile allo smartphone, sono organizzati secondo lo schema
+descritto in quel rapporto, che porta il nome di von Neumann:</p>
+<pre class="mermaid"><code>flowchart LR
+    I[Input&lt;br&gt;tastiera, mouse, microfono,&lt;br&gt;fotocamera, touchscreen] --&gt; CPU
+    subgraph Computer
+      CPU[Processore&lt;br&gt;CPU] &lt;--&gt; RAM[Memoria centrale&lt;br&gt;RAM]
+      CPU &lt;--&gt; D[Memoria di massa&lt;br&gt;disco, SSD]
+    end
+    CPU --&gt; O[Output&lt;br&gt;schermo, casse,&lt;br&gt;stampante]
+    CPU &lt;--&gt; N[Rete&lt;br&gt;Wi-Fi, cavo, 5G]</code></pre>
+<ul>
+<li>Il <strong>processore</strong> (CPU, <em>Central Processing Unit</em>) esegue le istruzioni dei programmi, una dopo
+  l'altra, a una velocità di diversi miliardi di operazioni al secondo. Molti computer recenti hanno
+  anche processori specializzati: la <strong>GPU</strong>, nata per la grafica e oggi fondamentale per
+  l'intelligenza artificiale perché esegue moltissimi calcoli semplici in parallelo.</li>
+<li>La <strong>memoria centrale</strong> (RAM) contiene i programmi e i dati su cui il processore sta lavorando in quel
+  momento. È velocissima ma <strong>volatile</strong>: si svuota quando il computer si spegne, ed è per questo che un
+  documento non salvato va perso.</li>
+<li>La <strong>memoria di massa</strong> (disco rigido, SSD, chiavetta USB, scheda di memoria) conserva i dati in modo
+  permanente. È più lenta della RAM, ma molto più capiente.</li>
+<li>I <strong>dispositivi di input</strong> (tastiera, mouse, microfono, fotocamera, touchscreen, sensori) portano le
+  informazioni dentro il computer; quelli di <strong>output</strong> (schermo, altoparlanti, stampante) le restituiscono.</li>
+<li>I <strong>dispositivi di rete</strong> collegano il computer ad altri computer e a Internet.</li>
+</ul>
+<h3 id="come-lavora-il-ciclo-del-processore">Come lavora: il ciclo del processore<a class="headerlink" href="#come-lavora-il-ciclo-del-processore" title="Permanent link">&para;</a></h3>
+<p>Il processore lavora ripetendo all'infinito un ciclo di tre passi: <strong>prende</strong> dalla memoria la prossima
+istruzione, la <strong>decodifica</strong> (cioè capisce che cosa chiede: sommare due numeri, copiare un dato,
+confrontare due valori, saltare a un'altra istruzione) e la <strong>esegue</strong>. Poi passa all'istruzione
+successiva. Ogni cosa che vedete fare a un computer, dall'apertura di un file alla traduzione di una
+frase, è il risultato di miliardi di questi cicli.</p>
+<p>Un'analogia può aiutare:</p>
+<table>
+<thead>
+<tr>
+<th>Nel computer</th>
+<th>In cucina</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Processore</strong> (CPU)</td>
+<td>il cuoco, che esegue un passo della ricetta alla volta</td>
+</tr>
+<tr>
+<td><strong>Memoria centrale</strong> (RAM)</td>
+<td>il piano di lavoro: la ricetta aperta e gli ingredienti a portata di mano, sgombrato a fine giornata</td>
+</tr>
+<tr>
+<td><strong>Memoria di massa</strong></td>
+<td>la dispensa e il ricettario: tutto resta, ma è più lento da raggiungere</td>
+</tr>
+<tr>
+<td><strong>Input e output</strong></td>
+<td>gli ordini che arrivano in cucina e i piatti che escono</td>
+</tr>
+</tbody>
+</table>
+<h3 id="molti-tipi-di-computer">Molti tipi di computer<a class="headerlink" href="#molti-tipi-di-computer" title="Permanent link">&para;</a></h3>
+<p>Quando pensiamo a un computer immaginiamo un portatile, ma oggi i computer sono ovunque:</p>
+<ul>
+<li>i <strong>personal computer</strong>, fissi e portatili;</li>
+<li>gli <strong>smartphone</strong> e i <strong>tablet</strong>, che contengono le stesse componenti miniaturizzate e molti sensori
+  in più (GPS, accelerometro, sensore di impronte);</li>
+<li>i <strong>server</strong>, computer senza schermo né tastiera che forniscono servizi ad altri computer attraverso
+  la rete. Raccolti a migliaia in grandi edifici, i <strong>data center</strong>, costituiscono quello che chiamiamo
+  <em>cloud</em>;</li>
+<li>i <strong>sistemi integrati</strong> (<em>embedded</em>), piccoli computer nascosti dentro oggetti di uso quotidiano: la
+  lavatrice, l'automobile, il bancomat, la carta di credito, la tessera dell'autobus;</li>
+<li>i <strong>supercomputer</strong>, usati per simulazioni scientifiche e per addestrare i grandi modelli di
+  intelligenza artificiale. A Bologna, al Tecnopolo, si trova Leonardo, uno dei supercomputer più potenti
+  d'Europa.</li>
+</ul>
+<hr />
+<h2 id="9-il-software">9. Il software<a class="headerlink" href="#9-il-software" title="Permanent link">&para;</a></h2>
+<h3 id="sistema-operativo-e-applicazioni">Sistema operativo e applicazioni<a class="headerlink" href="#sistema-operativo-e-applicazioni" title="Permanent link">&para;</a></h3>
+<p>Il software si divide in due grandi categorie. Il <strong>sistema operativo</strong> (Windows, macOS, Linux, Android,
+iOS) è il programma che si avvia per primo, gestisce l'hardware e permette a tutti gli altri programmi
+di funzionare. Le <strong>applicazioni</strong> sono i programmi che usiamo per svolgere compiti specifici: il
+browser, il programma di videoscrittura, il lettore musicale, un'app di messaggistica. A queste si
+aggiungono sempre più spesso i <strong>servizi online</strong>, applicazioni che funzionano su server remoti e a cui
+accediamo tramite il browser o un'app.</p>
+<h3 id="che-cosa-ce-dentro-il-software">Che cosa c'è dentro il software<a class="headerlink" href="#che-cosa-ce-dentro-il-software" title="Permanent link">&para;</a></h3>
+<p>Se apriamo il software e guardiamo di che cosa è fatto, troviamo tre ingredienti che ci accompagneranno
+per tutto il corso.</p>
+<p><strong>Le strutture dati.</strong> Sono i modi in cui le informazioni vengono organizzate. Ne conoscete già molte
+senza saperlo: una <strong>tabella</strong>, come quelle di Excel, organizza i dati in righe e colonne; una
+<strong>lista</strong>, come la lista della spesa o la playlist, li dispone in sequenza; un vocabolario associa a
+ogni parola la sua definizione, ed è quello che in informatica si chiama <strong>dizionario</strong>; l'indice di un
+libro, con capitoli, paragrafi e sottoparagrafi, è un <strong>albero</strong>; la mappa della metropolitana, con le
+stazioni collegate dalle linee, è un <strong>grafo</strong>. Le vedremo da vicino nella L03.</p>
+<p><strong>I linguaggi di programmazione.</strong> Servono a descrivere <strong>processi</strong>, cioè sequenze di operazioni da
+eseguire sui dati. Sono lingue artificiali, con un vocabolario ridotto e una grammatica rigidissima,
+progettate per non essere ambigue. Ecco tre righe in <strong>Python</strong> che contano le parole di una frase:</p>
+<div class="highlight"><pre><span></span><code><span class="n">frase</span> <span class="o">=</span> <span class="s2">"la lingua è un sistema in cui tutto si tiene"</span>
+<span class="n">parole</span> <span class="o">=</span> <span class="n">frase</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parole</span><span class="p">))</span>   <span class="c1"># stampa 10</span>
+</code></pre></div>
+<p>La prima riga memorizza una frase, la seconda la divide in parole in corrispondenza degli spazi, la
+terza stampa quante sono. Torneremo sulla programmazione nella L04.</p>
+<p><strong>I linguaggi di marcatura.</strong> Servono ad <strong>annotare</strong> un testo, aggiungendo informazioni sulla sua
+struttura o sul suo significato attraverso dei marcatori, detti <em>tag</em>. Il più noto è <strong>HTML</strong>, il
+linguaggio delle pagine web:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Benvenuti<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Questa è la mia <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>prima<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> pagina web.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Lo stesso principio si usa per annotare i corpora. In molti corpora, ad esempio, ogni parola è racchiusa
+in un marcatore che ne indica il lemma e la categoria grammaticale:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;s&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"il"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"DET"</span><span class="nt">&gt;</span>Le<span class="nt">&lt;/w&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"ragazza"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"NOUN"</span><span class="nt">&gt;</span>ragazze<span class="nt">&lt;/w&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"avere"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"AUX"</span><span class="nt">&gt;</span>avevano<span class="nt">&lt;/w&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"vedere"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"VERB"</span><span class="nt">&gt;</span>visto<span class="nt">&lt;/w&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"il"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"DET"</span><span class="nt">&gt;</span>il<span class="nt">&lt;/w&gt;</span>
+<span class="w">  </span><span class="nt">&lt;w</span><span class="w"> </span><span class="na">lemma=</span><span class="s">"film"</span><span class="w"> </span><span class="na">pos=</span><span class="s">"NOUN"</span><span class="nt">&gt;</span>film<span class="nt">&lt;/w&gt;</span>
+<span class="nt">&lt;/s&gt;</span>
+</code></pre></div>
+<p>È la stessa tabella della sezione 4, scritta in una forma che un programma può leggere. Costruiremo una
+pagina HTML nella L08.</p>
+<hr />
+<h2 id="10-due-esempi-dal-vivo">10. Due esempi dal vivo<a class="headerlink" href="#10-due-esempi-dal-vivo" title="Permanent link">&para;</a></h2>
+<h3 id="wikidata-informazioni-strutturate">Wikidata: informazioni strutturate<a class="headerlink" href="#wikidata-informazioni-strutturate" title="Permanent link">&para;</a></h3>
+<p><strong>Wikidata</strong> è una base di conoscenza libera e collaborativa, nata nel 2012 come progetto gemello di
+Wikipedia. Mentre Wikipedia contiene testi scritti per essere letti da persone, Wikidata contiene le
+stesse conoscenze in forma di <strong>dati strutturati</strong>, che anche una macchina può interrogare.</p>
+<p>Ogni entità ha un identificativo univoco che comincia con la lettera Q. La lingua italiana, ad esempio, è
+<a href="https://www.wikidata.org/wiki/Q652">Q652</a>. La sua scheda contiene decine di affermazioni nella forma
+<em>proprietà → valore</em>. Eccone alcune, in forma semplificata:</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Valore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sottoclasse di</td>
+<td>lingue italo-dalmatiche</td>
+</tr>
+<tr>
+<td>codice ISO 639-1</td>
+<td><code>it</code></td>
+</tr>
+<tr>
+<td>codice ISO 639-3</td>
+<td><code>ita</code></td>
+</tr>
+<tr>
+<td>sistema di scrittura</td>
+<td>alfabeto latino</td>
+</tr>
+<tr>
+<td>numero di parlanti</td>
+<td>più valori, ciascuno con la fonte e l'anno della stima</td>
+</tr>
+</tbody>
+</table>
+<p>Ogni valore è a sua volta un'entità, con un proprio identificativo, e le etichette sono tradotte in
+centinaia di lingue. Per questo Wikidata permette di porre domande che un'enciclopedia testuale non
+consente di affrontare in modo diretto: quali lingue sono ufficiali in più di cinque paesi? quali lingue
+romanze hanno meno di un milione di parlanti? Impareremo a porre queste domande nella L03.</p>
+<h3 id="diacoris-un-corpus-dellitaliano-nel-tempo">DiaCORIS: un corpus dell'italiano nel tempo<a class="headerlink" href="#diacoris-un-corpus-dellitaliano-nel-tempo" title="Permanent link">&para;</a></h3>
+<p><a href="https://corpora.ficlit.unibo.it/DiaCORIS/"><strong>DiaCORIS</strong></a> è un corpus diacronico dell'italiano scritto,
+sviluppato all'Università di Bologna. Copre il periodo dal <strong>1861 al 2001</strong>, diviso in cinque sezioni
+(1861–1900, 1901–1922, 1923–1945, 1946–1967, 1968–2001), e comprende diversi sottocorpora: stampa
+quotidiana, stampa periodica, narrativa, saggistica, prosa giuridica e una sezione miscellanea.
+L'accesso è libero per scopi di ricerca.</p>
+<p>Dalla pagina di interrogazione si può cercare una parola, scegliere il periodo e il sottocorpus e
+ottenere la <strong>concordanza</strong> di tutte le occorrenze, ordinate secondo il contesto a destra o a sinistra.
+Si possono anche calcolare le <strong>collocazioni</strong>, cioè le parole che compaiono insieme alla parola cercata
+più spesso di quanto ci si aspetterebbe per caso.</p>
+<h4 id="come-si-interroga-diacoris">Come si interroga DiaCORIS<a class="headerlink" href="#come-si-interroga-diacoris" title="Permanent link">&para;</a></h4>
+<p>Le ricerche si scrivono nel <strong>linguaggio di interrogazione</strong> del corpus (<em>Corpus Query Language</em>, nello
+stile IMS/CWB). Le regole di base sono poche:</p>
+<table>
+<thead>
+<tr>
+<th>Sintassi</th>
+<th>Che cosa fa</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"parola"</code></td>
+<td>cerca una parola esatta</td>
+<td><code>"calcolatore"</code></td>
+</tr>
+<tr>
+<td><code>"parola"%c</code></td>
+<td>ignora maiuscole e minuscole</td>
+<td><code>"radio"%c</code> trova <em>radio</em>, <em>Radio</em>, <em>RADIO</em></td>
+</tr>
+<tr>
+<td><code>"parol.*"</code></td>
+<td>tra le virgolette si possono usare <strong>espressioni regolari</strong>: <code>.</code> vale un carattere qualsiasi, <code>*</code> "ripetuto zero o più volte"</td>
+<td><code>"calcolat.*"</code> trova <em>calcolatore</em>, <em>calcolatori</em>, <em>calcolatrice</em>…</td>
+</tr>
+<tr>
+<td><code>"parola1" "parola2"</code></td>
+<td>cerca due parole <strong>in sequenza</strong></td>
+<td><code>"macchina" "da" "scrivere"</code></td>
+</tr>
+<tr>
+<td><code>"a" | "b"</code></td>
+<td>cerca l'una <strong>o</strong> l'altra</td>
+<td><code>("telefono" | "telegrafo")</code></td>
+</tr>
+<tr>
+<td><code>"a" []{0,N} "b"</code></td>
+<td>cerca <em>b</em> dopo <em>a</em>, con <strong>al massimo N parole in mezzo</strong></td>
+<td><code>"lingua" []{0,3} "italiana"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Le parti si possono combinare. Qualche esempio da provare:</p>
+<div class="highlight"><pre><span></span><code>"computer"%c
+"calcolat(ore|ori|rice|rici)"
+"signorin[ae]"
+("fa" | "fanno" | "faceva" | "fece") "paura"
+"pres.*" []{0,2} "decisione"
+</code></pre></div>
+<p>Il primo trova <em>computer</em> comunque sia scritto. Il secondo usa un'espressione regolare per elencare le
+forme di <em>calcolatore</em> e <em>calcolatrice</em>. Il terzo trova <em>signorina</em> e <em>signorine</em> (le parentesi quadre
+indicano "uno di questi caratteri"). Il quarto cerca alcune forme del verbo <em>fare</em> seguite da <em>paura</em>:
+DiaCORIS non è annotato per lemma, quindi le forme vanno elencate a mano. Il quinto trova <em>prendere una
+decisione</em>, <em>presero la decisione</em>, <em>presa questa decisione</em> e simili, con al massimo due parole in mezzo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Un corpus non annotato</p>
+<p>In questa forma di interrogazione il corpus contiene solo <strong>parole</strong>, senza lemmi né categorie
+grammaticali. Non si può chiedere "tutte le forme del verbo <em>fare</em>" né "tutti gli aggettivi prima di
+<em>lingua</em>": bisogna elencare le forme con le espressioni regolari. È la differenza concreta tra un
+corpus annotato e uno non annotato, di cui abbiamo parlato nella sezione 4.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Esercizio (15 minuti, in coppia)</p>
+<ol>
+<li>Aprite <a href="https://corpora.ficlit.unibo.it/DiaCORIS/">DiaCORIS</a> e cercate <code>"calcolat.*"</code> prima nella
+   sezione 1946–1967 e poi nella sezione 1968–2001. Fate lo stesso con <code>"computer"%c</code>. Che cosa
+   notate?</li>
+<li>Cercate <code>"signorin[ae]"</code> nelle cinque sezioni. Leggete una decina di righe di concordanza per
+   periodo: chi viene chiamata <em>signorina</em>, e in quali contesti?</li>
+<li>Scegliete un'espressione che secondo voi è cambiata nel corso del Novecento (<em>telefono</em>, <em>radio</em>,
+   <em>ferie</em>, <em>televisione</em>, <em>macchina da scrivere</em>) e scrivete una query che ne trovi tutte le forme.
+   Confrontate i risultati tra i periodi.</li>
+<li>Usate l'operatore di distanza per cercare due parole vicine, ad esempio
+   <code>"lingua" []{0,3} "italiana"</code> o <code>("prendere" | "prese" | "presa") []{0,2} "decisione"</code>. Quali parole
+   compaiono in mezzo?</li>
+<li>Ricordando la sezione 2: chi ha scelto i testi di questo corpus? Che tipi di testo <strong>non</strong> ci
+   sono? Che cosa potete concludere sull'italiano in generale, e che cosa no?</li>
+</ol>
+</div>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>In aula</strong></p>
+<ol>
+<li>Quiz su Kahoot e domande per alzata di mano.</li>
+<li>Discussione sulla mappa di John Snow: che cosa avreste registrato voi? Che cosa poteva sfuggire alla
+   mappa?</li>
+<li>Esplorazione guidata della scheda di una lingua su Wikidata: scegliete la lingua che studiate e
+   cercatene la scheda. Quali proprietà ci sono? Quali informazioni mancano o vi sembrano discutibili?</li>
+<li>Esercizio su DiaCORIS.</li>
+</ol>
+<p><strong>A casa (facoltativo, 20 minuti)</strong></p>
+<p>Pensate a un dataset che vi piacerebbe avere per una ricerca nella lingua che studiate: un corpus, un
+dizionario, una raccolta di registrazioni. Descrivete in poche righe che cosa conterrebbe, come
+raccogliereste i dati, quali scelte dovreste fare per renderli computabili e che cosa rischiereste di
+perdere.</p>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> La parola <em>dato</em> deriva dal latino <em>datum</em>. Perché alcuni studiosi preferiscono parlare di
+<em>capta</em>?</p>
+<ul>
+<li>A. Perché i dati sono sempre numerici</li>
+<li>B. Per sottolineare che ogni dato è il risultato di una selezione e di un'interpretazione</li>
+<li>C. Perché i dati sono protetti dal diritto d'autore</li>
+<li>D. Perché i dati sono raccolti solo dalle macchine</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> <em>Capta</em> significa "ciò che è stato preso": raccogliere un dato implica sempre delle scelte.</p>
+</details>
+<p><strong>2.</strong> Che cos'è un corpus linguistico?</p>
+<ul>
+<li>A. Un dizionario bilingue</li>
+<li>B. Una raccolta di testi selezionati con criteri espliciti e organizzati per essere analizzati</li>
+<li>C. Un programma di traduzione automatica</li>
+<li>D. Un manuale di grammatica</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>3.</strong> Che cosa mostrò la mappa di John Snow del 1854?</p>
+<ul>
+<li>A. Che il colera si trasmetteva attraverso l'aria</li>
+<li>B. Che i decessi si concentravano attorno a una pompa dell'acqua</li>
+<li>C. Che il colera colpiva soprattutto i bambini</li>
+<li>D. Il percorso delle fognature di Londra</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> La pompa di Broad Street, nel quartiere di Soho.</p>
+</details>
+<p><strong>4.</strong> In un corpus annotato, il <strong>lemma</strong> di <em>avevano</em> è:</p>
+<ul>
+<li>A. <em>avevano</em></li>
+<li>B. <em>avere</em></li>
+<li>C. verbo</li>
+<li>D. imperfetto</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Il lemma è la forma di dizionario; <em>verbo</em> è la categoria grammaticale.</p>
+</details>
+<p><strong>5.</strong> Quale intuizione è attribuita ad Ada Lovelace?</p>
+<ul>
+<li>A. Che le macchine possono pensare come gli esseri umani</li>
+<li>B. Che una macchina di calcolo può operare su qualsiasi simbolo, non solo sui numeri, se le relazioni tra i simboli sono formalizzate</li>
+<li>C. Che i computer devono usare il sistema binario</li>
+<li>D. Che la traduzione automatica è impossibile</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>6.</strong> Nel memorandum del 1949, Warren Weaver proponeva di considerare la traduzione come:</p>
+<ul>
+<li>A. un problema di decifrazione</li>
+<li>B. un'arte che nessuna macchina potrà mai svolgere</li>
+<li>C. un problema di riconoscimento delle immagini</li>
+<li>D. un compito da affidare solo a traduttori umani</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>A.</strong> Un testo in russo veniva immaginato come un testo inglese "cifrato".</p>
+</details>
+<p><strong>7.</strong> Quale di questi è un componente <strong>hardware</strong>?</p>
+<ul>
+<li>A. Il sistema operativo</li>
+<li>B. Il browser</li>
+<li>C. La memoria RAM</li>
+<li>D. Un file di testo</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong></p>
+</details>
+<p><strong>8.</strong> Perché un documento non salvato va perso se manca la corrente?</p>
+<ul>
+<li>A. Perché si trova nella memoria di massa</li>
+<li>B. Perché si trova nella RAM, che è volatile</li>
+<li>C. Perché il processore lo cancella</li>
+<li>D. Perché il sistema operativo non lo riconosce</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>9.</strong> HTML è:</p>
+<ul>
+<li>A. un linguaggio di programmazione</li>
+<li>B. un linguaggio di marcatura</li>
+<li>C. un sistema operativo</li>
+<li>D. un formato di immagine</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Serve ad annotare la struttura di una pagina web, non a descrivere un processo.</p>
+</details>
+<p><strong>10.</strong> Un chatbot a cui si scrivono richieste in italiano è un esempio di:</p>
+<ul>
+<li>A. interfaccia a riga di comando</li>
+<li>B. interfaccia grafica</li>
+<li>C. interfaccia conversazionale</li>
+<li>D. hardware</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong></p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Drucker, J. (2011). Humanities approaches to graphical display. <em>Digital Humanities Quarterly</em>, 5(1).
+  <a href="https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html">Testo online</a></li>
+<li>Börner, K. (2011). Plug-and-play macroscopes. <em>Communications of the ACM</em>, 54(3), 60–69.
+  <a href="https://doi.org/10.1145/1897852.1897871">doi:10.1145/1897852.1897871</a></li>
+<li>Johnson, S. (2006). <em>The Ghost Map: The Story of London's Most Terrifying Epidemic</em>. Riverhead Books.
+  La storia dell'epidemia di Soho raccontata come un romanzo.</li>
+<li>Vrandečić, D., &amp; Krötzsch, M. (2014). Wikidata: A free collaborative knowledgebase.
+  <em>Communications of the ACM</em>, 57(10), 78–85. <a href="https://doi.org/10.1145/2629489">doi:10.1145/2629489</a></li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-a-fondamenti">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#dato">Dato</a> ·
+<a href="../../glossario/#dataset">Dataset</a> ·
+<a href="../../glossario/#corpus">Corpus</a> ·
+<a href="../../glossario/#annotazione">Annotazione</a> ·
+<a href="../../glossario/#concordanza">Concordanza</a> ·
+<a href="../../glossario/#lemma">Lemma</a> ·
+<a href="../../glossario/#computabile">Computabile</a> ·
+<a href="../../glossario/#interfaccia">Interfaccia</a> ·
+<a href="../../glossario/#hardware">Hardware</a> ·
+<a href="../../glossario/#software">Software</a> ·
+<a href="../../glossario/#sistema-operativo">Sistema operativo</a> ·
+<a href="../../glossario/#struttura-dati">Struttura dati</a> ·
+<a href="../../glossario/#linguaggio-di-programmazione">Linguaggio di programmazione</a> ·
+<a href="../../glossario/#linguaggio-di-marcatura">Linguaggio di marcatura</a> ·
+<a href="../../glossario/#wikidata">Wikidata</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Lezioni">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Lezioni
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-rappresentazione/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L02 · Come si rappresenta l&#39;informazione">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L02 · Come si rappresenta l'informazione
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

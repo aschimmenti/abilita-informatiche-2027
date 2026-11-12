@@ -1,0 +1,2494 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/03-strutturare-i-dati/">
+      
+      
+        <link rel="prev" href="../02-rappresentazione/">
+      
+      
+        <link rel="next" href="../04-algoritmi/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>L03 · Strutturare i dati - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l03-strutturare-i-dati" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L03 · Strutturare i dati
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-strutturare-ed-elaborare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Strutturare ed elaborare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-strutture-dati-fondamentali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le strutture dati fondamentali
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le strutture dati fondamentali">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La lista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-dizionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il dizionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-tabella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La tabella
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lalbero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'albero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quale-struttura-scegliere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quale struttura scegliere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-scrivere-i-dati-csv-json-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Scrivere i dati: CSV, JSON, XML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Scrivere i dati: CSV, JSON, XML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-i-linguaggi-di-marcatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. I linguaggi di marcatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. I linguaggi di marcatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-pratica-antica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una pratica antica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-sintassi-di-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sintassi di base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-e-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML e XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marcatura-di-presentazione-e-marcatura-descrittiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marcatura di presentazione e marcatura descrittiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-i-grafi-di-conoscenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. I grafi di conoscenza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. I grafi di conoscenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dalla-tabella-al-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dalla tabella al grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-triple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le triple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classi-e-proprieta-i-due-livelli-del-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classi e proprietà: i due livelli del grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificativi-univoci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificativi univoci
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dai-testi-ai-dati-un-accenno-al-nlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dai testi ai dati: un accenno al NLP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ogni-struttura-e-una-scelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ogni struttura è una scelta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-strutturare-ed-elaborare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Strutturare ed elaborare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-strutture-dati-fondamentali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le strutture dati fondamentali
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le strutture dati fondamentali">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La lista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-dizionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il dizionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-tabella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La tabella
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lalbero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'albero
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quale-struttura-scegliere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quale struttura scegliere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-scrivere-i-dati-csv-json-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Scrivere i dati: CSV, JSON, XML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Scrivere i dati: CSV, JSON, XML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-i-linguaggi-di-marcatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. I linguaggi di marcatura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. I linguaggi di marcatura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#una-pratica-antica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una pratica antica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-sintassi-di-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La sintassi di base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-e-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML e XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marcatura-di-presentazione-e-marcatura-descrittiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marcatura di presentazione e marcatura descrittiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-i-grafi-di-conoscenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. I grafi di conoscenza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. I grafi di conoscenza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dalla-tabella-al-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dalla tabella al grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-triple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le triple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classi-e-proprieta-i-due-livelli-del-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classi e proprietà: i due livelli del grafo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificativi-univoci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificativi univoci
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dai-testi-ai-dati-un-accenno-al-nlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dai testi ai dati: un accenno al NLP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ogni-struttura-e-una-scelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ogni struttura è una scelta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l03-strutturare-i-dati">L03 · Strutturare i dati<a class="headerlink" href="#l03-strutturare-i-dati" title="Permanent link">&para;</a></h1>
+<p class="meta">In presenza · 2 ore · Blocco A — Fondamenti</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Nella L02 abbiamo visto come si rappresentano i singoli dati: un numero, una lettera, un pixel.
+Ma un elenco di parole, un dizionario, la struttura di un libro o la rete dei personaggi di un
+romanzo richiedono di organizzare molti dati insieme, stabilendo relazioni tra di essi. In questa
+lezione conosciamo le principali <strong>strutture dati</strong>, i formati con cui si scrivono (CSV, JSON, XML),
+i <strong>linguaggi di marcatura</strong> con cui si annotano i documenti e i <strong>grafi di conoscenza</strong>, che
+permettono alle macchine di collegare tra loro concetti, persone, opere e luoghi. Lavoreremo su un
+esempio che non ha bisogno di presentazioni: gli spaghetti aglio, olio e peperoncino.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L03.html" title="Slide della lezione 3" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L03.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L03.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>spiegare la differenza tra <strong>strutturare</strong> ed <strong>elaborare</strong> i dati;</li>
+<li>riconoscere e usare le strutture dati fondamentali: <strong>lista</strong>, <strong>dizionario</strong>, <strong>tabella</strong>, <strong>albero</strong>, <strong>grafo</strong>;</li>
+<li>leggere e scrivere un semplice file <strong>CSV</strong>, <strong>JSON</strong> e <strong>XML</strong>;</li>
+<li>descrivere che cos'è un <strong>linguaggio di marcatura</strong> e usarne la sintassi di base (tag, elementi, attributi);</li>
+<li>rappresentare un insieme di informazioni come <strong>grafo di conoscenza</strong>, con triple <em>soggetto–predicato–oggetto</em>;</li>
+<li>riflettere sulle scelte, e sulle esclusioni, che ogni struttura comporta.</li>
+</ul>
+<hr />
+<h2 id="1-strutturare-ed-elaborare">1. Strutturare ed elaborare<a class="headerlink" href="#1-strutturare-ed-elaborare" title="Permanent link">&para;</a></h2>
+<p>Davanti a un insieme di dati, qualunque sia la loro forma, un sistema informatico può fare
+fondamentalmente due cose:</p>
+<ul>
+<li><strong>strutturarli</strong>, cioè organizzarli secondo uno schema, attraverso una <em>struttura dati</em> o un
+  <em>linguaggio di marcatura</em>;</li>
+<li><strong>elaborarli</strong>, cioè trasformarli attraverso una procedura, un <em>algoritmo</em>, scritto di solito in un
+  <em>linguaggio di programmazione</em>.</li>
+</ul>
+<p>Le due attività sono strettamente legate. Un algoritmo lavora sempre su dati organizzati in un certo
+modo, e la scelta della struttura determina quali operazioni saranno semplici e quali difficili.
+Cercare una parola in un elenco ordinato alfabeticamente è facile; cercarla in un elenco disordinato
+richiede di scorrerlo tutto. A loro volta, gli algoritmi possono modificare le strutture: aggiungere
+voci, riordinarle, collegarle. Ogni sistema informatico ha bisogno di entrambe le componenti.</p>
+<pre class="mermaid"><code>flowchart LR
+    D[Dati] --&gt; S[Strutturare&lt;br&gt;&lt;small&gt;strutture dati,&lt;br&gt;linguaggi di marcatura&lt;/small&gt;]
+    D --&gt; E[Elaborare&lt;br&gt;&lt;small&gt;algoritmi,&lt;br&gt;linguaggi di programmazione&lt;/small&gt;]
+    S &lt;--&gt; E</code></pre>
+<p>In questa lezione ci occupiamo della prima metà; la seconda è l'argomento della L04.</p>
+<hr />
+<h2 id="2-le-strutture-dati-fondamentali">2. Le strutture dati fondamentali<a class="headerlink" href="#2-le-strutture-dati-fondamentali" title="Permanent link">&para;</a></h2>
+<p>Una <strong>struttura dati</strong> è un modo sistematico di organizzare e memorizzare i dati, in modo da poterli
+ritrovare e manipolare in modo efficiente. Ne esistono moltissime; ne vediamo cinque, che bastano a
+descrivere la maggior parte delle situazioni che incontrerete.</p>
+<h3 id="la-lista">La lista<a class="headerlink" href="#la-lista" title="Permanent link">&para;</a></h3>
+<p>Una <strong>lista</strong> (in molti linguaggi chiamata anche <em>array</em> o <em>vettore</em>) è una sequenza <strong>ordinata</strong> di
+elementi. Ogni elemento occupa una posizione precisa, indicata da un numero detto <strong>indice</strong>. Nella
+maggior parte dei linguaggi di programmazione il primo elemento ha indice 0, non 1.</p>
+<div class="highlight"><pre><span></span><code>versi = [ "Sempre caro mi fu quest'ermo colle,",
+          "e questa siepe, che da tanta parte",
+          "dell'ultimo orizzonte il guardo esclude." ]
+
+versi[0]  →  "Sempre caro mi fu quest'ermo colle,"
+versi[2]  →  "dell'ultimo orizzonte il guardo esclude."
+</code></pre></div>
+<p>Le liste sono adatte a tutto ciò che ha un ordine significativo: i versi di una poesia, le parole di
+una frase, i capitoli di un libro, la cronologia delle opere di un autore. Possono contenere duplicati:
+nella lista delle parole dell'<em>Infinito</em>, la congiunzione <em>e</em> comparirà undici volte.</p>
+<h3 id="il-dizionario">Il dizionario<a class="headerlink" href="#il-dizionario" title="Permanent link">&para;</a></h3>
+<p>Un <strong>dizionario</strong> (detto anche <em>mappa</em>, <em>tabella associativa</em> o, in Python, <code>dict</code>) è un insieme di
+coppie <strong>chiave → valore</strong>. Le chiavi sono uniche e servono a ritrovare rapidamente il valore
+corrispondente, come la parola-lemma in un vocabolario permette di trovare la definizione.</p>
+<div class="highlight"><pre><span></span><code>lemmi = { "corro":   "correre",
+          "corsero": "correre",
+          "andai":   "andare",
+          "vado":    "andare",
+          "uomini":  "uomo" }
+
+lemmi["corsero"]  →  "correre"
+</code></pre></div>
+<p>Questa struttura è alla base di moltissimi strumenti linguistici: un lemmatizzatore associa ogni forma
+flessa al proprio lemma, un glossario bilingue associa un termine alla sua traduzione, un indice dei
+nomi associa ogni persona alle pagine in cui è citata.</p>
+<h3 id="la-tabella">La tabella<a class="headerlink" href="#la-tabella" title="Permanent link">&para;</a></h3>
+<p>Una <strong>tabella</strong> organizza i dati in <strong>righe</strong> e <strong>colonne</strong>. Ogni riga descrive un oggetto (un testo,
+una persona, un'occorrenza) e ogni colonna un suo attributo. È la struttura dei fogli di calcolo come
+Excel, LibreOffice Calc o Google Fogli, e quella delle basi di dati relazionali.</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>autore</th>
+<th>titolo</th>
+<th>anno</th>
+<th>lingua</th>
+<th>genere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Giacomo Leopardi</td>
+<td>L'infinito</td>
+<td>1819</td>
+<td>italiano</td>
+<td>lirica</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alessandro Manzoni</td>
+<td>I promessi sposi</td>
+<td>1827</td>
+<td>italiano</td>
+<td>romanzo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gustave Flaubert</td>
+<td>Madame Bovary</td>
+<td>1857</td>
+<td>francese</td>
+<td>romanzo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rosalía de Castro</td>
+<td>Cantares gallegos</td>
+<td>1863</td>
+<td>galiziano</td>
+<td>lirica</td>
+</tr>
+</tbody>
+</table>
+<p>Una tabella come questa è il modo più comune di descrivere i <strong>metadati</strong> di un corpus: per ogni testo
+si registrano autore, data, lingua, genere, fonte, e così via. Ogni colonna dovrebbe contenere dati di
+un solo tipo e in un formato coerente: se in una riga l'anno è scritto <code>1827</code> e in un'altra
+<code>metà Ottocento</code>, nessun programma potrà ordinare i testi cronologicamente.</p>
+<h3 id="lalbero">L'albero<a class="headerlink" href="#lalbero" title="Permanent link">&para;</a></h3>
+<p>Un <strong>albero</strong> è una struttura <strong>gerarchica</strong>: ogni elemento (detto <em>nodo</em>) può avere dei "figli", e ogni
+nodo, tranne il primo, la <em>radice</em>, ha esattamente un "genitore". Gli alberi sono ovunque:</p>
+<ul>
+<li>la struttura di un'opera: la <em>Commedia</em> si divide in tre cantiche, ogni cantica in canti, ogni canto
+  in terzine, ogni terzina in versi;</li>
+<li>le cartelle e i file del vostro computer;</li>
+<li>l'albero sintattico di una frase, in cui il verbo principale governa il soggetto e i complementi;</li>
+<li>l'albero genealogico, almeno nella sua forma più semplice;</li>
+<li>la struttura di una pagina web, come vedremo nella L08.</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    C[Commedia] --&gt; I[Inferno]
+    C --&gt; P[Purgatorio]
+    C --&gt; R[Paradiso]
+    I --&gt; I1[Canto I]
+    I --&gt; I2[Canto II]
+    I --&gt; I3[…]
+    I1 --&gt; T1[Terzina 1]
+    I1 --&gt; T2[Terzina 2]
+    T1 --&gt; V1["Nel mezzo del cammin di nostra vita"]
+    T1 --&gt; V2["mi ritrovai per una selva oscura,"]
+    T1 --&gt; V3["ché la diritta via era smarrita."]</code></pre>
+<h3 id="il-grafo">Il grafo<a class="headerlink" href="#il-grafo" title="Permanent link">&para;</a></h3>
+<p>Un <strong>grafo</strong> è l'insieme più generale: un insieme di <strong>nodi</strong> collegati da <strong>archi</strong>, senza vincoli
+gerarchici. Un nodo può avere un numero qualsiasi di collegamenti, e i collegamenti possono formare
+cicli. Gli archi possono avere una direzione (A segue B, ma B non segue necessariamente A) e
+un'etichetta che specifica il tipo di relazione.</p>
+<p>Con un grafo si rappresentano bene le <strong>reti</strong>: le amicizie su un social network, i collegamenti tra
+pagine web, la corrispondenza tra gli intellettuali di un'epoca, le relazioni tra i personaggi di un
+romanzo.</p>
+<pre class="mermaid"><code>flowchart LR
+    Renzo -- "promesso sposo di" --&gt; Lucia
+    Lucia -- "promessa sposa di" --&gt; Renzo
+    DonRodrigo[Don Rodrigo] -- "vuole impedire le nozze di" --&gt; Lucia
+    DonAbbondio[Don Abbondio] -- "minacciato da" --&gt; Bravi[I bravi]
+    Bravi -- "al servizio di" --&gt; DonRodrigo
+    FraCristoforo[Fra Cristoforo] -- "protegge" --&gt; Lucia
+    FraCristoforo -- "protegge" --&gt; Renzo
+    Innominato[L'innominato] -- "rapisce" --&gt; Lucia</code></pre>
+<h3 id="quale-struttura-scegliere">Quale struttura scegliere<a class="headerlink" href="#quale-struttura-scegliere" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Struttura</th>
+<th>Organizza</th>
+<th>Domanda tipica</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lista</td>
+<td>sequenze ordinate</td>
+<td>qual è il terzo elemento?</td>
+<td>le parole di una frase</td>
+</tr>
+<tr>
+<td>Dizionario</td>
+<td>associazioni chiave–valore</td>
+<td>qual è il valore per questa chiave?</td>
+<td>forma → lemma</td>
+</tr>
+<tr>
+<td>Tabella</td>
+<td>oggetti con gli stessi attributi</td>
+<td>quali righe soddisfano una condizione?</td>
+<td>metadati di un corpus</td>
+</tr>
+<tr>
+<td>Albero</td>
+<td>gerarchie</td>
+<td>che cosa contiene questo elemento?</td>
+<td>capitoli e paragrafi di un libro</td>
+</tr>
+<tr>
+<td>Grafo</td>
+<td>reti di relazioni</td>
+<td>come sono collegati questi elementi?</td>
+<td>personaggi di un romanzo</td>
+</tr>
+</tbody>
+</table>
+<p>Nella realtà le strutture si combinano: una lista di dizionari, una tabella in cui una colonna contiene
+liste, un albero i cui nodi sono collegati anche trasversalmente.</p>
+<hr />
+<h2 id="3-scrivere-i-dati-csv-json-xml">3. Scrivere i dati: CSV, JSON, XML<a class="headerlink" href="#3-scrivere-i-dati-csv-json-xml" title="Permanent link">&para;</a></h2>
+<p>Una struttura dati vive nella memoria del computer mentre un programma la usa. Per salvarla su un file
+o scambiarla con altri programmi bisogna scriverla in un <strong>formato</strong> testuale condiviso. Vediamo la
+stessa informazione, i primi due testi della tabella precedente, in tre formati molto diffusi.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CSV</label><label for="__tabbed_1_2">JSON</label><label for="__tabbed_1_3">XML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>id,autore,titolo,anno,lingua,genere
+1,Giacomo Leopardi,L'infinito,1819,italiano,lirica
+2,Alessandro Manzoni,I promessi sposi,1827,italiano,romanzo
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"autore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Giacomo Leopardi"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"titolo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"L'infinito"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"anno"</span><span class="p">:</span><span class="w"> </span><span class="mi">1819</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"lingua"</span><span class="p">:</span><span class="w"> </span><span class="s2">"italiano"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"genere"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lirica"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"autore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alessandro Manzoni"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"titolo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I promessi sposi"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"anno"</span><span class="p">:</span><span class="w"> </span><span class="mi">1827</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"lingua"</span><span class="p">:</span><span class="w"> </span><span class="s2">"italiano"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"genere"</span><span class="p">:</span><span class="w"> </span><span class="s2">"romanzo"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testi&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testo</span><span class="w"> </span><span class="na">id=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;autore&gt;</span>Giacomo<span class="w"> </span>Leopardi<span class="nt">&lt;/autore&gt;</span>
+<span class="w">    </span><span class="nt">&lt;titolo&gt;</span>L'infinito<span class="nt">&lt;/titolo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;anno&gt;</span>1819<span class="nt">&lt;/anno&gt;</span>
+<span class="w">    </span><span class="nt">&lt;lingua&gt;</span>italiano<span class="nt">&lt;/lingua&gt;</span>
+<span class="w">    </span><span class="nt">&lt;genere&gt;</span>lirica<span class="nt">&lt;/genere&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/testo&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testo</span><span class="w"> </span><span class="na">id=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;autore&gt;</span>Alessandro<span class="w"> </span>Manzoni<span class="nt">&lt;/autore&gt;</span>
+<span class="w">    </span><span class="nt">&lt;titolo&gt;</span>I<span class="w"> </span>promessi<span class="w"> </span>sposi<span class="nt">&lt;/titolo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;anno&gt;</span>1827<span class="nt">&lt;/anno&gt;</span>
+<span class="w">    </span><span class="nt">&lt;lingua&gt;</span>italiano<span class="nt">&lt;/lingua&gt;</span>
+<span class="w">    </span><span class="nt">&lt;genere&gt;</span>romanzo<span class="nt">&lt;/genere&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/testo&gt;</span>
+<span class="nt">&lt;/testi&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<p>Il formato <strong>CSV</strong> (<em>Comma-Separated Values</em>) rappresenta una tabella in testo semplice: ogni riga del
+file è una riga della tabella e i valori sono separati da virgole. È il formato di scambio più
+semplice e universale, e qualsiasi foglio di calcolo lo apre e lo esporta.</p>
+<p>La sua semplicità ha però dei costi:</p>
+<ul>
+<li>se un valore contiene una virgola (<em>"Manzoni, Alessandro"</em>) deve essere racchiuso tra virgolette;</li>
+<li>nelle versioni italiane di Excel il separatore predefinito è il punto e virgola, perché la virgola è
+  usata come separatore decimale, e un CSV prodotto in Italia può aprirsi tutto in una colonna su un
+  computer inglese;</li>
+<li>il file non dichiara la propria codifica, e un CSV in UTF-8 aperto con una versione di Excel che si
+  aspetta Windows-1252 produce il <em>mojibake</em> che conosciamo dalla L02;</li>
+<li>i fogli di calcolo cercano di "interpretare" i valori: una sigla come <code>MAR1</code> o una data scritta in
+  un formato inatteso possono essere convertite automaticamente in date, alterando i dati in modo
+  silenzioso.</li>
+</ul>
+<h3 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h3>
+<p><strong>JSON</strong> (<em>JavaScript Object Notation</em>) nasce nel mondo del web ed è oggi il formato più usato per lo
+scambio di dati tra applicazioni. Si basa su due costrutti, che corrispondono esattamente alle
+strutture viste sopra: le <strong>liste</strong>, tra parentesi quadre, e i <strong>dizionari</strong> (detti <em>oggetti</em>), tra
+parentesi graffe. Rispetto al CSV permette di rappresentare strutture annidate, ad esempio un testo con
+più autori o con una lista di parole chiave.</p>
+<h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">&para;</a></h3>
+<p><strong>XML</strong> (<em>eXtensible Markup Language</em>) è un linguaggio di marcatura, di cui parliamo nella sezione
+seguente. Rappresenta naturalmente gli <strong>alberi</strong> ed è molto usato per i documenti: le edizioni
+digitali, i dizionari elettronici, i formati dei programmi di videoscrittura (ricordate il
+<code>document.xml</code> dentro il file <code>.docx</code>?), molti standard bibliografici e archivistici.</p>
+<hr />
+<h2 id="4-i-linguaggi-di-marcatura">4. I linguaggi di marcatura<a class="headerlink" href="#4-i-linguaggi-di-marcatura" title="Permanent link">&para;</a></h2>
+<h3 id="una-pratica-antica">Una pratica antica<a class="headerlink" href="#una-pratica-antica" title="Permanent link">&para;</a></h3>
+<p>L'idea di "marcare" un testo con indicazioni sulla sua struttura o sulla sua presentazione è molto più
+antica dell'informatica. I redattori delle tipografie annotavano a mano i manoscritti degli autori con
+segni convenzionali: <em>questo va in corsivo</em>, <em>questo è un titolo</em>, <em>qui va a capo</em>. Il termine inglese
+<em>markup</em> viene proprio da questa pratica.</p>
+<p>Un <strong>linguaggio di marcatura</strong> è un sistema di convenzioni per annotare un documento inserendo nel
+testo dei segni, detti <strong>marcatori</strong> o <strong>tag</strong>, che descrivono la struttura, il significato o la
+presentazione delle sue parti. I marcatori sono distinguibili dal contenuto, e un programma può quindi
+separare l'uno dall'altro.</p>
+<p>Alcune tappe:</p>
+<ul>
+<li><strong>1986</strong>: viene pubblicato lo standard <strong>SGML</strong>, un metalinguaggio per definire linguaggi di marcatura;</li>
+<li><strong>1991</strong>: Tim Berners-Lee definisce <strong>HTML</strong>, il linguaggio delle pagine web, derivato da SGML;</li>
+<li><strong>1998</strong>: il W3C pubblica <strong>XML</strong>, una versione semplificata e più rigorosa di SGML, che diventa lo
+  standard per lo scambio di documenti strutturati;</li>
+<li><strong>2004</strong>: nasce <strong>Markdown</strong>, un linguaggio di marcatura "leggero" pensato per essere leggibile anche
+  senza essere elaborato. Le pagine di questo sito sono scritte in Markdown.</li>
+</ul>
+<h3 id="la-sintassi-di-base">La sintassi di base<a class="headerlink" href="#la-sintassi-di-base" title="Permanent link">&para;</a></h3>
+<p>In XML e in HTML un <strong>elemento</strong> è delimitato da un <strong>tag di apertura</strong> e da un <strong>tag di chiusura</strong>,
+che ha lo stesso nome preceduto da una barra:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;titolo&gt;</span>L'infinito<span class="nt">&lt;/titolo&gt;</span>
+</code></pre></div>
+<p>Un elemento può avere degli <strong>attributi</strong>, cioè informazioni aggiuntive scritte dentro il tag di apertura
+nella forma <code>nome="valore"</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;titolo</span><span class="w"> </span><span class="na">lingua=</span><span class="s">"it"</span><span class="w"> </span><span class="na">tipo=</span><span class="s">"principale"</span><span class="nt">&gt;</span>L'infinito<span class="nt">&lt;/titolo&gt;</span>
+</code></pre></div>
+<p>Gli elementi si possono <strong>annidare</strong> uno dentro l'altro, formando un albero:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;poesia&gt;</span>
+<span class="w">  </span><span class="nt">&lt;titolo&gt;</span>L'infinito<span class="nt">&lt;/titolo&gt;</span>
+<span class="w">  </span><span class="nt">&lt;autore&gt;</span>Giacomo<span class="w"> </span>Leopardi<span class="nt">&lt;/autore&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;verso</span><span class="w"> </span><span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>Sempre<span class="w"> </span>caro<span class="w"> </span>mi<span class="w"> </span>fu<span class="w"> </span>quest'ermo<span class="w"> </span>colle,<span class="nt">&lt;/verso&gt;</span>
+<span class="w">    </span><span class="nt">&lt;verso</span><span class="w"> </span><span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>e<span class="w"> </span>questa<span class="w"> </span>siepe,<span class="w"> </span>che<span class="w"> </span>da<span class="w"> </span>tanta<span class="w"> </span>parte<span class="nt">&lt;/verso&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/testo&gt;</span>
+<span class="nt">&lt;/poesia&gt;</span>
+</code></pre></div>
+<p>Un documento XML si dice <strong>ben formato</strong> quando rispetta alcune regole sintattiche: c'è un unico
+elemento radice che contiene tutti gli altri, ogni tag aperto viene chiuso, gli elementi sono annidati
+correttamente (non si può chiudere <code>&lt;poesia&gt;</code> prima di aver chiuso <code>&lt;testo&gt;</code>), i valori degli attributi
+sono tra virgolette. Un documento si dice inoltre <strong>valido</strong> quando rispetta uno <strong>schema</strong>, cioè un
+insieme di regole che stabilisce quali elementi sono ammessi, in quale ordine e con quali attributi.</p>
+<h3 id="html-e-xml">HTML e XML<a class="headerlink" href="#html-e-xml" title="Permanent link">&para;</a></h3>
+<p>HTML e XML condividono la stessa sintassi ma hanno scopi diversi. <strong>HTML</strong> dispone di un insieme
+<strong>fisso</strong> di elementi, pensati per le pagine web (<code>&lt;h1&gt;</code> per i titoli, <code>&lt;p&gt;</code> per i paragrafi, <code>&lt;a&gt;</code>
+per i collegamenti) e interpretati dai browser per mostrare il documento. <strong>XML</strong> non ha elementi
+predefiniti: è un linguaggio <strong>estensibile</strong>, con cui ciascuna comunità può definire i propri marcatori
+in base a ciò che vuole descrivere.</p>
+<p>Per i testi letterari e linguistici, lo schema XML più importante è quello della <strong>TEI</strong> (<em>Text
+Encoding Initiative</em>), sviluppato dal 1987 per codificare manoscritti, edizioni critiche, testi poetici
+e teatrali, dizionari, trascrizioni del parlato. In TEI una terzina dantesca si codifica così:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;lg</span><span class="w"> </span><span class="na">type=</span><span class="s">"terzina"</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;l</span><span class="w"> </span><span class="na">n=</span><span class="s">"1"</span><span class="nt">&gt;</span>Nel<span class="w"> </span>mezzo<span class="w"> </span>del<span class="w"> </span>cammin<span class="w"> </span>di<span class="w"> </span>nostra<span class="w"> </span>vita<span class="nt">&lt;/l&gt;</span>
+<span class="w">  </span><span class="nt">&lt;l</span><span class="w"> </span><span class="na">n=</span><span class="s">"2"</span><span class="nt">&gt;</span>mi<span class="w"> </span>ritrovai<span class="w"> </span>per<span class="w"> </span>una<span class="w"> </span>selva<span class="w"> </span>oscura,<span class="nt">&lt;/l&gt;</span>
+<span class="w">  </span><span class="nt">&lt;l</span><span class="w"> </span><span class="na">n=</span><span class="s">"3"</span><span class="nt">&gt;</span>ché<span class="w"> </span>la<span class="w"> </span>diritta<span class="w"> </span>via<span class="w"> </span>era<span class="w"> </span>smarrita.<span class="nt">&lt;/l&gt;</span>
+<span class="nt">&lt;/lg&gt;</span>
+</code></pre></div>
+<p>dove <code>lg</code> (<em>line group</em>) indica un gruppo di versi e <code>l</code> (<em>line</em>) un singolo verso.</p>
+<h3 id="marcatura-di-presentazione-e-marcatura-descrittiva">Marcatura di presentazione e marcatura descrittiva<a class="headerlink" href="#marcatura-di-presentazione-e-marcatura-descrittiva" title="Permanent link">&para;</a></h3>
+<p>Si distingue tra marcatura <strong>di presentazione</strong>, che indica come una porzione di testo deve apparire
+("in corsivo"), e marcatura <strong>descrittiva</strong>, che dice che cosa quella porzione di testo <strong>è</strong>
+("titolo di un'opera", "parola straniera", "citazione"). In un libro stampato il corsivo può indicare
+cose molto diverse: un titolo, un termine in lingua straniera, un'enfasi. Una marcatura descrittiva
+conserva questa distinzione, e permette ad esempio di estrarre automaticamente tutti i titoli di opere
+citati in un saggio, o tutte le parole straniere usate da un autore.</p>
+<div class="admonition example">
+<p class="admonition-title">Esercizio 1: aglio, olio e peperoncino (15 minuti)</p>
+<p>Ecco una ricetta in testo libero:</p>
+<blockquote>
+<p>Cuocete 320 g di spaghetti in abbondante acqua salata. Nel frattempo, in una padella larga,
+scaldate 6 cucchiai di olio extravergine d'oliva con 4 spicchi d'aglio tagliati a fettine e
+1 peperoncino fresco sminuzzato, finché l'aglio non diventa dorato. Scolate la pasta al dente
+tenendo da parte un mestolo di acqua di cottura, versatela in padella e saltatela con l'acqua
+e una manciata di prezzemolo tritato. Servite subito.</p>
+</blockquote>
+<p>Usando XML, strutturate <strong>l'elenco degli ingredienti</strong>, distinguendo per ciascuno la quantità,
+l'unità di misura e il nome. Inventate voi i nomi dei tag.</p>
+<p>Poi riflettete: come rappresentate <em>una manciata</em> o <em>abbondante acqua</em>? Che cosa fate con il sale,
+di cui non è indicata la quantità? E con <em>q.b.</em>, <em>quanto basta</em>, che nella cucina italiana è
+ovunque?</p>
+<details class="success">
+<summary>Una possibile soluzione</summary>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;ingredienti&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita&gt;</span>320<span class="nt">&lt;/quantita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;unita&gt;</span>g<span class="nt">&lt;/unita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>spaghetti<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita&gt;</span>6<span class="nt">&lt;/quantita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;unita&gt;</span>cucchiai<span class="nt">&lt;/unita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>olio<span class="w"> </span>extravergine<span class="w"> </span>d'oliva<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita&gt;</span>4<span class="nt">&lt;/quantita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;unita&gt;</span>spicchi<span class="nt">&lt;/unita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>aglio<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita&gt;</span>1<span class="nt">&lt;/quantita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>peperoncino<span class="w"> </span>fresco<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita</span><span class="w"> </span><span class="na">tipo=</span><span class="s">"approssimativa"</span><span class="nt">&gt;</span>una<span class="w"> </span>manciata<span class="nt">&lt;/quantita&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>prezzemolo<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ingrediente&gt;</span>
+<span class="w">    </span><span class="nt">&lt;quantita</span><span class="w"> </span><span class="na">tipo=</span><span class="s">"non specificata"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nome&gt;</span>sale<span class="nt">&lt;/nome&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ingrediente&gt;</span>
+<span class="nt">&lt;/ingredienti&gt;</span>
+</code></pre></div>
+<p>Notate l'uso dell'attributo <code>tipo</code> per distinguere le quantità precise da quelle approssimative,
+e l'elemento vuoto <code>&lt;quantita/&gt;</code>, che si apre e si chiude da solo. Non esiste un'unica soluzione
+corretta: ogni schema è una scelta su che cosa sia importante descrivere.</p>
+</details>
+</div>
+<hr />
+<h2 id="5-i-grafi-di-conoscenza">5. I grafi di conoscenza<a class="headerlink" href="#5-i-grafi-di-conoscenza" title="Permanent link">&para;</a></h2>
+<h3 id="dalla-tabella-al-grafo">Dalla tabella al grafo<a class="headerlink" href="#dalla-tabella-al-grafo" title="Permanent link">&para;</a></h3>
+<p>Le tabelle funzionano bene quando tutti gli oggetti hanno gli stessi attributi. Ma la conoscenza reale
+è più irregolare: un autore può avere più nomi, scrivere in più lingue, aver vissuto in più città, e
+le sue opere possono essere state tradotte, adattate, citate da altre opere. Per rappresentare questo
+intreccio di relazioni si usa sempre più spesso un <strong>grafo di conoscenza</strong> (<em>knowledge graph</em>).</p>
+<h3 id="le-triple">Le triple<a class="headerlink" href="#le-triple" title="Permanent link">&para;</a></h3>
+<p>Un grafo di conoscenza è composto da affermazioni elementari, dette <strong>triple</strong>, nella forma:</p>
+<p><strong>soggetto → predicato → oggetto</strong></p>
+<p>dove il soggetto e l'oggetto sono nodi del grafo (persone, opere, luoghi, concetti) e il predicato è
+l'arco che li collega, cioè la relazione:</p>
+<table>
+<thead>
+<tr>
+<th>Soggetto</th>
+<th>Predicato</th>
+<th>Oggetto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Giacomo Leopardi</td>
+<td>è nato a</td>
+<td>Recanati</td>
+</tr>
+<tr>
+<td>Giacomo Leopardi</td>
+<td>è autore di</td>
+<td>L'infinito</td>
+</tr>
+<tr>
+<td>L'infinito</td>
+<td>fa parte di</td>
+<td>Canti</td>
+</tr>
+<tr>
+<td>L'infinito</td>
+<td>ha come forma metrica</td>
+<td>endecasillabo sciolto</td>
+</tr>
+<tr>
+<td>Canti</td>
+<td>è scritto in</td>
+<td>italiano</td>
+</tr>
+<tr>
+<td>Recanati</td>
+<td>si trova in</td>
+<td>Marche</td>
+</tr>
+</tbody>
+</table>
+<p>Ogni tripla aggiunge un arco al grafo, e l'insieme delle triple forma una rete che si può percorrere in
+qualsiasi direzione: partendo da <em>Recanati</em> si arriva alle opere degli autori che vi sono nati, partendo
+da <em>endecasillabo sciolto</em> a tutte le poesie che lo usano.</p>
+<pre class="mermaid"><code>flowchart LR
+    GL([Giacomo Leopardi]) -- è nato a --&gt; R([Recanati])
+    GL -- è autore di --&gt; I([L'infinito])
+    I -- fa parte di --&gt; C([Canti])
+    I -- ha come forma metrica --&gt; E([endecasillabo sciolto])
+    C -- è scritto in --&gt; IT([italiano])
+    R -- si trova in --&gt; M([Marche])</code></pre>
+<p>Wikidata, che abbiamo esplorato nella L01, è un grande grafo di conoscenza, con oltre cento milioni di
+entità. Le proprietà come <em>data di nascita</em> (P569) o <em>occupazione</em> (P106) sono predicati, le entità
+come <em>Mahmoud Darwish</em> (Q207720) sono nodi.</p>
+<h3 id="classi-e-proprieta-i-due-livelli-del-grafo">Classi e proprietà: i due livelli del grafo<a class="headerlink" href="#classi-e-proprieta-i-due-livelli-del-grafo" title="Permanent link">&para;</a></h3>
+<p>Un grafo di conoscenza ben costruito ha due livelli:</p>
+<ul>
+<li>il livello delle <strong>asserzioni</strong>, che contiene i fatti specifici: <em>Leopardi è autore dell'Infinito</em>;</li>
+<li>il livello <strong>terminologico</strong>, che definisce il vocabolario usato per esprimere quei fatti: quali
+  <strong>classi</strong> di entità esistono (<em>Persona</em>, <em>Opera</em>, <em>Luogo</em>, <em>Forma metrica</em>) e quali <strong>proprietà</strong> le
+  collegano, con quali vincoli (la proprietà <em>è autore di</em> collega una <em>Persona</em> a un'<em>Opera</em>, non un
+  <em>Luogo</em> a una <em>Forma metrica</em>).</li>
+</ul>
+<p>Il livello terminologico si chiama spesso <strong>ontologia</strong>, con un termine preso in prestito dalla
+filosofia. La disciplina che si occupa di progettare questi vocabolari e di raccogliere le conoscenze
+degli esperti per formalizzarle è l'<strong>ingegneria della conoscenza</strong> (<em>knowledge engineering</em>).</p>
+<h3 id="identificativi-univoci">Identificativi univoci<a class="headerlink" href="#identificativi-univoci" title="Permanent link">&para;</a></h3>
+<p>Perché un grafo funzioni, ogni nodo deve avere un <strong>identificativo univoco</strong>. "Leopardi" è ambiguo
+(esistono altre persone con questo cognome, oltre al conte Monaldo, padre del poeta); un identificativo
+come quello di Wikidata, o un indirizzo web stabile che identifica una persona in modo non ambiguo,
+risolve il problema. Quando diverse istituzioni (biblioteche, archivi, musei) usano gli stessi
+identificativi e pubblicano i propri grafi sul web, i dati si collegano tra loro: si parla allora di
+<strong>Linked Open Data</strong>. Torneremo sugli identificativi nella L05, a proposito di bibliografia.</p>
+<div class="admonition example">
+<p class="admonition-title">Esercizio 2: la ricetta come grafo (20 minuti)</p>
+<p>Rappresentate come grafo di conoscenza un piatto che sapete cucinare, o uno tipico della cultura
+della lingua che studiate. Usate queste classi e queste proprietà:</p>
+<table>
+<thead>
+<tr>
+<th>Classi</th>
+<th>Proprietà</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Piatto</td>
+<td><em>contiene</em> (Piatto → Ingrediente)</td>
+</tr>
+<tr>
+<td>Ingrediente</td>
+<td><em>appartiene alla cucina</em> (Piatto → Cucina)</td>
+</tr>
+<tr>
+<td>Cucina</td>
+<td><em>si prepara con</em> (Piatto → Metodo di cottura)</td>
+</tr>
+<tr>
+<td>Metodo di cottura</td>
+<td><em>ha sapore</em> (Ingrediente → Profilo aromatico)</td>
+</tr>
+<tr>
+<td>Profilo aromatico</td>
+<td><em>si abbina a</em> (Ingrediente → Ingrediente)</td>
+</tr>
+</tbody>
+</table>
+<p>Scrivete almeno dieci triple, poi disegnate il grafo (a mano o con
+<a href="https://app.diagrams.net/">draw.io</a>). Ecco l'inizio, per gli spaghetti aglio, olio e peperoncino:</p>
+<pre class="mermaid"><code>flowchart LR
+    P([Spaghetti aglio, olio&lt;br&gt;e peperoncino]) -- contiene --&gt; S([spaghetti])
+    P -- contiene --&gt; A([aglio])
+    P -- contiene --&gt; O([olio d'oliva])
+    P -- contiene --&gt; PE([peperoncino])
+    P -- appartiene alla cucina --&gt; C([cucina campana])
+    P -- si prepara con --&gt; M1([bollitura])
+    P -- si prepara con --&gt; M2([soffritto])
+    PE -- ha sapore --&gt; PI([piccante])
+    A -- si abbina a --&gt; O</code></pre>
+<p>Domande per la discussione: quali relazioni avreste voluto esprimere ma non avete potuto con
+queste proprietà? Un piatto può appartenere a più cucine? Come rappresentereste una variante (con
+o senza pangrattato)?</p>
+</div>
+<hr />
+<h2 id="6-dai-testi-ai-dati-un-accenno-al-nlp">6. Dai testi ai dati: un accenno al NLP<a class="headerlink" href="#6-dai-testi-ai-dati-un-accenno-al-nlp" title="Permanent link">&para;</a></h2>
+<p>La maggior parte dell'informazione che ci interessa non si trova in tabelle o grafi, ma in <strong>testi
+non strutturati</strong>: articoli, libri, lettere, trascrizioni. Esistono tecniche che cercano di estrarre
+automaticamente dati strutturati dai testi, e appartengono al campo dell'<strong>elaborazione del linguaggio
+naturale</strong> (NLP, <em>Natural Language Processing</em>) e della <strong>linguistica computazionale</strong>. Due di queste
+tecniche sono particolarmente legate a quanto abbiamo visto oggi:</p>
+<ul>
+<li>il <strong>riconoscimento delle entità nominate</strong> (<em>Named Entity Recognition</em>, NER) individua nel testo i
+  nomi di persone, luoghi, organizzazioni, date;</li>
+<li>l'<strong>estrazione di relazioni</strong> (<em>Relation Extraction</em>) cerca di capire quali relazioni il testo
+  stabilisce tra quelle entità, producendo triple.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Esercizio 3: estrazione a mano (10 minuti)</p>
+<p>Leggete questo breve testo:</p>
+<blockquote>
+<p>Giacomo Leopardi nacque a Recanati nel 1798. Nel 1822 si trasferì per alcuni mesi a Roma, ospite
+dello zio Carlo Antici. Dal 1833 visse a Napoli insieme all'amico Antonio Ranieri, e lì morì nel
+1837.</p>
+</blockquote>
+<ol>
+<li>Sottolineate tutte le entità: persone, luoghi, date.</li>
+<li>Scrivete le triple che il testo vi permette di ricavare (ad esempio <em>Giacomo Leopardi – è nato
+   a – Recanati</em>).</li>
+<li>Quali informazioni avete dovuto <strong>dedurre</strong>? Chi è "lo zio" di chi? A che cosa si riferisce
+   "lì"? Sono esattamente le difficoltà che un sistema automatico deve affrontare, e che vedremo nel
+   Blocco C.</li>
+</ol>
+</div>
+<hr />
+<h2 id="7-ogni-struttura-e-una-scelta">7. Ogni struttura è una scelta<a class="headerlink" href="#7-ogni-struttura-e-una-scelta" title="Permanent link">&para;</a></h2>
+<p>Progettare una struttura dati significa decidere che cosa conta e che cosa no. Le scelte possono
+sembrare tecniche e neutrali, ma hanno conseguenze concrete su chi viene rappresentato correttamente
+e chi no.</p>
+<p>Un esempio che riguarda da vicino chi studia lingue sono i <strong>nomi di persona</strong>. Molti moduli online
+prevedono due campi, <em>nome</em> e <em>cognome</em>, e danno per scontato che il nome venga prima. Ma in cinese,
+giapponese, coreano e ungherese il cognome si scrive di solito per primo; in spagnolo e in portoghese
+molte persone hanno due cognomi; in islandese la maggior parte delle persone ha un patronimico al posto
+del cognome di famiglia; in molte culture esistono nomi composti da una sola parola. Un sistema
+progettato con in mente soltanto i nomi italiani o inglesi costringe tutti gli altri a deformare il
+proprio nome per poter compilare un modulo.</p>
+<div class="admonition question">
+<p class="admonition-title">Per discutere</p>
+<p>Pensate ad altri campi che nei moduli sembrano ovvi: <em>sesso</em> con due sole opzioni, <em>indirizzo</em>
+con via e numero civico (che in molti luoghi non esistono), <em>lingua madre</em> con una sola scelta
+possibile. Che cosa succede alle persone che non rientrano nello schema? E quando quei dati
+servono ad addestrare un sistema automatico?</p>
+</div>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Quale struttura dati è più adatta a rappresentare l'associazione tra le forme flesse di un verbo
+e il loro lemma?</p>
+<ul>
+<li>A. Una lista</li>
+<li>B. Un dizionario</li>
+<li>C. Un albero</li>
+<li>D. Un'immagine</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Ogni forma (chiave) è associata al suo lemma (valore).</p>
+</details>
+<p><strong>2.</strong> La suddivisione della <em>Commedia</em> in cantiche, canti, terzine e versi si rappresenta naturalmente con:</p>
+<ul>
+<li>A. un albero</li>
+<li>B. un dizionario</li>
+<li>C. un grafo non orientato</li>
+<li>D. un file CSV</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>A.</strong> È una struttura gerarchica, in cui ogni elemento è contenuto in un solo elemento superiore.</p>
+</details>
+<p><strong>3.</strong> Quale problema è tipico dei file CSV?</p>
+<ul>
+<li>A. Non si possono aprire con un foglio di calcolo</li>
+<li>B. Non possono contenere numeri</li>
+<li>C. Non dichiarano la propria codifica né il separatore, e possono essere interpretati male</li>
+<li>D. Possono contenere soltanto una colonna</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong></p>
+</details>
+<p><strong>4.</strong> In XML, l'espressione <code>&lt;verso n="3"&gt;</code> contiene:</p>
+<ul>
+<li>A. un tag di chiusura</li>
+<li>B. un tag di apertura con un attributo</li>
+<li>C. un commento</li>
+<li>D. un errore di sintassi</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> <code>n</code> è il nome dell'attributo, <code>3</code> il suo valore.</p>
+</details>
+<p><strong>5.</strong> Un documento XML è <em>ben formato</em> quando:</p>
+<ul>
+<li>A. è scritto in inglese</li>
+<li>B. rispetta le regole sintattiche, ad esempio ogni tag aperto è chiuso e gli elementi sono annidati correttamente</li>
+<li>C. contiene almeno dieci elementi</li>
+<li>D. è stato approvato dal W3C</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> La <em>validità</em> rispetto a uno schema è un requisito ulteriore.</p>
+</details>
+<p><strong>6.</strong> Qual è la differenza principale tra HTML e XML?</p>
+<ul>
+<li>A. HTML ha un insieme fisso di elementi pensati per le pagine web, XML permette di definire i propri elementi</li>
+<li>B. XML è più antico di HTML</li>
+<li>C. HTML non usa i tag</li>
+<li>D. XML si usa solo per le immagini</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>A.</strong></p>
+</details>
+<p><strong>7.</strong> In un grafo di conoscenza, l'affermazione "Leopardi è autore dell'<em>Infinito</em>" è:</p>
+<ul>
+<li>A. una classe</li>
+<li>B. una tripla soggetto–predicato–oggetto</li>
+<li>C. un attributo XML</li>
+<li>D. una lista</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> <em>Leopardi</em> è il soggetto, <em>è autore di</em> il predicato, <em>L'infinito</em> l'oggetto.</p>
+</details>
+<p><strong>8.</strong> Il riconoscimento delle entità nominate (NER) serve a:</p>
+<ul>
+<li>A. tradurre automaticamente i nomi propri</li>
+<li>B. individuare in un testo nomi di persone, luoghi, organizzazioni e date</li>
+<li>C. correggere gli errori di ortografia</li>
+<li>D. comprimere i file di testo</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hogan, A., Blomqvist, E., Cochez, M., d'Amato, C., de Melo, G., Gutierrez, C., et al. (2021).
+  Knowledge Graphs. <em>ACM Computing Surveys</em>, 54(4), 1–37.
+  <a href="https://doi.org/10.1145/3447772">doi:10.1145/3447772</a></li>
+<li>Vrandečić, D., &amp; Krötzsch, M. (2014). Wikidata: A free collaborative knowledgebase.
+  <em>Communications of the ACM</em>, 57(10), 78–85. <a href="https://doi.org/10.1145/2629489">doi:10.1145/2629489</a></li>
+<li><a href="https://teibyexample.org/">TEI by Example</a>: esercizi guidati sulla codifica dei testi in TEI.</li>
+<li>McKenzie, P. (2010). <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/"><em>Falsehoods Programmers Believe About Names</em></a>.
+  Un elenco celebre (e divertente) delle false certezze sui nomi di persona.</li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-a-fondamenti">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#struttura-dati">Struttura dati</a> ·
+<a href="../../glossario/#lista">Lista</a> ·
+<a href="../../glossario/#dizionario-struttura-dati">Dizionario</a> ·
+<a href="../../glossario/#tabella">Tabella</a> ·
+<a href="../../glossario/#albero">Albero</a> ·
+<a href="../../glossario/#grafo">Grafo</a> ·
+<a href="../../glossario/#csv">CSV</a> ·
+<a href="../../glossario/#json">JSON</a> ·
+<a href="../../glossario/#xml">XML</a> ·
+<a href="../../glossario/#linguaggio-di-marcatura">Linguaggio di marcatura</a> ·
+<a href="../../glossario/#tag">Tag</a> ·
+<a href="../../glossario/#tei-text-encoding-initiative">TEI</a> ·
+<a href="../../glossario/#grafo-di-conoscenza">Grafo di conoscenza</a> ·
+<a href="../../glossario/#tripla">Tripla</a> ·
+<a href="../../glossario/#ontologia">Ontologia</a> ·
+<a href="../../glossario/#linked-open-data">Linked Open Data</a> ·
+<a href="../../glossario/#ner-named-entity-recognition">NER</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../02-rappresentazione/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L02 · Come si rappresenta l&#39;informazione">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L02 · Come si rappresenta l'informazione
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-algoritmi/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L04 · Algoritmi e pensiero computazionale">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L04 · Algoritmi e pensiero computazionale
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

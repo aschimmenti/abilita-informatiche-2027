@@ -1,0 +1,2286 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/04-algoritmi/">
+      
+      
+        <link rel="prev" href="../03-strutturare-i-dati/">
+      
+      
+        <link rel="next" href="../05-bibliografia-e-zotero/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>L04 · Algoritmi e pensiero computazionale - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l04-algoritmi-e-pensiero-computazionale" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L04 · Algoritmi e pensiero computazionale
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-pensiero-computazionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il pensiero computazionale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-che-cose-un-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Che cos'è un algoritmo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Che cos&#39;è un algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lorigine-della-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'origine della parola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-definizione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una definizione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmi-quotidiani" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmi quotidiani
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programma-e-linguaggio-di-programmazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programma e linguaggio di programmazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-come-si-scrive-un-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Come si scrive un algoritmo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Come si scrive un algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-linguaggio-naturale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In linguaggio naturale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-pseudocodice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In pseudocodice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-un-diagramma-di-flusso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con un diagramma di flusso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mettiamolo-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettiamolo alla prova
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-le-strutture-di-controllo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Le strutture di controllo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Le strutture di controllo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-esempio-che-le-usa-tutte-e-tre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un esempio che le usa tutte e tre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ordinare-e-cercare-due-problemi-linguistici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ordinare e cercare: due problemi linguistici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Ordinare e cercare: due problemi linguistici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-significa-in-ordine-alfabetico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa significa "in ordine alfabetico"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordinare-strategie-diverse-costi-diversi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinare: strategie diverse, costi diversi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cercare-in-un-dizionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cercare in un dizionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-lalgoritmo-nel-discorso-pubblico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. "L'algoritmo" nel discorso pubblico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-pensiero-computazionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il pensiero computazionale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-che-cose-un-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Che cos'è un algoritmo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Che cos&#39;è un algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lorigine-della-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'origine della parola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-definizione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Una definizione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmi-quotidiani" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algoritmi quotidiani
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programma-e-linguaggio-di-programmazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programma e linguaggio di programmazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-come-si-scrive-un-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Come si scrive un algoritmo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Come si scrive un algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-linguaggio-naturale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In linguaggio naturale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-pseudocodice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In pseudocodice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#con-un-diagramma-di-flusso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Con un diagramma di flusso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mettiamolo-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettiamolo alla prova
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-le-strutture-di-controllo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Le strutture di controllo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Le strutture di controllo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-esempio-che-le-usa-tutte-e-tre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un esempio che le usa tutte e tre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ordinare-e-cercare-due-problemi-linguistici" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ordinare e cercare: due problemi linguistici
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Ordinare e cercare: due problemi linguistici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-significa-in-ordine-alfabetico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa significa "in ordine alfabetico"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordinare-strategie-diverse-costi-diversi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinare: strategie diverse, costi diversi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cercare-in-un-dizionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cercare in un dizionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-lalgoritmo-nel-discorso-pubblico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. "L'algoritmo" nel discorso pubblico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l04-algoritmi-e-pensiero-computazionale">L04 · Algoritmi e pensiero computazionale<a class="headerlink" href="#l04-algoritmi-e-pensiero-computazionale" title="Permanent link">&para;</a></h1>
+<p class="meta">Online · 2 ore · Blocco A — Fondamenti</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Nei giornali "l'algoritmo" è diventato quasi un personaggio, che decide che cosa vediamo sui social,
+chi ottiene un prestito, quali canzoni ci propone una piattaforma musicale. In questa lezione
+proviamo a capire che cosa sia, in senso proprio, un algoritmo, e impariamo a ragionare come chi deve
+dare istruzioni a una macchina: scomporre un problema, riconoscere delle regolarità, trascurare i
+dettagli irrilevanti e scrivere una procedura priva di ambiguità. Lo faremo con problemi che vi sono
+familiari: cucinare un piatto di pasta, formare il plurale dei nomi, ordinare le parole di un
+dizionario. Concluderemo con un primo sguardo a un vero linguaggio di programmazione.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L04.html" title="Slide della lezione 4" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L04.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L04.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>definire il <strong>pensiero computazionale</strong> e illustrarne i quattro principi con esempi concreti;</li>
+<li>dare una definizione precisa di <strong>algoritmo</strong> e riconoscerne le proprietà;</li>
+<li>rappresentare un algoritmo in linguaggio naturale, in <strong>pseudocodice</strong> e con un <strong>diagramma di flusso</strong>;</li>
+<li>usare le strutture di controllo fondamentali: <strong>sequenza</strong>, <strong>selezione</strong>, <strong>iterazione</strong>;</li>
+<li>leggere un breve programma in <strong>Python</strong> e capirne il funzionamento;</li>
+<li>spiegare perché le lingue naturali si prestano male a essere descritte soltanto con regole esplicite;</li>
+<li>confrontare l'efficienza di due algoritmi di ricerca.</li>
+</ul>
+<hr />
+<h2 id="1-il-pensiero-computazionale">1. Il pensiero computazionale<a class="headerlink" href="#1-il-pensiero-computazionale" title="Permanent link">&para;</a></h2>
+<p>L'espressione <em>computational thinking</em> compare già negli anni Ottanta negli scritti di Seymour Papert,
+il matematico e pedagogista che al MIT ideò il linguaggio Logo per insegnare ai bambini a programmare.
+Divenne però popolare nel 2006, quando l'informatica Jeannette Wing la propose, in un breve articolo,
+come un'abilità fondamentale che tutti dovrebbero acquisire, accanto a leggere, scrivere e far di
+conto. Con questa espressione si indica un insieme di strategie per affrontare un problema in modo che
+la soluzione possa essere eseguita, almeno in parte, da una macchina.</p>
+<p>Di solito il pensiero computazionale si descrive attraverso quattro principi:</p>
+<table>
+<thead>
+<tr>
+<th>Principio</th>
+<th>Che cosa significa</th>
+<th>Esempio linguistico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scomposizione</strong></td>
+<td>dividere un problema complesso in sotto-problemi più semplici, da risolvere separatamente</td>
+<td>tradurre un romanzo significa tradurre capitoli, e poi paragrafi, e poi frasi; ma anche mantenere coerenti i nomi dei personaggi in tutto il libro</td>
+</tr>
+<tr>
+<td><strong>Riconoscimento di schemi</strong></td>
+<td>individuare somiglianze e regolarità tra i sotto-problemi</td>
+<td>i verbi italiani in <em>-are</em> si coniugano quasi tutti allo stesso modo</td>
+</tr>
+<tr>
+<td><strong>Astrazione</strong></td>
+<td>concentrarsi sulle caratteristiche rilevanti, trascurando le altre</td>
+<td>per formare il plurale conta la vocale finale della parola, non il suo significato</td>
+</tr>
+<tr>
+<td><strong>Algoritmo</strong></td>
+<td>formulare una procedura ordinata e precisa che risolva il problema</td>
+<td>le istruzioni passo per passo per formare il plurale</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Che cosa non è il pensiero computazionale</p>
+<p>L'espressione si presta a fraintendimenti. Pensare in modo computazionale non vuol dire "pensare
+come un computer", né credere che ogni problema abbia una soluzione algoritmica. Michael Lodi e
+Simone Martini, in un articolo del 2021, hanno ricordato che nell'idea originale di Papert il
+computer era uno strumento per <strong>imparare ed esprimersi</strong>, non un modello della mente umana. Molti
+problemi che interessano gli umanisti, come interpretare una metafora o decidere come tradurre un
+gioco di parole, non hanno una soluzione di questo tipo, e non c'è alcuna ragione di forzarli in uno
+schema che non li rappresenta.</p>
+</div>
+<hr />
+<h2 id="2-che-cose-un-algoritmo">2. Che cos'è un algoritmo<a class="headerlink" href="#2-che-cose-un-algoritmo" title="Permanent link">&para;</a></h2>
+<h3 id="lorigine-della-parola">L'origine della parola<a class="headerlink" href="#lorigine-della-parola" title="Permanent link">&para;</a></h3>
+<p>La parola <em>algoritmo</em> deriva dal nome del matematico persiano <strong>Muḥammad ibn Mūsā al-Khwārizmī</strong>,
+attivo a Baghdad nel IX secolo. La traduzione latina di un suo trattato, che si apriva con le parole
+<em>Dixit Algorizmi</em> ("così disse al-Khwārizmī"), fece conoscere in Europa i numeri indo-arabici e le
+procedure per calcolare con essi. Da un'altra sua opera deriva anche la parola <em>algebra</em>.</p>
+<h3 id="una-definizione">Una definizione<a class="headerlink" href="#una-definizione" title="Permanent link">&para;</a></h3>
+<p>Un <strong>algoritmo</strong> è una sequenza <strong>finita</strong> di istruzioni <strong>precise e non ambigue</strong> che, a partire da un
+insieme di dati iniziali (l'<strong>input</strong>), produce un risultato (l'<strong>output</strong>) in un numero finito di passi.</p>
+<p>Le proprietà che un algoritmo deve avere sono quattro:</p>
+<ul>
+<li><strong>finitezza</strong>: è composto da un numero finito di istruzioni e termina dopo un numero finito di passi;</li>
+<li><strong>non ambiguità</strong>: ogni istruzione ha un solo significato possibile, e chi la esegue sa sempre che
+  cosa fare;</li>
+<li><strong>eseguibilità</strong>: ogni istruzione può essere effettivamente eseguita con i mezzi disponibili;</li>
+<li><strong>generalità</strong>: risolve un'intera classe di problemi, e non soltanto un caso particolare.</li>
+</ul>
+<h3 id="algoritmi-quotidiani">Algoritmi quotidiani<a class="headerlink" href="#algoritmi-quotidiani" title="Permanent link">&para;</a></h3>
+<p>Eseguiamo algoritmi continuamente, anche senza chiamarli così: quando proviamo un paio di scarpe in un
+negozio (provo la mia taglia; se è stretta provo quella più grande; se è larga quella più piccola;
+mi fermo quando una mi va bene), quando seguiamo la routine della sera, quando montiamo un mobile
+seguendo le istruzioni, quando cerchiamo una parola nel vocabolario.</p>
+<p>La ricetta di cucina, che si cita spesso come esempio, è in realtà un algoritmo solo in parte. Un'istruzione come
+"aggiungete sale quanto basta" non è un'istruzione precisa: <em>quanto basta</em> lo decide il cuoco, in base
+al gusto e all'esperienza. Le ricette sono scritte per esseri umani, che colmano le lacune con il buon
+senso. Un computer non ha buon senso, ed esegue <strong>esattamente</strong> ciò che c'è scritto.</p>
+<div class="admonition example">
+<p class="admonition-title">Esercizio 1: la ricetta per una macchina (15 minuti)</p>
+<p>Riprendiamo gli spaghetti aglio, olio e peperoncino della L03. La prima istruzione della ricetta
+era <em>Cuocete 320 g di spaghetti in abbondante acqua salata</em>. Per una persona è chiarissima, ma per
+un robot che non ha mai visto una cucina va scomposta in passi elementari:</p>
+<ol>
+<li>prendi una pentola capiente;</li>
+<li>riempi la pentola d'acqua fino a tre quarti;</li>
+<li>metti la pentola sul fornello più grande;</li>
+<li>accendi il fornello alla fiamma massima;</li>
+<li>aspetta finché l'acqua non bolle;</li>
+<li>aggiungi 10 g di sale;</li>
+<li>…</li>
+</ol>
+<p>Continuate voi fino alla fine della ricetta, con la regola che ogni istruzione deve essere
+<strong>un'azione semplice</strong>, eseguibile senza bisogno di interpretazione. Poi scambiatevi i testi con un
+compagno, che li leggerà come se fosse il robot e segnalerà ogni punto in cui non saprebbe che cosa
+fare. Come si traduce <em>al dente</em> in un'istruzione? Che cosa fa il robot se il fornello non si accende?</p>
+<p>È esattamente il lavoro che si fa scrivendo un programma: scomporre un'attività in azioni
+elementari, che la macchina possa eseguire una dopo l'altra.</p>
+</div>
+<h3 id="programma-e-linguaggio-di-programmazione">Programma e linguaggio di programmazione<a class="headerlink" href="#programma-e-linguaggio-di-programmazione" title="Permanent link">&para;</a></h3>
+<p>Un <strong>programma</strong> è un algoritmo scritto in un <strong>linguaggio di programmazione</strong>, cioè in una lingua che
+un computer è in grado di eseguire. I linguaggi di programmazione (Python, JavaScript, Java, C, R e
+moltissimi altri) sono <strong>linguaggi formali</strong>: hanno un vocabolario limitato e una grammatica rigida,
+definita in modo da non ammettere ambiguità. Una frase sintatticamente scorretta, come una parentesi
+non chiusa, non viene "capita lo stesso": il programma semplicemente non funziona.</p>
+<div class="admonition tip">
+<p class="admonition-title">Perché vi riguarda</p>
+<p>"Ho visto l'uomo con il cannocchiale": chi ha il cannocchiale, io o l'uomo? "La vecchia porta la
+sbarra": chi porta che cosa? Le lingue naturali sono piene di ambiguità, sottintesi e dipendenze dal
+contesto, che i parlanti risolvono senza accorgersene. I linguaggi di programmazione sono progettati
+perché non ce ne siano. Gran parte della difficoltà dell'elaborazione automatica del linguaggio,
+che affronteremo nel Blocco C, nasce proprio dalla distanza tra questi due tipi di lingua.</p>
+</div>
+<hr />
+<h2 id="3-come-si-scrive-un-algoritmo">3. Come si scrive un algoritmo<a class="headerlink" href="#3-come-si-scrive-un-algoritmo" title="Permanent link">&para;</a></h2>
+<p>Lo stesso algoritmo si può scrivere in forme diverse, più o meno vicine al linguaggio della macchina.
+Prendiamo un problema che conoscete bene: <strong>formare il plurale di un nome italiano</strong>.</p>
+<h3 id="in-linguaggio-naturale">In linguaggio naturale<a class="headerlink" href="#in-linguaggio-naturale" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Guarda l'ultima lettera della parola. Se è <em>-o</em>, sostituiscila con <em>-i</em>. Se è <em>-a</em>, sostituiscila
+con <em>-e</em>. Se è <em>-e</em>, sostituiscila con <em>-i</em>. Negli altri casi, lascia la parola invariata.</p>
+</blockquote>
+<h3 id="in-pseudocodice">In pseudocodice<a class="headerlink" href="#in-pseudocodice" title="Permanent link">&para;</a></h3>
+<p>Lo <strong>pseudocodice</strong> è una forma intermedia tra lingua naturale e linguaggio di programmazione: è
+abbastanza preciso da non lasciare dubbi, ma resta leggibile da chiunque. Non esiste una sintassi
+ufficiale, e ciascuno può adottare le convenzioni che preferisce, purché le usi in modo coerente.</p>
+<div class="highlight"><pre><span></span><code>ALGORITMO plurale(parola)
+    SE parola finisce con "o" ALLORA
+        restituisci parola senza l'ultima lettera + "i"
+    ALTRIMENTI SE parola finisce con "a" ALLORA
+        restituisci parola senza l'ultima lettera + "e"
+    ALTRIMENTI SE parola finisce con "e" ALLORA
+        restituisci parola senza l'ultima lettera + "i"
+    ALTRIMENTI
+        restituisci parola          // es. "film", "bar", "città"
+FINE
+</code></pre></div>
+<h3 id="con-un-diagramma-di-flusso">Con un diagramma di flusso<a class="headerlink" href="#con-un-diagramma-di-flusso" title="Permanent link">&para;</a></h3>
+<p>Il <strong>diagramma di flusso</strong> rappresenta l'algoritmo in forma grafica: gli ovali indicano l'inizio e la
+fine, i rettangoli le azioni, i rombi le decisioni, le frecce l'ordine in cui procedere.</p>
+<pre class="mermaid"><code>flowchart TD
+    S([Inizio: parola]) --&gt; A{finisce in -o?}
+    A -- sì --&gt; A1[togli -o, aggiungi -i] --&gt; F([Fine: plurale])
+    A -- no --&gt; B{finisce in -a?}
+    B -- sì --&gt; B1[togli -a, aggiungi -e] --&gt; F
+    B -- no --&gt; C{finisce in -e?}
+    C -- sì --&gt; C1[togli -e, aggiungi -i] --&gt; F
+    C -- no --&gt; D[lascia invariata] --&gt; F</code></pre>
+<h3 id="in-python">In Python<a class="headerlink" href="#in-python" title="Permanent link">&para;</a></h3>
+<p>Ed ecco lo stesso algoritmo scritto in <strong>Python</strong>, uno dei linguaggi di programmazione più diffusi e
+più usati nella linguistica computazionale e nelle Digital Humanities:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">plurale</span><span class="p">(</span><span class="n">parola</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">parola</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"o"</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">parola</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"i"</span>
+    <span class="k">elif</span> <span class="n">parola</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"a"</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">parola</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"e"</span>
+    <span class="k">elif</span> <span class="n">parola</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">"e"</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">parola</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"i"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">parola</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">plurale</span><span class="p">(</span><span class="s2">"libro"</span><span class="p">))</span>   <span class="c1"># libri</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">plurale</span><span class="p">(</span><span class="s2">"casa"</span><span class="p">))</span>    <span class="c1"># case</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">plurale</span><span class="p">(</span><span class="s2">"film"</span><span class="p">))</span>    <span class="c1"># film</span>
+</code></pre></div>
+<p>Non serve saper programmare per capirlo. <code>def</code> definisce una nuova funzione, chiamata <code>plurale</code>, che
+riceve una <code>parola</code>. <code>if</code>, <code>elif</code> ("altrimenti se") ed <code>else</code> corrispondono a <em>se</em>, <em>altrimenti se</em> e
+<em>altrimenti</em>. <code>parola[:-1]</code> significa "la parola senza l'ultimo carattere", e il segno <code>+</code> unisce due
+sequenze di caratteri. Le righe che cominciano con <code>#</code> sono commenti, ignorati dal computer.</p>
+<h3 id="mettiamolo-alla-prova">Mettiamolo alla prova<a class="headerlink" href="#mettiamolo-alla-prova" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parola</th>
+<th>Risultato dell'algoritmo</th>
+<th>Corretto?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>libro</td>
+<td>libri</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>casa</td>
+<td>case</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>fiore</td>
+<td>fiori</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>film</td>
+<td>film</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>città</td>
+<td>città</td>
+<td>✅ (ma solo perché <em>à</em> è un carattere diverso da <em>a</em>)</td>
+</tr>
+<tr>
+<td><strong>amica</strong></td>
+<td>amice</td>
+<td>❌ amiche</td>
+</tr>
+<tr>
+<td><strong>lago</strong></td>
+<td>lagi</td>
+<td>❌ laghi</td>
+</tr>
+<tr>
+<td><strong>problema</strong></td>
+<td>probleme</td>
+<td>❌ problemi</td>
+</tr>
+<tr>
+<td><strong>mano</strong></td>
+<td>mani</td>
+<td>✅ (ma <em>mano</em> è femminile: la regola funziona per caso)</td>
+</tr>
+<tr>
+<td><strong>uomo</strong></td>
+<td>uomi</td>
+<td>❌ uomini</td>
+</tr>
+<tr>
+<td><strong>uovo</strong></td>
+<td>uovi</td>
+<td>❌ uova</td>
+</tr>
+<tr>
+<td><strong>dito</strong></td>
+<td>diti</td>
+<td>❌ dita (o <em>diti</em>, in un altro senso)</td>
+</tr>
+</tbody>
+</table>
+<p>Possiamo aggiungere regole: <em>-ca</em> diventa <em>-che</em>, <em>-ga</em> diventa <em>-ghe</em>. Ma <em>amico</em> fa <em>amici</em> e
+<em>antico</em> fa <em>antichi</em>; <em>mago</em> fa <em>maghi</em> e <em>psicologo</em> può fare <em>psicologi</em>. Le parole in <em>-ma</em> di
+origine greca (<em>problema</em>, <em>tema</em>, <em>poema</em>) fanno il plurale in <em>-i</em>, ma <em>arma</em> fa <em>armi</em> e <em>mamma</em>
+fa <em>mamme</em>. Alla fine ci serve un elenco di eccezioni, e l'elenco cresce ogni volta che proviamo
+l'algoritmo su un testo nuovo.</p>
+<div class="admonition question">
+<p class="admonition-title">Per discutere</p>
+<p>Questo è, in piccolo, il problema che hanno affrontato i primi sistemi di traduzione automatica,
+negli anni Cinquanta e Sessanta: le lingue hanno regole, ma le regole hanno eccezioni, e le
+eccezioni hanno a loro volta eccezioni. A partire dagli anni Novanta si è progressivamente cambiato
+approccio: invece di scrivere le regole a mano, si lascia che il sistema le ricavi da milioni di
+esempi. È il passaggio dalle regole alla statistica che studieremo nelle L10 e L12. Quali vantaggi
+ha un sistema a regole scritte da esperti? Quali svantaggi?</p>
+</div>
+<hr />
+<h2 id="4-le-strutture-di-controllo">4. Le strutture di controllo<a class="headerlink" href="#4-le-strutture-di-controllo" title="Permanent link">&para;</a></h2>
+<p>Qualunque algoritmo, per quanto complesso, si può costruire combinando tre soli tipi di istruzione,
+detti <strong>strutture di controllo</strong>.</p>
+<p><strong>La sequenza.</strong> Le istruzioni vengono eseguite una dopo l'altra, nell'ordine in cui sono scritte:
+<em>fai A, poi B, poi C</em>. La ricetta per il robot è quasi tutta una sequenza.</p>
+<p><strong>La selezione</strong> (o condizione). Si sceglie tra due o più strade a seconda che una condizione sia
+vera o falsa: <em>se la condizione è vera fai A, altrimenti fai B</em>. L'algoritmo del plurale è costruito
+quasi interamente con selezioni.</p>
+<p><strong>L'iterazione</strong> (o ciclo). Un gruppo di istruzioni viene ripetuto più volte: un numero stabilito di
+volte, per ogni elemento di una lista, oppure finché una condizione resta vera. <em>Aspetta finché l'acqua
+non bolle</em> è un'iterazione: controlla l'acqua, e se non bolle ancora aspetta e controlla di nuovo.</p>
+<p>Per tenere traccia dei valori che cambiano durante l'esecuzione si usano le <strong>variabili</strong>, contenitori
+dotati di un nome, il cui contenuto può essere letto e modificato.</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Sequenza
+      direction TB
+      a1[A] --&gt; a2[B] --&gt; a3[C]
+    end
+    subgraph Selezione
+      direction TB
+      b0{condizione?} -- sì --&gt; b1[A]
+      b0 -- no --&gt; b2[B]
+    end
+    subgraph Iterazione
+      direction TB
+      c0{condizione?} -- sì --&gt; c1[A] --&gt; c0
+      c0 -- no --&gt; c2[esci]
+    end</code></pre>
+<h3 id="un-esempio-che-le-usa-tutte-e-tre">Un esempio che le usa tutte e tre<a class="headerlink" href="#un-esempio-che-le-usa-tutte-e-tre" title="Permanent link">&para;</a></h3>
+<p>Contiamo quante volte compare ciascuna parola in un testo, come abbiamo fatto con <em>L'infinito</em> nella L01.
+In pseudocodice:</p>
+<div class="highlight"><pre><span></span><code>ALGORITMO conta_parole(testo)
+    frequenze ← dizionario vuoto
+    parole ← dividi testo in parole
+    PER OGNI parola IN parole                    // iterazione
+        parola ← trasforma parola in minuscolo   // sequenza
+        SE parola è già in frequenze ALLORA      // selezione
+            frequenze[parola] ← frequenze[parola] + 1
+        ALTRIMENTI
+            frequenze[parola] ← 1
+    restituisci frequenze
+FINE
+</code></pre></div>
+<p>E in Python:</p>
+<div class="highlight"><pre><span></span><code><span class="n">testo</span> <span class="o">=</span> <span class="s2">"Sempre caro mi fu quest'ermo colle, e questa siepe, che da tanta parte"</span>
+
+<span class="n">frequenze</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">parola</span> <span class="ow">in</span> <span class="n">testo</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">","</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">parola</span> <span class="ow">in</span> <span class="n">frequenze</span><span class="p">:</span>
+        <span class="n">frequenze</span><span class="p">[</span><span class="n">parola</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">frequenze</span><span class="p">[</span><span class="n">parola</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frequenze</span><span class="p">)</span>
+<span class="c1"># {'sempre': 1, 'caro': 1, 'mi': 1, 'fu': 1, "quest'ermo": 1, 'colle': 1, 'e': 1, ...}</span>
+</code></pre></div>
+<p>Notate due cose. La prima è che il programma usa un <strong>dizionario</strong>, la struttura dati della L03, per
+associare a ogni parola il numero delle sue occorrenze. La seconda è che il programma tratta
+<em>quest'ermo</em> come una sola parola, perché divide il testo soltanto in corrispondenza degli spazi:
+decidere che cosa sia una "parola" è meno semplice di quanto sembri, e lo vedremo nel Blocco C a
+proposito di <strong>tokenizzazione</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Volete provare?</p>
+<p>Non serve installare nulla. Potete eseguire questi esempi online, ad esempio su
+<a href="https://colab.research.google.com/">Google Colab</a> (con un account Google) o su
+<a href="https://jupyter.org/try-jupyter/lab/">JupyterLite</a>, che funziona direttamente nel browser.
+Copiate il codice, premete il tasto di esecuzione e provate a cambiare il testo.</p>
+</div>
+<hr />
+<h2 id="5-ordinare-e-cercare-due-problemi-linguistici">5. Ordinare e cercare: due problemi linguistici<a class="headerlink" href="#5-ordinare-e-cercare-due-problemi-linguistici" title="Permanent link">&para;</a></h2>
+<h3 id="che-cosa-significa-in-ordine-alfabetico">Che cosa significa "in ordine alfabetico"?<a class="headerlink" href="#che-cosa-significa-in-ordine-alfabetico" title="Permanent link">&para;</a></h3>
+<p>Ordinare un elenco di parole sembra il problema più banale del mondo, ma il concetto stesso di <strong>ordine
+alfabetico</strong> varia da lingua a lingua:</p>
+<ul>
+<li>in <strong>spagnolo</strong> la <em>ñ</em> è una lettera distinta e si colloca dopo la <em>n</em>: <em>nuez</em>, <em>ñandú</em>, <em>oso</em>.
+  Fino al 1994, inoltre, i dizionari della Real Academia trattavano <em>ch</em> e <em>ll</em> come lettere
+  autonome, collocate rispettivamente dopo la <em>c</em> e dopo la <em>l</em>;</li>
+<li>in <strong>svedese</strong> <em>å</em>, <em>ä</em> e <em>ö</em> sono lettere a sé e si trovano <strong>in fondo</strong> all'alfabeto, dopo la <em>z</em>;</li>
+<li>in <strong>tedesco</strong> la <em>ä</em> si ordina come una <em>a</em> nei dizionari, ma negli elenchi di nomi (come gli
+  elenchi telefonici) spesso come <em>ae</em>;</li>
+<li>in <strong>ceco</strong> il digramma <em>ch</em> è una lettera e viene dopo la <em>h</em>;</li>
+<li>in <strong>giapponese</strong> l'ordinamento segue il sillabario (l'ordine <em>gojūon</em>: a, i, u, e, o, ka, ki, ku…);</li>
+<li>per il <strong>cinese</strong> esistono più criteri: per pronuncia in <em>pinyin</em>, per numero di tratti, per radicale.</li>
+</ul>
+<p>E per un computer che non riceve istruzioni specifiche, l'ordine è semplicemente quello dei punti di
+codice Unicode visti nella L02. Così <code>Z</code> (90) viene prima di <code>a</code> (97), e <code>é</code> (233) viene dopo <code>z</code> (122):
+un elenco come <em>zebra, Zurigo, école, abete</em> verrebbe ordinato come <em>Zurigo, abete, zebra, école</em>.</p>
+<p>Per questo i sistemi informatici usano regole di <strong>ordinamento</strong> specifiche per ciascuna lingua,
+dette in inglese <em>collation</em>. Unicode definisce un algoritmo di base, adattabile alle diverse
+tradizioni.</p>
+<h3 id="ordinare-strategie-diverse-costi-diversi">Ordinare: strategie diverse, costi diversi<a class="headerlink" href="#ordinare-strategie-diverse-costi-diversi" title="Permanent link">&para;</a></h3>
+<p>Ricordate il gioco della L01, in cui vi siete messi in fila per data di nascita senza parlare? Era un
+problema di <strong>ordinamento</strong>, e probabilmente avete usato una di queste strategie, che in informatica
+hanno un nome preciso:</p>
+<ul>
+<li><strong>ordinamento a bolle</strong> (<em>bubble sort</em>): ciascuno si confronta con il vicino e, se i due sono
+  nell'ordine sbagliato, si scambiano di posto. Si ripete finché nessuno deve più spostarsi;</li>
+<li><strong>ordinamento per selezione</strong> (<em>selection sort</em>): si cerca la persona più anziana e la si mette in
+  testa, poi si cerca la più anziana tra le rimanenti e la si mette in seconda posizione, e così via;</li>
+<li><strong>ordinamento per inserimento</strong> (<em>insertion sort</em>): ciascuno, a turno, entra nella fila già formata
+  e si colloca al posto giusto, come quando si riordinano le carte da gioco in mano.</li>
+</ul>
+<p>Tutte e tre producono il risultato corretto, ma con un numero di passi molto diverso al crescere del
+numero di persone. Esistono algoritmi molto più efficienti, come il <em>merge sort</em> e il <em>quicksort</em>,
+che usano la scomposizione: dividono l'elenco in due metà, le ordinano separatamente e poi le fondono.</p>
+<h3 id="cercare-in-un-dizionario">Cercare in un dizionario<a class="headerlink" href="#cercare-in-un-dizionario" title="Permanent link">&para;</a></h3>
+<p>Dovete trovare la parola <em>pesca</em> in un vocabolario di 1000 pagine. Avete due possibilità.</p>
+<p>La <strong>ricerca lineare</strong> consiste nello sfogliare il dizionario dalla prima pagina, una pagina dopo
+l'altra, finché non si trova la parola. Nel caso peggiore servono 1000 passi.</p>
+<p>La <strong>ricerca binaria</strong> consiste nell'aprire il dizionario a metà e controllare se <em>pesca</em> venga prima
+o dopo le parole di quella pagina. Si scarta così metà del dizionario e si ripete l'operazione sulla
+metà rimasta: 1000 pagine, poi 500, 250, 125, 63, 32, 16, 8, 4, 2, 1. Bastano circa <strong>10 passi</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Pagine del dizionario</th>
+<th>Ricerca lineare (caso peggiore)</th>
+<th>Ricerca binaria (caso peggiore)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.000</td>
+<td>1.000 passi</td>
+<td>10 passi</td>
+</tr>
+<tr>
+<td>1.000.000</td>
+<td>1.000.000 passi</td>
+<td>20 passi</td>
+</tr>
+<tr>
+<td>1.000.000.000</td>
+<td>1.000.000.000 passi</td>
+<td>30 passi</td>
+</tr>
+</tbody>
+</table>
+<p>È proprio così che, intuitivamente, si consulta un vocabolario cartaceo. La ricerca binaria ha però
+una condizione: funziona <strong>soltanto se l'elenco è ordinato</strong>. Ecco perché ordinare è un'operazione così
+importante, e perché i motori di ricerca e le basi di dati dedicano tanto lavoro a costruire <strong>indici</strong>
+ordinati in anticipo.</p>
+<p>Questi esempi introducono una domanda centrale dell'informatica: non basta sapere <em>se</em> un problema si
+può risolvere, bisogna sapere anche <strong>quanto costa</strong> risolverlo, in termini di tempo, di memoria e,
+sempre più spesso, di energia.</p>
+<hr />
+<h2 id="6-lalgoritmo-nel-discorso-pubblico">6. "L'algoritmo" nel discorso pubblico<a class="headerlink" href="#6-lalgoritmo-nel-discorso-pubblico" title="Permanent link">&para;</a></h2>
+<p>Quando un giornale parla dell'"algoritmo di TikTok" o dell'"algoritmo di Instagram", usa la parola in
+senso largo. Non si riferisce a una procedura come quella del plurale, che si può leggere e verificare
+riga per riga, ma a un <strong>sistema</strong> complesso, fatto di molti programmi e di modelli statistici
+addestrati su enormi quantità di dati sul comportamento degli utenti. Spesso nessuno è in grado di
+leggerne le regole: in alcuni casi perché sono segrete, protette come segreto industriale; in altri
+perché il sistema le ha ricavate dai dati e non sono scritte da nessuna parte in forma comprensibile.</p>
+<div class="admonition question">
+<p class="admonition-title">Per discutere</p>
+<p>Se un sistema automatico decide quali notizie vedete, chi è responsabile di ciò che vedete:
+chi lo ha progettato, chi lo ha addestrato, l'azienda che lo usa, voi che avete cliccato?
+E se un algoritmo esclude la vostra candidatura a un lavoro, avete diritto di sapere perché?
+Lasciamo aperta la domanda: tornerà quando parleremo del Web (L07) e di etica dell'intelligenza
+artificiale (L15).</p>
+</div>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>Durante la lezione (online, in stanze da 3 o 4 persone)</strong></p>
+<ol>
+<li><strong>La ricetta per il robot.</strong> Riscrivete la ricetta degli spaghetti aglio, olio e peperoncino come
+   sequenza di azioni elementari. Un compagno la "esegue" alla lettera e segnala ogni istruzione
+   ambigua.</li>
+<li><strong>Il plurale nella vostra lingua.</strong> Scegliete la lingua che studiate e scrivete in pseudocodice un
+   algoritmo per formare il plurale dei nomi, oppure un'altra regola morfologica (il genere dei
+   sostantivi, il participio passato, il comparativo degli aggettivi). Provatelo su dieci parole, di
+   cui almeno tre "difficili". Quante regole vi sono servite? Quante eccezioni avete trovato? Avete
+   avuto bisogno di sapere qualcosa sulla parola oltre alla sua forma (il genere, l'origine, il
+   significato)?</li>
+<li><strong>Disegnatelo.</strong> Trasformate il vostro algoritmo in un diagramma di flusso, su carta oppure con
+   <a href="https://app.diagrams.net/">draw.io</a>.</li>
+</ol>
+<p><strong>A casa (facoltativo)</strong></p>
+<ul>
+<li>Provate i primi livelli del <em>Labirinto</em> su <a href="https://blockly.games/?lang=it">Blockly Games</a>: è
+  programmazione visuale, senza scrivere codice, e allena sequenza, selezione e iterazione.</li>
+<li>Aprite <a href="https://colab.research.google.com/">Google Colab</a> o
+  <a href="https://jupyter.org/try-jupyter/lab/">JupyterLite</a>, copiate la funzione <code>plurale</code> e provate a
+  migliorarla aggiungendo la regola per le parole in <em>-ca</em> e <em>-ga</em>.</li>
+</ul>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Quale di questi <strong>non</strong> è uno dei quattro principi del pensiero computazionale?</p>
+<ul>
+<li>A. Scomposizione</li>
+<li>B. Astrazione</li>
+<li>C. Memorizzazione</li>
+<li>D. Riconoscimento di schemi</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> I quattro principi sono scomposizione, riconoscimento di schemi, astrazione e algoritmi.</p>
+</details>
+<p><strong>2.</strong> Un algoritmo deve essere:</p>
+<ul>
+<li>A. scritto in un linguaggio di programmazione</li>
+<li>B. finito, non ambiguo ed eseguibile</li>
+<li>C. eseguito da un computer</li>
+<li>D. il più breve possibile</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Un algoritmo si può scrivere anche in lingua naturale o in pseudocodice, ed essere eseguito
+da una persona. Quando è scritto in un linguaggio di programmazione diventa un programma.</p>
+</details>
+<p><strong>3.</strong> L'istruzione "aggiungete sale quanto basta" non è un'istruzione algoritmica perché:</p>
+<ul>
+<li>A. è scritta in italiano</li>
+<li>B. non è eseguibile da un essere umano</li>
+<li>C. è ambigua: la quantità dipende dall'interpretazione di chi la esegue</li>
+<li>D. riguarda la cucina</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong></p>
+</details>
+<p><strong>4.</strong> Nell'istruzione "<em>Se</em> la parola finisce in -a, sostituisci con -e, <em>altrimenti</em> lasciala com'è"
+si usa la struttura di:</p>
+<ul>
+<li>A. sequenza</li>
+<li>B. selezione</li>
+<li>C. iterazione</li>
+<li>D. variabile</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>5.</strong> "Aspetta finché l'acqua non bolle" è un esempio di:</p>
+<ul>
+<li>A. sequenza</li>
+<li>B. selezione</li>
+<li>C. iterazione</li>
+<li>D. funzione</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> L'azione si ripete finché la condizione resta vera.</p>
+</details>
+<p><strong>6.</strong> In un diagramma di flusso, il rombo rappresenta:</p>
+<ul>
+<li>A. l'inizio dell'algoritmo</li>
+<li>B. un'azione da compiere</li>
+<li>C. una decisione</li>
+<li>D. la fine dell'algoritmo</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong></p>
+</details>
+<p><strong>7.</strong> In Python, che cosa restituisce <code>plurale("lago")</code> con la funzione vista a lezione?</p>
+<ul>
+<li>A. laghi</li>
+<li>B. lagi</li>
+<li>C. lago</li>
+<li>D. un errore</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> La funzione sostituisce la <em>o</em> finale con <em>i</em>, senza gestire il caso di <em>-go</em>.</p>
+</details>
+<p><strong>8.</strong> Un computer che ordina parole senza regole specifiche per la lingua mette <code>Zurigo</code> prima di
+<code>abete</code> perché:</p>
+<ul>
+<li>A. ordina le parole dalla più lunga alla più corta</li>
+<li>B. confronta i punti di codice dei caratteri, e le maiuscole hanno valori più bassi delle minuscole</li>
+<li>C. ordina le parole in ordine alfabetico inverso</li>
+<li>D. considera le parole straniere prima di quelle italiane</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> <code>Z</code> vale 90, <code>a</code> vale 97.</p>
+</details>
+<p><strong>9.</strong> La ricerca binaria in un elenco di parole:</p>
+<ul>
+<li>A. funziona solo se l'elenco è ordinato</li>
+<li>B. è sempre più lenta della ricerca lineare</li>
+<li>C. controlla le parole una alla volta dall'inizio</li>
+<li>D. funziona solo con i numeri</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>A.</strong></p>
+</details>
+<p><strong>10.</strong> Con la ricerca binaria, quanti passi servono al massimo, approssimativamente, per trovare una
+parola in un elenco ordinato di un milione di voci?</p>
+<ul>
+<li>A. 20</li>
+<li>B. 1.000</li>
+<li>C. 500.000</li>
+<li>D. 1.000.000</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>A.</strong> Ogni passo dimezza l'elenco: 2<sup>20</sup> è poco più di un milione.</p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Wing, J. M. (2006). Computational thinking. <em>Communications of the ACM</em>, 49(3), 33–35.
+  <a href="https://doi.org/10.1145/1118178.1118215">doi:10.1145/1118178.1118215</a></li>
+<li>Lodi, M., &amp; Martini, S. (2021). Computational thinking, between Papert and Wing. <em>Science &amp;
+  Education</em>, 30(4), 883–908. <a href="https://doi.org/10.1007/s11191-021-00202-5">doi:10.1007/s11191-021-00202-5</a></li>
+<li>Denning, P. J., &amp; Tedre, M. (2019). <em>Computational Thinking</em>. MIT Press.</li>
+<li><a href="https://www.csunplugged.org/">CS Unplugged</a>: attività per imparare i concetti dell'informatica senza computer.</li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-a-fondamenti">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#pensiero-computazionale">Pensiero computazionale</a> ·
+<a href="../../glossario/#algoritmo">Algoritmo</a> ·
+<a href="../../glossario/#programma">Programma</a> ·
+<a href="../../glossario/#linguaggio-formale">Linguaggio formale</a> ·
+<a href="../../glossario/#pseudocodice">Pseudocodice</a> ·
+<a href="../../glossario/#diagramma-di-flusso">Diagramma di flusso</a> ·
+<a href="../../glossario/#strutture-di-controllo">Strutture di controllo</a> ·
+<a href="../../glossario/#variabile">Variabile</a> ·
+<a href="../../glossario/#python">Python</a> ·
+<a href="../../glossario/#ordinamento">Ordinamento</a> ·
+<a href="../../glossario/#ricerca-binaria">Ricerca binaria</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../03-strutturare-i-dati/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L03 · Strutturare i dati">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L03 · Strutturare i dati
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-bibliografia-e-zotero/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L05 · Bibliografia e Zotero">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L05 · Bibliografia e Zotero
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
