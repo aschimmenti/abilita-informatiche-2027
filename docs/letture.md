@@ -111,12 +111,25 @@ Se doveste leggere una cosa sola per ciascun blocco:
 
 ## Blocco B · Internet e Web
 
+- **Leiner, B. M., Cerf, V. G., Clark, D. D., Kahn, R. E., Kleinrock, L., Lynch, D. C., Postel, J.,
+  Roberts, L. G., & Wolff, S.** (2009). A brief history of the Internet. *ACM SIGCOMM Computer
+  Communication Review*, 39(5), 22–31. [doi:10.1145/1629607.1629613](https://doi.org/10.1145/1629607.1629613)
+  🟡 EN · OA — La storia di Internet raccontata da chi l'ha costruita.
+- [**ITU, Facts and Figures 2026**](https://www.itu.int/itu-d/reports/statistics/facts-figures-2026/).
+  🟢 EN · OA — I dati aggiornati su chi è connesso e chi no.
 - **Berners-Lee, T.** (2001). *L'architettura del nuovo Web*. Feltrinelli (ed. orig. *Weaving the Web*, 1999).
   🟢 IT — L'inventore del Web racconta come e perché lo ha progettato.
 - [**Submarine Cable Map**](https://www.submarinecablemap.com/) (TeleGeography).
   🟢 · OA — La mappa dei cavi sottomarini: Internet è fatta di oggetti fisici.
 - **Pariser, E.** (2012). *Il filtro*. Il Saggiatore (ed. orig. *The Filter Bubble*, 2011).
   🟢 IT — Il libro che ha reso popolare l'idea di "bolla informativa".
+- **Wineburg, S., & McGrew, S.** (2019). Lateral reading and the nature of expertise: Reading less and
+  learning more when evaluating digital information. *Teachers College Record*, 121(11), 1–40.
+  [doi:10.1177/016146811912101102](https://doi.org/10.1177/016146811912101102)
+  🟡 EN — Come verificano le fonti i *fact-checker* professionisti.
+- **Vosoughi, S., Roy, D., & Aral, S.** (2018). The spread of true and false news online. *Science*,
+  359(6380), 1146–1151. [doi:10.1126/science.aap9559](https://doi.org/10.1126/science.aap9559)
+  🟡 EN — Perché le notizie false corrono più veloci di quelle vere.
 - **Noble, S. U.** (2018). *Algorithms of Oppression: How Search Engines Reinforce Racism*. NYU Press.
   🟡 EN — Come i motori di ricerca riproducono stereotipi.
 - **Zuboff, S.** (2019). *Il capitalismo della sorveglianza*. LUISS University Press.

@@ -88,6 +88,9 @@ nav:
           - "L03 · Strutturare i dati": lezioni/03-strutturare-i-dati.md
           - "L04 · Algoritmi e pensiero computazionale": lezioni/04-algoritmi.md
           - "L05 · Bibliografia e Zotero": lezioni/05-bibliografia-e-zotero.md
+      - "Blocco B · Internet e Web":
+          - "L06 · Internet: la rete delle reti": lezioni/06-internet.md
+          - "L07 · Il Web e la società": lezioni/07-web-e-societa.md
   - Risorse:
       - Letture e materiali: letture.md
       - Glossario: glossario.md

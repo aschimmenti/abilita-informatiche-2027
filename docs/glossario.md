@@ -43,6 +43,17 @@ composizione tipografica LaTeX. Ogni riferimento è un insieme di campi (`author
 *Binary digit*. L'unità minima di informazione: può valere 0 o 1. Con *n* bit si rappresentano
 2<sup>*n*</sup> combinazioni diverse. → L02
 
+### Bolla di filtraggio
+In inglese *filter bubble* (Eli Pariser, 2011). L'ipotesi che gli algoritmi di personalizzazione,
+mostrandoci solo contenuti simili a quelli che già preferiamo, ci isolino da punti di vista diversi. Le
+ricerche empiriche ne danno un quadro più sfumato. Simile, ma riferita ai gruppi, è la *camera
+dell'eco*. → L07
+
+### Browser
+Programma client che richiede le risorse del Web ai server tramite HTTP e le mostra all'utente:
+Firefox, Chrome, Edge, Safari. Il primo, scritto da Tim Berners-Lee nel 1990, si chiamava WorldWideWeb.
+→ L07
+
 ### Byte
 Gruppo di 8 bit, che può assumere 256 valori. Unità di base per misurare file e memorie
 (kilobyte, megabyte, gigabyte…). → L02
@@ -51,9 +62,20 @@ Gruppo di 8 bit, che può assumere 256 valori. Unità di base per misurare file 
 Cifra aggiunta in fondo a un codice (ISBN, ISSN, ORCID, codice IBAN) e calcolata a partire dalle altre
 con un algoritmo. Permette di rilevare automaticamente gli errori di trascrizione. → L05
 
+### Client/server
+Modello di comunicazione in cui un programma (il *client*, ad esempio il browser) invia una richiesta e
+un altro (il *server*, sempre acceso) risponde fornendo un servizio o una risorsa. È il modello su cui
+si basano il Web e la posta elettronica. → L06
+
 ### Codifica dei caratteri
 Tabella condivisa che associa a ogni carattere un numero, e stabilisce come scrivere quel numero in
 byte. Esempi: ASCII, Latin-1, UTF-8. In inglese *character encoding*. → L02
+
+### Commutazione di pacchetto
+Modo di trasmettere i dati in cui il messaggio viene diviso in pacchetti, ciascuno con mittente,
+destinatario e numero d'ordine, che viaggiano indipendentemente e vengono ricomposti all'arrivo. È il
+principio di funzionamento di Internet, opposto alla *commutazione di circuito* della telefonia
+tradizionale. → L06
 
 ### Compressione
 Riduzione dello spazio occupato da un file. **Senza perdita** (*lossless*: ZIP, PNG, FLAC) se si può
@@ -68,9 +90,19 @@ che una macchina può memorizzare ed elaborare seguendo regole precise. → L01
 Elenco di tutte le occorrenze di una parola in un corpus, ciascuna con il contesto immediato a
 sinistra e a destra, allineate al centro. In inglese *KWIC* (*Key Word In Context*). → L01
 
+### Cookie
+Piccolo file di testo che un sito chiede al browser di conservare e che il browser rimanda al sito a
+ogni visita, permettendogli di riconoscere l'utente. I cookie *tecnici* servono al funzionamento del
+sito; quelli di *profilazione*, spesso di terze parti, richiedono il consenso dell'utente. → L07
+
 ### Corpus
 Raccolta di testi (scritti o trascritti dal parlato) selezionati secondo criteri precisi e
 organizzati per essere analizzati, spesso con strumenti automatici. Plurale: *corpora*. → L01, L09
+
+### Creative Commons
+Famiglia di licenze (nate nel 2001) con cui un autore permette il riuso delle proprie opere a certe
+condizioni, combinando le clausole BY (attribuzione), SA (condividi allo stesso modo), NC (non
+commerciale) e ND (non opere derivate). CC0 rinuncia a tutti i diritti. → L07
 
 ### CSL (Citation Style Language)
 Linguaggio basato su XML per descrivere gli stili citazionali. Zotero, Mendeley e molti altri
@@ -81,6 +113,11 @@ programmi lo usano per formattare citazioni e bibliografie; ne esistono oltre di
 una riga della tabella e i valori sono separati da virgole (o, in alcune impostazioni locali, da punti
 e virgola). → L03
 
+### Data center
+Edificio che ospita migliaia di server collegati alla rete, alimentati e raffreddati senza
+interruzioni. È il luogo fisico in cui stanno i servizi "cloud". Nel 2024 i data center hanno consumato
+circa l'1,5% dell'elettricità mondiale. → L06
+
 ### Dataset
 Raccolta di dati organizzata secondo criteri precisi per sostenere un'analisi o un'interpretazione.
 Un corpus, un dizionario elettronico, una memoria di traduzione sono dataset. → L01
@@ -88,6 +125,11 @@ Un corpus, un dizionario elettronico, una memoria di traduzione sono dataset. �
 ### Dato
 Valore grezzo, privo di contesto (un numero, una parola, una data). Diventa **informazione** quando
 viene interpretato. → L01
+
+### Dato personale
+Secondo il GDPR, qualsiasi informazione riguardante una persona fisica identificata o identificabile,
+anche indirettamente: un nome, un numero di identificazione, dati sull'ubicazione, un identificativo
+online come un indirizzo IP. → L07
 
 ### Diagramma di flusso
 Rappresentazione grafica di un algoritmo: ovali per inizio e fine, rettangoli per le azioni, rombi
@@ -98,13 +140,28 @@ In italiano anche *informatica umanistica* o *umanistica digitale*. Campo che us
 informatici per la ricerca nelle discipline umanistiche e riflette criticamente sul digitale con gli
 strumenti delle scienze umane. → L01
 
+### Disinformazione
+Informazione falsa creata e diffusa intenzionalmente per ingannare. Si distingue dalla
+*misinformazione* (falsa ma diffusa in buona fede) e dalla *malinformazione* (vera ma usata per
+nuocere). → L07
+
 ### Distant reading
 "Lettura a distanza". Approccio proposto da Franco Moretti: studiare la letteratura analizzando con
 metodi quantitativi grandi quantità di testi, invece di leggerne da vicino pochi. → L01
 
+### Divario digitale
+In inglese *digital divide*. Le disuguaglianze nell'uso delle tecnologie digitali tra paesi, territori,
+generi, età e gruppi sociali. Si distinguono un divario di accesso, uno di competenze e uno nei
+benefici che se ne ricavano. → L06
+
 ### Dizionario (struttura dati)
 Struttura dati composta da coppie chiave → valore, in cui le chiavi sono uniche e permettono di
 ritrovare rapidamente il valore corrispondente. Detto anche *mappa* o *tabella associativa*. → L03
+
+### DNS (Domain Name System)
+Il sistema che traduce i nomi di dominio (come `unibo.it`) negli indirizzi IP corrispondenti. È
+organizzato ad albero, dalla radice ai domini di primo livello (`.it`, `.org`) e via via ai
+sottodomini. → L06
 
 ### DOI
 *Digital Object Identifier*. Identificativo persistente di un oggetto digitale (articolo, capitolo,
@@ -124,6 +181,11 @@ esadecimale corrisponde a quattro bit, e un byte si scrive con due cifre (es. `F
 Formato di file le cui specifiche sono pubbliche, così che chiunque possa scrivere programmi in grado
 di leggerlo e scriverlo (es. `.txt`, `.html`, `.odt`). Si contrappone al formato **proprietario**,
 controllato da un'azienda. → L02
+
+### GDPR
+*General Data Protection Regulation*, Regolamento UE 2016/679, applicato dal 25 maggio 2018. Stabilisce
+le regole per il trattamento dei dati personali nell'Unione Europea e i diritti delle persone
+interessate: accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. → L07
 
 ### Gestore bibliografico
 Programma che conserva i riferimenti bibliografici come una base di dati e permette di inserire
@@ -150,10 +212,32 @@ della forma `https://hdl.handle.net/…`. Il sistema dei DOI si basa sulla stess
 ### Hardware
 La parte fisica di un computer: processore, memoria, dischi, schermo, tastiera. → L01
 
+### Host
+Qualsiasi dispositivo collegato a una rete e dotato di un indirizzo: un computer, un telefono, un
+server, una stampante. → L06
+
+### HTTP e HTTPS
+*HyperText Transfer Protocol*. Il protocollo del Web, basato su richieste del client (con metodi come
+GET e POST) e risposte del server (con codici di stato come 200 o 404). HTTPS è la sua versione
+cifrata. → L07
+
 ### Identificativo persistente
 Codice che identifica una risorsa in modo univoco e stabile, indipendentemente dalla sua collocazione
 sul web, e che un servizio apposito (*resolver*) traduce di volta in volta nell'indirizzo corrente.
 Esempi: DOI, Handle, ORCID. → L05
+
+### IDN e Punycode
+Gli *Internationalized Domain Names* sono nomi di dominio che contengono caratteri non ASCII
+(`città.it`, `.рф`). Per compatibilità con il DNS vengono convertiti con la codifica Punycode in
+stringhe ASCII che iniziano con `xn--`. → L06
+
+### Indice inverso
+Struttura dati usata dai motori di ricerca: per ogni parola, l'elenco dei documenti che la contengono.
+Funziona come l'indice analitico in fondo a un libro. → L07
+
+### Indirizzo IP
+Numero che identifica un host in una rete basata sul protocollo IP. Nella versione IPv4 è lungo 32 bit
+e si scrive come quattro numeri da 0 a 255 (`192.168.1.10`); nella versione IPv6 è lungo 128 bit. → L06
 
 ### Informatica
 Dal francese *informatique* (*information* + *automatique*, 1962). Scienza della rappresentazione e
@@ -165,6 +249,16 @@ Dato interpretato in un contesto, che acquista così un significato. → L01
 ### Interfaccia
 Il punto di contatto tra una persona e una macchina, che traduce le azioni dell'utente in istruzioni:
 riga di comando, interfaccia grafica, touch, vocale, conversazionale. → L01
+
+### Internet
+La rete mondiale formata dall'interconnessione di decine di migliaia di reti indipendenti che usano i
+protocolli TCP/IP. Nasce da ARPANET (1969). Il nome viene da *internetworking*, il collegamento tra
+reti. → L06
+
+### Ipertesto
+Insieme di testi (nodi) collegati da link che partono da e arrivano a punti precisi (ancore),
+percorribile dal lettore in ordini diversi. Dal punto di vista strutturale è un grafo orientato. La
+parola è stata coniata da Ted Nelson nel 1965. → L07
 
 ### ISBN
 *International Standard Book Number*. Codice di 13 cifre (10 prima del 2007) che identifica una
@@ -182,6 +276,10 @@ periodica (rivista, collana, quotidiano). L'ultimo carattere è una cifra di con
 ### Lemma
 La forma di citazione di una parola, quella che si trova nel dizionario (*vedere* per *vidi*,
 *visto*, *vedranno*). → L01
+
+### Lettura laterale
+Strategia di verifica delle fonti usata dai *fact-checker* professionisti: invece di analizzare a fondo
+un sito, lo si lascia presto per cercare in altre schede che cosa dicono altri di quella fonte. → L07
 
 ### Linguaggio di marcatura
 Sistema di convenzioni per annotare un documento inserendo nel testo dei marcatori (tag) che ne
@@ -215,9 +313,18 @@ Dal giapponese 文字化け, "caratteri trasformati". Testo illeggibile che si o
 viene letto con una codifica dei caratteri diversa da quella con cui è stato scritto
 (es. "perchÃ©" invece di "perché"). → L02
 
+### Motore di ricerca
+Sistema che scansiona il Web con un *crawler*, ne registra il contenuto in un indice e restituisce, per
+ogni ricerca, un elenco di pagine ordinate per rilevanza. → L07
+
 ### NER (Named Entity Recognition)
 Riconoscimento delle entità nominate. Tecnica di elaborazione del linguaggio naturale che individua in
 un testo i nomi di persone, luoghi, organizzazioni, date e altre entità. → L03
+
+### Nome di dominio
+Nome leggibile che identifica un insieme di risorse in rete (`unibo.it`, `it.wikipedia.org`). Si legge
+da destra a sinistra, dal dominio di primo livello ai sottodomini. In Italia i domini `.it` sono
+gestiti dal Registro .it del CNR. → L06
 
 ### Normalizzazione
 Trasformazione di un testo Unicode in una forma standard, così che caratteri visivamente identici
@@ -243,6 +350,15 @@ modo univoco una ricercatrice o un ricercatore, indipendentemente da come ne vie
 Disporre gli elementi di una lista secondo un criterio (numerico, alfabetico…). L'ordine alfabetico
 dipende dalla lingua: le regole di ordinamento specifiche si chiamano *collation*. → L04
 
+### PageRank
+Algoritmo pubblicato da Sergey Brin e Larry Page nel 1998, alla base di Google. Misura l'importanza di
+una pagina in base ai link che riceve, pesando di più quelli che provengono da pagine a loro volta
+importanti. → L07
+
+### Peer-to-peer
+Modello di rete in cui ogni nodo è insieme client e server, e i dati passano direttamente da un utente
+all'altro senza un server centrale. Abbreviato P2P. → L06
+
 ### Pensiero computazionale
 Modo di affrontare i problemi basato su quattro principi: scomposizione, riconoscimento di schemi,
 astrazione, algoritmi. Espressione resa popolare da Jeannette Wing (2006), già presente in Seymour
@@ -255,9 +371,18 @@ rosso, verde e blu (RGB). → L02
 ### Programma
 Algoritmo scritto in un linguaggio di programmazione, in modo che un computer possa eseguirlo. → L04
 
+### Protocollo
+Insieme di regole condivise che stabilisce quali messaggi possono scambiarsi due dispositivi, in che
+formato, in che ordine, e che cosa fare in caso di errore. Esempi: IP, TCP, HTTP. → L06
+
 ### Pseudocodice
 Modo semi-formale di scrivere un algoritmo, a metà tra lingua naturale e linguaggio di
 programmazione: preciso, ma leggibile da chiunque. Non ha una sintassi ufficiale. → L04
+
+### Pubblico dominio
+Condizione di un'opera non più (o mai) protetta dal diritto d'autore, che chiunque può usare
+liberamente. In Italia un'opera entra di norma nel pubblico dominio settant'anni dopo la morte
+dell'autore. → L07
 
 ### Punto di codice
 Il numero che Unicode assegna a un carattere, scritto nella forma `U+` seguita da cifre esadecimali
@@ -275,9 +400,18 @@ cui l'elemento cercato non può trovarsi e si ripete. Su mille elementi bastano 
 Insieme strutturato di elementi (autore, anno, titolo, editore, rivista, pagine, identificativo) che
 permette di identificare e ritrovare un documento citato. → L05
 
+### Router
+Dispositivo che collega reti diverse e smista i pacchetti, scegliendo per ciascuno il collegamento
+successivo verso la destinazione. → L06
+
 ### Sistema binario
 Sistema di numerazione posizionale in base 2, che usa le sole cifre 0 e 1. Ogni posizione vale il doppio
 della precedente (1, 2, 4, 8, 16…). → L02
+
+### Sistema di raccomandazione
+Algoritmo che propone a un utente contenuti o prodotti che probabilmente gli interesseranno, sulla base
+dei suoi comportamenti passati e di quelli di utenti simili. Usato da social network, piattaforme video
+e musicali, negozi online. → L07
 
 ### Sistema operativo
 Il software che gestisce l'hardware e permette di eseguire le applicazioni (Windows, macOS, Linux,
@@ -307,6 +441,11 @@ struttura dei fogli di calcolo e delle basi di dati relazionali. → L03
 Marcatore inserito in un documento per delimitarne una porzione e descriverla. In XML e HTML un elemento
 è racchiuso tra un tag di apertura (`<titolo>`) e uno di chiusura (`</titolo>`). → L03
 
+### TCP/IP
+La famiglia di protocolli su cui si basa Internet, organizzata in quattro livelli: collegamento, rete
+(IP, che instrada i pacchetti), trasporto (TCP, che garantisce una consegna completa e ordinata) e
+applicazione (HTTP, DNS, posta). → L06
+
 ### TEI (Text Encoding Initiative)
 Standard nato nel 1987 per codificare in formato digitale la struttura dei testi (versi, capitoli,
 varianti, note, personaggi), usato per le edizioni digitali. Si basa sul linguaggio XML. → L01
@@ -323,6 +462,10 @@ Affermazione elementare di un grafo di conoscenza, nella forma *soggetto – pre
 Standard che assegna un numero unico (punto di codice) a ogni carattere di ogni sistema di scrittura,
 dalle lingue vive alle scritture storiche, comprese le emoji. Contiene oltre 150.000 caratteri. → L02
 
+### URL
+*Uniform Resource Locator*. L'indirizzo di una risorsa sul Web, composto da schema (`https`), nome di
+dominio, percorso e, facoltativamente, parametri e frammento. → L07
+
 ### UTF-8
 Il modo più diffuso di scrivere i punti di codice Unicode in byte: usa da 1 a 4 byte per carattere
 ed è compatibile con ASCII. È la codifica della grande maggioranza delle pagine web. → L02
@@ -335,6 +478,11 @@ l'esecuzione (es. un contatore). → L04
 Base di conoscenza libera e multilingue della Wikimedia Foundation, attiva dal 2012. Descrive ogni
 entità con un identificativo univoco (che inizia con Q) e con affermazioni nella forma proprietà →
 valore. È un grande grafo di conoscenza. → L01
+
+### World Wide Web
+Sistema di documenti ipertestuali distribuiti su Internet, inventato da Tim Berners-Lee al CERN tra il
+1989 e il 1991. Si basa su tre tecnologie: URL, HTTP e HTML. È uno dei servizi di Internet, non un suo
+sinonimo. → L07
 
 ### XML
 *eXtensible Markup Language* (1998). Linguaggio di marcatura estensibile, che permette di definire i
