@@ -108,6 +108,9 @@ commerciale) e ND (non opere derivate). CC0 rinuncia a tutti i diritti. → L07
 Linguaggio basato su XML per descrivere gli stili citazionali. Zotero, Mendeley e molti altri
 programmi lo usano per formattare citazioni e bibliografie; ne esistono oltre diecimila. → L05
 
+### CSS
+*Cascading Style Sheets*. Linguaggio con cui si descrive l'aspetto di una pagina web (colori, caratteri, margini) separandolo dal contenuto scritto in HTML. Una regola ha un selettore e delle dichiarazioni `proprietà: valore`. → L08
+
 ### CSV
 *Comma-Separated Values*. Formato di testo semplice per rappresentare tabelle: ogni riga del file è
 una riga della tabella e i valori sono separati da virgole (o, in alcune impostazioni locali, da punti
@@ -192,6 +195,9 @@ Programma che conserva i riferimenti bibliografici come una base di dati e perme
 citazioni e bibliografie nei documenti, formattandole automaticamente nello stile richiesto. Esempi:
 Zotero, Mendeley, EndNote. → L05
 
+### GitHub Pages
+Servizio gratuito di GitHub che pubblica come sito web i file di un repository. → L08
+
 ### Glifo
 La forma grafica concreta con cui un carattere viene disegnato. La stessa lettera ha glifi diversi in
 caratteri tipografici diversi; il file contiene i caratteri, il font fornisce i glifi. → L02
@@ -215,6 +221,9 @@ La parte fisica di un computer: processore, memoria, dischi, schermo, tastiera. 
 ### Host
 Qualsiasi dispositivo collegato a una rete e dotato di un indirizzo: un computer, un telefono, un
 server, una stampante. → L06
+
+### HTML
+*HyperText Markup Language*. Linguaggio di marcatura delle pagine web, con un insieme fisso di elementi (`<h1>`, `<p>`, `<a>`…) interpretati dal browser. Definito da Tim Berners-Lee nel 1991. → L03, L08
 
 ### HTTP e HTTPS
 *HyperText Transfer Protocol*. Il protocollo del Web, basato su richieste del client (con metodi come

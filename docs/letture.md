@@ -142,6 +142,8 @@ Se doveste leggere una cosa sola per ciascun blocco:
   🔴 IT · OA — Il testo ufficiale, disponibile in tutte le lingue dell'UE: tra l'altro, un ottimo corpus parallelo.
 - [**MDN Web Docs**](https://developer.mozilla.org/) (Mozilla), sezione *Learn web development*.
   🟢 EN · OA — Il riferimento per imparare HTML e CSS.
+- [**Visual Studio Code**](https://code.visualstudio.com/download) e [**iscrizione a GitHub**](https://github.com/signup).
+  🟢 EN · OA — Editor e account necessari per il laboratorio della L08.
 - [**GitHub Pages**](https://pages.github.com/).
   🟢 EN · OA — La guida ufficiale per pubblicare un sito.
 - [**W3C Internationalization**](https://www.w3.org/International/).
