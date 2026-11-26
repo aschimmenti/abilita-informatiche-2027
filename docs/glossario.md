@@ -19,6 +19,12 @@ sintattico di una frase. → L03
 Sequenza finita di istruzioni precise e non ambigue che, a partire da dati in ingresso (*input*),
 produce un risultato (*output*) e termina. Il nome deriva dal matematico persiano al-Khwārizmī. → L04
 
+### Ambiguità
+Proprietà di un'espressione che ammette più interpretazioni (lessicale, sintattica…). È il problema centrale del NLP. → L09
+
+### Analisi a dipendenze
+Analisi sintattica che collega ogni parola di una frase a quella da cui dipende, con una relazione etichettata (soggetto, oggetto…). → L09
+
 ### Analogico / digitale
 Una rappresentazione **analogica** varia in modo continuo, come il fenomeno che rappresenta (il solco
 di un vinile). Una rappresentazione **digitale** è fatta di valori discreti, cioè numeri separati
@@ -70,6 +76,9 @@ si basano il Web e la posta elettronica. → L06
 ### Codifica dei caratteri
 Tabella condivisa che associa a ogni carattere un numero, e stabilisce come scrivere quel numero in
 byte. Esempi: ASCII, Latin-1, UTF-8. In inglese *character encoding*. → L02
+
+### Collocazione
+Combinazione di parole che compaiono insieme più spesso di quanto ci si aspetterebbe per caso (es. *make a decision*). → L09
 
 ### Commutazione di pacchetto
 Modo di trasmettere i dati in cui il messaggio viene diviso in pacchetti, ciascuno con mittente,
@@ -215,6 +224,9 @@ spesso accompagnato da un'ontologia. Wikidata ne è un esempio. → L03
 Sistema di identificativi persistenti usato da molti archivi istituzionali e digitali, con indirizzi
 della forma `https://hdl.handle.net/…`. Il sistema dei DOI si basa sulla stessa tecnologia. → L05
 
+### Hapax
+Da *hapax legomenon*: parola che compare una sola volta in un testo o in un corpus. → L09
+
 ### Hardware
 La parte fisica di un computer: processore, memoria, dischi, schermo, tastiera. → L01
 
@@ -282,6 +294,9 @@ periodica (rivista, collana, quotidiano). L'ultimo carattere è una cifra di con
 *JavaScript Object Notation*. Formato di testo per lo scambio di dati strutturati, basato su liste
 (tra parentesi quadre) e dizionari, detti oggetti (tra parentesi graffe). → L03
 
+### Legge di Zipf
+Regolarità per cui la frequenza di una parola è circa inversamente proporzionale al suo rango nella lista di frequenza. → L09
+
 ### Lemma
 La forma di citazione di una parola, quella che si trova nel dizionario (*vedere* per *vidi*,
 *visto*, *vedranno*). → L01
@@ -325,6 +340,9 @@ viene letto con una codifica dei caratteri diversa da quella con cui è stato sc
 ### Motore di ricerca
 Sistema che scansiona il Web con un *crawler*, ne registra il contenuto in un indice e restituisce, per
 ogni ricerca, un elenco di pagine ordinate per rilevanza. → L07
+
+### n-gramma
+Sequenza di *n* elementi consecutivi di un testo, di solito parole: bigrammi (due), trigrammi (tre). → L09
 
 ### NER (Named Entity Recognition)
 Riconoscimento delle entità nominate. Tecnica di elaborazione del linguaggio naturale che individua in
@@ -376,6 +394,9 @@ Papert. → L04
 ### Pixel
 *Picture element*. Il singolo punto di un'immagine digitale, di solito descritto da tre valori di
 rosso, verde e blu (RGB). → L02
+
+### PoS tagging
+*Part-of-speech tagging*: assegnazione automatica a ogni token della sua parte del discorso. → L09
 
 ### Programma
 Algoritmo scritto in un linguaggio di programmazione, in modo che un computer possa eseguirlo. → L04
@@ -429,10 +450,16 @@ Android, iOS). → L01
 ### Software
 L'insieme dei programmi che un computer esegue. → L01
 
+### Stemming
+Riduzione di una parola a una radice (*stem*) tagliando i suffissi secondo regole fisse; più rozzo della lemmatizzazione. → L09
+
 ### Stile citazionale
 Insieme di regole che stabilisce come presentare le citazioni nel testo e i riferimenti in bibliografia.
 Le famiglie principali sono quella autore-data (APA, Chicago autore-data), quella con note (Chicago note
 e bibliografia) e quella numerica (IEEE, Vancouver). → L05
+
+### Stopword
+Parole molto frequenti e poco informative (articoli, preposizioni…), spesso escluse dai conteggi. → L09
 
 ### Struttura dati
 Modo sistematico di organizzare e memorizzare i dati per poterli ritrovare e manipolare in modo
@@ -463,13 +490,28 @@ varianti, note, personaggi), usato per le edizioni digitali. Si basa sul linguag
 Rettangolo vuoto (□) che compare al posto di un carattere quando il computer non dispone di un font in
 grado di disegnarlo. A differenza del mojibake, la codifica è corretta: manca soltanto il glifo. → L02
 
+### Token
+Unità minima in cui viene diviso un testo: parole, numeri, segni di punteggiatura. → L09
+
+### Tokenizzazione
+Divisione di un testo in token. → L09
+
+### Treebank
+Corpus in cui ogni frase è annotata con la sua struttura sintattica. → L09
+
 ### Tripla
 Affermazione elementare di un grafo di conoscenza, nella forma *soggetto – predicato – oggetto*
 (es. *Leopardi – è autore di – L'infinito*). → L03
 
+### Type e token
+I **token** sono tutte le occorrenze delle parole in un testo; i **type** sono le parole diverse. → L09
+
 ### Unicode
 Standard che assegna un numero unico (punto di codice) a ogni carattere di ogni sistema di scrittura,
 dalle lingue vive alle scritture storiche, comprese le emoji. Contiene oltre 150.000 caratteri. → L02
+
+### Universal Dependencies
+Progetto che definisce uno schema comune a molte lingue per annotare parti del discorso e dipendenze sintattiche. → L09
 
 ### URL
 *Uniform Resource Locator*. L'indirizzo di una risorsa sul Web, composto da schema (`https`), nome di

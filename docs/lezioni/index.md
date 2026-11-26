@@ -10,7 +10,7 @@
 | L06 | [Internet: la rete delle reti](06-internet.md) | B Internet e Web | online | ✅ con slide |
 | L07 | [Il Web e la società](07-web-e-societa.md) | B Internet e Web | online | ✅ con slide |
 | L08 | [Laboratorio: costruire e pubblicare una pagina web](08-laboratorio-pagina-web.md) | B Internet e Web | online | ✅ con slide |
-| L09 | Il linguaggio come dato | C NLP | online | in preparazione |
+| L09 | [Il linguaggio come dato](09-linguaggio-come-dato.md) | C NLP | online | ✅ con slide |
 | L10 | Dalle regole alla statistica: la traduzione automatica | C NLP | online | in preparazione |
 | L11 | NLP al servizio della ricerca | C NLP | online | in preparazione |
 | L12 | Che cos'è l'intelligenza artificiale | D AI e LLM | online | in preparazione |

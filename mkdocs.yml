@@ -92,7 +92,8 @@ nav:
           - "L06 · Internet: la rete delle reti": lezioni/06-internet.md
           - "L07 · Il Web e la società": lezioni/07-web-e-societa.md
           - "L08 · Laboratorio: una pagina web": lezioni/08-laboratorio-pagina-web.md
-          - "L08 · Laboratorio: una pagina web": lezioni/08-laboratorio-pagina-web.md
+      - "Blocco C · Natural Language Processing":
+          - "L09 · Il linguaggio come dato": lezioni/09-linguaggio-come-dato.md
   - Risorse:
       - Letture e materiali: letture.md
       - Glossario: glossario.md
