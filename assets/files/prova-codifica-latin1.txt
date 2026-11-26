@@ -1,0 +1,7 @@
+Prova di codifica / Encoding test
+
+Italiano: Perché la città è così bella? Più caffè, per favore.
+Français : Où est la bibliothèque ? Ça coûte très cher, voilà.
+Deutsch: Die Straße ist schön, aber die Bücher sind teuer.
+Español: ¿Dónde está el niño? ¡Qué año tan extraño!
+Português: A tradução não é fácil, mas é possível.

@@ -1,0 +1,2810 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/06-internet/">
+      
+      
+        <link rel="prev" href="../05-bibliografia-e-zotero/">
+      
+      
+        <link rel="next" href="../07-web-e-societa/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>L06 · Internet: la rete delle reti - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l06-internet-la-rete-delle-reti" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L06 · Internet: la rete delle reti
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco B · Internet e Web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco B · Internet e Web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L06 · Internet: la rete delle reti
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L06 · Internet: la rete delle reti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-una-domanda-per-cominciare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Una domanda per cominciare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-breve-storia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Breve storia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Breve storia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#da-arpa-ad-arpanet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da ARPA ad ARPANET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-una-rete-a-una-rete-di-reti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da una rete a una rete di reti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#litalia-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'Italia in rete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perche-ha-funzionato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perché ha funzionato
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-reti-e-architetture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Reti e architetture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Reti e architetture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodi-host-collegamenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodi, host, collegamenti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-e-server-o-tutti-alla-pari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client e server, o tutti alla pari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-come-viaggiano-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Come viaggiano i dati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Come viaggiano i dati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commutazione-di-circuito-e-commutazione-di-pacchetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commutazione di circuito e commutazione di pacchetto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-un-protocollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è un protocollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-pila-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La pila TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-gli-indirizzi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP: gli indirizzi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-arrivare-tutto-e-in-ordine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP: arrivare tutto, e in ordine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-lelenco-telefonico-di-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS: l'elenco telefonico di Internet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mettiamo-insieme-i-pezzi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettiamo insieme i pezzi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-linfrastruttura-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. L'infrastruttura fisica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. L&#39;infrastruttura fisica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-nuvola-e-sottacqua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La "nuvola" è sott'acqua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-data-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I data center
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-chi-ce-in-rete-e-in-quale-lingua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Chi c'è in rete, e in quale lingua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Chi c&#39;è in rete, e in quale lingua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-divario-digitale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il divario digitale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-lingue-del-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le lingue del Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomi-di-dominio-in-tutte-le-scritture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nomi di dominio in tutte le scritture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-lingue-minoritarie-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le lingue minoritarie in rete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-web-e-societa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L07 · Il Web e la società
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-laboratorio-pagina-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L08 · Laboratorio: una pagina web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco C · Natural Language Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco C · Natural Language Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-linguaggio-come-dato/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L09 · Il linguaggio come dato
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-una-domanda-per-cominciare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Una domanda per cominciare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-breve-storia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Breve storia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Breve storia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#da-arpa-ad-arpanet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da ARPA ad ARPANET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-una-rete-a-una-rete-di-reti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da una rete a una rete di reti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#litalia-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'Italia in rete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perche-ha-funzionato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perché ha funzionato
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-reti-e-architetture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Reti e architetture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Reti e architetture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodi-host-collegamenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodi, host, collegamenti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-e-server-o-tutti-alla-pari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client e server, o tutti alla pari
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-come-viaggiano-i-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Come viaggiano i dati
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Come viaggiano i dati">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commutazione-di-circuito-e-commutazione-di-pacchetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commutazione di circuito e commutazione di pacchetto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-un-protocollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è un protocollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-pila-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La pila TCP/IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-gli-indirizzi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP: gli indirizzi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-arrivare-tutto-e-in-ordine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP: arrivare tutto, e in ordine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-lelenco-telefonico-di-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS: l'elenco telefonico di Internet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mettiamo-insieme-i-pezzi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettiamo insieme i pezzi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-linfrastruttura-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. L'infrastruttura fisica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. L&#39;infrastruttura fisica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-nuvola-e-sottacqua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La "nuvola" è sott'acqua
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-data-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I data center
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-chi-ce-in-rete-e-in-quale-lingua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Chi c'è in rete, e in quale lingua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Chi c&#39;è in rete, e in quale lingua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-divario-digitale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il divario digitale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-lingue-del-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le lingue del Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomi-di-dominio-in-tutte-le-scritture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nomi di dominio in tutte le scritture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-lingue-minoritarie-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le lingue minoritarie in rete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l06-internet-la-rete-delle-reti">L06 · Internet: la rete delle reti<a class="headerlink" href="#l06-internet-la-rete-delle-reti" title="Permanent link">&para;</a></h1>
+<p class="meta">Online · 2 ore · Blocco B — Internet e Web</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Usiamo Internet ogni giorno senza chiederci come funziona, un po' come la rete idrica: apriamo il
+rubinetto e l'acqua arriva. In questa lezione apriamo il rubinetto e guardiamo i tubi. Partiamo da
+una breve storia, da ARPANET alla prima connessione italiana del 1986. Poi seguiamo il viaggio di
+una richiesta qualsiasi, dal vostro computer al server di unibo.it e ritorno: pacchetti, indirizzi
+IP, router, DNS, protocolli. Infine scopriamo che la "nuvola" è fatta di cavi sul fondo del mare e
+di edifici pieni di server, e che non tutti, e non tutte le lingue, sono in rete allo stesso modo.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L06.html" title="Slide della lezione 6" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L06.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L06.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>raccontare a grandi linee come è nata Internet, e quando e come è arrivata in Italia;</li>
+<li>distinguere il modello <strong>client/server</strong> da quello <strong>peer-to-peer</strong>;</li>
+<li>spiegare perché Internet usa la <strong>commutazione di pacchetto</strong> e non quella di circuito;</li>
+<li>descrivere i quattro livelli della pila <strong>TCP/IP</strong> e dire che cosa fa ciascuno;</li>
+<li>leggere un <strong>indirizzo IP</strong> e spiegare a che cosa serve il <strong>DNS</strong>;</li>
+<li>ricostruire passo per passo che cosa succede quando digitate un indirizzo nel browser;</li>
+<li>descrivere l'<strong>infrastruttura fisica</strong> della rete e il suo costo energetico;</li>
+<li>discutere il <strong>divario digitale</strong> e il peso delle diverse lingue in rete.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Prima della lezione</p>
+<p>Non c'è niente da installare. Tenete aperto un browser: durante la lezione useremo alcuni strumenti
+online gratuiti, che trovate collegati nella sezione <a href="#attivita">Attività</a>.</p>
+</div>
+<hr />
+<h2 id="0-una-domanda-per-cominciare">0. Una domanda per cominciare<a class="headerlink" href="#0-una-domanda-per-cominciare" title="Permanent link">&para;</a></h2>
+<p>Scrivete nel browser <code>unibo.it</code> e premete Invio. In meno di un secondo compare la pagina dell'Ateneo.
+<strong>Che cosa è successo in quel secondo?</strong> Prima di proseguire, provate a rispondere in chat con le
+parole che conoscete: anche "non ne ho idea" è una risposta utile. Alla fine della lezione
+riprenderemo le risposte e le confronteremo con quello che avremo visto.</p>
+<hr />
+<h2 id="1-breve-storia">1. Breve storia<a class="headerlink" href="#1-breve-storia" title="Permanent link">&para;</a></h2>
+<h3 id="da-arpa-ad-arpanet">Da ARPA ad ARPANET<a class="headerlink" href="#da-arpa-ad-arpanet" title="Permanent link">&para;</a></h3>
+<p>Nel 1957 l'Unione Sovietica lancia lo <strong>Sputnik</strong>, il primo satellite artificiale. Gli Stati Uniti
+rispondono l'anno successivo creando l'<strong>ARPA</strong> (<em>Advanced Research Projects Agency</em>), un'agenzia del
+Dipartimento della Difesa che finanzia la ricerca di base nelle università. Tra i progetti finanziati
+c'è una rete per collegare i grandi calcolatori dei centri di ricerca, che all'epoca erano costosi,
+rari e incompatibili tra loro: si chiama <strong>ARPANET</strong>.</p>
+<p>Alla fine del 1969 ARPANET collega quattro nodi: la University of California a Los Angeles (UCLA), lo
+Stanford Research Institute (SRI), la University of California a Santa Barbara e la University of
+Utah. Il primo messaggio parte da UCLA verso SRI il 29 ottobre 1969: doveva essere la parola <code>LOGIN</code>,
+ma il sistema si blocca dopo le prime due lettere. Il primo messaggio della storia della rete è
+quindi <code>LO</code>.</p>
+<figure>
+<p><img alt="Mappa logica di ARPANET nel marzo 1977" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Arpanet_logical_map,_march_1977.png?width=1000" width="640" /></p>
+<figcaption>Mappa logica di ARPANET nel marzo 1977: ogni rettangolo è un nodo della rete, ogni ovale
+un calcolatore collegato. Pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="da-una-rete-a-una-rete-di-reti">Da una rete a una rete di reti<a class="headerlink" href="#da-una-rete-a-una-rete-di-reti" title="Permanent link">&para;</a></h3>
+<p>Negli anni Settanta nascono altre reti a commutazione di pacchetto: reti via radio, reti via satellite,
+reti nazionali in Europa. Ciascuna funziona a modo suo, e nessuna sa parlare con le altre. Nel 1974
+<strong>Vinton Cerf</strong> e <strong>Robert Kahn</strong> pubblicano un articolo in cui propongono un protocollo comune per far
+comunicare reti diverse: è l'origine di <strong>TCP/IP</strong>. Il 1° gennaio 1983 ARPANET abbandona il vecchio
+protocollo e passa definitivamente a TCP/IP.</p>
+<p>Da qui viene anche il nome: <em>internet</em> è l'abbreviazione di <em>internetworking</em>, il collegamento tra
+reti. Internet non è una rete unica, ma decine di migliaia di reti indipendenti (quelle delle
+università, delle aziende, dei fornitori di connessione) che hanno accettato di usare le stesse
+regole per scambiarsi dati.</p>
+<h3 id="litalia-in-rete">L'Italia in rete<a class="headerlink" href="#litalia-in-rete" title="Permanent link">&para;</a></h3>
+<p>L'Italia si collega per la prima volta a Internet il <strong>30 aprile 1986</strong>, poco dopo le sei di sera.
+Un gruppo di ricercatori del <strong>CNUCE</strong> di Pisa, il centro di calcolo del CNR, invia un <code>ping</code> verso
+gli Stati Uniti. Il segnale viaggia su linea telefonica fino alla stazione di Telespazio nella piana
+del Fucino, in Abruzzo, sale su un satellite Intelsat e arriva alla stazione di Roaring Creek, in
+Pennsylvania. Dall'altra parte qualcuno risponde. L'Italia è tra i primi paesi europei a collegarsi.</p>
+<p>L'anno successivo, sempre a Pisa, viene registrato il primo nome di dominio italiano, <code>cnuce.cnr.it</code>.
+Il <strong>Registro .it</strong>, che ancora oggi gestisce tutti i domini che finiscono in <code>.it</code>, ha sede presso
+l'Istituto di Informatica e Telematica del CNR, a Pisa. Le università e i centri di ricerca italiani,
+compresa la nostra, sono collegati tra loro e al resto del mondo dalla rete <strong>GARR</strong>.</p>
+<h3 id="perche-ha-funzionato">Perché ha funzionato<a class="headerlink" href="#perche-ha-funzionato" title="Permanent link">&para;</a></h3>
+<p>Le slide dell'anno scorso individuano quattro fattori del successo di Internet, che vale la pena
+ricordare perché torneranno quando parleremo del Web:</p>
+<ul>
+<li><strong>investimenti pubblici</strong>: per i primi vent'anni Internet è stata finanziata quasi solo da governi e
+  università;</li>
+<li><strong>collaborazione</strong> tra ricerca pubblica e industria;</li>
+<li><strong>standard aperti</strong>: le regole di Internet sono pubblicate in documenti chiamati <strong>RFC</strong> (<em>Request
+  for Comments</em>), che chiunque può leggere e usare gratuitamente;</li>
+<li><strong>estensibilità</strong>: l'architettura è fatta a strati, e si può cambiare uno strato senza toccare gli
+  altri.</li>
+</ul>
+<hr />
+<h2 id="2-reti-e-architetture">2. Reti e architetture<a class="headerlink" href="#2-reti-e-architetture" title="Permanent link">&para;</a></h2>
+<h3 id="nodi-host-collegamenti">Nodi, host, collegamenti<a class="headerlink" href="#nodi-host-collegamenti" title="Permanent link">&para;</a></h3>
+<p>Una <strong>rete</strong> è un insieme di <strong>nodi</strong> collegati da canali di comunicazione. Ogni dispositivo collegato
+a Internet si chiama <strong>host</strong>: il vostro portatile, il telefono, il server che ospita un sito, ma anche
+la smart TV o il termostato. Tra un host e l'altro ci sono i <strong>router</strong>, dispositivi specializzati che
+smistano il traffico tra reti diverse.</p>
+<p>Perché servono i router? Immaginate di voler collegare direttamente ogni computer a tutti gli altri.
+Con 10 computer servono 45 cavi, con 100 computer 4.950, con un milione circa 500 miliardi. In
+generale, con <em>n</em> nodi servono <em>n</em>(<em>n</em>−1)/2 collegamenti: il numero cresce molto più in fretta dei
+nodi. La soluzione è organizzare la rete in modo <strong>gerarchico</strong>: i computer di una stanza formano una
+piccola rete locale (in inglese <em>LAN</em>, <em>Local Area Network</em>), le reti locali di un edificio si
+collegano tra loro, gli edifici si collegano alla rete dell'Ateneo, e la rete dell'Ateneo si collega a
+Internet. In ogni punto di raccordo c'è un router.</p>
+<p>Una rete come quella dell'Università di Bologna, che usa le tecnologie di Internet ma è riservata a una
+sola organizzazione e protetta da un <em>firewall</em>, si chiama <strong>intranet</strong>.</p>
+<h3 id="client-e-server-o-tutti-alla-pari">Client e server, o tutti alla pari<a class="headerlink" href="#client-e-server-o-tutti-alla-pari" title="Permanent link">&para;</a></h3>
+<p>Gli host possono avere ruoli diversi:</p>
+<ul>
+<li>nel modello <strong>client/server</strong> c'è chi chiede (il <strong>client</strong>, ad esempio il vostro browser) e chi
+  risponde (il <strong>server</strong>, un computer sempre acceso che ospita un servizio). È il modello di gran
+  lunga più diffuso: il Web, la posta elettronica, Netflix, Virtuale funzionano così;</li>
+<li>nel modello <strong>peer-to-peer</strong> (P2P, "da pari a pari") ogni nodo è insieme client e server, e i dati
+  passano direttamente da un utente all'altro senza un server centrale. Lo usano alcuni sistemi di
+  condivisione di file come BitTorrent, alcune criptovalute e, in parte, alcune applicazioni di
+  videochiamata.</li>
+</ul>
+<div class="grid">
+<figure>
+<p><img alt="Modello client/server" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Client-server-model.svg?width=800" width="380" /></p>
+<figcaption>Client/server: un server risponde a molti client. Calimo, CC BY-SA, via Wikimedia Commons.</figcaption>
+</figure>
+<figure>
+<p><img alt="Rete peer-to-peer" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/P2P_network.svg?width=800" width="300" /></p>
+<figcaption>Peer-to-peer: ogni nodo parla direttamente con gli altri. The 360 Degree, via Wikimedia Commons.</figcaption>
+</figure>
+</div>
+<hr />
+<h2 id="3-come-viaggiano-i-dati">3. Come viaggiano i dati<a class="headerlink" href="#3-come-viaggiano-i-dati" title="Permanent link">&para;</a></h2>
+<h3 id="commutazione-di-circuito-e-commutazione-di-pacchetto">Commutazione di circuito e commutazione di pacchetto<a class="headerlink" href="#commutazione-di-circuito-e-commutazione-di-pacchetto" title="Permanent link">&para;</a></h3>
+<p>La rete telefonica tradizionale funzionava a <strong>commutazione di circuito</strong>: quando chiamavate qualcuno,
+le centrali stabilivano un collegamento fisico dedicato tra i due telefoni, che restava occupato per
+tutta la durata della chiamata, anche durante i silenzi. È un sistema semplice e prevedibile, ma spreca
+risorse e si interrompe del tutto se un tratto del circuito si guasta.</p>
+<p>Internet usa invece la <strong>commutazione di pacchetto</strong>. Il messaggio viene diviso in piccoli pezzi, i
+<strong>pacchetti</strong>, e ciascuno viene spedito per conto suo, con un'etichetta che indica il mittente, il
+destinatario e il numero d'ordine. I pacchetti possono seguire strade diverse: ogni router decide, in
+quel momento, a quale vicino passarli. Il destinatario li riceve, magari in disordine, e li rimette in
+sequenza.</p>
+<p>Un'analogia: dovete spedire un'enciclopedia in venti volumi. Invece di noleggiare un camion che vada
+direttamente a destinazione (il circuito), spedite venti pacchi separati, numerati, ciascuno con il suo
+indirizzo. Alcuni passeranno per Milano, altri per Firenze, ma arriveranno tutti, e chi li riceve li
+metterà in ordine sullo scaffale.</p>
+<figure>
+<p><img alt="Animazione della commutazione di pacchetto" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Packet_Switching.gif" width="640" /></p>
+<figcaption>Un messaggio diviso in pacchetti che seguono percorsi diversi e vengono ricomposti
+all'arrivo. Oddbodz, via Wikimedia Commons.</figcaption>
+</figure>
+<p>I vantaggi sono tre: la rete è usata solo quando c'è davvero qualcosa da trasmettere, molte
+comunicazioni condividono gli stessi cavi, e se un collegamento si interrompe i pacchetti trovano
+un'altra strada.</p>
+<h3 id="che-cose-un-protocollo">Che cos'è un protocollo<a class="headerlink" href="#che-cose-un-protocollo" title="Permanent link">&para;</a></h3>
+<p>Perché tutto questo funzioni, ogni dispositivo deve seguire le stesse regole. Un <strong>protocollo</strong> è un
+insieme di regole che stabilisce quali messaggi si possono scambiare, in che formato, in che ordine, e
+che cosa fare quando qualcosa va storto. Nella L02 abbiamo visto che un linguaggio formale ha una
+sintassi e una semantica senza ambiguità: un protocollo è un linguaggio formale pensato per far
+dialogare due macchine.</p>
+<p>Ci sono protocolli anche nella vita quotidiana. Al telefono si risponde "pronto?", si aspetta che
+l'altro si presenti, si parla a turno, si chiude salutando. Se la linea è disturbata si chiede "mi
+senti?". Un protocollo di rete fa la stessa cosa, ma in modo molto più rigido.</p>
+<h3 id="la-pila-tcpip">La pila TCP/IP<a class="headerlink" href="#la-pila-tcpip" title="Permanent link">&para;</a></h3>
+<p>Far comunicare due computer è un problema troppo complesso per un solo protocollo. Per questo i
+protocolli di Internet sono organizzati in <strong>livelli</strong> (<em>layer</em>), ciascuno dei quali risolve una parte
+del problema e si appoggia a quello sottostante. L'insieme si chiama <strong>pila TCP/IP</strong> (<em>TCP/IP stack</em>).</p>
+<table>
+<thead>
+<tr>
+<th>Livello</th>
+<th>Domanda a cui risponde</th>
+<th>Esempi di protocolli</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Applicazione</strong></td>
+<td>Che cosa vogliono dirsi i due programmi?</td>
+<td>HTTP (Web), SMTP e IMAP (posta), DNS</td>
+</tr>
+<tr>
+<td><strong>Trasporto</strong></td>
+<td>Come arriva il messaggio completo e in ordine al programma giusto?</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td><strong>Rete</strong> (o Internet)</td>
+<td>Come raggiunge un pacchetto l'host di destinazione, attraversando più reti?</td>
+<td>IP</td>
+</tr>
+<tr>
+<td><strong>Collegamento</strong></td>
+<td>Come passa un pacchetto da un dispositivo al successivo?</td>
+<td>Ethernet, Wi-Fi, 5G</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="La pila TCP/IP tra due host collegati da due router" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/IP_stack_connections.svg?width=1000" width="440" /></p>
+<figcaption>Due host comunicano attraverso due router. In alto il percorso fisico, in basso i livelli
+usati a ogni passaggio: i router arrivano solo fino al livello di rete, mentre i livelli di trasporto
+e di applicazione riguardano solo i due estremi. Kbrose, via Wikimedia Commons.</figcaption>
+</figure>
+<p>Quando inviate qualcosa, il dato scende la pila: ogni livello aggiunge un'<strong>intestazione</strong> (<em>header</em>)
+con le informazioni che gli servono, come una busta dentro un'altra busta. Questo meccanismo si chiama
+<strong>incapsulamento</strong>. All'arrivo il dato risale la pila, e ogni livello toglie la sua busta e passa il
+contenuto a quello superiore.</p>
+<figure>
+<p><img alt="Incapsulamento dei dati nei livelli della pila TCP/IP" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/UDP_encapsulation.svg?width=1000" width="560" /></p>
+<figcaption>Incapsulamento: i dati dell'applicazione ricevono un'intestazione dal livello di trasporto
+(qui UDP; con TCP funziona allo stesso modo), una da IP e una dal livello di collegamento. Cburnett e
+Kbrose, GFDL, via Wikimedia Commons.</figcaption>
+</figure>
+<p>La divisione in livelli è il motivo per cui potete passare dal Wi-Fi di casa al 5G del telefono senza
+che il browser se ne accorga: cambia il livello di collegamento, gli altri restano uguali.</p>
+<h3 id="ip-gli-indirizzi">IP: gli indirizzi<a class="headerlink" href="#ip-gli-indirizzi" title="Permanent link">&para;</a></h3>
+<p>Ogni host collegato a Internet ha un <strong>indirizzo IP</strong>. Nella versione più diffusa, <strong>IPv4</strong>, un
+indirizzo è un numero di 32 bit, scritto per comodità come quattro numeri da 0 a 255 separati da punti:
+ad esempio <code>192.168.1.10</code>. Ricordate la L02? Ciascuno dei quattro numeri è un byte, e un byte va da 0
+a 255.</p>
+<p>Con 32 bit si possono scrivere 2<sup>32</sup> indirizzi diversi, circa 4,3 miliardi. Negli anni
+Settanta sembravano infiniti; oggi gli host collegati sono molti di più. La IANA, l'ente che coordina
+gli indirizzi a livello mondiale, ha distribuito gli ultimi blocchi liberi nel 2011, e il RIPE NCC, che
+li assegna in Europa, ha esaurito i suoi nel 2019. Le soluzioni sono due:</p>
+<ul>
+<li><strong>IPv6</strong>, la nuova versione del protocollo, usa indirizzi di 128 bit (2<sup>128</sup> combinazioni,
+  un numero di 39 cifre). Un indirizzo IPv6 si scrive in esadecimale, ad esempio
+  <code>2001:db8::8a2e:370:7334</code>;</li>
+<li>il <strong>NAT</strong> (<em>Network Address Translation</em>): il router di casa ha un solo indirizzo pubblico e assegna
+  ai dispositivi della casa indirizzi privati (quelli che cominciano con <code>192.168.</code> o <code>10.</code>), facendo
+  da intermediario.</li>
+</ul>
+<p>Gli indirizzi sono assegnati in modo <strong>gerarchico</strong>: la IANA delega blocchi di indirizzi a cinque
+registri regionali (per l'Europa il RIPE NCC, che ha sede ad Amsterdam), che li assegnano ai fornitori
+di connessione e alle grandi organizzazioni, che a loro volta li assegnano ai singoli dispositivi.</p>
+<div class="admonition warning">
+<p class="admonition-title">Un indirizzo IP non è un indirizzo di casa</p>
+<p>Il vostro indirizzo IP di solito cambia: il fornitore di connessione ve ne assegna uno temporaneo,
+spesso condiviso con altri utenti. Un indirizzo IP indica più o meno da quale rete vi collegate e
+da quale città, ma da solo non identifica una persona. Insieme ai registri del fornitore, però,
+può farlo: per questo è considerato un <strong>dato personale</strong> (ne parleremo nella L07).</p>
+</div>
+<h3 id="tcp-arrivare-tutto-e-in-ordine">TCP: arrivare tutto, e in ordine<a class="headerlink" href="#tcp-arrivare-tutto-e-in-ordine" title="Permanent link">&para;</a></h3>
+<p>IP si preoccupa di far arrivare ogni pacchetto a destinazione, ma non garantisce nulla: un pacchetto
+può perdersi, arrivare due volte o arrivare in ritardo. Il livello di trasporto rimedia.</p>
+<p><strong>TCP</strong> (<em>Transmission Control Protocol</em>) divide i dati in segmenti numerati, chiede al destinatario di
+confermare la ricezione di ciascuno, rispedisce quelli persi e rimette tutto in ordine. È il protocollo
+usato quando ogni bit conta: pagine web, posta, file.</p>
+<p><strong>UDP</strong> (<em>User Datagram Protocol</em>) è più semplice e più veloce: spedisce e basta, senza conferme. Si
+usa quando un pacchetto perso è meno grave di un ritardo, come nelle videochiamate o nei giochi online:
+meglio un'immagine sgranata per un istante che una conversazione che si blocca.</p>
+<p>Il livello di trasporto usa anche le <strong>porte</strong>, numeri che identificano il programma a cui è destinato
+un messaggio sullo stesso computer. Un server web risponde sulla porta 443 (HTTPS) o sulla 80 (HTTP), un
+server di posta sulla 25. Se l'indirizzo IP è il numero civico di un condominio, la porta è il numero
+dell'interno.</p>
+<h3 id="dns-lelenco-telefonico-di-internet">DNS: l'elenco telefonico di Internet<a class="headerlink" href="#dns-lelenco-telefonico-di-internet" title="Permanent link">&para;</a></h3>
+<p>Nessuno ricorda un numero come <code>203.0.113.42</code>: ricordiamo <code>unibo.it</code>. Il <strong>DNS</strong> (<em>Domain Name System</em>) è il sistema
+che traduce i <strong>nomi di dominio</strong>, comodi per le persone, negli indirizzi IP, necessari alle macchine.</p>
+<p>I nomi di dominio sono organizzati ad <strong>albero</strong>, la struttura dati che abbiamo visto nella L03, e si
+leggono da destra verso sinistra:</p>
+<ul>
+<li>in cima c'è la <strong>radice</strong>, gestita in ultima istanza dall'ICANN;</li>
+<li>sotto la radice ci sono i <strong>domini di primo livello</strong> (<em>TLD</em>, <em>Top-Level Domain</em>): quelli nazionali
+  come <code>.it</code>, <code>.fr</code>, <code>.jp</code> e quelli generici come <code>.com</code>, <code>.org</code>, <code>.edu</code>;</li>
+<li>sotto ciascun TLD ci sono i <strong>domini di secondo livello</strong>, registrati da organizzazioni e persone:
+  <code>unibo.it</code>, <code>wikipedia.org</code>. In Italia li gestisce il Registro .it;</li>
+<li>chi possiede un dominio di secondo livello può creare tutti i <strong>sottodomini</strong> che vuole: <code>www.unibo.it</code>,
+  <code>virtuale.unibo.it</code>, <code>it.wikipedia.org</code>.</li>
+</ul>
+<figure>
+<p><img alt="Lo spazio dei nomi di dominio come albero" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Domain_name_space.svg?width=1000" width="520" /></p>
+<figcaption>Lo spazio dei nomi del DNS è un albero: ogni nodo è un dominio, e ogni dominio può delegare
+la gestione dei propri sottodomini. LionKimbro, pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
+<p>Quando digitate <code>it.wikipedia.org</code>, il vostro computer chiede l'indirizzo a un <strong>resolver</strong>, di solito
+quello del vostro fornitore di connessione. Se il resolver non conosce già la risposta, la cerca
+scendendo l'albero: chiede a un server della radice chi gestisce <code>.org</code>, chiede al server di <code>.org</code> chi
+gestisce <code>wikipedia.org</code>, chiede a quest'ultimo l'indirizzo di <code>it.wikipedia.org</code>. La risposta viene
+poi conservata per un po' in memoria (<em>cache</em>), così la volta successiva arriva subito.</p>
+<figure>
+<p><img alt="Esempio di risoluzione iterativa di un nome di dominio" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Example_of_an_iterative_DNS_resolver-it.svg?width=1000" width="560" /></p>
+<figcaption>Il resolver interroga in successione la radice, il server di <code>.org</code> e il
+server di <code>wikipedia.org</code>. Versione italiana dell'originale di Mfwitten, via Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="mettiamo-insieme-i-pezzi">Mettiamo insieme i pezzi<a class="headerlink" href="#mettiamo-insieme-i-pezzi" title="Permanent link">&para;</a></h3>
+<p>Torniamo alla domanda iniziale. Ecco, semplificando, che cosa succede quando scrivete <code>unibo.it</code> e
+premete Invio:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Che cosa succede</th>
+<th>Chi lo fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Il browser chiede al DNS l'indirizzo IP di <code>unibo.it</code></td>
+<td>DNS (livello applicazione)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Il browser apre una connessione con quell'indirizzo, sulla porta 443</td>
+<td>TCP (trasporto)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Il browser invia una richiesta: "dammi la pagina principale"</td>
+<td>HTTP (applicazione)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La richiesta viene divisa in pacchetti, ciascuno con l'indirizzo di destinazione</td>
+<td>IP (rete)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>I pacchetti passano dal Wi-Fi al router di casa, poi di router in router fino al server</td>
+<td>collegamento e rete</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Il server risponde con la pagina, divisa a sua volta in pacchetti</td>
+<td>tutti i livelli, in senso inverso</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Il browser riceve i pacchetti, li rimette in ordine e mostra la pagina</td>
+<td>TCP, poi il browser</td>
+</tr>
+</tbody>
+</table>
+<p>Tutto questo accade, di solito, in qualche decina di millisecondi. Il passo 3, la conversazione tra il
+browser e il server web, è il tema della prossima lezione.</p>
+<hr />
+<h2 id="4-linfrastruttura-fisica">4. L'infrastruttura fisica<a class="headerlink" href="#4-linfrastruttura-fisica" title="Permanent link">&para;</a></h2>
+<h3 id="la-nuvola-e-sottacqua">La "nuvola" è sott'acqua<a class="headerlink" href="#la-nuvola-e-sottacqua" title="Permanent link">&para;</a></h3>
+<p>Parliamo di <em>cloud</em>, di "nuvola", come se i dati fluttuassero nell'aria. In realtà quasi tutto il
+traffico tra continenti viaggia in <strong>cavi in fibra ottica posati sul fondo del mare</strong>. Secondo
+TeleGeography, la società che ne cura la mappa più completa, all'inizio del 2025 i cavi sottomarini in
+servizio erano circa 570, per una lunghezza complessiva di circa 1,4 milioni di chilometri. I satelliti
+servono soprattutto per raggiungere luoghi isolati, ma trasportano una quota piccola del traffico.</p>
+<figure>
+<p><img alt="Sezione di un cavo sottomarino per telecomunicazioni" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Submarine_cable_cross-section.svg?width=800" width="380" /></p>
+<figcaption>Sezione di un cavo sottomarino: al centro le fibre ottiche, intorno strati di protezione,
+un conduttore di rame che alimenta i ripetitori e un'armatura d'acciaio. Mysid, via Wikimedia Commons.</figcaption>
+</figure>
+<p>Al centro del cavo ci sono poche coppie di fibre ottiche, sottili come capelli; tutto il resto è
+protezione. Il cavo arriva a terra in punti precisi della costa, detti <strong>punti di approdo</strong>. Il
+Mediterraneo è uno snodo importante tra Europa, Africa e Asia, e diversi cavi approdano in Sicilia.</p>
+<p>I cavi si rompono più spesso di quanto si pensi, soprattutto per colpa di ancore e reti da pesca, e
+vengono riparati da navi specializzate. Negli ultimi anni sono diventati anche una questione
+geopolitica: chi li possiede, chi li può danneggiare, quali paesi restano isolati se si rompono. Un
+tempo erano posati da consorzi di compagnie telefoniche; oggi molti dei nuovi cavi sono di proprietà
+delle grandi aziende tecnologiche.</p>
+<h3 id="i-data-center">I data center<a class="headerlink" href="#i-data-center" title="Permanent link">&para;</a></h3>
+<p>All'altro capo dei cavi ci sono i <strong>data center</strong>: edifici pieni di server, collegati alla rete con
+connessioni velocissime, alimentati giorno e notte e raffreddati continuamente. Quando salvate un file
+"nel cloud", lo state salvando sul disco di un computer in uno di questi edifici.</p>
+<figure>
+<p><img alt="Il data center del CERN" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/CERN_Server_03.jpg?width=1200" width="560" /></p>
+<figcaption>Una sala server del CERN di Ginevra. Florian Hirzinger, via Wikimedia Commons.</figcaption>
+</figure>
+<p>I data center consumano molta energia. Secondo l'Agenzia Internazionale dell'Energia, nel 2024 hanno
+consumato circa 415 terawattora di elettricità, l'1,5% del consumo mondiale; la stessa agenzia prevede
+che entro il 2030 il consumo più che raddoppi, fino a circa 945 TWh, soprattutto per la crescita
+dell'intelligenza artificiale. Il consumo è anche molto concentrato: nel 2024 gli Stati Uniti ne
+rappresentavano il 45%, la Cina il 25% e l'Europa il 15%. A questo si aggiunge l'acqua usata per il
+raffreddamento, che pesa soprattutto nelle zone già povere d'acqua. Torneremo su questi numeri nella L15,
+quando parleremo del costo ambientale dei modelli linguistici.</p>
+<hr />
+<h2 id="5-chi-ce-in-rete-e-in-quale-lingua">5. Chi c'è in rete, e in quale lingua<a class="headerlink" href="#5-chi-ce-in-rete-e-in-quale-lingua" title="Permanent link">&para;</a></h2>
+<h3 id="il-divario-digitale">Il divario digitale<a class="headerlink" href="#il-divario-digitale" title="Permanent link">&para;</a></h3>
+<p>Secondo l'Unione Internazionale delle Telecomunicazioni (ITU), l'agenzia dell'ONU che si occupa di
+telecomunicazioni, nel 2026 usano Internet circa <strong>6,3 miliardi</strong> di persone, il 76% della popolazione
+mondiale. Restano fuori circa <strong>2 miliardi</strong> di persone, e la distribuzione è tutt'altro che uniforme:</p>
+<ul>
+<li>usa Internet il <strong>93%</strong> delle persone nei paesi ad alto reddito, il <strong>32%</strong> in quelli a basso reddito;</li>
+<li>nelle città è online l'82% delle persone, nelle aree rurali il 63%;</li>
+<li>è online il 79% degli uomini e il 74% delle donne;</li>
+<li>tra i giovani dai 15 ai 24 anni la quota sale all'86%.</li>
+</ul>
+<p>Si parla di <strong>divario digitale</strong> (<em>digital divide</em>) per indicare queste disuguaglianze. Il termine è
+nato per indicare chi ha accesso alla rete e chi no, ma oggi gli studiosi ne distinguono almeno tre
+livelli: l'<strong>accesso</strong> (avere una connessione e un dispositivo), le <strong>competenze</strong> (saperli usare) e i
+<strong>benefici</strong> (riuscire a ricavarne qualcosa di utile, come un lavoro, un servizio, un'informazione
+affidabile). Anche in un paese dove quasi tutti sono connessi, il secondo e il terzo livello possono
+fare molta differenza. Lo vedrete anche in questo corso: avere un computer non basta per saper
+pubblicare una pagina web o valutare una fonte.</p>
+<h3 id="le-lingue-del-web">Le lingue del Web<a class="headerlink" href="#le-lingue-del-web" title="Permanent link">&para;</a></h3>
+<p>In quale lingua è scritto il Web? Il servizio W3Techs analizza ogni giorno i dieci milioni di siti più
+visitati e ne rileva la lingua. Ecco i dati del 18 novembre 2026:</p>
+<table>
+<thead>
+<tr>
+<th>Lingua</th>
+<th>Quota dei siti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inglese</td>
+<td>49,5%</td>
+</tr>
+<tr>
+<td>Spagnolo</td>
+<td>6,0%</td>
+</tr>
+<tr>
+<td>Tedesco</td>
+<td>5,9%</td>
+</tr>
+<tr>
+<td>Giapponese</td>
+<td>4,9%</td>
+</tr>
+<tr>
+<td>Francese</td>
+<td>4,6%</td>
+</tr>
+<tr>
+<td>Portoghese</td>
+<td>4,2%</td>
+</tr>
+<tr>
+<td>Russo</td>
+<td>3,4%</td>
+</tr>
+<tr>
+<td><strong>Italiano</strong></td>
+<td><strong>2,7%</strong></td>
+</tr>
+<tr>
+<td>Cinese</td>
+<td>1,2%</td>
+</tr>
+<tr>
+<td>Arabo</td>
+<td>0,6%</td>
+</tr>
+</tbody>
+</table>
+<p>Quasi un sito su due è in inglese, una lingua parlata come prima lingua da una piccola parte
+dell'umanità. Il cinese, che ha più parlanti nativi di qualsiasi altra lingua, si ferma all'1,2%; lingue
+con centinaia di milioni di parlanti, come l'hindi o il bengalese, non arrivano allo 0,1%.</p>
+<div class="admonition question">
+<p class="admonition-title">Leggere un dato con spirito critico</p>
+<p>Prima di trarre conclusioni, chiediamoci come è stato prodotto questo dato (ricordate i <em>capta</em>
+della L01). W3Techs guarda solo i siti <strong>più visitati</strong>, solo la <strong>pagina principale</strong>, e conta i
+<strong>siti</strong>, non le pagine né le persone che li leggono. Molti contenuti in cinese stanno su piattaforme
+chiuse, che non compaiono come siti separati; molti contenuti in lingue africane o indiane circolano
+sui social e nei messaggi, non sul Web. Il dato misura bene una cosa precisa, e male tutto il resto.</p>
+</div>
+<p>Questa disuguaglianza ha conseguenze che vanno oltre la navigazione. I modelli linguistici e gli strumenti
+di traduzione automatica imparano dai testi che trovano in rete: se una lingua è poco presente sul Web,
+gli strumenti funzioneranno peggio per chi la parla. Joshi e colleghi (2020) hanno mostrato che la
+grande maggioranza delle oltre 7.000 lingue del mondo è quasi del tutto ignorata dalle tecnologie
+linguistiche. Ne parleremo nel blocco sul NLP (L11).</p>
+<h3 id="nomi-di-dominio-in-tutte-le-scritture">Nomi di dominio in tutte le scritture<a class="headerlink" href="#nomi-di-dominio-in-tutte-le-scritture" title="Permanent link">&para;</a></h3>
+<p>Per decenni i nomi di dominio potevano contenere solo lettere latine senza accenti, cifre e trattini:
+in pratica, i caratteri ASCII della L02. Un sito in arabo, in russo o in cinese doveva comunque avere un
+indirizzo in caratteri latini.</p>
+<p>Dal 2003 esiste uno standard, chiamato <strong>IDNA</strong>, che permette di usare nei nomi di dominio qualsiasi
+carattere Unicode. Il trucco è una codifica, chiamata <strong>Punycode</strong>, che trasforma il nome in una
+stringa ASCII che comincia con <code>xn--</code>. Il DNS continua a vedere solo ASCII, mentre il browser mostra
+all'utente il nome originale.</p>
+<table>
+<thead>
+<tr>
+<th>Nome che vedete</th>
+<th>Nome che vede il DNS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>città.it</code></td>
+<td><code>xn--citt-3na.it</code></td>
+</tr>
+<tr>
+<td><code>università.it</code></td>
+<td><code>xn--universit-y1a.it</code></td>
+</tr>
+<tr>
+<td><code>пример.рф</code></td>
+<td><code>xn--e1afmkfd.xn--p1ai</code></td>
+</tr>
+</tbody>
+</table>
+<p>Nel maggio 2010 sono entrati nella radice del DNS i primi domini di primo livello interamente in
+caratteri non latini: <code>مصر</code> (Egitto), <code>السعودية</code> (Arabia Saudita) e <code>امارات</code> (Emirati Arabi Uniti),
+seguiti a breve da <code>.рф</code> per la Russia e da quelli in caratteri cinesi.</p>
+<div class="admonition warning">
+<p class="admonition-title">Lettere che si somigliano</p>
+<p>La <code>а</code> cirillica e la <code>a</code> latina sono caratteri diversi, con punti di codice diversi, ma hanno lo
+stesso aspetto. Un truffatore può registrare un dominio che <em>sembra</em> identico a quello di una banca,
+usando qualche lettera cirillica. Si chiama <strong>attacco omografico</strong>, e per difendersi i browser in
+alcuni casi mostrano l'indirizzo in Punycode invece che nella forma originale.</p>
+</div>
+<h3 id="le-lingue-minoritarie-in-rete">Le lingue minoritarie in rete<a class="headerlink" href="#le-lingue-minoritarie-in-rete" title="Permanent link">&para;</a></h3>
+<p>Per le lingue con pochi parlanti, o senza un riconoscimento ufficiale, la rete è insieme un rischio e
+un'opportunità. Il rischio è che l'uso quotidiano della rete in una lingua dominante acceleri
+l'abbandono della lingua di casa. L'opportunità è che pubblicare costa pochissimo: esistono edizioni di
+Wikipedia in siciliano, napoletano, friulano, ladino e in oltre trecento lingue, scritte da volontari.
+Una lingua presente in rete può essere usata dai giovani, raccolta in corpora, e dare dati agli
+strumenti di cui parleremo nel blocco C.</p>
+<hr />
+<h2 id="riepilogo">Riepilogo<a class="headerlink" href="#riepilogo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concetto</th>
+<th>In una frase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td>Una rete di reti indipendenti che usano gli stessi protocolli</td>
+</tr>
+<tr>
+<td>Commutazione di pacchetto</td>
+<td>I dati viaggiano in pezzi separati, ciascuno per la sua strada</td>
+</tr>
+<tr>
+<td>Protocollo</td>
+<td>Un insieme di regole condivise per comunicare</td>
+</tr>
+<tr>
+<td>Pila TCP/IP</td>
+<td>Quattro livelli: collegamento, rete (IP), trasporto (TCP/UDP), applicazione</td>
+</tr>
+<tr>
+<td>Indirizzo IP</td>
+<td>Il numero che identifica un host in rete (IPv4: 32 bit; IPv6: 128 bit)</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>Il sistema, organizzato ad albero, che traduce i nomi in indirizzi IP</td>
+</tr>
+<tr>
+<td>Infrastruttura</td>
+<td>Cavi sottomarini, router, data center: oggetti fisici, con costi energetici</td>
+</tr>
+<tr>
+<td>Divario digitale</td>
+<td>Disuguaglianze di accesso, competenze e benefici</td>
+</tr>
+<tr>
+<td>IDN</td>
+<td>Nomi di dominio in scritture non latine, codificati in Punycode</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>Durante la lezione (online)</strong></p>
+<ol>
+<li><strong>Qual è il vostro indirizzo IP?</strong> Cercate "what is my IP" su un motore di ricerca. Confrontate in
+   chat la città indicata: corrisponde a dove siete davvero?</li>
+<li><strong>Interrogate il DNS.</strong> Con lo strumento <a href="https://toolbox.googleapps.com/apps/dig/">Dig di Google Admin Toolbox</a>
+   cercate l'indirizzo IP di <code>unibo.it</code>, di <code>wikipedia.org</code> e di un sito del vostro paese o della
+   vostra lingua. Provate anche a cercare <code>città.it</code>: che cosa vedete?</li>
+<li><strong>Seguite un pacchetto.</strong> Con un servizio di <em>visual traceroute</em> (cercate "visual traceroute
+   online") tracciate il percorso verso un sito giapponese, ad esempio <code>nhk.or.jp</code>. Quanti router
+   attraversa? Passa da qualche cavo sottomarino?</li>
+<li><strong>Esplorate i cavi.</strong> Aprite la <a href="https://www.submarinecablemap.com/">Submarine Cable Map</a> e cercate i
+   cavi che approdano in Italia. Da dove partono? Dove arrivano?</li>
+</ol>
+<details class="tip">
+<summary>Per chi vuole usare il terminale</summary>
+<p>Gli stessi esperimenti si possono fare dal terminale del vostro computer (su Windows il <em>Prompt dei
+comandi</em>, su macOS e Linux il <em>Terminale</em>):</p>
+<div class="highlight"><pre><span></span><code>ping unibo.it
+nslookup unibo.it
+tracert nhk.or.jp       (Windows)
+traceroute nhk.or.jp    (macOS e Linux)
+</code></pre></div>
+</details>
+<p><strong>A casa (facoltativo)</strong></p>
+<ul>
+<li>Scegliete una lingua che conoscete o che studiate, diversa dall'inglese e dall'italiano. Cercate su
+  W3Techs la sua quota di siti e su Wikipedia (pagina <em>Lista di Wikipedia</em>) il numero di voci della sua
+  edizione. Confrontateli con il numero approssimativo di parlanti. Scrivete tre righe di commento.</li>
+</ul>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Che cosa significa che Internet è una "rete di reti"?</p>
+<ul>
+<li>A. Che è una sola grande rete gestita da un'unica organizzazione</li>
+<li>B. Che è formata da molte reti indipendenti che usano gli stessi protocolli per comunicare</li>
+<li>C. Che ogni computer è collegato direttamente a tutti gli altri</li>
+<li>D. Che esistono tante Internet diverse, una per paese</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Il nome stesso viene da <em>internetworking</em>, il collegamento tra reti diverse.</p>
+</details>
+<p><strong>2.</strong> Qual è il principale vantaggio della commutazione di pacchetto rispetto a quella di circuito?</p>
+<ul>
+<li>A. Garantisce che i pacchetti arrivino sempre nell'ordine in cui sono partiti</li>
+<li>B. Riserva un canale dedicato a ogni comunicazione</li>
+<li>C. Usa le risorse della rete solo quando serve e permette di aggirare i guasti</li>
+<li>D. Non ha bisogno di indirizzi</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> I pacchetti possono anzi arrivare in disordine: a rimetterli in sequenza ci pensa TCP.</p>
+</details>
+<p><strong>3.</strong> A quale livello della pila TCP/IP appartiene il protocollo IP?</p>
+<ul>
+<li>A. Applicazione</li>
+<li>B. Trasporto</li>
+<li>C. Rete</li>
+<li>D. Collegamento</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> IP si occupa di far arrivare i pacchetti all'host di destinazione attraverso reti diverse.</p>
+</details>
+<p><strong>4.</strong> Perché per le videochiamate si usa spesso UDP invece di TCP?</p>
+<ul>
+<li>A. Perché UDP è più sicuro</li>
+<li>B. Perché un pacchetto perso è meno grave di un ritardo, e UDP non aspetta le conferme</li>
+<li>C. Perché TCP non può trasportare audio e video</li>
+<li>D. Perché UDP usa indirizzi IPv6</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong></p>
+</details>
+<p><strong>5.</strong> Quanti indirizzi diversi si possono scrivere con IPv4?</p>
+<ul>
+<li>A. 256</li>
+<li>B. 65.536</li>
+<li>C. Circa 4,3 miliardi (2<sup>32</sup>)</li>
+<li>D. Infiniti</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> Un indirizzo IPv4 è lungo 32 bit. Gli indirizzi liberi sono finiti: per questo si è passati
+a IPv6, che ne usa 128.</p>
+</details>
+<p><strong>6.</strong> Che cosa fa il DNS?</p>
+<ul>
+<li>A. Cifra le comunicazioni tra browser e server</li>
+<li>B. Traduce i nomi di dominio in indirizzi IP</li>
+<li>C. Assegna un indirizzo IP al vostro computer</li>
+<li>D. Divide i messaggi in pacchetti</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> I nomi di dominio sono organizzati ad albero, dalla radice ai domini di primo livello
+(<code>.it</code>, <code>.org</code>) e via via ai sottodomini.</p>
+</details>
+<p><strong>7.</strong> Quale di queste affermazioni sull'infrastruttura di Internet è corretta?</p>
+<ul>
+<li>A. La maggior parte del traffico tra continenti viaggia via satellite</li>
+<li>B. Il "cloud" non occupa spazio fisico</li>
+<li>C. La maggior parte del traffico tra continenti viaggia in cavi in fibra ottica sottomarini</li>
+<li>D. I data center consumano una quantità trascurabile di elettricità</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> E secondo l'IEA i data center consumano circa l'1,5% dell'elettricità mondiale, una quota
+destinata a crescere.</p>
+</details>
+<p><strong>8.</strong> Che cos'è il Punycode?</p>
+<ul>
+<li>A. Una lingua artificiale usata dai programmatori</li>
+<li>B. Un modo di scrivere nomi di dominio non ASCII usando solo caratteri ASCII, con il prefisso <code>xn--</code></li>
+<li>C. Un protocollo per la posta elettronica</li>
+<li>D. Un tipo di attacco informatico</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Permette di avere domini come <code>città.it</code> o <code>.рф</code> senza cambiare il funzionamento del DNS.</p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Leiner, B. M., Cerf, V. G., Clark, D. D., Kahn, R. E., Kleinrock, L., Lynch, D. C., Postel, J.,
+  Roberts, L. G., &amp; Wolff, S. (2009). A brief history of the Internet. <em>ACM SIGCOMM Computer
+  Communication Review</em>, <em>39</em>(5), 22–31. <a href="https://doi.org/10.1145/1629607.1629613">doi:10.1145/1629607.1629613</a>
+  La storia raccontata da chi l'ha fatta.</li>
+<li>Cerf, V. G., &amp; Kahn, R. E. (1974). A protocol for packet network intercommunication. <em>IEEE
+  Transactions on Communications</em>, <em>22</em>(5), 637–648. <a href="https://doi.org/10.1109/TCOM.1974.1092259">doi:10.1109/TCOM.1974.1092259</a>
+  L'articolo da cui nasce TCP/IP (per curiosi: è tecnico).</li>
+<li>MDN Web Docs, <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">How does the Internet work?</a>
+  Una spiegazione breve e chiara, in inglese.</li>
+<li>TeleGeography, <a href="https://www.submarinecablemap.com/">Submarine Cable Map</a>.</li>
+<li>International Telecommunication Union (2026). <a href="https://www.itu.int/itu-d/reports/statistics/facts-figures-2026/"><em>Measuring digital development: Facts and Figures 2026</em></a>.</li>
+<li>International Energy Agency (2025). <a href="https://www.iea.org/reports/energy-and-ai"><em>Energy and AI</em></a>.</li>
+<li>W3Techs, <a href="https://w3techs.com/technologies/overview/content_language">Usage statistics of content languages for websites</a>.</li>
+<li>Joshi, P., Santy, S., Budhiraja, A., Bali, K., &amp; Choudhury, M. (2020). The state and fate of
+  linguistic diversity and inclusion in the NLP world. In <em>Proceedings of ACL 2020</em>, 6282–6293.
+  <a href="https://doi.org/10.18653/v1/2020.acl-main.560">doi:10.18653/v1/2020.acl-main.560</a></li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-b-internet-e-web">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#internet">Internet</a> ·
+<a href="../../glossario/#host">Host</a> ·
+<a href="../../glossario/#router">Router</a> ·
+<a href="../../glossario/#clientserver">Client/server</a> ·
+<a href="../../glossario/#peer-to-peer">Peer-to-peer</a> ·
+<a href="../../glossario/#commutazione-di-pacchetto">Commutazione di pacchetto</a> ·
+<a href="../../glossario/#protocollo">Protocollo</a> ·
+<a href="../../glossario/#tcpip">TCP/IP</a> ·
+<a href="../../glossario/#indirizzo-ip">Indirizzo IP</a> ·
+<a href="../../glossario/#dns-domain-name-system">DNS</a> ·
+<a href="../../glossario/#nome-di-dominio">Nome di dominio</a> ·
+<a href="../../glossario/#data-center">Data center</a> ·
+<a href="../../glossario/#divario-digitale">Divario digitale</a> ·
+<a href="../../glossario/#idn-e-punycode">IDN e Punycode</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../05-bibliografia-e-zotero/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L05 · Bibliografia e Zotero">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L05 · Bibliografia e Zotero
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07-web-e-societa/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L07 · Il Web e la società">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L07 · Il Web e la società
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

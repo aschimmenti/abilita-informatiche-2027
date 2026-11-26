@@ -1,0 +1,3001 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/07-web-e-societa/">
+      
+      
+        <link rel="prev" href="../06-internet/">
+      
+      
+        <link rel="next" href="../08-laboratorio-pagina-web/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>L07 · Il Web e la società - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l07-il-web-e-la-societa" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L07 · Il Web e la società
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco B · Internet e Web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco B · Internet e Web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L06 · Internet: la rete delle reti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L07 · Il Web e la società
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L07 · Il Web e la società
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dallipertesto-al-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dall'ipertesto al Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Dall&#39;ipertesto al Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-un-ipertesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è un ipertesto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tre-precursori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tre precursori
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-web-nasce-al-cern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il Web nasce al CERN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-e-web-non-sono-la-stessa-cosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internet e Web non sono la stessa cosa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-come-funziona-il-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Come funziona il Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Come funziona il Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomia-di-un-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia di un URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-una-conversazione-tra-client-e-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP: una conversazione tra client e server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-e-il-lucchetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS e il lucchetto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dal-web-10-al-web-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dal Web 1.0 al Web 2.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cercare-informazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cercare informazioni
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cercare informazioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-funziona-un-motore-di-ricerca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come funziona un motore di ricerca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank-i-link-come-voti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PageRank: i link come voti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cercare-meglio-gli-operatori-di-ricerca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cercare meglio: gli operatori di ricerca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-risposte-generate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le risposte generate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-web-che-i-motori-non-vedono" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il Web che i motori non vedono
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-raccomandazioni-bolle-disinformazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Raccomandazioni, bolle, disinformazione
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Raccomandazioni, bolle, disinformazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-sistemi-di-raccomandazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I sistemi di raccomandazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolle-informative-e-camere-delleco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolle informative e camere dell'eco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disinformazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disinformazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-verificare-la-lettura-laterale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come verificare: la lettura laterale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tracce-digitali-e-diritti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tracce digitali e diritti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Tracce digitali e diritti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-racconta-di-voi-il-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa racconta di voi il browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I cookie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-licenze-e-diritto-dautore-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Licenze e diritto d'autore in rete
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Licenze e diritto d&#39;autore in rete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutto-e-protetto-salvo-diverso-avviso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutto è protetto, salvo diverso avviso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-licenze-creative-commons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le licenze Creative Commons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-laboratorio-pagina-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L08 · Laboratorio: una pagina web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco C · Natural Language Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco C · Natural Language Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-linguaggio-come-dato/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L09 · Il linguaggio come dato
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dallipertesto-al-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Dall'ipertesto al Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Dall&#39;ipertesto al Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-un-ipertesto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è un ipertesto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tre-precursori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tre precursori
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-web-nasce-al-cern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il Web nasce al CERN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-e-web-non-sono-la-stessa-cosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internet e Web non sono la stessa cosa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-come-funziona-il-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Come funziona il Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Come funziona il Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomia-di-un-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomia di un URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-una-conversazione-tra-client-e-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP: una conversazione tra client e server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-e-il-lucchetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS e il lucchetto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dal-web-10-al-web-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dal Web 1.0 al Web 2.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cercare-informazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cercare informazioni
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cercare informazioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-funziona-un-motore-di-ricerca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come funziona un motore di ricerca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank-i-link-come-voti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PageRank: i link come voti
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cercare-meglio-gli-operatori-di-ricerca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cercare meglio: gli operatori di ricerca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-risposte-generate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le risposte generate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-web-che-i-motori-non-vedono" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il Web che i motori non vedono
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-raccomandazioni-bolle-disinformazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Raccomandazioni, bolle, disinformazione
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Raccomandazioni, bolle, disinformazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-sistemi-di-raccomandazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I sistemi di raccomandazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolle-informative-e-camere-delleco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bolle informative e camere dell'eco
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disinformazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disinformazione
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-verificare-la-lettura-laterale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Come verificare: la lettura laterale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tracce-digitali-e-diritti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tracce digitali e diritti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Tracce digitali e diritti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-racconta-di-voi-il-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa racconta di voi il browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I cookie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-licenze-e-diritto-dautore-in-rete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Licenze e diritto d'autore in rete
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Licenze e diritto d&#39;autore in rete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutto-e-protetto-salvo-diverso-avviso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutto è protetto, salvo diverso avviso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-licenze-creative-commons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le licenze Creative Commons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l07-il-web-e-la-societa">L07 · Il Web e la società<a class="headerlink" href="#l07-il-web-e-la-societa" title="Permanent link">&para;</a></h1>
+<p class="meta">Online · 2 ore · Blocco B — Internet e Web</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Nella lezione precedente abbiamo visto Internet, l'infrastruttura. Oggi parliamo del servizio che
+usiamo di più tra quelli costruiti sopra di essa: il <strong>World Wide Web</strong>. Partiamo dall'idea di
+ipertesto, che è molto più antica dei computer, e arriviamo al CERN, dove Tim Berners-Lee inventa
+URL, HTTP e HTML. Poi guardiamo come si trovano le informazioni in un Web di miliardi di pagine
+(motori di ricerca, ranking, raccomandazioni) e che cosa comporta per il modo in cui ci informiamo.
+Chiudiamo con le tracce che lasciamo navigando, con i diritti che il GDPR ci riconosce e con le
+licenze che regolano il riuso di testi e immagini in rete.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L07.html" title="Slide della lezione 7" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L07.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L07.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>definire un <strong>ipertesto</strong> e riconoscerne gli elementi (nodi, ancore, link);</li>
+<li>raccontare come e perché è nato il <strong>World Wide Web</strong>, e in che cosa si distingue da Internet;</li>
+<li>scomporre un <strong>URL</strong> nelle sue parti e leggere una richiesta e una risposta <strong>HTTP</strong>;</li>
+<li>spiegare come funziona un <strong>motore di ricerca</strong> e usare gli operatori di ricerca avanzata;</li>
+<li>descrivere i <strong>sistemi di raccomandazione</strong> e discutere con dati alla mano bolle informative e
+  disinformazione;</li>
+<li>distinguere i tipi di <strong>cookie</strong> e conoscere i vostri <strong>diritti</strong> secondo il GDPR;</li>
+<li>riconoscere le principali <strong>licenze Creative Commons</strong> e scegliere materiali riusabili.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Prima della lezione</p>
+<p>Usate un browser per computer (Firefox, Chrome, Edge o Safari): in un paio di esercizi apriremo gli
+<strong>strumenti per sviluppatori</strong>, che sui telefoni non sono disponibili. Su Safari vanno prima attivati
+da <em>Impostazioni → Avanzate → Mostra funzionalità per sviluppatori web</em>.</p>
+</div>
+<hr />
+<h2 id="1-dallipertesto-al-web">1. Dall'ipertesto al Web<a class="headerlink" href="#1-dallipertesto-al-web" title="Permanent link">&para;</a></h2>
+<h3 id="che-cose-un-ipertesto">Che cos'è un ipertesto<a class="headerlink" href="#che-cose-un-ipertesto" title="Permanent link">&para;</a></h3>
+<p>Un testo normale si legge in un ordine stabilito dall'autore, dalla prima pagina all'ultima. Un
+<strong>ipertesto</strong> è invece un insieme di testi collegati, che il lettore può percorrere in ordini diversi
+seguendo dei collegamenti. Gli elementi sono tre:</p>
+<ul>
+<li>i <strong>nodi</strong>, cioè le unità di informazione (una pagina, un paragrafo, un'immagine);</li>
+<li>le <strong>ancore</strong>, i punti di un nodo da cui parte o in cui arriva un collegamento;</li>
+<li>i <strong>link</strong>, i collegamenti tra un'ancora e l'altra.</li>
+</ul>
+<p>Nella L03 abbiamo incontrato i <strong>grafi</strong>: un ipertesto è un grafo <strong>orientato</strong>, perché un link va da A
+a B ma non necessariamente da B ad A.</p>
+<p>L'idea è molto più antica dei computer. Le glosse nei margini dei manoscritti medievali, le note a piè
+di pagina, i rimandi di un dizionario ("→ vedi anche") sono già collegamenti tra testi. Alcuni
+scrittori ne hanno fatto un principio di costruzione dell'opera: <em>Rayuela</em> (in italiano <em>Il gioco del
+mondo</em>, 1963) di Julio Cortázar si può leggere in ordine oppure seguendo un percorso alternativo indicato
+dall'autore alla fine di ogni capitolo, e i "librigame" degli anni Ottanta chiedevano al lettore di
+scegliere a quale paragrafo saltare.</p>
+<h3 id="tre-precursori">Tre precursori<a class="headerlink" href="#tre-precursori" title="Permanent link">&para;</a></h3>
+<p>Nel 1945 l'ingegnere statunitense <strong>Vannevar Bush</strong> pubblica un articolo intitolato <em>As We May Think</em>,
+in cui immagina il <strong>Memex</strong>: una scrivania con schermi e microfilm in cui uno studioso può conservare
+tutti i suoi libri e documenti e, soprattutto, creare <strong>percorsi associativi</strong> tra di essi, da
+ripercorrere e condividere. La macchina non verrà mai costruita, ma l'idea di collegare documenti per
+associazione, come fa la mente, è quella dell'ipertesto.</p>
+<figure>
+<p><img alt="L'illustrazione del Memex su Life, 1945" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Memex_(3002477109).jpg?width=1000" width="520" /></p>
+<figcaption>Il Memex nell'illustrazione che accompagnava la versione dell'articolo di Bush pubblicata
+dalla rivista <em>Life</em> il 10 settembre 1945. Via Wikimedia Commons.</figcaption>
+</figure>
+<p>Nel 1965 <strong>Ted Nelson</strong> conia la parola <em>hypertext</em> e avvia <strong>Xanadu</strong>, un progetto di "universo di
+documenti" in cui ogni testo sarebbe stato collegato a tutti gli altri, con i link in entrambe le
+direzioni e un sistema di citazione che teneva traccia degli autori. Xanadu non è mai stato completato.</p>
+<p>Nel 1968 <strong>Douglas Engelbart</strong> presenta a San Francisco un sistema chiamato NLS, in una dimostrazione
+passata alla storia come <em>The Mother of All Demos</em>: in novanta minuti mostra il mouse, le finestre, la
+modifica collaborativa di documenti a distanza e, appunto, i collegamenti ipertestuali.</p>
+<h3 id="il-web-nasce-al-cern">Il Web nasce al CERN<a class="headerlink" href="#il-web-nasce-al-cern" title="Permanent link">&para;</a></h3>
+<p>Alla fine degli anni Ottanta <strong>Tim Berners-Lee</strong>, un informatico britannico che lavora al <strong>CERN</strong> di
+Ginevra, si scontra con un problema pratico: migliaia di ricercatori di paesi diversi producono
+documenti su computer diversi e incompatibili, e nessuno riesce a trovare niente. Nel marzo 1989
+scrive una proposta intitolata <em>Information Management: A Proposal</em>: un sistema ipertestuale
+<strong>distribuito</strong>, in cui i documenti restano sui computer di chi li produce ma sono collegati tra loro
+da link.</p>
+<p>Tra il 1990 e il 1991, su un computer NeXT, Berners-Lee sviluppa i tre ingredienti che usiamo ancora
+oggi:</p>
+<ul>
+<li><strong>URL</strong>, un modo uniforme di dare un indirizzo a ogni documento;</li>
+<li><strong>HTTP</strong>, il protocollo con cui un client chiede un documento e un server lo invia;</li>
+<li><strong>HTML</strong>, il linguaggio di marcatura con cui si scrivono i documenti e i link (lo abbiamo visto
+  nella L03 e lo useremo nella L08).</li>
+</ul>
+<p>Scrive anche il primo <strong>browser</strong> e il primo <strong>server</strong> web. Il primo sito, <code>info.cern.ch</code>, spiega che
+cos'è il Web e come usarlo; è ancora online.</p>
+<figure>
+<p><img alt="Il computer NeXT usato come primo server web al CERN" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/First_Web_Server.jpg?width=1200" width="520" /></p>
+<figcaption>Il NeXTcube usato come primo server web, esposto al CERN. Sulla tastiera c'è una copia
+della proposta del 1989; l'etichetta sul computer avverte di non spegnerlo. Coolcaesar, CC BY-SA 3.0,
+via Wikimedia Commons.</figcaption>
+</figure>
+<p>Il 30 aprile 1993 il CERN rende il software del Web di <strong>pubblico dominio</strong>: chiunque può usarlo e
+modificarlo senza pagare nulla. È una scelta decisiva. Nello stesso periodo esistevano altri sistemi
+per pubblicare documenti in rete, alcuni a pagamento, e nel giro di pochi anni il Web li sostituisce
+tutti. Nel 1994 Berners-Lee fonda il <strong>W3C</strong> (<em>World Wide Web Consortium</em>), l'organizzazione che
+ancora oggi definisce gli standard del Web.</p>
+<h3 id="internet-e-web-non-sono-la-stessa-cosa">Internet e Web non sono la stessa cosa<a class="headerlink" href="#internet-e-web-non-sono-la-stessa-cosa" title="Permanent link">&para;</a></h3>
+<p>Nel linguaggio comune "Internet" e "Web" si usano come sinonimi, ma indicano due cose diverse:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Internet</th>
+<th>World Wide Web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Che cos'è</td>
+<td>Un'infrastruttura di reti collegate</td>
+<td>Un sistema di documenti ipertestuali</td>
+</tr>
+<tr>
+<td>Quando nasce</td>
+<td>Dal 1969 (ARPANET), TCP/IP dal 1983</td>
+<td>Dal 1989–1991</td>
+</tr>
+<tr>
+<td>Tecnologie</td>
+<td>TCP, IP, DNS</td>
+<td>URL, HTTP, HTML</td>
+</tr>
+<tr>
+<td>Analogia</td>
+<td>La rete stradale</td>
+<td>Uno dei servizi che la usano, come le consegne a domicilio</td>
+</tr>
+</tbody>
+</table>
+<p>Il Web è <strong>uno dei servizi</strong> di Internet. Altri sono la posta elettronica, il trasferimento di file, le
+videochiamate, i giochi online, e molte app che usano Internet senza passare dal browser.</p>
+<hr />
+<h2 id="2-come-funziona-il-web">2. Come funziona il Web<a class="headerlink" href="#2-come-funziona-il-web" title="Permanent link">&para;</a></h2>
+<h3 id="anatomia-di-un-url">Anatomia di un URL<a class="headerlink" href="#anatomia-di-un-url" title="Permanent link">&para;</a></h3>
+<p>Un <strong>URL</strong> (<em>Uniform Resource Locator</em>) è l'indirizzo di una risorsa sul Web. Prendiamo questo:</p>
+<div class="highlight"><pre><span></span><code>https://it.wikipedia.org/wiki/Lingua_siciliana?action=history#top
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parte</th>
+<th>Nell'esempio</th>
+<th>Che cosa indica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schema</strong></td>
+<td><code>https</code></td>
+<td>Il protocollo da usare</td>
+</tr>
+<tr>
+<td><strong>Nome di dominio</strong></td>
+<td><code>it.wikipedia.org</code></td>
+<td>Il server a cui chiedere (lo traduce il DNS, L06)</td>
+</tr>
+<tr>
+<td><strong>Percorso</strong></td>
+<td><code>/wiki/Lingua_siciliana</code></td>
+<td>La risorsa all'interno del server</td>
+</tr>
+<tr>
+<td><strong>Parametri</strong> (<em>query</em>)</td>
+<td><code>?action=history</code></td>
+<td>Informazioni aggiuntive per il server, in coppie <code>chiave=valore</code></td>
+</tr>
+<tr>
+<td><strong>Frammento</strong> (<em>ancora</em>)</td>
+<td><code>#top</code></td>
+<td>Un punto preciso all'interno della pagina</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p><img alt="Le parti di un URL" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/URI_Components_Full_Example_HTTPS.svg?width=1400" width="760" /></p>
+<figcaption>Un URL completo scomposto nelle sue parti, compresi i componenti meno comuni come le
+credenziali dell'utente e la porta. Via Wikimedia Commons.</figcaption>
+</figure>
+<p>I parametri sono la parte più interessante da osservare. Fate una ricerca su un motore di ricerca o su
+un sito di vendita e guardate la barra degli indirizzi: troverete la vostra ricerca, i filtri, la
+pagina dei risultati, e spesso codici che servono a tracciare da dove siete arrivati (quelli che
+cominciano con <code>utm_</code>, ad esempio).</p>
+<h3 id="http-una-conversazione-tra-client-e-server">HTTP: una conversazione tra client e server<a class="headerlink" href="#http-una-conversazione-tra-client-e-server" title="Permanent link">&para;</a></h3>
+<p><strong>HTTP</strong> (<em>HyperText Transfer Protocol</em>) è un protocollo a livello di applicazione (L06) basato su un
+meccanismo di <strong>richiesta e risposta</strong>: il client chiede, il server risponde. Ogni messaggio è testo,
+leggibile anche da una persona. Una richiesta semplificata:</p>
+<div class="highlight"><pre><span></span><code>GET /wiki/Lingua_siciliana HTTP/1.1
+Host: it.wikipedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0) Firefox/140.0
+Accept-Language: it-IT,it;q=0.9,en;q=0.5
+</code></pre></div>
+<p>La prima riga contiene il <strong>metodo</strong> (<code>GET</code>, "dammi"), il percorso e la versione del protocollo. Le
+righe successive sono le <strong>intestazioni</strong>: tra queste, il browser comunica quale programma state usando
+e <strong>quali lingue preferite</strong>. È così che un sito multilingue sceglie in quale lingua mostrarvi la
+pagina.</p>
+<p>La risposta del server comincia con un <strong>codice di stato</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Language: it
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="it"&gt;
+...
+</code></pre></div>
+<p>Notate <code>charset=UTF-8</code>: il server dichiara la codifica dei caratteri del documento, il tema della L02.
+Se la dichiarazione è sbagliata, compare il <em>mojibake</em>.</p>
+<p>I codici di stato sono raggruppati in famiglie, e alcuni li avete sicuramente incontrati:</p>
+<table>
+<thead>
+<tr>
+<th>Codice</th>
+<th>Famiglia</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2xx</code></td>
+<td>Successo</td>
+<td><code>200 OK</code>: ecco la risorsa</td>
+</tr>
+<tr>
+<td><code>3xx</code></td>
+<td>Reindirizzamento</td>
+<td><code>301 Moved Permanently</code>: la risorsa si è spostata a un altro URL</td>
+</tr>
+<tr>
+<td><code>4xx</code></td>
+<td>Errore del client</td>
+<td><code>403 Forbidden</code>: non avete il permesso. <code>404 Not Found</code>: la risorsa non esiste</td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>Errore del server</td>
+<td><code>500 Internal Server Error</code>, <code>503 Service Unavailable</code></td>
+</tr>
+</tbody>
+</table>
+<p>Oltre a <code>GET</code>, il metodo più comune è <code>POST</code>, con cui il client <strong>invia</strong> dati al server: un modulo di
+iscrizione, un commento, un messaggio.</p>
+<h3 id="https-e-il-lucchetto">HTTPS e il lucchetto<a class="headerlink" href="#https-e-il-lucchetto" title="Permanent link">&para;</a></h3>
+<p>HTTP viaggia <strong>in chiaro</strong>: chiunque si trovi lungo il percorso dei pacchetti, ad esempio sulla stessa
+rete Wi-Fi pubblica, può leggere che cosa vi scambiate con il server. <strong>HTTPS</strong> aggiunge uno strato di
+<strong>cifratura</strong> (TLS): il contenuto della comunicazione diventa illeggibile per chi lo intercetta, e il
+server dimostra con un <strong>certificato</strong> di essere davvero il titolare di quel dominio. Oggi la grande
+maggioranza dei siti usa HTTPS, e i browser segnalano come "non sicuri" quelli che non lo fanno.</p>
+<div class="admonition warning">
+<p class="admonition-title">Il lucchetto non dice che il sito è affidabile</p>
+<p>Il lucchetto accanto all'indirizzo garantisce che la comunicazione è cifrata e che state parlando
+con il server di quel dominio. Non dice nulla sulle intenzioni di chi lo gestisce. Anche i siti di
+<em>phishing</em> hanno il lucchetto: <code>unibo-verifica-account.com</code> può avere un certificato perfettamente
+valido. Guardate sempre il <strong>nome di dominio</strong>.</p>
+</div>
+<h3 id="dal-web-10-al-web-20">Dal Web 1.0 al Web 2.0<a class="headerlink" href="#dal-web-10-al-web-20" title="Permanent link">&para;</a></h3>
+<p>Negli anni Novanta pubblicare sul Web richiedeva competenze tecniche: pochi scrivevano, molti
+leggevano. Dai primi anni Duemila si diffondono piattaforme che permettono a chiunque di pubblicare
+senza sapere nulla di HTML: blog, wiki, social network, siti di condivisione di foto e video. Si parla
+allora di <strong>Web 2.0</strong>, il Web dei <strong>contenuti generati dagli utenti</strong>. L'architettura sottostante non
+cambia, è sempre client/server: cambia chi scrive. Wikipedia, nata nel 2001, ne è l'esempio più
+importante per chi lavora con le lingue.</p>
+<p>C'è un rovescio: quando tutti pubblicano sulle stesse poche piattaforme, i contenuti, i dati sugli
+utenti e le regole su che cosa si può dire finiscono nelle mani di poche aziende. Nella L08 vedremo
+un'alternativa: pubblicare una pagina vostra, con un indirizzo vostro.</p>
+<hr />
+<h2 id="3-cercare-informazioni">3. Cercare informazioni<a class="headerlink" href="#3-cercare-informazioni" title="Permanent link">&para;</a></h2>
+<h3 id="come-funziona-un-motore-di-ricerca">Come funziona un motore di ricerca<a class="headerlink" href="#come-funziona-un-motore-di-ricerca" title="Permanent link">&para;</a></h3>
+<p>Per trovare una pagina dovete conoscere il suo URL, ma nella maggior parte dei casi non lo conoscete.
+Un <strong>motore di ricerca</strong> risolve il problema in tre fasi.</p>
+<ol>
+<li><strong>Scansione</strong> (<em>crawling</em>). Un programma chiamato <strong>crawler</strong> o <em>spider</em> parte da un elenco di pagine
+   note, le scarica, ne estrae i link e scarica le pagine collegate, e così via, all'infinito. È una
+   visita del grafo del Web.</li>
+<li><strong>Indicizzazione</strong>. Il testo delle pagine viene analizzato e registrato in un <strong>indice inverso</strong>: per
+   ogni parola, l'elenco delle pagine che la contengono. È lo stesso principio dell'indice analitico in
+   fondo a un libro, ed è un <strong>dizionario</strong> nel senso della L03: la chiave è la parola, il valore è la
+   lista delle pagine.</li>
+<li><strong>Interrogazione e ordinamento</strong> (<em>ranking</em>). Quando scrivete una ricerca, il motore trova nell'indice
+   le pagine che contengono le parole e le <strong>ordina</strong> secondo la loro presunta rilevanza.</li>
+</ol>
+<figure>
+<p><img alt="Architettura di un web crawler" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/WebCrawlerArchitecture.svg?width=900" width="460" /></p>
+<figcaption>Architettura di un crawler: uno scheduler sceglie quali URL visitare, un componente
+multithread scarica le pagine, e i testi e i nuovi URL trovati vengono salvati. Dnet, sulla base di
+un'immagine di Carlos Castillo, pubblico dominio, via Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="pagerank-i-link-come-voti">PageRank: i link come voti<a class="headerlink" href="#pagerank-i-link-come-voti" title="Permanent link">&para;</a></h3>
+<p>La parte difficile è l'ordinamento. Alla fine degli anni Novanta i motori di ricerca ordinavano le
+pagine soprattutto in base a quante volte contenevano le parole cercate, ed era facile ingannarli.
+Nel 1998 Sergey Brin e Larry Page, due dottorandi di Stanford, pubblicano l'algoritmo <strong>PageRank</strong>, da
+cui nasce Google. L'idea è trattare ogni link come un <strong>voto</strong>: una pagina è importante se riceve link
+da molte pagine, e ancora di più se quelle pagine sono a loro volta importanti.</p>
+<figure>
+<p><img alt="Esempio di valori di PageRank in un piccolo grafo" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/PageRanks-Example.svg?width=900" width="440" /></p>
+<figcaption>Valori di PageRank in un piccolo grafo. La pagina C ha un punteggio alto pur ricevendo un
+solo link, perché quel link viene da B, la pagina più importante. Via Wikimedia Commons.</figcaption>
+</figure>
+<p>Oggi i motori di ricerca usano centinaia di segnali oltre ai link: la vostra posizione, la lingua del
+browser, le ricerche precedenti, la velocità del sito, il comportamento degli altri utenti. Due persone
+che fanno la stessa ricerca possono vedere risultati diversi. Intorno al ranking è nata un'intera
+industria, la <strong>SEO</strong> (<em>Search Engine Optimization</em>), che ottimizza le pagine per salire nei risultati,
+e i primi risultati sono spesso <strong>annunci a pagamento</strong>, segnalati con la parola "Sponsorizzato".</p>
+<h3 id="cercare-meglio-gli-operatori-di-ricerca">Cercare meglio: gli operatori di ricerca<a class="headerlink" href="#cercare-meglio-gli-operatori-di-ricerca" title="Permanent link">&para;</a></h3>
+<p>La maggior parte delle persone scrive due o tre parole e guarda la prima pagina di risultati. Gli
+<strong>operatori di ricerca</strong> permettono di essere molto più precisi. Questi funzionano su Google e, con
+qualche differenza, sugli altri motori:</p>
+<table>
+<thead>
+<tr>
+<th>Operatore</th>
+<th>Esempio</th>
+<th>Che cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>" "</code></td>
+<td><code>"lingua siciliana"</code></td>
+<td>Cerca la frase esatta</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td><code>giaguaro -auto</code></td>
+<td>Esclude una parola</td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td><code>traduzione OR traduttologia</code></td>
+<td>Almeno una delle parole</td>
+</tr>
+<tr>
+<td><code>site:</code></td>
+<td><code>site:unibo.it tirocinio</code></td>
+<td>Solo in un sito o in un dominio (anche <code>site:.edu</code>)</td>
+</tr>
+<tr>
+<td><code>filetype:</code></td>
+<td><code>filetype:pdf "corpus parallelo"</code></td>
+<td>Solo un certo formato di file</td>
+</tr>
+<tr>
+<td><code>intitle:</code></td>
+<td><code>intitle:glossario terminologia</code></td>
+<td>La parola deve stare nel titolo</td>
+</tr>
+<tr>
+<td><code>before:</code> / <code>after:</code></td>
+<td><code>traduzione automatica after:2024-01-01</code></td>
+<td>Pagine prima o dopo una data</td>
+</tr>
+</tbody>
+</table>
+<p>Le stesse funzioni sono disponibili nella pagina di <strong>ricerca avanzata</strong>, con l'aggiunta di filtri per
+lingua, paese e licenza d'uso delle immagini.</p>
+<h3 id="le-risposte-generate">Le risposte generate<a class="headerlink" href="#le-risposte-generate" title="Permanent link">&para;</a></h3>
+<p>Oggi molti motori di ricerca mostrano in cima ai risultati un <strong>riassunto generato da un modello
+linguistico</strong>, e alcuni offrono una modalità di ricerca conversazionale. È comodo, ma cambia il
+rapporto con le fonti: invece di una lista di pagine da valutare riceviamo una risposta già formulata,
+che può contenere errori e che spesso non invoglia ad aprire le pagine da cui è tratta. Vedremo come
+funzionano questi modelli nella L13 e come verificare le loro risposte nella L14.</p>
+<h3 id="il-web-che-i-motori-non-vedono">Il Web che i motori non vedono<a class="headerlink" href="#il-web-che-i-motori-non-vedono" title="Permanent link">&para;</a></h3>
+<p>Una parte enorme del Web non compare nei motori di ricerca. Si chiama <strong>deep web</strong> (web profondo) e non
+ha nulla di misterioso: sono le pagine che stanno dietro un login (la vostra posta, Virtuale), quelle
+generate al momento in risposta a una ricerca (i risultati di un catalogo di biblioteca come l'OPAC
+SBN, i dati di un corpus interrogato online), quelle che i proprietari hanno chiesto di non indicizzare.
+Per una persona che fa ricerca è il Web più prezioso: cataloghi, archivi, banche dati, corpora.</p>
+<p>Il <strong>dark web</strong> è un'altra cosa: un insieme di siti raggiungibili solo con software apposito, come Tor,
+che nasconde chi li gestisce e chi li visita. È usato sia da attività illegali sia da giornalisti e
+attivisti in paesi dove la rete è censurata.</p>
+<hr />
+<h2 id="4-raccomandazioni-bolle-disinformazione">4. Raccomandazioni, bolle, disinformazione<a class="headerlink" href="#4-raccomandazioni-bolle-disinformazione" title="Permanent link">&para;</a></h2>
+<h3 id="i-sistemi-di-raccomandazione">I sistemi di raccomandazione<a class="headerlink" href="#i-sistemi-di-raccomandazione" title="Permanent link">&para;</a></h3>
+<p>Sui social network, sulle piattaforme video e musicali, nei negozi online non cercate quasi mai voi:
+è la piattaforma che vi propone che cosa guardare. Lo fa un <strong>sistema di raccomandazione</strong>, un
+algoritmo (L04) che prevede che cosa vi interesserà. I due approcci di base sono:</p>
+<ul>
+<li>il <strong>filtraggio basato sul contenuto</strong>: vi propongo cose simili a quelle che vi sono piaciute (un altro
+  romanzo dello stesso autore, un altro video sullo stesso tema);</li>
+<li>il <strong>filtraggio collaborativo</strong>: vi propongo cose piaciute a persone che hanno gusti simili ai vostri
+  ("chi ha acquistato questo articolo ha acquistato anche…").</li>
+</ul>
+<p>I sistemi reali combinano i due approcci con migliaia di altri segnali. Ma la domanda più importante è
+un'altra: <strong>che cosa cerca di ottenere</strong> il sistema? Spesso l'obiettivo è il <strong>coinvolgimento</strong>
+(<em>engagement</em>): il tempo che passate sulla piattaforma, i clic, i commenti, le condivisioni, perché è da
+questo che dipendono i ricavi pubblicitari. Un sistema ottimizzato per il coinvolgimento non è
+ottimizzato per informarvi bene.</p>
+<p>Dal 2024 il <strong>Digital Services Act</strong>, il regolamento europeo sulle piattaforme digitali, obbliga le
+piattaforme molto grandi a spiegare come funzionano i loro sistemi di raccomandazione e a offrire
+almeno un'opzione <strong>non basata sulla profilazione</strong>, ad esempio un feed in ordine cronologico.</p>
+<h3 id="bolle-informative-e-camere-delleco">Bolle informative e camere dell'eco<a class="headerlink" href="#bolle-informative-e-camere-delleco" title="Permanent link">&para;</a></h3>
+<p>Nel 2011 l'attivista Eli Pariser ha proposto l'espressione <strong>filter bubble</strong> (bolla di filtraggio):
+se gli algoritmi ci mostrano solo ciò che è simile a ciò che già ci piace, finiremo chiusi in una bolla
+in cui non incontriamo mai opinioni diverse. Un'idea vicina è quella di <strong>camera dell'eco</strong> (<em>echo
+chamber</em>): un gruppo in cui le stesse opinioni rimbalzano e si rafforzano.</p>
+<p>L'idea è intuitiva, ma le ricerche empiriche danno un quadro più sfumato:</p>
+<ul>
+<li>uno studio su oltre 10 milioni di utenti statunitensi di Facebook (Bakshy, Messing e Adamic, 2015) ha
+  trovato che l'algoritmo riduce un po' l'esposizione a notizie di orientamento politico diverso, ma che
+  pesano di più le <strong>scelte degli utenti</strong>: con chi si è amici e su che cosa si clicca;</li>
+<li>uno studio sulla navigazione di 50.000 utenti (Flaxman, Goel e Rao, 2016) ha trovato che social
+  network e motori di ricerca aumentano la distanza ideologica tra gli utenti, ma anche, nello stesso
+  tempo, la loro esposizione a fonti dell'orientamento opposto.</li>
+</ul>
+<p>In sintesi: gli algoritmi contano, ma non agiscono da soli. Le nostre scelte, le persone che seguiamo e
+il modo in cui il sistema premia il coinvolgimento contribuiscono tutti al risultato.</p>
+<h3 id="disinformazione">Disinformazione<a class="headerlink" href="#disinformazione" title="Permanent link">&para;</a></h3>
+<p>Il Consiglio d'Europa distingue tre fenomeni (Wardle e Derakhshan, 2017):</p>
+<ul>
+<li><strong>misinformazione</strong>: un'informazione falsa diffusa in buona fede, da chi la crede vera;</li>
+<li><strong>disinformazione</strong>: un'informazione falsa creata e diffusa <strong>intenzionalmente</strong> per ingannare;</li>
+<li><strong>malinformazione</strong>: un'informazione vera usata per nuocere, ad esempio pubblicando dati privati.</li>
+</ul>
+<p>In uno studio molto citato, Vosoughi, Roy e Aral (2018) hanno analizzato circa 126.000 notizie diffuse
+su Twitter tra il 2006 e il 2017, verificate da sei organizzazioni di <em>fact-checking</em>. Le notizie false
+si diffondevano <strong>più lontano, più in fretta e a più persone</strong> di quelle vere, e la causa principale non
+erano i <em>bot</em>: erano gli esseri umani, più inclini a condividere ciò che appare nuovo e sorprendente.</p>
+<h3 id="come-verificare-la-lettura-laterale">Come verificare: la lettura laterale<a class="headerlink" href="#come-verificare-la-lettura-laterale" title="Permanent link">&para;</a></h3>
+<p>Come si valuta una fonte in rete? Wineburg e McGrew (2019) hanno messo a confronto tre gruppi: storici
+con un dottorato, studenti di Stanford e <em>fact-checker</em> professionisti, chiedendo a tutti di valutare
+l'affidabilità di alcuni siti. I <em>fact-checker</em> hanno ottenuto i risultati migliori in molto meno tempo,
+e lo hanno fatto in un modo controintuitivo: invece di leggere a fondo il sito (lettura "verticale"),
+lo lasciavano quasi subito e aprivano <strong>altre schede</strong> per cercare che cosa dicessero <strong>altri</strong> di quel
+sito e di chi lo pubblica. Questa strategia si chiama <strong>lettura laterale</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Quattro mosse per verificare</p>
+<ol>
+<li><strong>Fermatevi</strong> prima di condividere o di credere: chiedetevi se conoscete la fonte.</li>
+<li><strong>Indagate la fonte</strong>: cercate il nome del sito o dell'autore in un'altra scheda (Wikipedia è un
+   ottimo punto di partenza per questo).</li>
+<li><strong>Cercate copertura migliore</strong>: la stessa notizia è riportata da fonti che conoscete?</li>
+<li><strong>Risalite all'originale</strong>: per le immagini usate la <strong>ricerca inversa</strong> (Google Lens, TinEye)
+   per scoprire dove e quando sono apparse per la prima volta.</li>
+</ol>
+</div>
+<hr />
+<h2 id="5-tracce-digitali-e-diritti">5. Tracce digitali e diritti<a class="headerlink" href="#5-tracce-digitali-e-diritti" title="Permanent link">&para;</a></h2>
+<h3 id="che-cosa-racconta-di-voi-il-browser">Che cosa racconta di voi il browser<a class="headerlink" href="#che-cosa-racconta-di-voi-il-browser" title="Permanent link">&para;</a></h3>
+<p>Ogni volta che visitate una pagina, il browser comunica al server, senza che ve ne accorgiate:</p>
+<ul>
+<li>il vostro <strong>indirizzo IP</strong> (e quindi, approssimativamente, la città e il fornitore di connessione);</li>
+<li>il <strong>browser</strong> e il <strong>sistema operativo</strong> che usate;</li>
+<li>le <strong>lingue</strong> che preferite;</li>
+<li>la pagina da cui arrivate (<em>referer</em>);</li>
+<li>la data e l'ora.</li>
+</ul>
+<p>Combinando queste informazioni con altre (la risoluzione dello schermo, i caratteri installati, il
+fuso orario) un sito può riconoscere lo stesso browser anche senza cookie, con una tecnica chiamata
+<strong><em>fingerprinting</em></strong> ("impronta digitale").</p>
+<h3 id="i-cookie">I cookie<a class="headerlink" href="#i-cookie" title="Permanent link">&para;</a></h3>
+<p>Un <strong>cookie</strong> è un piccolo file di testo che un sito chiede al browser di conservare. Alla visita
+successiva il browser lo rimanda al sito, che così vi riconosce. HTTP di per sé non ha memoria: ogni
+richiesta è indipendente dalle precedenti, e i cookie servono proprio a ricordare chi siete tra una
+richiesta e l'altra.</p>
+<figure>
+<p><img alt="Scambio di cookie tra browser e server" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/HTTP_cookie_exchange.svg?width=1000" width="560" /></p>
+<figcaption>Il server invia il cookie insieme alla prima risposta (<code>Set-Cookie</code>); il browser
+lo rimanda a ogni richiesta successiva verso lo stesso sito. Tizio, GFDL, via Wikimedia Commons.</figcaption>
+</figure>
+<p>Conviene distinguere i cookie in due modi.</p>
+<p><strong>Per finalità</strong>:</p>
+<ul>
+<li>i cookie <strong>tecnici</strong> servono al funzionamento del sito: ricordare che avete fatto il login, che cosa
+  c'è nel carrello, la lingua scelta;</li>
+<li>i cookie di <strong>profilazione</strong> servono a costruire un profilo dei vostri interessi, di solito a fini
+  pubblicitari.</li>
+</ul>
+<p><strong>Per provenienza</strong>:</p>
+<ul>
+<li>i cookie <strong>di prima parte</strong> sono impostati dal sito che state visitando;</li>
+<li>i cookie <strong>di terze parti</strong> sono impostati da un altro dominio i cui contenuti (un banner pubblicitario,
+  un pulsante "mi piace", uno strumento di statistica) sono incorporati nella pagina. Se lo stesso
+  inserzionista è presente su mille siti, può seguirvi da un sito all'altro.</li>
+</ul>
+<p>In Europa i cookie tecnici si possono usare senza chiedere nulla; per tutti gli altri serve il vostro
+<strong>consenso</strong>, ed è per questo che vedete i banner. Secondo le linee guida del Garante italiano (2021), il
+banner deve permettere di rifiutare con la stessa facilità con cui si accetta, ad esempio con un
+pulsante o una "X" di chiusura, e continuare a navigare non equivale a dare il consenso.</p>
+<h3 id="il-gdpr">Il GDPR<a class="headerlink" href="#il-gdpr" title="Permanent link">&para;</a></h3>
+<p>Il <strong>Regolamento generale sulla protezione dei dati</strong> (<em>General Data Protection Regulation</em>, GDPR,
+Regolamento UE 2016/679) si applica in tutta l'Unione Europea dal 25 maggio 2018. Alcuni concetti
+fondamentali:</p>
+<ul>
+<li>un <strong>dato personale</strong> è qualsiasi informazione riguardante una <strong>persona fisica</strong> identificata o
+  identificabile, anche indirettamente: un nome, un numero di identificazione, dati sull'ubicazione, un
+  <strong>identificativo online</strong> (come un indirizzo IP o l'identificativo contenuto in un cookie);</li>
+<li>alcune <strong>categorie particolari</strong> di dati (origine etnica, opinioni politiche, convinzioni religiose,
+  appartenenza sindacale, dati genetici e biometrici, salute, vita e orientamento sessuale) godono di una
+  protezione più forte;</li>
+<li>il trattamento deve rispettare alcuni <strong>principi</strong>: liceità, correttezza e trasparenza; limitazione
+  della finalità (i dati raccolti per uno scopo non si usano per un altro); minimizzazione (solo i dati
+  necessari); esattezza; limitazione della conservazione; integrità e riservatezza.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Una correzione rispetto ai materiali degli anni passati</p>
+<p>In alcune slide circolate negli anni scorsi la definizione di dato personale includeva "persona
+giuridica, ente o associazione". Era la definizione della vecchia normativa italiana, superata da
+tempo: il GDPR protegge soltanto le <strong>persone fisiche</strong>.</p>
+</div>
+<p>Il GDPR vi riconosce una serie di <strong>diritti</strong> nei confronti di chiunque tratti i vostri dati
+(articoli 15–22):</p>
+<table>
+<thead>
+<tr>
+<th>Diritto</th>
+<th>In pratica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accesso</strong></td>
+<td>Sapere se un'organizzazione ha dati su di voi, quali, perché e per quanto tempo, e riceverne una copia</td>
+</tr>
+<tr>
+<td><strong>Rettifica</strong></td>
+<td>Far correggere dati sbagliati</td>
+</tr>
+<tr>
+<td><strong>Cancellazione</strong> ("diritto all'oblio")</td>
+<td>Far cancellare i dati, in certe condizioni</td>
+</tr>
+<tr>
+<td><strong>Limitazione</strong></td>
+<td>Bloccare temporaneamente l'uso dei dati, ad esempio mentre se ne contesta l'esattezza</td>
+</tr>
+<tr>
+<td><strong>Portabilità</strong></td>
+<td>Ricevere i dati in un formato strutturato e leggibile da una macchina, per portarli altrove</td>
+</tr>
+<tr>
+<td><strong>Opposizione</strong></td>
+<td>Opporsi a certi trattamenti, sempre a quelli per marketing diretto</td>
+</tr>
+<tr>
+<td><strong>Decisioni automatizzate</strong></td>
+<td>Non essere sottoposti a decisioni importanti prese solo da un algoritmo, con alcune eccezioni</td>
+</tr>
+</tbody>
+</table>
+<p>Il diritto alla portabilità ci riporta alla L03: i dati devono essere consegnati in un formato
+<strong>strutturato</strong> e <strong>leggibile da una macchina</strong>, e spesso si tratta proprio di JSON o CSV. In Italia
+l'autorità che vigila sul rispetto del GDPR è il <strong>Garante per la protezione dei dati personali</strong>.</p>
+<hr />
+<h2 id="6-licenze-e-diritto-dautore-in-rete">6. Licenze e diritto d'autore in rete<a class="headerlink" href="#6-licenze-e-diritto-dautore-in-rete" title="Permanent link">&para;</a></h2>
+<h3 id="tutto-e-protetto-salvo-diverso-avviso">Tutto è protetto, salvo diverso avviso<a class="headerlink" href="#tutto-e-protetto-salvo-diverso-avviso" title="Permanent link">&para;</a></h3>
+<p>Testi, fotografie, illustrazioni, musica, video e software sono <strong>opere dell'ingegno</strong>, e in Italia sono
+protetti dalla legge sul diritto d'autore (legge 633/1941). La protezione è <strong>automatica</strong>: non serve
+registrare l'opera né scrivere "tutti i diritti riservati". In generale dura fino a <strong>settant'anni dopo
+la morte dell'autore</strong>; dopo, l'opera entra nel <strong>pubblico dominio</strong> e chiunque può usarla liberamente.</p>
+<p>Il fatto che un'immagine sia visibile su un sito non significa che possiate riusarla. Senza
+un'autorizzazione esplicita, la regola è che <strong>non si può</strong>, salvo alcune eccezioni previste dalla legge,
+come la citazione di brevi brani per critica, discussione o insegnamento, purché accompagnata dalla
+fonte.</p>
+<h3 id="le-licenze-creative-commons">Le licenze Creative Commons<a class="headerlink" href="#le-licenze-creative-commons" title="Permanent link">&para;</a></h3>
+<p>Per gli autori che vogliono permettere il riuso delle proprie opere esistono licenze già pronte. Le più
+diffuse sono le <strong>Creative Commons</strong> (CC), nate nel 2001. Si costruiscono combinando quattro clausole:</p>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Nome</th>
+<th>Che cosa chiede</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BY</strong></td>
+<td>Attribuzione</td>
+<td>Citare l'autore e la licenza (presente in tutte le licenze)</td>
+</tr>
+<tr>
+<td><strong>SA</strong></td>
+<td>Condividi allo stesso modo</td>
+<td>Le opere derivate devono avere la stessa licenza</td>
+</tr>
+<tr>
+<td><strong>NC</strong></td>
+<td>Non commerciale</td>
+<td>Niente usi commerciali</td>
+</tr>
+<tr>
+<td><strong>ND</strong></td>
+<td>Non opere derivate</td>
+<td>L'opera si può diffondere solo così com'è, senza modifiche</td>
+</tr>
+</tbody>
+</table>
+<p>Ne risultano sei licenze, dalla più aperta alla più restrittiva: CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA,
+CC BY-ND, CC BY-NC-ND. A queste si aggiunge <strong>CC0</strong>, con cui l'autore rinuncia a tutti i diritti e
+mette l'opera di fatto in pubblico dominio.</p>
+<p>Qualche esempio che conoscete: Wikipedia è in <strong>CC BY-SA</strong>, quindi potete riusarne i testi citando la
+fonte e mantenendo la stessa licenza; il sito di questo corso è in <strong>CC BY</strong>; le immagini che vedete in
+queste pagine vengono da <strong>Wikimedia Commons</strong>, e sotto ciascuna è indicato l'autore, come chiede la
+licenza.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dove trovare immagini riusabili</p>
+<ul>
+<li><a href="https://commons.wikimedia.org/">Wikimedia Commons</a>: oltre cento milioni di file, ciascuno con la
+  sua licenza indicata nella pagina del file.</li>
+<li><a href="https://openverse.org/">Openverse</a>: un motore di ricerca per immagini e audio con licenze aperte.</li>
+<li>Nella ricerca immagini di Google: <em>Strumenti → Diritti di utilizzo → Licenze Creative Commons</em>.</li>
+</ul>
+</div>
+<p>Ci servirà subito: nella L08 sceglierete una licenza per la vostra pagina web e userete solo immagini che
+potete davvero pubblicare. Nella L15, invece, ci chiederemo che cosa succede quando milioni di opere
+protette vengono usate per addestrare un modello linguistico.</p>
+<hr />
+<h2 id="riepilogo">Riepilogo<a class="headerlink" href="#riepilogo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concetto</th>
+<th>In una frase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ipertesto</td>
+<td>Testi collegati da link, percorribili in ordini diversi: un grafo orientato</td>
+</tr>
+<tr>
+<td>World Wide Web</td>
+<td>Il sistema ipertestuale distribuito inventato al CERN (1989–1991), basato su URL, HTTP, HTML</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>Schema, dominio, percorso, parametri, frammento</td>
+</tr>
+<tr>
+<td>HTTP/HTTPS</td>
+<td>Richiesta e risposta tra client e server; HTTPS aggiunge la cifratura</td>
+</tr>
+<tr>
+<td>Motore di ricerca</td>
+<td>Scansione, indice inverso, ranking (PageRank e molti altri segnali)</td>
+</tr>
+<tr>
+<td>Raccomandazione</td>
+<td>Algoritmi che scelgono che cosa mostrarvi, spesso per massimizzare il coinvolgimento</td>
+</tr>
+<tr>
+<td>Disinformazione</td>
+<td>Falsità diffuse intenzionalmente; si contrasta con la lettura laterale</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>File che permettono a un sito di riconoscervi; per i non tecnici serve il consenso</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Protegge i dati delle persone fisiche e vi dà diritti di accesso, rettifica, cancellazione, portabilità…</td>
+</tr>
+<tr>
+<td>Creative Commons</td>
+<td>Licenze pronte per permettere il riuso delle opere a certe condizioni</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>Durante la lezione (online)</strong></p>
+<ol>
+<li><strong>Guardate dentro una pagina.</strong> Aprite <code>it.wikipedia.org</code>, premete <code>F12</code> (o <code>Cmd+Opt+I</code> su Mac) e
+   scegliete la scheda <strong>Rete</strong> (<em>Network</em>). Ricaricate la pagina. Quante richieste fa il browser per
+   mostrare una sola pagina? Cliccate sulla prima: trovate il metodo, il codice di stato e
+   l'intestazione <code>Accept-Language</code>?</li>
+<li><strong>Provocate un errore.</strong> Scrivete nella barra degli indirizzi un URL inventato su un sito che
+   conoscete, ad esempio <code>https://www.unibo.it/pagina-che-non-esiste</code>. Che codice di stato riceve il
+   browser?</li>
+<li><strong>Cercate come un professionista.</strong> Trovate con un solo comando di ricerca: (a) un PDF del sito
+   dell'Unione Europea che contenga l'espressione "multilinguismo"; (b) pagine sulla traduzione
+   automatica pubblicate dopo il 1° gennaio 2025, escludendo un sito a vostra scelta.</li>
+<li><strong>Contate i cookie.</strong> Aprite un sito di notizie e, prima di rispondere al banner, aprite gli strumenti
+   per sviluppatori: scheda <strong>Archiviazione</strong> (Firefox) o <strong>Applicazione</strong> (Chrome). Quanti cookie ci
+   sono? Da quali domini? Rifiutate il consenso e ricaricate: che cosa cambia?</li>
+</ol>
+<p><strong>A casa (facoltativo)</strong></p>
+<ul>
+<li>Esercitate il <strong>diritto di accesso</strong> su un servizio che usate (Google, Instagram, Spotify, TikTok):
+  quasi tutti hanno una pagina "Scarica i tuoi dati". Aprite il file che ricevete: in che formato è?
+  Che cosa c'è che non vi aspettavate?</li>
+<li>Scegliete una notizia sorprendente che avete visto circolare di recente e applicate le quattro mosse
+  della lettura laterale. Scrivete in cinque righe che cosa avete scoperto.</li>
+</ul>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Qual è la differenza tra Internet e il World Wide Web?</p>
+<ul>
+<li>A. Sono due nomi per la stessa cosa</li>
+<li>B. Internet è l'infrastruttura di reti; il Web è uno dei servizi che la usano</li>
+<li>C. Il Web è più antico di Internet</li>
+<li>D. Internet funziona solo con i browser</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Internet nasce da ARPANET (1969) e usa TCP/IP; il Web nasce al CERN tra il 1989 e il 1991 e
+usa URL, HTTP e HTML.</p>
+</details>
+<p><strong>2.</strong> Nell'URL <code>https://www.example.org/catalogo/libri?genere=poesia#risultati</code>, che cosa è <code>genere=poesia</code>?</p>
+<ul>
+<li>A. Il nome di dominio</li>
+<li>B. Il percorso</li>
+<li>C. Un parametro</li>
+<li>D. Il frammento</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> Segue il punto interrogativo ed è una coppia <code>chiave=valore</code>. Il frammento è <code>#risultati</code>.</p>
+</details>
+<p><strong>3.</strong> Un server risponde a una richiesta con il codice <code>404</code>. Che cosa significa?</p>
+<ul>
+<li>A. La richiesta ha avuto successo</li>
+<li>B. La risorsa si è spostata a un altro indirizzo</li>
+<li>C. La risorsa richiesta non è stata trovata</li>
+<li>D. Il server ha avuto un errore interno</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> I codici <code>4xx</code> indicano un errore dalla parte del client, in questo caso un indirizzo che non
+corrisponde a nessuna risorsa.</p>
+</details>
+<p><strong>4.</strong> Un sito ha il lucchetto accanto all'indirizzo (HTTPS). Che cosa possiamo concludere?</p>
+<ul>
+<li>A. Che il sito è affidabile e i suoi contenuti sono veri</li>
+<li>B. Che la comunicazione tra browser e server è cifrata</li>
+<li>C. Che il sito non usa cookie</li>
+<li>D. Che il sito è stato verificato dal Garante</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Anche un sito di <em>phishing</em> può avere il lucchetto.</p>
+</details>
+<p><strong>5.</strong> Secondo l'idea alla base di PageRank, una pagina è importante se:</p>
+<ul>
+<li>A. contiene molte volte la parola cercata</li>
+<li>B. riceve link da molte pagine, soprattutto se a loro volta importanti</li>
+<li>C. è stata pubblicata di recente</li>
+<li>D. paga per comparire nei risultati</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> I link sono trattati come voti, e il voto di una pagina importante pesa di più.</p>
+</details>
+<p><strong>6.</strong> Uno studente legge a lungo e con attenzione un sito per capire se è affidabile. Che cosa farebbe
+invece un <em>fact-checker</em> professionista, secondo Wineburg e McGrew?</p>
+<ul>
+<li>A. Leggerebbe il sito ancora più a fondo</li>
+<li>B. Controllerebbe se il sito ha un design professionale</li>
+<li>C. Uscirebbe presto dal sito per cercare in altre schede che cosa dicono altri di quella fonte</li>
+<li>D. Guarderebbe solo la sezione "Chi siamo"</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> È la <strong>lettura laterale</strong>.</p>
+</details>
+<p><strong>7.</strong> Secondo il GDPR, quale di queste informazioni <strong>non</strong> è un dato personale?</p>
+<ul>
+<li>A. L'indirizzo IP di uno studente</li>
+<li>B. Il nome e cognome di una docente</li>
+<li>C. Il fatturato di una società per azioni</li>
+<li>D. L'identificativo contenuto in un cookie di profilazione</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> Il GDPR protegge le persone fisiche, non le società.</p>
+</details>
+<p><strong>8.</strong> Trovate su Wikimedia Commons una fotografia con licenza <strong>CC BY-SA 4.0</strong>. Potete usarla nella
+vostra pagina web?</p>
+<ul>
+<li>A. No, le immagini trovate in rete non si possono mai usare</li>
+<li>B. Sì, senza nessuna condizione</li>
+<li>C. Sì, citando l'autore e la licenza, e pubblicando con la stessa licenza un'eventuale versione modificata</li>
+<li>D. Sì, ma solo se la pagina non ha scopi commerciali</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> BY chiede l'attribuzione, SA chiede di condividere le opere derivate con la stessa licenza.
+La clausola che vieta gli usi commerciali è NC, che qui non c'è.</p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Berners-Lee, T. (1989). <a href="https://www.w3.org/History/1989/proposal.html"><em>Information Management: A Proposal</em></a>.
+  CERN. La proposta originale del Web.</li>
+<li>Bush, V. (1945). As we may think. <em>The Atlantic Monthly</em>, <em>176</em>(1), 101–108.
+  <a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">Testo online</a>.</li>
+<li>Brin, S., &amp; Page, L. (1998). The anatomy of a large-scale hypertextual Web search engine. <em>Computer
+  Networks and ISDN Systems</em>, <em>30</em>(1–7), 107–117. <a href="https://doi.org/10.1016/S0169-7552(98)00110-X">doi:10.1016/S0169-7552(98)00110-X</a></li>
+<li>Bakshy, E., Messing, S., &amp; Adamic, L. A. (2015). Exposure to ideologically diverse news and opinion
+  on Facebook. <em>Science</em>, <em>348</em>(6239), 1130–1132. <a href="https://doi.org/10.1126/science.aaa1160">doi:10.1126/science.aaa1160</a></li>
+<li>Flaxman, S., Goel, S., &amp; Rao, J. M. (2016). Filter bubbles, echo chambers, and online news
+  consumption. <em>Public Opinion Quarterly</em>, <em>80</em>(S1), 298–320. <a href="https://doi.org/10.1093/poq/nfw006">doi:10.1093/poq/nfw006</a></li>
+<li>Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. <em>Science</em>,
+  <em>359</em>(6380), 1146–1151. <a href="https://doi.org/10.1126/science.aap9559">doi:10.1126/science.aap9559</a></li>
+<li>Wardle, C., &amp; Derakhshan, H. (2017). <a href="https://rm.coe.int/information-disorder-toward-an-interdisciplinary-framework-for-researc/168076277c"><em>Information Disorder: Toward an interdisciplinary framework for
+  research and policy making</em></a>.
+  Consiglio d'Europa.</li>
+<li>Wineburg, S., &amp; McGrew, S. (2019). Lateral reading and the nature of expertise: Reading less and
+  learning more when evaluating digital information. <em>Teachers College Record</em>, <em>121</em>(11), 1–40.
+  <a href="https://doi.org/10.1177/016146811912101102">doi:10.1177/016146811912101102</a></li>
+<li>Garante per la protezione dei dati personali, <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876">Linee guida cookie e altri strumenti di
+  tracciamento</a> (10 giugno 2021).</li>
+<li><a href="https://creativecommons.org/chooser/">Creative Commons: scegliere una licenza</a>.</li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-b-internet-e-web">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#ipertesto">Ipertesto</a> ·
+<a href="../../glossario/#world-wide-web">World Wide Web</a> ·
+<a href="../../glossario/#url">URL</a> ·
+<a href="../../glossario/#http-e-https">HTTP e HTTPS</a> ·
+<a href="../../glossario/#browser">Browser</a> ·
+<a href="../../glossario/#motore-di-ricerca">Motore di ricerca</a> ·
+<a href="../../glossario/#indice-inverso">Indice inverso</a> ·
+<a href="../../glossario/#pagerank">PageRank</a> ·
+<a href="../../glossario/#sistema-di-raccomandazione">Sistema di raccomandazione</a> ·
+<a href="../../glossario/#bolla-di-filtraggio">Bolla di filtraggio</a> ·
+<a href="../../glossario/#disinformazione">Disinformazione</a> ·
+<a href="../../glossario/#lettura-laterale">Lettura laterale</a> ·
+<a href="../../glossario/#cookie">Cookie</a> ·
+<a href="../../glossario/#gdpr">GDPR</a> ·
+<a href="../../glossario/#dato-personale">Dato personale</a> ·
+<a href="../../glossario/#creative-commons">Creative Commons</a> ·
+<a href="../../glossario/#pubblico-dominio">Pubblico dominio</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../06-internet/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L06 · Internet: la rete delle reti">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L06 · Internet: la rete delle reti
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../08-laboratorio-pagina-web/" class="md-footer__link md-footer__link--next" aria-label="Successivo: L08 · Laboratorio: una pagina web">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                L08 · Laboratorio: una pagina web
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

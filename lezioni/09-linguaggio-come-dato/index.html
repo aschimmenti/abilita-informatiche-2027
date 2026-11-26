@@ -1,0 +1,3331 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Corso di idoneità per le lauree magistrali di area linguistica e letteraria — Università di Bologna">
+      
+      
+        <meta name="author" content="Andrea Schimmenti">
+      
+      
+        <link rel="canonical" href="https://aschimmenti.github.io/abilita-informatiche-2027/lezioni/09-linguaggio-come-dato/">
+      
+      
+        <link rel="prev" href="../08-laboratorio-pagina-web/">
+      
+      
+        <link rel="next" href="../../letture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>L09 · Il linguaggio come dato - Abilità Informatiche 2026/27</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Atkinson Hyperlegible";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l09-il-linguaggio-come-dato" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-header__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abilità Informatiche 2026/27
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L09 · Il linguaggio come dato
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema scuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema scuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Tema chiaro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema chiaro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../info/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Il corso
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lezioni
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../letture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Risorse
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abilità Informatiche 2026/27" class="md-nav__button md-logo" aria-label="Abilità Informatiche 2026/27" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abilità Informatiche 2026/27
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Il corso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Il corso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informazioni ed esame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lezioni
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lezioni
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco A · Fondamenti
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco A · Fondamenti
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-dati-e-macchine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L01 · Dati e macchine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-rappresentazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L02 · Come si rappresenta l'informazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-strutturare-i-dati/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L03 · Strutturare i dati
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algoritmi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L04 · Algoritmi e pensiero computazionale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-bibliografia-e-zotero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L05 · Bibliografia e Zotero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco B · Internet e Web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco B · Internet e Web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-internet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L06 · Internet: la rete delle reti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-web-e-societa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L07 · Il Web e la società
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-laboratorio-pagina-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L08 · Laboratorio: una pagina web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocco C · Natural Language Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blocco C · Natural Language Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L09 · Il linguaggio come dato
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    L09 · Il linguaggio come dato
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il corpus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Il corpus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#da-una-raccolta-di-testi-a-un-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da una raccolta di testi a un corpus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alcuni-corpora-dellitaliano-e-dellinglese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcuni corpora dell'italiano e dell'inglese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-treebank-corpora-annotati-fino-alla-sintassi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I treebank: corpora annotati fino alla sintassi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dal-testo-ai-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dal testo ai token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dal testo ai token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-una-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è una parola?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-fa-davvero-un-tokenizzatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa fa davvero un tokenizzatore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-e-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type e token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lemmatizzazione-e-stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lemmatizzazione e stemming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contare
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-liste-di-frequenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le liste di frequenza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-legge-di-zipf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La legge di Zipf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concordanze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concordanze
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collocazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collocazioni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-frequenze-nel-tempo-google-books-ngram-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le frequenze nel tempo: Google Books Ngram Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-i-livelli-di-analisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. I livelli di analisi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. I livelli di analisi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-parti-del-discorso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le parti del discorso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-formato-conll-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il formato CoNLL-U
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lanalisi-a-dipendenze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'analisi a dipendenze
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provare-un-parser-online-udpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provare un parser online: UDPipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lambiguita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. L'ambiguità
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. L&#39;ambiguità">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ambiguita-lessicale-e-morfologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguità lessicale e morfologica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguita-sintattica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguità sintattica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frasi-che-portano-fuori-strada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frasi che portano fuori strada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altri-tipi-di-ambiguita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altri tipi di ambiguità
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-voyant-tools-passo-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Voyant Tools, passo passo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Voyant Tools, passo passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caricare-i-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caricare i testi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-cruscotto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il cruscotto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-le-statistiche-del-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: le statistiche del corpus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cirrus-e-le-stopword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cirrus e le stopword
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trends-dove-compare-una-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trends: dove compare una parola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexts-e-collocates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexts e Collocates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chi-entra-in-un-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chi entra in un corpus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risorse
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Risorse
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../letture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Letture e materiali
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obiettivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Il corpus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Il corpus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#da-una-raccolta-di-testi-a-un-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Da una raccolta di testi a un corpus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alcuni-corpora-dellitaliano-e-dellinglese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alcuni corpora dell'italiano e dell'inglese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-treebank-corpora-annotati-fino-alla-sintassi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I treebank: corpora annotati fino alla sintassi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dal-testo-ai-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dal testo ai token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dal testo ai token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cose-una-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cos'è una parola?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-fa-davvero-un-tokenizzatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Che cosa fa davvero un tokenizzatore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-e-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type e token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lemmatizzazione-e-stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lemmatizzazione e stemming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contare
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-liste-di-frequenza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le liste di frequenza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-legge-di-zipf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La legge di Zipf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concordanze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concordanze
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collocazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collocazioni
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-frequenze-nel-tempo-google-books-ngram-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le frequenze nel tempo: Google Books Ngram Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-i-livelli-di-analisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. I livelli di analisi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. I livelli di analisi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-parti-del-discorso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le parti del discorso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-formato-conll-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il formato CoNLL-U
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lanalisi-a-dipendenze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'analisi a dipendenze
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provare-un-parser-online-udpipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provare un parser online: UDPipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lambiguita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. L'ambiguità
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. L&#39;ambiguità">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ambiguita-lessicale-e-morfologica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguità lessicale e morfologica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguita-sintattica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguità sintattica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frasi-che-portano-fuori-strada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frasi che portano fuori strada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altri-tipi-di-ambiguita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altri tipi di ambiguità
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-voyant-tools-passo-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Voyant Tools, passo passo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Voyant Tools, passo passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caricare-i-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caricare i testi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-cruscotto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Il cruscotto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-le-statistiche-del-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: le statistiche del corpus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cirrus-e-le-stopword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cirrus e le stopword
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trends-dove-compare-una-parola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trends: dove compare una parola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexts-e-collocates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexts e Collocates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chi-entra-in-un-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chi entra in un corpus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riepilogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riepilogo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attività
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettetevi-alla-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mettetevi alla prova
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-approfondire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per approfondire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parole-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parole chiave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="l09-il-linguaggio-come-dato">L09 · Il linguaggio come dato<a class="headerlink" href="#l09-il-linguaggio-come-dato" title="Permanent link">&para;</a></h1>
+<p class="meta">Online · 2 ore · Blocco C — Natural Language Processing</p>
+
+<div class="admonition abstract">
+<p class="admonition-title">In sintesi</p>
+<p>Con questa lezione comincia il blocco sul <em>Natural Language Processing</em> (NLP), cioè l'elaborazione
+automatica del linguaggio. La domanda di fondo è semplice: che cosa vede una macchina quando "legge"
+un testo? Partiamo dai corpora, che abbiamo incontrato nella L01, e seguiamo il percorso con cui un
+testo diventa un dato: lo si divide in <strong>token</strong>, si riconducono le forme ai <strong>lemmi</strong>, si contano le
+parole e si scopre che le loro frequenze seguono una legge sorprendentemente regolare, la <strong>legge di
+Zipf</strong>. Poi guardiamo i livelli di analisi che una macchina aggiunge al testo (le <strong>parti del
+discorso</strong> e le <strong>dipendenze sintattiche</strong>) e lo schema che li rende confrontabili tra lingue diverse,
+<strong>Universal Dependencies</strong>. Chiudiamo con il problema che attraversa tutto il NLP, l'<strong>ambiguità</strong>, e
+con una guida passo passo a <strong>Voyant Tools</strong> sulle <em>Avventure di Pinocchio</em>, in italiano e in inglese.</p>
+</div>
+<div class="slides-embed">
+  <iframe src="../../slides/L09.html" title="Slide della lezione 9" loading="lazy" allowfullscreen></iframe>
+</div>
+<p class="slides-links">
+  <a class="md-button" href="../../slides/L09.html" target="_blank" rel="noopener">Slide a schermo intero</a>
+  <a class="md-button" href="../../slides/L09.pdf" target="_blank" rel="noopener">Slide in PDF</a>
+</p>
+
+<h2 id="obiettivi">Obiettivi<a class="headerlink" href="#obiettivi" title="Permanent link">&para;</a></h2>
+<p>Alla fine della lezione saprete:</p>
+<ul>
+<li>spiegare che cosa rende un corpus <strong>rappresentativo</strong> e <strong>bilanciato</strong>, e riconoscere i principali
+  corpora dell'italiano e dell'inglese;</li>
+<li>descrivere la <strong>tokenizzazione</strong> e i problemi che pone in italiano e in inglese (apostrofi,
+  preposizioni articolate, clitici, contrazioni);</li>
+<li>distinguere <strong>type</strong> e <strong>token</strong>, <strong>lemmatizzazione</strong> e <strong>stemming</strong>;</li>
+<li>leggere una lista di frequenza e spiegare che cosa dice la <strong>legge di Zipf</strong>;</li>
+<li>riconoscere <strong>concordanze</strong> e <strong>collocazioni</strong> e sapere a che cosa servono;</li>
+<li>leggere un'annotazione in <strong>parti del discorso</strong> e un <strong>albero a dipendenze</strong> secondo lo schema
+  <strong>Universal Dependencies</strong>;</li>
+<li>spiegare perché l'<strong>ambiguità</strong> è il problema centrale del NLP;</li>
+<li>usare le funzioni principali di <strong>Voyant Tools</strong> su un testo letterario.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">I testi che usiamo</p>
+<p>Gli esempi su testi letterari usano <em>Le avventure di Pinocchio</em> di Carlo Collodi (1883) e la sua
+traduzione inglese di Carol Della Chiesa (<em>The Adventures of Pinocchio</em>, 1914). Sono entrambi di
+pubblico dominio e si trovano su Project Gutenberg in formato testo:
+<a href="https://www.gutenberg.org/ebooks/52484.txt.utf-8">originale italiano</a> e
+<a href="https://www.gutenberg.org/ebooks/500.txt.utf-8">traduzione inglese</a>.
+Per le statistiche usiamo invece due corpora annotati liberamente scaricabili, descritti nella
+sezione 1.</p>
+</div>
+<hr />
+<h2 id="1-il-corpus">1. Il corpus<a class="headerlink" href="#1-il-corpus" title="Permanent link">&para;</a></h2>
+<h3 id="da-una-raccolta-di-testi-a-un-corpus">Da una raccolta di testi a un corpus<a class="headerlink" href="#da-una-raccolta-di-testi-a-un-corpus" title="Permanent link">&para;</a></h3>
+<p>Nella L01 abbiamo definito il <strong>corpus</strong> come una raccolta di testi scritti o trascritti dal parlato,
+selezionati con criteri espliciti e organizzati per essere analizzati, e abbiamo interrogato DiaCORIS.
+Ora possiamo chiederci che cosa distingue un corpus ben costruito da una semplice cartella piena di
+file. Le proprietà su cui si insiste di più sono tre.</p>
+<ul>
+<li><strong>Rappresentatività.</strong> Un corpus serve a dire qualcosa su una lingua o su una sua varietà (l'italiano
+  scritto contemporaneo, l'inglese parlato britannico, i testi giuridici). È rappresentativo quando
+  include la gamma di variazione presente in quella varietà: generi, registri, autori, periodi. Il
+  linguista Douglas Biber (1993) ha mostrato che per ottenerla bisogna prima definire con precisione la
+  popolazione di testi che si vuole studiare, e solo dopo decidere come campionarla.</li>
+<li><strong>Bilanciamento.</strong> Le diverse parti del corpus devono avere proporzioni ragionevoli. Un corpus
+  dell'italiano fatto al 90% di articoli di giornale descrive soprattutto la lingua dei giornali.</li>
+<li><strong>Dimensioni.</strong> Più un fenomeno è raro, più testo serve per osservarlo. Qualche milione di parole basta
+  per studiare le parole grammaticali, ma per le collocazioni di una parola poco frequente ne servono
+  centinaia di milioni.</li>
+</ul>
+<p>A queste si aggiungono i <strong>metadati</strong> (chi ha scritto ciascun testo, quando, in quale genere: è la
+tabella di cui abbiamo parlato nella L03) e l'eventuale <strong>annotazione</strong>, cioè le informazioni
+linguistiche aggiunte a ogni parola.</p>
+<h3 id="alcuni-corpora-dellitaliano-e-dellinglese">Alcuni corpora dell'italiano e dell'inglese<a class="headerlink" href="#alcuni-corpora-dellitaliano-e-dellinglese" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Corpus</th>
+<th>Lingua</th>
+<th>Dimensioni</th>
+<th>Che cosa contiene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.english-corpora.org/bnc/"><strong>BNC</strong></a> (<em>British National Corpus</em>)</td>
+<td>inglese britannico</td>
+<td>circa 100 milioni di parole</td>
+<td>scritto (90%) e parlato (10%), anni Ottanta e primi Novanta</td>
+</tr>
+<tr>
+<td><a href="https://www.english-corpora.org/coca/"><strong>COCA</strong></a> (<em>Corpus of Contemporary American English</em>)</td>
+<td>inglese americano</td>
+<td>circa 1 miliardo di parole</td>
+<td>parlato televisivo, narrativa, riviste, giornali, testi accademici, web, dal 1990</td>
+</tr>
+<tr>
+<td><a href="https://corpora.ficlit.unibo.it/coris_ita.html"><strong>CORIS/CODIS</strong></a></td>
+<td>italiano scritto</td>
+<td>circa 165 milioni di parole</td>
+<td>stampa, narrativa, saggistica, prosa giuridica e amministrativa, testi effimeri; sviluppato a Bologna</td>
+</tr>
+<tr>
+<td><a href="https://www.corpusitaliano.it/"><strong>PAISÀ</strong></a></td>
+<td>italiano</td>
+<td>circa 250 milioni di parole</td>
+<td>testi del web con licenza Creative Commons, annotati</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/ngrams/"><strong>Google Books Ngram</strong></a></td>
+<td>molte lingue, tra cui italiano e inglese</td>
+<td>centinaia di miliardi di parole</td>
+<td>libri digitalizzati da Google, dal Cinquecento a oggi</td>
+</tr>
+</tbody>
+</table>
+<p>I primi quattro sono corpora progettati da linguisti, con criteri di selezione documentati. L'ultimo è
+un caso diverso: un'enorme raccolta di libri digitalizzati per altri scopi, utilissima per osservare come
+cambia la frequenza di una parola nel tempo, ma con limiti che vedremo nella sezione 3.</p>
+<div class="admonition example">
+<p class="admonition-title">Per provare</p>
+<p>Aprite <a href="https://www.english-corpora.org/coca/">COCA</a> (serve una registrazione gratuita) e cercate
+<code>make a decision</code>. La scheda <em>Context</em> mostra le occorrenze con anno, genere testuale e fonte; la
+scheda <em>Frequency</em> mostra in quali generi l'espressione è più frequente.</p>
+</div>
+<h3 id="i-treebank-corpora-annotati-fino-alla-sintassi">I treebank: corpora annotati fino alla sintassi<a class="headerlink" href="#i-treebank-corpora-annotati-fino-alla-sintassi" title="Permanent link">&para;</a></h3>
+<p>Un <strong>treebank</strong> (letteralmente "banca di alberi") è un corpus in cui ogni frase è annotata con la sua
+struttura sintattica, oltre che con lemmi e parti del discorso. Costruirlo richiede molto lavoro umano,
+e per questo i treebank sono piccoli rispetto ai corpora generali: qualche centinaio di migliaia di
+parole. Sono però la base su cui si addestrano e si valutano gli strumenti automatici che vedremo nella
+sezione 4.</p>
+<p>In questa lezione ne usiamo due, liberamente scaricabili dal progetto Universal Dependencies:</p>
+<ul>
+<li><strong>UD Italian-ISDT</strong> (<em>Italian Stanford Dependency Treebank</em>): circa 14.000 frasi e 245.000 parole,
+  tratte da giornali, testi giuridici e Wikipedia;</li>
+<li><strong>UD English-EWT</strong> (<em>English Web Treebank</em>): circa 16.600 frasi e 222.000 parole, tratte da blog,
+  gruppi di discussione, email, recensioni e domande e risposte online.</li>
+</ul>
+<p>Tenete a mente da dove vengono questi testi: nella sezione 3 vedremo che la composizione di un corpus si
+riflette direttamente nei numeri che ne ricaviamo.</p>
+<hr />
+<h2 id="2-dal-testo-ai-token">2. Dal testo ai token<a class="headerlink" href="#2-dal-testo-ai-token" title="Permanent link">&para;</a></h2>
+<h3 id="che-cose-una-parola">Che cos'è una parola?<a class="headerlink" href="#che-cose-una-parola" title="Permanent link">&para;</a></h3>
+<p>Nella L04 abbiamo scritto un programma che contava le parole dell'<em>Infinito</em> dividendo il testo in
+corrispondenza degli spazi, e abbiamo notato che <em>quest'ermo</em> veniva contato come una parola sola. Il
+problema è generale. Prima di contare, cercare o analizzare un testo, una macchina deve decidere quali
+sono le sue unità, e la nozione intuitiva di "parola" non basta. Il primo passo di quasi ogni
+elaborazione si chiama <strong>tokenizzazione</strong>: la divisione di un testo in <strong>token</strong>, cioè le unità minime su
+cui lavoreranno gli strumenti successivi. Di solito i token sono parole e segni di punteggiatura.</p>
+<p>Dividere sugli spazi e staccare la punteggiatura funziona nella maggior parte dei casi, ma l'italiano e
+l'inglese offrono molte eccezioni.</p>
+<table>
+<thead>
+<tr>
+<th>Fenomeno</th>
+<th>Esempio</th>
+<th>Quanti token?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apostrofo ed elisione</td>
+<td><em>l'ho</em>, <em>dell'anno</em>, <em>quest'ermo</em></td>
+<td><em>l'</em> + <em>ho</em>, <em>dell'</em> + <em>anno</em></td>
+</tr>
+<tr>
+<td>Preposizioni articolate</td>
+<td><em>sul</em>, <em>della</em>, <em>negli</em></td>
+<td>una parola scritta, due parole sintattiche (<em>su</em> + <em>il</em>)</td>
+</tr>
+<tr>
+<td>Clitici attaccati al verbo</td>
+<td><em>dammelo</em>, <em>portandoglielo</em>, <em>ammetterlo</em></td>
+<td><em>da</em> + <em>me</em> + <em>lo</em>; <em>portando</em> + <em>glie</em> + <em>lo</em></td>
+</tr>
+<tr>
+<td>Contrazioni inglesi</td>
+<td><em>don't</em>, <em>can't</em>, <em>I'm</em></td>
+<td><em>do</em> + <em>n't</em>, <em>ca</em> + <em>n't</em>, <em>I</em> + <em>'m</em></td>
+</tr>
+<tr>
+<td>Genitivo sassone</td>
+<td><em>Geppetto's house</em></td>
+<td><em>Geppetto</em> + <em>'s</em></td>
+</tr>
+<tr>
+<td>Composti e trattini</td>
+<td><em>New York-based</em>, <em>e-mail</em>, <em>anglo-americano</em></td>
+<td>dipende dalle convenzioni</td>
+</tr>
+<tr>
+<td>Nomi propri di più parole</td>
+<td><em>New York</em>, <em>Grillo Parlante</em></td>
+<td>due token, ma un solo nome</td>
+</tr>
+<tr>
+<td>Testo senza spazi</td>
+<td><em>#nonsonounrobot</em>, <em>#throwbackthursday</em></td>
+<td>per una macchina è un'unica stringa</td>
+</tr>
+<tr>
+<td>Numeri, date, sigle</td>
+<td><em>3.000</em>, <em>12/03/2026</em>, <em>U.S.A.</em></td>
+<td>il punto chiude la frase oppure no?</td>
+</tr>
+</tbody>
+</table>
+<p>Anche l'apostrofo crea problemi che conosciamo dalla L02: nei testi si trovano sia l'apostrofo
+dattilografico <code>'</code> (U+0027) sia quello tipografico <code>’</code> (U+2019). Per un computer sono due caratteri
+diversi, e un tokenizzatore che conosce solo il primo non riconosce <em>l’ho</em> come <em>l'</em> + <em>ho</em>.</p>
+<h3 id="che-cosa-fa-davvero-un-tokenizzatore">Che cosa fa davvero un tokenizzatore<a class="headerlink" href="#che-cosa-fa-davvero-un-tokenizzatore" title="Permanent link">&para;</a></h3>
+<p>Vediamo che cosa produce <strong>spaCy</strong>, una libreria di NLP molto usata, con i suoi modelli standard per
+l'italiano e per l'inglese (<code>it_core_news_sm</code> e <code>en_core_web_sm</code>, versione 3.8). Sono risultati reali,
+errori compresi.</p>
+<div class="highlight"><pre><span></span><code>Dammelo subito: l'ho visto all'ufficio postale, ma non c'è!
+
+Dammelo | subito | : | l' | ho | visto | all' | ufficio | postale | , | ma | non | c' | è | !
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>I don't think New York-based firms can't afford it.
+
+I | do | n't | think | New | York | - | based | firms | ca | n't | afford | it | .
+</code></pre></div>
+<p>Il tokenizzatore inglese segue una convenzione nata con il Penn Treebank negli anni Novanta: <em>don't</em>
+diventa <em>do</em> + <em>n't</em> e <em>can't</em> diventa <em>ca</em> + <em>n't</em>, così che la negazione sia sempre lo stesso token.
+In italiano gli apostrofi sono gestiti bene, ma <em>Dammelo</em> resta un token unico. Nel prossimo paragrafo
+vedremo che il modello lo scambia per un nome proprio.</p>
+<h3 id="type-e-token">Type e token<a class="headerlink" href="#type-e-token" title="Permanent link">&para;</a></h3>
+<p>Se contiamo tutte le parole di un testo, contiamo i <strong>token</strong>. Se contiamo quante parole <strong>diverse</strong> ci
+sono, contiamo i <strong>type</strong>. Nella frase <em>la gatta e la volpe</em> ci sono cinque token e quattro type, perché
+<em>la</em> compare due volte.</p>
+<p>Il rapporto tra type e token (in inglese <em>type-token ratio</em>, TTR) misura in modo grezzo la varietà del
+lessico di un testo. Nei due treebank di questa lezione:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Token</th>
+<th>Type (forme diverse)</th>
+<th>Lemmi diversi</th>
+<th>Type/token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Italiano (ISDT)</td>
+<td>244.547</td>
+<td>27.782</td>
+<td>18.675</td>
+<td>0,114</td>
+</tr>
+<tr>
+<td>Inglese (EWT)</td>
+<td>221.724</td>
+<td>19.639</td>
+<td>15.114</td>
+<td>0,089</td>
+</tr>
+</tbody>
+</table>
+<p><em>Conteggi fatti da noi sui dati di Universal Dependencies, punteggiatura esclusa, parole convertite in
+minuscolo.</em></p>
+<p>A parità di dimensioni l'italiano ha più type dell'inglese. Il motivo è la morfologia: un verbo italiano
+ha decine di forme (<em>parlo</em>, <em>parlavi</em>, <em>parlerebbero</em>, <em>parlandone</em>), mentre un verbo inglese ne ha
+quattro o cinque (<em>talk</em>, <em>talks</em>, <em>talked</em>, <em>talking</em>). Per lo stesso motivo il rapporto tra forme e
+lemmi è più alto in italiano (1,49) che in inglese (1,30). Il TTR dipende però dalla lunghezza del
+testo, perché più si legge più le parole si ripetono: si possono confrontare solo testi di lunghezza
+simile.</p>
+<h3 id="lemmatizzazione-e-stemming">Lemmatizzazione e stemming<a class="headerlink" href="#lemmatizzazione-e-stemming" title="Permanent link">&para;</a></h3>
+<p>Per molte analisi conviene trattare <em>vado</em>, <em>andò</em> e <em>andremmo</em> come la stessa parola. Ci sono due modi
+per farlo.</p>
+<p>La <strong>lemmatizzazione</strong> riconduce ogni forma al suo <strong>lemma</strong>, la forma di citazione che si trova nel
+dizionario (L01): <em>andò</em> → <em>andare</em>, <em>went</em> → <em>go</em>, <em>mice</em> → <em>mouse</em>. Per farlo bene servono un dizionario
+morfologico e spesso il contesto: <em>porta</em> è il nome <em>porta</em> o il verbo <em>portare</em>? <em>saw</em> è il nome
+<em>saw</em> (sega) o il passato di <em>see</em>?</p>
+<p>Lo <strong>stemming</strong> è più rozzo: taglia i suffissi secondo regole fisse e ottiene una "radice" (<em>stem</em>) che
+non è necessariamente una parola. L'algoritmo più famoso è quello di Martin Porter (1980). Ecco i
+risultati reali dello stemmer di Porter per l'inglese e della sua versione per l'italiano (Snowball):</p>
+<table>
+<thead>
+<tr>
+<th>Parola</th>
+<th>Stem</th>
+<th></th>
+<th>Parola</th>
+<th>Stem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>connected</em>, <em>connection</em></td>
+<td><code>connect</code></td>
+<td></td>
+<td><em>gatto</em>, <em>gatti</em></td>
+<td><code>gatt</code></td>
+</tr>
+<tr>
+<td><em>university</em>, <em>universe</em>, <em>universal</em></td>
+<td><code>univers</code></td>
+<td></td>
+<td><em>parlare</em>, <em>parlavano</em>, <em>parlamento</em></td>
+<td><code>parl</code></td>
+</tr>
+<tr>
+<td><em>organization</em>, <em>organ</em></td>
+<td><code>organ</code></td>
+<td></td>
+<td><em>casa</em>, <em>caso</em></td>
+<td><code>cas</code></td>
+</tr>
+<tr>
+<td><em>ran</em></td>
+<td><code>ran</code></td>
+<td></td>
+<td><em>andare</em>, <em>vado</em>, <em>andò</em></td>
+<td><code>andar</code>, <code>vad</code>, <code>andò</code></td>
+</tr>
+</tbody>
+</table>
+<p>Lo stemming funziona bene nei casi regolari, ma unisce parole che non hanno niente in comune
+(<em>university</em> e <em>universe</em>, <em>casa</em> e <em>caso</em>, <em>parlare</em> e <em>parlamento</em>) e separa forme dello stesso verbo
+irregolare. È veloce e non richiede dizionari, e per questo si usa ancora nei motori di ricerca; per lo
+studio delle lingue la lemmatizzazione è quasi sempre preferibile.</p>
+<p>Anche la lemmatizzazione automatica sbaglia. Ecco i lemmi assegnati dallo stesso modello spaCy per
+l'italiano:</p>
+<table>
+<thead>
+<tr>
+<th>Forma</th>
+<th>Lemma assegnato</th>
+<th>Lemma corretto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>sedette</em></td>
+<td><code>sedettere</code></td>
+<td><em>sedere</em></td>
+</tr>
+<tr>
+<td><em>mangiarono</em></td>
+<td><code>mangiarere</code></td>
+<td><em>mangiare</em></td>
+</tr>
+<tr>
+<td><em>Dammelo</em></td>
+<td><code>Dammelo</code> (nome proprio)</td>
+<td><em>dare</em> + <em>me</em> + <em>lo</em></td>
+</tr>
+<tr>
+<td><em>all'</em></td>
+<td><code>a il</code></td>
+<td><em>a</em> + <em>il</em></td>
+</tr>
+</tbody>
+</table>
+<p>Gli errori sui passati remoti si spiegano con i dati di addestramento: un modello che ha visto pochi
+passati remoti in testi giornalistici prova a costruire un infinito per analogia e inventa una parola.
+È una buona ragione per guardare sempre un campione dei risultati prima di fidarsi dei conteggi.</p>
+<hr />
+<h2 id="3-contare">3. Contare<a class="headerlink" href="#3-contare" title="Permanent link">&para;</a></h2>
+<h3 id="le-liste-di-frequenza">Le liste di frequenza<a class="headerlink" href="#le-liste-di-frequenza" title="Permanent link">&para;</a></h3>
+<p>Una volta tokenizzato il testo, contare è facile: è il programma con il <strong>dizionario</strong> della L04. Il
+risultato è una <strong>lista di frequenza</strong>, cioè l'elenco dei type ordinati dal più al meno frequente. Ecco le
+venti parole più frequenti nei nostri due treebank.</p>
+<figure>
+<p><img alt="Le venti parole più frequenti nei treebank italiano e inglese" loading="lazy" src="../../assets/img/L09/top20.png" width="820" /></p>
+<figcaption>Le venti forme più frequenti in UD Italian-ISDT e in UD English-EWT, punteggiatura esclusa.
+Elaborazione nostra sui dati di Universal Dependencies.</figcaption>
+</figure>
+<p>In cima alle liste ci sono solo <strong>parole grammaticali</strong>: articoli, preposizioni, congiunzioni, pronomi,
+ausiliari. In molte analisi queste parole si escludono con una lista di <strong>stopword</strong> ("parole vuote"),
+così da far emergere le parole che dicono qualcosa sul contenuto. L'esclusione però è una scelta, e
+dipende dalla domanda: chi studia lo stile di un autore o l'uso dei pronomi ha bisogno proprio delle
+parole che le stopword eliminano.</p>
+<p>Più in basso nelle liste si vede la composizione dei corpora. Nel treebank italiano il centesimo posto
+è occupato da <em>proprietario</em>, una parola che deve la sua frequenza ai testi giuridici; nel treebank
+inglese, fatto di testi del web, <em>I</em> e <em>you</em> sono tra le prime dieci parole e al centesimo posto c'è
+<em>thanks</em>. Il corpus decide che cosa vedremo.</p>
+<h3 id="la-legge-di-zipf">La legge di Zipf<a class="headerlink" href="#la-legge-di-zipf" title="Permanent link">&para;</a></h3>
+<p>Negli anni Trenta e Quaranta il linguista statunitense George Kingsley Zipf osservò una regolarità che
+vale per tutte le lingue studiate finora: se si ordinano le parole per frequenza, la frequenza di una
+parola è circa <strong>inversamente proporzionale</strong> alla sua posizione in classifica (il <strong>rango</strong>). La seconda
+parola compare circa la metà delle volte della prima, la terza circa un terzo, la decima circa un
+decimo, e così via. In formula, con <em>f</em> la frequenza e <em>r</em> il rango:</p>
+<p style="text-align:center"><em>f</em> ≈ <em>C</em> / <em>r</em></p>
+
+<p>dove <em>C</em> è una costante che dipende dalle dimensioni del corpus. Nei nostri dati <em>di</em> compare 9.695
+volte e <em>il</em>, seconda, 5.756; in inglese <em>the</em> compare 11.028 volte e <em>to</em> 6.294. Non è una legge esatta,
+ma l'andamento generale è sorprendentemente stabile. Si vede bene in un grafico con le scale
+<strong>logaritmiche</strong>, in cui ogni tacca vale dieci volte la precedente: la relazione di Zipf diventa una
+linea retta.</p>
+<figure>
+<p><img alt="La legge di Zipf nei treebank italiano e inglese, in scala logaritmica" loading="lazy" src="../../assets/img/L09/zipf-loglog.png" width="720" /></p>
+<figcaption>Rango e frequenza di tutte le forme dei due treebank, su scale logaritmiche. I punti seguono
+da vicino una retta, come prevede la legge di Zipf (linea tratteggiata). Elaborazione nostra sui dati di
+Universal Dependencies.</figcaption>
+</figure>
+<p>Le conseguenze pratiche sono importanti per chiunque lavori con i testi:</p>
+<ul>
+<li><strong>poche parole fanno la maggior parte del testo</strong>: nel treebank italiano le 100 forme più frequenti
+  coprono il 43% di tutti i token, in quello inglese il 47%;</li>
+<li><strong>la maggior parte delle parole è rara</strong>: circa metà dei type compare <strong>una volta sola</strong> (il 51% in
+  italiano, il 48% in inglese). Queste parole si chiamano <strong><em>hapax legomena</em></strong> (dal greco, "dette una
+  volta sola");</li>
+<li><strong>nessun corpus è abbastanza grande</strong>: per quanto si allarghi un corpus, si continueranno a incontrare
+  parole mai viste prima. È un problema per chi costruisce dizionari, per chi studia le parole rare e,
+  come vedremo nella L13, anche per i modelli linguistici.</li>
+</ul>
+<p>Le ragioni della legge di Zipf sono ancora discusse. Zipf la attribuiva a un "principio del minimo
+sforzo" nella comunicazione; altri studiosi l'hanno spiegata in modi diversi, e una rassegna del 2014
+(Piantadosi) conclude che nessuna spiegazione è ancora davvero convincente.</p>
+<h3 id="concordanze">Concordanze<a class="headerlink" href="#concordanze" title="Permanent link">&para;</a></h3>
+<p>La <strong>concordanza</strong> l'abbiamo vista nella L01: tutte le occorrenze di una parola, ciascuna con il suo
+contesto a sinistra e a destra, allineate al centro. Il formato si chiama <strong>KWIC</strong> (<em>Key Word In
+Context</em>). Ecco alcune righe reali per il verbo <em>make</em> nel treebank inglese:</p>
+<div class="highlight"><pre><span></span><code>            some reliable bearded guides to |  make  | sure you have everything set
+                       I will come over and |  make  | the change at your desk
+                      Any tips or advice to |  make  | this a great experience ??
+                                     How to |  make  | a breyer horse stable ?
+                     The outward appearance | makes  | you think this place is
+                 the Enron guaranties to be |  made  | in support of EPMI 's
+                    to hear the same leader | making | opposite statements in Arabic to
+</code></pre></div>
+<p>Le concordanze hanno una storia lunga: le prime, compilate a mano sulla Bibbia, risalgono al Duecento.
+Con il computer è cambiata soprattutto la scala. Leggere le righe di una concordanza resta il modo
+migliore per capire come si usa una parola, ed è utile anche per chi traduce: una concordanza mostra le
+costruzioni in cui una parola compare davvero, che spesso il dizionario non registra.</p>
+<div class="admonition example">
+<p class="admonition-title">Per provare</p>
+<p>In <a href="https://corpora.ficlit.unibo.it/coris_ita.html">CORIS</a> cercate <code>"battente"</code> e leggete le righe di
+concordanza: con quali nomi compare?</p>
+</div>
+<h3 id="collocazioni">Collocazioni<a class="headerlink" href="#collocazioni" title="Permanent link">&para;</a></h3>
+<p>Alcune parole stanno insieme più spesso di quanto ci si aspetterebbe per caso. In inglese si dice <em>strong
+tea</em> e non <em>powerful tea</em>, anche se <em>strong</em> e <em>powerful</em> hanno significati vicini; in italiano la
+pioggia è <em>battente</em> e non <em>picchiante</em>, e una decisione in italiano si <em>prende</em>, mentre in inglese si
+<em>fa</em> (<em>make a decision</em>). Queste
+combinazioni preferite si chiamano <strong>collocazioni</strong>, e sono uno dei punti più difficili per chi impara
+una lingua e per chi traduce.</p>
+<p>Nel treebank inglese, per esempio, il verbo <em>make</em> si accompagna a <em>decision</em>, <em>sense</em> e <em>change</em>, mentre
+<em>do</em> si accompagna a <em>job</em>, <em>work</em> e <em>research</em>.</p>
+<p>Un corpus permette di trovare le collocazioni in modo sistematico. Gli strumenti confrontano quante
+volte due parole compaiono vicine con quante volte ci si aspetterebbe di trovarle vicine se fossero
+distribuite a caso, e assegnano un <strong>punteggio di associazione</strong>. Le misure più usate hanno nomi tecnici
+(<em>mutual information</em>, <em>log-likelihood</em>, <em>logDice</em>); non serve conoscerne le formule, basta sapere che
+misurano la forza del legame e che misure diverse danno classifiche un po' diverse: alcune premiano le
+combinazioni rare ed esclusive, altre quelle frequenti.</p>
+<div class="admonition example">
+<p class="admonition-title">Per provare</p>
+<p>In <a href="https://www.english-corpora.org/coca/">COCA</a> scegliete la ricerca <em>Collocates</em>, scrivete <code>tea</code> e
+limitate i collocati alle parole immediatamente a sinistra: in cima troverete gli aggettivi che si
+combinano con <em>tea</em>, ordinati per punteggio di associazione.</p>
+</div>
+<p>L'idea che le parole si conoscano dalle loro compagnie è stata riassunta dal linguista britannico John
+Rupert Firth nel 1957 con una frase molto citata: <em>"You shall know a word by the company it keeps"</em>.
+Ci tornerà utile nella L10, quando vedremo come le macchine rappresentano il significato delle parole a
+partire dai contesti in cui compaiono.</p>
+<h3 id="le-frequenze-nel-tempo-google-books-ngram-viewer">Le frequenze nel tempo: Google Books Ngram Viewer<a class="headerlink" href="#le-frequenze-nel-tempo-google-books-ngram-viewer" title="Permanent link">&para;</a></h3>
+<p>Il <a href="https://books.google.com/ngrams/">Google Books Ngram Viewer</a> mostra come cambia nel tempo la frequenza
+di una parola o di una sequenza di parole (un <strong><em>n</em>-gramma</strong>: un unigramma è una parola, un bigramma una
+sequenza di due, e così via) nei libri digitalizzati da Google. Si possono confrontare più espressioni e
+scegliere il corpus di una lingua, tra cui l'italiano e l'inglese.</p>
+<div class="admonition example">
+<p class="admonition-title">Per provare</p>
+<p>Nel <a href="https://books.google.com/ngrams/">Ngram Viewer</a> scrivete <code>calcolatore,computer</code>, scegliete il
+corpus <em>Italian</em> e l'intervallo 1940–2022. In che decennio <em>computer</em> supera <em>calcolatore</em>?</p>
+</div>
+<p>Lo strumento è affascinante, ma i suoi dati vanno presi con cautela. Pechenick, Danforth e Dodds (2015)
+hanno mostrato due problemi importanti: il corpus contiene <strong>una copia di ogni libro</strong>, quindi un autore
+molto prolifico pesa quanto un autore letto da milioni di persone; e nel corso del Novecento la quota di
+<strong>testi scientifici</strong> cresce enormemente, così che molte "tendenze" riflettono il cambiamento della
+composizione del corpus più che quello della lingua. È lo stesso problema della rappresentatività da cui
+siamo partiti.</p>
+<hr />
+<h2 id="4-i-livelli-di-analisi">4. I livelli di analisi<a class="headerlink" href="#4-i-livelli-di-analisi" title="Permanent link">&para;</a></h2>
+<h3 id="le-parti-del-discorso">Le parti del discorso<a class="headerlink" href="#le-parti-del-discorso" title="Permanent link">&para;</a></h3>
+<p>Dopo la tokenizzazione e la lemmatizzazione, il passo successivo è assegnare a ogni token la sua
+<strong>parte del discorso</strong> (in inglese <em>part of speech</em>, PoS): nome, verbo, aggettivo e così via. Il compito
+si chiama <strong><em>PoS tagging</em></strong>, e le etichette si chiamano <em>tag</em>.</p>
+<p>Per decenni ogni gruppo di ricerca ha usato il proprio insieme di etichette. Il più famoso è quello del
+<strong>Penn Treebank</strong> per l'inglese, con 36 etichette per le parole: distingue, per esempio, <code>NN</code> (nome
+singolare), <code>NNS</code> (nome plurale), <code>VBD</code> (verbo al passato), <code>VBG</code> (gerundio o participio presente). È un
+insieme pensato per l'inglese, e non si adatta bene alle altre lingue.</p>
+<p>Il progetto <strong>Universal Dependencies</strong> (UD) usa invece un insieme di <strong>17 etichette universali</strong>, le
+stesse per tutte le lingue:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Categoria</th>
+<th>Esempi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOUN</code></td>
+<td>nome</td>
+<td><em>burattino</em>, <em>puppet</em></td>
+</tr>
+<tr>
+<td><code>PROPN</code></td>
+<td>nome proprio</td>
+<td><em>Geppetto</em>, <em>Florence</em></td>
+</tr>
+<tr>
+<td><code>VERB</code></td>
+<td>verbo</td>
+<td><em>scappò</em>, <em>ran</em></td>
+</tr>
+<tr>
+<td><code>AUX</code></td>
+<td>ausiliare</td>
+<td><em>ha</em>, <em>è</em>, <em>has</em>, <em>will</em></td>
+</tr>
+<tr>
+<td><code>ADJ</code></td>
+<td>aggettivo</td>
+<td><em>vecchio</em>, <em>wooden</em></td>
+</tr>
+<tr>
+<td><code>ADV</code></td>
+<td>avverbio</td>
+<td><em>subito</em>, <em>quickly</em></td>
+</tr>
+<tr>
+<td><code>PRON</code></td>
+<td>pronome</td>
+<td><em>lui</em>, <em>lo</em>, <em>she</em>, <em>it</em></td>
+</tr>
+<tr>
+<td><code>DET</code></td>
+<td>determinante</td>
+<td><em>il</em>, <em>questa</em>, <em>the</em>, <em>every</em></td>
+</tr>
+<tr>
+<td><code>ADP</code></td>
+<td>adposizione (preposizione)</td>
+<td><em>di</em>, <em>con</em>, <em>of</em>, <em>with</em></td>
+</tr>
+<tr>
+<td><code>CCONJ</code> / <code>SCONJ</code></td>
+<td>congiunzione coordinante / subordinante</td>
+<td><em>e</em>, <em>ma</em> / <em>perché</em>, <em>if</em></td>
+</tr>
+<tr>
+<td><code>NUM</code></td>
+<td>numerale</td>
+<td><em>cinque</em>, <em>1883</em></td>
+</tr>
+<tr>
+<td><code>PART</code></td>
+<td>particella</td>
+<td><em>not</em>, il <em>to</em> di <em>to go</em></td>
+</tr>
+<tr>
+<td><code>INTJ</code></td>
+<td>interiezione</td>
+<td><em>ahi</em>, <em>oh</em></td>
+</tr>
+<tr>
+<td><code>PUNCT</code> / <code>SYM</code> / <code>X</code></td>
+<td>punteggiatura / simbolo / altro</td>
+<td><em>.</em>, <em>%</em>, parole straniere</td>
+</tr>
+</tbody>
+</table>
+<p>Le informazioni più fini (genere, numero, tempo, modo, persona) non finiscono nel tag ma in un campo
+separato di <strong>tratti morfologici</strong>, per esempio <code>Gender=Fem|Number=Plur</code> per <em>ragazze</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Una correzione rispetto ai materiali degli anni passati</p>
+<p>Nelle slide degli anni scorsi la frase <em>Il gatto si sedette sul tappeto</em> era etichettata con i tag
+del Penn Treebank (<code>DT</code>, <code>NN</code>, <code>VBD</code>, <code>IN</code>), che sono pensati per l'inglese, e <em>si sedette</em> era
+trattato come un token unico. Secondo le convenzioni attuali <em>si</em> e <em>sedette</em> sono due token
+(<code>PRON</code> e <code>VERB</code>) e <em>sul</em> corrisponde a due parole sintattiche, <em>su</em> (<code>ADP</code>) e <em>il</em> (<code>DET</code>). Nello
+stesso materiale l'esempio di tokenizzazione di <em>Sto bene!</em> contava anche lo spazio come token: gli
+spazi separano i token, ma non lo sono.</p>
+</div>
+<h3 id="il-formato-conll-u">Il formato CoNLL-U<a class="headerlink" href="#il-formato-conll-u" title="Permanent link">&para;</a></h3>
+<p>I treebank di Universal Dependencies sono semplici file di testo in un formato chiamato <strong>CoNLL-U</strong>: una
+riga per parola, dieci colonne separate da tabulazioni, una riga vuota tra una frase e l'altra. Ecco una
+frase reale di UD Italian-ISDT, con le colonne principali:</p>
+<div class="highlight"><pre><span></span><code># text = Ma noi non vogliamo ammetterlo.
+ID    FORMA       LEMMA      UPOS    TESTA  RELAZIONE
+1     Ma          ma         CCONJ   5      cc
+2     noi         noi        PRON    5      nsubj
+3     non         non        ADV     5      advmod
+4     vogliamo    volere     AUX     5      aux
+5-6   ammetterlo  _          _       _      _
+5     ammetter    ammettere  VERB    0      root
+6     lo          lo         PRON    5      obj
+7     .           .          PUNCT   5      punct
+</code></pre></div>
+<p>È una <strong>tabella</strong> (L03), e ogni riga è un piccolo insieme di coppie attributo-valore. Notate la riga
+<code>5-6</code>: la parola scritta <em>ammetterlo</em> viene divisa in due parole sintattiche, il verbo <em>ammetter(e)</em> e il
+clitico <em>lo</em>. Lo stesso accade per le preposizioni articolate (<em>della</em> = <em>di</em> + <em>la</em>). È la soluzione di
+UD al problema dei clitici visto nella sezione 2.</p>
+<h3 id="lanalisi-a-dipendenze">L'analisi a dipendenze<a class="headerlink" href="#lanalisi-a-dipendenze" title="Permanent link">&para;</a></h3>
+<p>Le ultime due colonne, <strong>testa</strong> e <strong>relazione</strong>, descrivono la sintassi. Nell'<strong>analisi a dipendenze</strong>
+ogni parola dipende da un'altra parola, la sua <strong>testa</strong>, e la relazione tra le due ha un nome. Il verbo
+principale non dipende da nessuno ed è la <strong>radice</strong> (<code>root</code>) della frase. Il risultato è un <strong>albero</strong>,
+la struttura dati della L03.</p>
+<p>Ecco la stessa frase in inglese e in italiano, analizzata secondo UD.</p>
+<figure>
+<p><img alt="Albero a dipendenze di The cat sat on the mat" loading="lazy" src="../../assets/img/L09/ud-en-cat.png" width="620" /></p>
+</figure>
+<figure>
+<p><img alt="Albero a dipendenze di Il gatto si sedette sul tappeto" loading="lazy" src="../../assets/img/L09/ud-it-gatto.png" width="700" /></p>
+<figcaption>Le due frasi analizzate secondo lo schema UD. Ogni freccia va dalla testa alla parola che
+ne dipende; sotto ogni parola c'è la sua parte del discorso.</figcaption>
+</figure>
+<p>Le relazioni da conoscere sono poche:</p>
+<table>
+<thead>
+<tr>
+<th>Relazione</th>
+<th>Significato</th>
+<th>Esempio (parola dipendente → testa)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nsubj</code></td>
+<td>soggetto</td>
+<td><em>cat</em> → <em>sat</em>, <em>gatto</em> → <em>sedette</em></td>
+</tr>
+<tr>
+<td><code>obj</code></td>
+<td>oggetto diretto</td>
+<td><em>lo</em> → <em>ammetter</em> nella frase precedente</td>
+</tr>
+<tr>
+<td><code>obl</code></td>
+<td>complemento introdotto da preposizione, che dipende dal verbo</td>
+<td><em>mat</em> → <em>sat</em>, <em>tappeto</em> → <em>sedette</em></td>
+</tr>
+<tr>
+<td><code>nmod</code></td>
+<td>complemento che dipende da un nome</td>
+<td><em>di Pinocchio</em> → <em>naso</em> in <em>il naso di Pinocchio</em></td>
+</tr>
+<tr>
+<td><code>det</code></td>
+<td>determinante</td>
+<td><em>the</em> → <em>cat</em>, <em>il</em> → <em>gatto</em></td>
+</tr>
+<tr>
+<td><code>amod</code></td>
+<td>aggettivo che modifica un nome</td>
+<td><em>vecchio</em> → <em>falegname</em></td>
+</tr>
+<tr>
+<td><code>case</code></td>
+<td>preposizione o marca di caso</td>
+<td><em>on</em> → <em>mat</em>, <em>su</em> → <em>tappeto</em></td>
+</tr>
+<tr>
+<td><code>aux</code></td>
+<td>ausiliare</td>
+<td><em>vogliamo</em> → <em>ammetter</em></td>
+</tr>
+<tr>
+<td><code>expl</code></td>
+<td>pronome che non ha un ruolo argomentale</td>
+<td><em>si</em> in <em>si sedette</em></td>
+</tr>
+</tbody>
+</table>
+<p>Confrontate i due alberi: la struttura è la stessa. In entrambe le lingue la preposizione dipende dal
+nome (<code>case</code>) e il nome dipende dal verbo (<code>obl</code>). L'italiano ha in più il <em>si</em> del verbo pronominale,
+etichettato <code>expl</code>. Questa è l'idea di fondo di UD: annotare le lingue in modo <strong>coerente</strong>, così che le
+somiglianze siano visibili e le differenze reali (de Marneffe et al., 2021). Universal Dependencies
+comprende oggi treebank per più di 150 lingue, costruiti da centinaia di ricercatori.</p>
+<h3 id="provare-un-parser-online-udpipe">Provare un parser online: UDPipe<a class="headerlink" href="#provare-un-parser-online-udpipe" title="Permanent link">&para;</a></h3>
+<p>Un programma che produce automaticamente l'analisi a dipendenze si chiama <strong>parser</strong>. Uno dei più comodi
+da provare è <a href="https://lindat.mff.cuni.cz/services/udpipe/"><strong>UDPipe</strong></a>, sviluppato all'Università Carlo di
+Praga: si sceglie il modello di una lingua, si incolla un testo e si ottiene l'analisi completa, sia come
+tabella CoNLL-U sia come albero disegnato.</p>
+<div class="admonition example">
+<p class="admonition-title">Per provare</p>
+<p>Su <a href="https://lindat.mff.cuni.cz/services/udpipe/">UDPipe</a> scegliete il modello <code>italian-isdt</code>,
+incollate <code>Ma noi non vogliamo ammetterlo.</code> e premete <em>Process input</em>. Nella scheda <em>Show table</em>
+trovate il formato CoNLL-U, nella scheda <em>Show trees</em> l'albero.</p>
+</div>
+<hr />
+<h2 id="5-lambiguita">5. L'ambiguità<a class="headerlink" href="#5-lambiguita" title="Permanent link">&para;</a></h2>
+<p>Tutti i passaggi visti finora richiedono una scelta, e quasi ogni scelta può essere ambigua. Per una
+persona l'ambiguità di solito passa inosservata, perché il contesto e la conoscenza del mondo eliminano
+le letture assurde prima ancora che ce ne accorgiamo. Una macchina invece deve scegliere esplicitamente,
+e spesso non ha le informazioni per farlo. Per questo l'ambiguità è considerata il problema centrale
+del NLP.</p>
+<h3 id="ambiguita-lessicale-e-morfologica">Ambiguità lessicale e morfologica<a class="headerlink" href="#ambiguita-lessicale-e-morfologica" title="Permanent link">&para;</a></h3>
+<p>Una stessa forma può corrispondere a parole diverse: <em>porta</em> (nome o verbo), <em>pesca</em> (frutto, sport,
+verbo), <em>saw</em> (sega o passato di <em>see</em>), <em>bank</em> (banca o riva). Il classico esempio inglese mostra come
+l'ambiguità lessicale si combini con quella sintattica:</p>
+<blockquote>
+<p><em>Time flies like an arrow; fruit flies like a banana.</em></p>
+</blockquote>
+<p>Nella prima frase <em>flies</em> è un verbo e <em>like</em> una preposizione ("il tempo vola come una freccia");
+nella seconda <em>fruit flies</em> è un nome composto (i moscerini della frutta) e <em>like</em> un verbo ("ai
+moscerini piacciono le banane"). Il modello spaCy per l'inglese analizza le due frasi <strong>nello stesso
+modo</strong>, con <em>flies</em> verbo e <em>like</em> preposizione: la seconda frase diventa "la frutta vola come una
+banana".</p>
+<h3 id="ambiguita-sintattica">Ambiguità sintattica<a class="headerlink" href="#ambiguita-sintattica" title="Permanent link">&para;</a></h3>
+<p>Anche quando le parole sono chiare, la struttura può non esserlo:</p>
+<blockquote>
+<p><em>I saw the man with the telescope.</em></p>
+</blockquote>
+<p>Chi ha il cannocchiale? Se l'ho usato io per vedere, <em>telescope</em> dipende dal verbo (<code>obl</code>); se ce l'ha
+l'uomo, dipende da <em>man</em> (<code>nmod</code>). Sono due alberi diversi.</p>
+<figure>
+<p><img alt="Prima lettura: il cannocchiale dipende dal verbo" loading="lazy" src="../../assets/img/L09/amb-telescope-a.png" width="680" /></p>
+</figure>
+<figure>
+<p><img alt="Seconda lettura: il cannocchiale dipende da man" loading="lazy" src="../../assets/img/L09/amb-telescope-b.png" width="680" /></p>
+<figcaption>Le due analisi di <em>I saw the man with the telescope</em>. Cambia soltanto la testa di
+<em>telescope</em>: <em>saw</em> nella prima, <em>man</em> nella seconda.</figcaption>
+</figure>
+<p>Il parser sceglie una sola delle due letture (spaCy sceglie la seconda, sia in inglese sia nella frase
+italiana <em>Ho visto un uomo con il binocolo</em>) e non segnala che ne esisteva un'altra.</p>
+<p>Un esempio italiano famoso è ancora più radicale:</p>
+<blockquote>
+<p><em>La vecchia porta la sbarra.</em></p>
+</blockquote>
+<p>Si può leggere come "la donna anziana porta la sbarra" oppure come "la porta vecchia la sbarra", cioè le
+sbarra il passaggio. Cambiano le parti del discorso di quattro parole su cinque.</p>
+<figure>
+<p><img alt="Prima lettura di La vecchia porta la sbarra" loading="lazy" src="../../assets/img/L09/amb-vecchia-a.png" width="560" /></p>
+</figure>
+<figure>
+<p><img alt="Seconda lettura di La vecchia porta la sbarra" loading="lazy" src="../../assets/img/L09/amb-vecchia-b.png" width="560" /></p>
+<figcaption>Le due letture: nella prima <em>vecchia</em> è un nome e <em>porta</em> un verbo; nella
+seconda <em>vecchia</em> è un aggettivo, <em>porta</em> un nome, <em>la</em> un pronome e
+<em>sbarra</em> un verbo.</figcaption>
+</figure>
+<p>Il modello spaCy per l'italiano non sceglie nessuna delle due: tagga <em>vecchia</em> come aggettivo, <em>porta</em>
+come nome e <em>sbarra</em> come nome, e costruisce una frase senza verbo. È un risultato che nessun parlante
+darebbe, e mostra bene come lavora lo strumento: sceglie l'analisi più probabile sulla base dei testi
+che ha visto durante l'addestramento, senza alcuna idea di che cosa succede nella scena descritta.</p>
+<h3 id="frasi-che-portano-fuori-strada">Frasi che portano fuori strada<a class="headerlink" href="#frasi-che-portano-fuori-strada" title="Permanent link">&para;</a></h3>
+<p>Alcune frasi portano fuori strada anche il lettore umano. In inglese si chiamano <em>garden path
+sentences</em>, dall'espressione <em>to lead someone up the garden path</em>, "portare qualcuno fuori strada". In <em>The old man the boat</em> si legge istintivamente <em>the old man</em> come "il vecchio",
+e la frase sembra senza verbo; poi si capisce che <em>the old</em> significa "gli anziani" e <em>man</em> è un verbo
+("gli anziani formano l'equipaggio della barca"). Una macchina che analizza la frase da sinistra a destra
+cade nella stessa trappola.</p>
+<h3 id="altri-tipi-di-ambiguita">Altri tipi di ambiguità<a class="headerlink" href="#altri-tipi-di-ambiguita" title="Permanent link">&para;</a></h3>
+<p>L'ambiguità non finisce con la sintassi. C'è quella <strong>referenziale</strong> (in <em>Geppetto disse a Pinocchio che
+lui sarebbe tornato presto</em>, chi tornerà?), quella di <strong>ambito</strong> (<em>every student read a book</em>: lo stesso
+libro per tutti?) e quella <strong>pragmatica</strong> (<em>Puoi aprire la finestra?</em> è una domanda sulle capacità o una
+richiesta?). Ne riparleremo a proposito della traduzione automatica nella L10 e dei modelli linguistici
+nella L13.</p>
+<hr />
+<h2 id="6-voyant-tools-passo-passo">6. Voyant Tools, passo passo<a class="headerlink" href="#6-voyant-tools-passo-passo" title="Permanent link">&para;</a></h2>
+<p><a href="https://voyant-tools.org/"><strong>Voyant Tools</strong></a> è un ambiente di analisi testuale gratuito che funziona nel
+browser, senza installare nulla. È stato sviluppato da Stéfan Sinclair e Geoffrey Rockwell ed è molto
+usato nelle Digital Humanities. Mette insieme in una sola pagina quasi tutto quello che abbiamo visto in
+questa lezione: tokenizzazione, liste di frequenza, stopword, concordanze, collocazioni. Lo proviamo sulle
+<em>Avventure di Pinocchio</em> in italiano e in inglese.</p>
+<h3 id="caricare-i-testi">Caricare i testi<a class="headerlink" href="#caricare-i-testi" title="Permanent link">&para;</a></h3>
+<p>Nella pagina iniziale si può incollare un testo, caricare un file dal computer oppure scrivere uno o più
+indirizzi web, uno per riga. Incollate i due indirizzi di Project Gutenberg indicati all'inizio della
+lezione e premete <strong>Reveal</strong>. Voyant crea un <strong>corpus</strong> di due documenti.</p>
+<div class="admonition tip">
+<p class="admonition-title">Un dettaglio da non trascurare</p>
+<p>I file di Project Gutenberg contengono all'inizio e alla fine un'intestazione e una licenza in
+inglese, che finiscono nei conteggi. Per un'analisi seria conviene scaricare i file, eliminare queste
+parti e caricare i file puliti. È un esempio concreto di <strong>preparazione dei dati</strong>, il lavoro poco
+visibile che precede ogni analisi.</p>
+</div>
+<h3 id="il-cruscotto">Il cruscotto<a class="headerlink" href="#il-cruscotto" title="Permanent link">&para;</a></h3>
+<p>Voyant mostra cinque pannelli: <strong>Cirrus</strong> (una nuvola di parole), <strong>Reader</strong> (il testo), <strong>Trends</strong> (la
+distribuzione delle parole nel testo), <strong>Summary</strong> (un riassunto statistico) e <strong>Contexts</strong> (la
+concordanza). Ogni pannello ha in alto alcune icone: passandoci sopra il mouse si possono sostituire con
+altri strumenti, esportare i dati o aprire le impostazioni.</p>
+<h3 id="summary-le-statistiche-del-corpus">Summary: le statistiche del corpus<a class="headerlink" href="#summary-le-statistiche-del-corpus" title="Permanent link">&para;</a></h3>
+<p>Il pannello <strong>Summary</strong> riporta per ogni documento il numero di token (<em>words</em>) e di type (<em>unique word
+forms</em>), il rapporto tra i due (<em>vocabulary density</em>), la lunghezza media delle frasi e le parole più
+caratteristiche di ciascun documento rispetto all'altro (<em>distinctive words</em>). Confrontare originale e
+traduzione è istruttivo: quale dei due testi è più lungo? Quale ha un lessico più vario?</p>
+<h3 id="cirrus-e-le-stopword">Cirrus e le stopword<a class="headerlink" href="#cirrus-e-le-stopword" title="Permanent link">&para;</a></h3>
+<p>La nuvola di parole mostra le parole più frequenti, con dimensioni proporzionali alla frequenza. Voyant
+riconosce la lingua e applica automaticamente una lista di stopword. Dalle impostazioni del pannello
+(l'icona con i cursori) si può cambiare la lista o disattivarla: provate a confrontare le due nuvole e
+ritroverete in cima <em>di</em>, <em>e</em>, <em>il</em>, <em>the</em>, <em>and</em>, come nelle liste della sezione 3.</p>
+<p>Le nuvole di parole sono immediate ma imprecise: la dimensione delle parole è difficile da confrontare a
+occhio e la disposizione non significa nulla. Per i numeri veri conviene usare la tabella <strong>Terms</strong>, che
+si apre dalle icone del pannello Cirrus e riporta la frequenza assoluta e relativa di ogni parola.</p>
+<h3 id="trends-dove-compare-una-parola">Trends: dove compare una parola<a class="headerlink" href="#trends-dove-compare-una-parola" title="Permanent link">&para;</a></h3>
+<p>Il pannello <strong>Trends</strong> divide ogni documento in segmenti e mostra la frequenza di una o più parole in
+ciascun segmento. Scrivendo nella casella di ricerca <em>fata</em>, <em>grillo</em> e <em>volpe</em> si vede in quali parti
+del romanzo compaiono questi personaggi. Nel testo inglese si possono cercare <em>fairy</em>, <em>cricket</em> e
+<em>fox</em>.</p>
+<h3 id="contexts-e-collocates">Contexts e Collocates<a class="headerlink" href="#contexts-e-collocates" title="Permanent link">&para;</a></h3>
+<p>Il pannello <strong>Contexts</strong> è la concordanza: cliccando su una parola in qualsiasi altro pannello, Contexts
+mostra tutte le sue occorrenze con il contesto. Il pannello <strong>Collocates</strong> (da aggiungere con l'icona
+delle finestre) elenca le parole che compaiono più spesso vicino alla parola scelta. Provate con <em>naso</em> e
+con <em>nose</em>: quali verbi e aggettivi lo accompagnano in italiano e in inglese?</p>
+<div class="admonition warning">
+<p class="admonition-title">Che cosa Voyant non fa</p>
+<p>Voyant lavora sulle <strong>forme</strong>, non sui lemmi, e non riconosce le parti del discorso. <em>Burattino</em> e
+<em>burattini</em> sono due parole diverse, e <em>porta</em> è sempre la stessa parola che sia un nome o un verbo.
+Per analisi linguistiche più fini servono corpora annotati e strumenti come Sketch Engine, che
+vedremo nella L11.</p>
+</div>
+<hr />
+<h2 id="chi-entra-in-un-corpus">Chi entra in un corpus<a class="headerlink" href="#chi-entra-in-un-corpus" title="Permanent link">&para;</a></h2>
+<p>Ogni corpus è una selezione, e ogni selezione lascia fuori qualcosa. Nei corpora generali l'italiano è
+soprattutto quello scritto, e soprattutto quello dei giornali; il parlato, gli italiani regionali e i
+dialetti sono molto meno rappresentati, perché raccoglierli e trascriverli costa di più. I due treebank di
+questa lezione mostrano lo stesso fenomeno in piccolo: il nostro "italiano" è quello dei giornali e delle
+leggi, il nostro "inglese" quello dei forum e delle recensioni online.</p>
+<p>Le conseguenze vanno oltre la linguistica. Gli strumenti automatici imparano dai corpora annotati: un
+lemmatizzatore che ha visto pochi passati remoti li sbaglia, un parser addestrato su testi giornalistici
+funziona peggio su un messaggio WhatsApp o su una trascrizione del parlato. E poiché costruire un treebank
+richiede anni di lavoro, le lingue con più risorse (l'inglese prima di tutte) hanno anche gli strumenti
+migliori. Ne parleremo più a fondo nella L11.</p>
+<hr />
+<h2 id="riepilogo">Riepilogo<a class="headerlink" href="#riepilogo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concetto</th>
+<th>In una frase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Corpus</td>
+<td>Raccolta di testi selezionati con criteri espliciti: rappresentativa, bilanciata, documentata</td>
+</tr>
+<tr>
+<td>Treebank</td>
+<td>Corpus annotato anche con la struttura sintattica di ogni frase</td>
+</tr>
+<tr>
+<td>Tokenizzazione</td>
+<td>Divisione del testo in unità minime (token): più difficile di quanto sembri</td>
+</tr>
+<tr>
+<td>Type e token</td>
+<td>Parole diverse e parole totali; il loro rapporto misura la varietà del lessico</td>
+</tr>
+<tr>
+<td>Lemmatizzazione / stemming</td>
+<td>Ricondurre le forme al lemma del dizionario / tagliare i suffissi con regole fisse</td>
+</tr>
+<tr>
+<td>Stopword</td>
+<td>Parole grammaticali che si escludono da alcune analisi, per scelta</td>
+</tr>
+<tr>
+<td>Legge di Zipf</td>
+<td>La frequenza di una parola è circa inversamente proporzionale al suo rango</td>
+</tr>
+<tr>
+<td>Hapax</td>
+<td>Parola che compare una sola volta; circa metà dei type di un corpus</td>
+</tr>
+<tr>
+<td>Concordanza (KWIC)</td>
+<td>Tutte le occorrenze di una parola con il contesto, allineate al centro</td>
+</tr>
+<tr>
+<td>Collocazione</td>
+<td>Combinazione di parole più frequente di quanto ci si aspetterebbe per caso</td>
+</tr>
+<tr>
+<td>PoS tagging</td>
+<td>Assegnare a ogni token la sua parte del discorso</td>
+</tr>
+<tr>
+<td>Analisi a dipendenze</td>
+<td>Ogni parola dipende da una testa, con una relazione: il risultato è un albero</td>
+</tr>
+<tr>
+<td>Universal Dependencies</td>
+<td>Uno schema di annotazione comune per più di 150 lingue</td>
+</tr>
+<tr>
+<td>Ambiguità</td>
+<td>Più analisi possibili per la stessa forma o frase: il problema centrale del NLP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="attivita">Attività<a class="headerlink" href="#attivita" title="Permanent link">&para;</a></h2>
+<p><strong>A casa (facoltativo)</strong></p>
+<ol>
+<li><strong>Pinocchio in Voyant.</strong> Caricate in Voyant i due testi di Pinocchio, come descritto nella sezione 6.
+   Nel pannello Summary confrontate il numero di token e di type dei due documenti: quale testo è più
+   lungo? Quale ha il lessico più vario? Provate a spiegare perché, ricordando che cosa abbiamo detto
+   sulla morfologia dell'italiano e dell'inglese.</li>
+<li><strong>Personaggi nel tempo.</strong> Nel pannello Trends confrontate la distribuzione di <em>Geppetto</em> e di
+   <em>Lucignolo</em> nel testo italiano. Che cosa vi dice il grafico sulla struttura del romanzo?</li>
+<li><strong>Un albero tutto vostro.</strong> Aprite <a href="https://lindat.mff.cuni.cz/services/udpipe/">UDPipe</a>, scegliete il
+   modello italiano o inglese e analizzate una frase che vi sembra difficile: con clitici, con una
+   preposizione ambigua, con un verbo che può essere anche un nome. Nella scheda <em>Show trees</em> controllate
+   l'albero: il parser ha scelto la lettura giusta?</li>
+<li><strong>Collocazioni a confronto.</strong> Su <a href="https://www.english-corpora.org/coca/">COCA</a> (serve una registrazione
+   gratuita) cercate i collocati di <em>decision</em>. Quali verbi lo precedono? Confrontate con le espressioni
+   italiane che usereste per tradurli.</li>
+</ol>
+<hr />
+<h2 id="mettetevi-alla-prova">Mettetevi alla prova<a class="headerlink" href="#mettetevi-alla-prova" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> Quale di queste caratteristiche <strong>non</strong> è tra quelle che rendono un corpus ben progettato?</p>
+<ul>
+<li>A. La rappresentatività rispetto alla varietà di lingua che si vuole studiare</li>
+<li>B. Il bilanciamento tra le diverse parti</li>
+<li>C. La presenza di testi tutti dello stesso autore</li>
+<li>D. La documentazione dei criteri di selezione e dei metadati</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> Un corpus di un solo autore può servire per studiare quell'autore, ma non rappresenta una
+lingua o una varietà.</p>
+</details>
+<p><strong>2.</strong> Nella frase <em>il gatto vide il cane e il cane vide il gatto</em>, quanti sono i token e quanti i type
+(senza contare la punteggiatura)?</p>
+<ul>
+<li>A. 11 token, 11 type</li>
+<li>B. 11 token, 5 type</li>
+<li>C. 5 token, 11 type</li>
+<li>D. 11 token, 4 type</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Le parole sono undici in tutto; quelle diverse sono cinque: <em>il</em>, <em>gatto</em>, <em>vide</em>, <em>cane</em>, <em>e</em>.</p>
+</details>
+<p><strong>3.</strong> Un programma riconduce <em>university</em> e <em>universe</em> alla stessa forma <code>univers</code>. Che cosa sta
+facendo?</p>
+<ul>
+<li>A. Lemmatizzazione</li>
+<li>B. Stemming</li>
+<li>C. PoS tagging</li>
+<li>D. Tokenizzazione</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Lo stemming taglia i suffissi con regole fisse e per questo unisce parole che non hanno
+niente in comune. Un lemmatizzatore restituirebbe due lemmi diversi.</p>
+</details>
+<p><strong>4.</strong> In un corpus di un milione di parole, la parola più frequente compare 60.000 volte. Secondo la
+legge di Zipf, circa quante volte comparirà la terza parola più frequente?</p>
+<ul>
+<li>A. 57.000</li>
+<li>B. 30.000</li>
+<li>C. 20.000</li>
+<li>D. 6.000</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>C.</strong> La frequenza è circa inversamente proporzionale al rango: la terza parola compare circa un
+terzo delle volte della prima.</p>
+</details>
+<p><strong>5.</strong> Che cosa sono gli <em>hapax legomena</em>?</p>
+<ul>
+<li>A. Le parole grammaticali escluse dalle analisi</li>
+<li>B. Le parole che compaiono una sola volta in un corpus</li>
+<li>C. Le parole più frequenti di un corpus</li>
+<li>D. Le parole composte da più token</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Sono circa metà dei type di un corpus, come prevede la legge di Zipf.</p>
+</details>
+<p><strong>6.</strong> In inglese si dice <em>strong tea</em> e non <em>powerful tea</em>. Come si chiama questo fenomeno?</p>
+<ul>
+<li>A. Ambiguità lessicale</li>
+<li>B. Collocazione</li>
+<li>C. Lemmatizzazione</li>
+<li>D. Concordanza</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> Una collocazione è una combinazione di parole preferita dall'uso, più frequente di quanto ci si
+aspetterebbe per caso.</p>
+</details>
+<p><strong>7.</strong> Nell'annotazione Universal Dependencies della frase <em>Il gatto dorme sul divano</em>, quale
+relazione lega <em>gatto</em> a <em>dorme</em>?</p>
+<ul>
+<li>A. <code>obj</code></li>
+<li>B. <code>nsubj</code></li>
+<li>C. <code>det</code></li>
+<li>D. <code>case</code></li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> <em>Gatto</em> è il soggetto del verbo. <code>det</code> lega <em>il</em> a <em>gatto</em>, <code>case</code> lega <em>su</em> a <em>divano</em>.</p>
+</details>
+<p><strong>8.</strong> Perché la frase <em>I saw the man with the telescope</em> è difficile per un parser?</p>
+<ul>
+<li>A. Perché contiene una parola che il parser non conosce</li>
+<li>B. Perché <em>with the telescope</em> può dipendere sia dal verbo sia dal nome, e le due analisi sono
+  entrambe grammaticali</li>
+<li>C. Perché è troppo lunga</li>
+<li>D. Perché in inglese le preposizioni non hanno un tag universale</li>
+</ul>
+<details class="success">
+<summary>Soluzione</summary>
+<p><strong>B.</strong> È un caso di ambiguità sintattica: due alberi diversi, entrambi corretti, tra cui solo il
+contesto permette di scegliere.</p>
+</details>
+<hr />
+<h2 id="per-approfondire">Per approfondire<a class="headerlink" href="#per-approfondire" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Biber, D. (1993). Representativeness in corpus design. <em>Literary and Linguistic Computing</em>, <em>8</em>(4),
+  243–257. <a href="https://doi.org/10.1093/llc/8.4.243">doi:10.1093/llc/8.4.243</a></li>
+<li>Davies, M. (2010). The Corpus of Contemporary American English as the first reliable monitor corpus of
+  English. <em>Literary and Linguistic Computing</em>, <em>25</em>(4), 447–464.
+  <a href="https://doi.org/10.1093/llc/fqq018">doi:10.1093/llc/fqq018</a></li>
+<li>Tamburini, F. (2022). I corpora del FICLIT, Università di Bologna: CORIS/CODIS, BoLC e DiaCORIS. In
+  <em>Atti del LIV Congresso della Società di Linguistica Italiana</em>. Società di Linguistica Italiana.
+  <a href="https://doi.org/10.17469/O2106SLI000012">doi:10.17469/O2106SLI000012</a></li>
+<li>Lyding, V., Stemle, E., Borghetti, C., Brunello, M., Castagnoli, S., Dell'Orletta, F., Dittmann, H.,
+  Lenci, A., &amp; Pirrelli, V. (2014). The PAISÀ corpus of Italian web texts. In <em>Proceedings of the 9th Web
+  as Corpus Workshop (WaC-9)</em> (pp. 36–43). <a href="https://doi.org/10.3115/v1/W14-0406">doi:10.3115/v1/W14-0406</a></li>
+<li>Piantadosi, S. T. (2014). Zipf's word frequency law in natural language: A critical review and future
+  directions. <em>Psychonomic Bulletin &amp; Review</em>, <em>21</em>(5), 1112–1130.
+  <a href="https://doi.org/10.3758/s13423-014-0585-6">doi:10.3758/s13423-014-0585-6</a></li>
+<li>Pechenick, E. A., Danforth, C. M., &amp; Dodds, P. S. (2015). Characterizing the Google Books corpus: Strong
+  limits to inferences of socio-cultural and linguistic evolution. <em>PLoS ONE</em>, <em>10</em>(10), e0137041.
+  <a href="https://doi.org/10.1371/journal.pone.0137041">doi:10.1371/journal.pone.0137041</a></li>
+<li>de Marneffe, M.-C., Manning, C. D., Nivre, J., &amp; Zeman, D. (2021). Universal Dependencies.
+  <em>Computational Linguistics</em>, <em>47</em>(2), 255–308. <a href="https://doi.org/10.1162/coli_a_00402">doi:10.1162/coli_a_00402</a></li>
+<li>Porter, M. F. (1980). An algorithm for suffix stripping. <em>Program</em>, <em>14</em>(3), 130–137.
+  <a href="https://doi.org/10.1108/eb046814">doi:10.1108/eb046814</a></li>
+<li>Jurafsky, D., &amp; Martin, J. H. <a href="https://web.stanford.edu/~jurafsky/slp3/"><em>Speech and Language Processing</em></a>
+  (3ª ed., bozza online), capitolo 2 (parole, token, normalizzazione) e capitoli sul PoS tagging e
+  sull'analisi a dipendenze.</li>
+<li><a href="https://universaldependencies.org/">Universal Dependencies</a>: la documentazione dei tag e delle
+  relazioni, con esempi in tutte le lingue.</li>
+<li><a href="https://voyant-tools.org/docs/">Voyant Tools: documentazione</a>, in inglese.</li>
+</ul>
+<p>Elenco completo in <a href="../../letture/#blocco-c-natural-language-processing">Letture e materiali</a>.</p>
+<h2 id="parole-chiave">Parole chiave<a class="headerlink" href="#parole-chiave" title="Permanent link">&para;</a></h2>
+<p><a href="../../glossario/#corpus">Corpus</a> ·
+<a href="../../glossario/#treebank">Treebank</a> ·
+<a href="../../glossario/#token">Token</a> ·
+<a href="../../glossario/#tokenizzazione">Tokenizzazione</a> ·
+<a href="../../glossario/#type-e-token">Type e token</a> ·
+<a href="../../glossario/#lemma">Lemma</a> ·
+<a href="../../glossario/#stemming">Stemming</a> ·
+<a href="../../glossario/#stopword">Stopword</a> ·
+<a href="../../glossario/#legge-di-zipf">Legge di Zipf</a> ·
+<a href="../../glossario/#hapax">Hapax</a> ·
+<a href="../../glossario/#concordanza">Concordanza</a> ·
+<a href="../../glossario/#collocazione">Collocazione</a> ·
+<a href="../../glossario/#n-gramma">n-gramma</a> ·
+<a href="../../glossario/#pos-tagging">PoS tagging</a> ·
+<a href="../../glossario/#analisi-a-dipendenze">Analisi a dipendenze</a> ·
+<a href="../../glossario/#universal-dependencies">Universal Dependencies</a> ·
+<a href="../../glossario/#ambiguita">Ambiguità</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../08-laboratorio-pagina-web/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: L08 · Laboratorio: una pagina web">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                L08 · Laboratorio: una pagina web
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../letture/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Letture e materiali">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Letture e materiali
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Materiali rilasciati con licenza CC BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
